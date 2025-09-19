@@ -3,28 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Leading supplier of Ceramic Metallization solutions - DBC and DPC. Innovative technology and quality products.">
-    <meta name="keywords" content="Ceramic Metallization, DBC, DPC, Direct Bonded Copper, Advanced Packaging">
+    <meta name="description" content="Leading supplier of Bare and Metallized Ceramic Substrates. Jimei Materials provides advanced ceramic solutions for 
+    electronics, semiconductors, and industrial applications.">
+    <meta name="keywords" content="Ceramic Metallization, DBC, DPC, Direct Bonded Copper, Advanced Packaging, Semiconductor, Heat Sink, Thermoelectric Cooler, 
+    Interdigital Electrodes, Bare Ceramic Substrate, Metallized Ceramic Substrate, Nitride, Alumina, Silicon Carbide, Jimei Materials">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Jimei Materials">
-    <link rel="canonical" href="https://www.jimei-materials.com/">
     
-    <!-- Open Graph / Facebook -->
-    <!-- <meta property="og:title" content="Leading Supplier of Ceramic Metallization - DBC and DPC">
-    <meta property="og:description" content="Innovative technology and quality products for DBC and DPC ceramic metallization.">
-    <meta property="og:image" content="https://www.jimei-materials.com/path/to/og-image.jpg">
-    <meta property="og:url" content="https://www.jimei-materials.com/">
-    <meta property="og:type" content="website"> -->
 
-    <!-- Twitter -->
-    <!-- <meta name="twitter:title" content="Leading Supplier of Ceramic Metallization - DBC and DPC">
-    <meta name="twitter:description" content="Innovative technology and quality products for DBC and DPC ceramic metallization.">
-    <meta name="twitter:image" content="https://www.jimei-materials.com/path/to/twitter-image.jpg">
-    <meta name="twitter:card" content="summary_large_image"> -->
+    <title>Leading Supplier of Bare & Metallized Ceramic Substrates | Jimei Materials</title>
 
-    <title>Leading Supplier of Ceramic Metallization - DBC and DPC | Jimei Materials</title>
+    <link rel="canonical" href="https://www.jimei-materials.com/">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -39,22 +30,69 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
-    <!-- Favicon ICO for Browsers -->
-  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
-
-  <!-- PNG icons for Retina & Android -->
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
-
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-
-  <!-- Optional manifest for PWA -->
-  <link rel="manifest" href="icons/site.webmanifest">
+    <!-- Favicon and App Icons -->
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <meta name="theme-color" content="#28495a">
 
 </head>
+<style>
+    /* Hide scrollbar for all browsers */
+    html, body {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+    }
+    html::-webkit-scrollbar, body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+</style>
+
+<style>
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 999;
+    background: #28495a;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(40,73,90,0.18);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#scrollToTopBtn:hover {
+    background: #18303d;
+}
+</style>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+    var btn = document.createElement('button');
+    btn.id = 'scrollToTopBtn';
+    btn.title = 'Scroll to top';
+    btn.innerHTML = '<i class="fa fa-chevron-up"></i>';
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', function() {
+        btn.style.display = (window.scrollY > 200) ? 'block' : 'none';
+    });
+
+    btn.addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+});
+</script>
+
 
 <body>
     <!-- Page Preloder -->
@@ -71,29 +109,17 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="./index.html">Home</a></li>
-                <!-- <li><a href="./shop-grid.html">Shop</a></li> -->
-                <li><a href="./index.html#products">Products</a>
-                    <!-- <ul class="header__menu__dropdown">
-                        <li><a href="./Direct-Plated-Copper-Substrate.html">Direct Plated Copper Substrate</a></li>
-                        <li><a href="./Direct-Plated-Copper-Substrate.html">Direct Bonded Copper Substrates</a></li> -->
-                        <!-- <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li> -->
-                    <!-- </ul> -->
+                <li><a href="./Products.html">Products</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./Ceramic_Metalization_Substrates.html">Metallized Ceramic Substrate</a></li>
+                        <li><a href="./Bare_Ceramic_Substrates.html">Bare Ceramic Substrates</a></li>
+                    </ul>
                 </li>
-                <!-- <li><a href="./blog.html">Blog</a></li> -->
-                <li><a href="./index.html#about">About us</a></li>
-                <li><a href="./index.html#contact">Contact</a></li>
+                <li><a href="./About_us.html">About us</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
-        <!-- <div class="header__top__right__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-        </div> -->
         <div class="humberger__menu__contact">
             <ul>
                 <li><i class="fa fa-envelope"></i> sales@jimei-materials.com</li>
@@ -101,10 +127,11 @@
             </ul>
         </div>
         <div class="humberger__menu__contact">
-            <a href="./index.html#contact" class="primary-btn">Request A Quote</a>
+            <a href="./Contact.html" class="primary-btn">Request A Quote</a>
         </div>
     </div>
     <!-- Humberger End -->
+
 
     <!-- Header Section Begin -->
     <header class="header" style="background-color:#d4dfe7; align-content:center;">
@@ -121,23 +148,8 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
-                            <!-- <div class="header__top__right__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                            </div> -->
-                            <!-- <div class="header__top__right__language">
-                                <img src="img/language.png" alt="">
-                                <div>English</div>
-                                <span class="arrow_carrot-down"></span>
-                                <ul>
-                                    <li><a href="#">Spanis</a></li>
-                                    <li><a href="#">English</a></li>
-                                </ul>
-                            </div> -->
                             <div class="header__top__right__auth">
-                                <a href="./index.html#contact" class="site-btn">Request A Quote</a>
+                                <a href="./Contact.html" class="site-btn">Request A Quote</a>
                             </div>
                         </div>
                     </div>
@@ -153,20 +165,14 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="./index.html" style="font-size: 16px;">Home</a></li>
-                            <!-- <li><a href="./shop-grid.html">Shop</a></li> -->
-                            <li><a href="./index.html#products" style="font-size: 16px;">Products</a>
-                                <!-- <ul class="header__menu__dropdown">
-                                    <li><a href="./Direct-Plated-Copper-Substrate.html">Direct Plated Copper Substrate</a></li>
-                                    <li><a href="./Direct-Bonded-Copper-Substrate.html">Direct Bonded Copper Substrates</a></li> -->
-                                    <!-- <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li> -->
-                                <!-- </ul> -->
+                            <li><a href="./Products.html" style="font-size: 16px;">Products</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./Ceramic_Metalization_Substrates.html" style="font-size: 16px; font-weight: 700; padding-top: 1em; padding-bottom: 1em;">Metallized Ceramic <br> Substrate</a></li>
+                                    <li><a href="./Bare_Ceramic_Substrates.html" style="font-size: 16px; font-weight: 700;  padding-top: 1em; padding-bottom: 1em;">Bare Ceramic <br> Substrates</a></li>
+                                </ul>
                             </li>
-                            <!-- <li><a href="./blog.html">Blog</a></li> -->
-                            <li><a href="./index.html#about"  style="font-size: 16px;">About us</a></li>
-                            <li><a href="./index.html#contact" style="font-size: 16px;">Contact</a></li>
+                            <li><a href="./About_us.html" style="font-size: 16px;">About us</a></li>
+                            <li><a href="./Contact.html" style="font-size: 16px;">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -178,378 +184,345 @@
     </header>
     <!-- Header Section End -->
 
-    <!-- Hero Section Begin -->
-    <section class="hero" id="home">
-        <div class="container mt-3 mb-3">
-            <div class="row align-items-center text-center bg-light">
-                <h1 class="text-center m-3" style="font-size: 50px;">Leading supplier of Ceramic Metallization Solutions for DBC and DPC</h1>
+        <!-- Hero Section Begin -->
+        <section class="hero" id="home" style="height: 50vh; min-height: 300px;">
+            <div id="heroCarousel" class="carousel slide h-100" data-ride="carousel" style="height: 100%;">
+                <ol class="carousel-indicators">
+                    <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#heroCarousel" data-slide-to="1"></li>
+                    <li data-target="#heroCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                        <img src="img/hero/hero4.webp" class="d-block w-100 h-100" alt="Ceramic Substrates" style="object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block"></div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="img/hero/hero3.webp" class="d-block w-100 h-100" alt="Metallized Substrates" style="object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block"></div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="img/hero/hero2.webp" class="d-block w-100 h-100" alt="Heat Sink Solutions" style="object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block"></div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="img/hero/hero1.webp" class="d-block w-100 h-100" alt="Heat Sink Solutions" style="object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block"></div>
+                    </div>
+                </div>
+                <style>
+                .carousel-control-prev-icon,
+                .carousel-control-next-icon {
+                    filter: invert(24%) sepia(17%) saturate(1232%) hue-rotate(170deg) brightness(93%) contrast(92%);
+                    width: 3rem;
+                    height: 3rem;
+                    background-size: 80% 80%;
+                }
+                .carousel-control-prev-icon,
+                .carousel-control-next-icon {
+                    filter: invert(24%) sepia(17%) saturate(1232%) hue-rotate(170deg) brightness(93%) contrast(92%);
+                }
+                </style>
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+    <!-- Hero Section End -->
+
+    <!-- Menu Section Begin -->
+
+    <div class="container mb-3 mt-3">
+            <div class="row text-center align-items-center">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 style="font-size: 32px;"><b>What are you looking for?</b></h2>
+                    </div>
+                </div>
+            </div>
+    </div>
+        <div class="container mb-3">
+            <div class="row text-center">
+
+                <style>
+                    .menu-hover-card {
+                        background: #fff;
+                        transition: 
+                            box-shadow 0.3s cubic-bezier(.4,2,.6,1), 
+                            transform 0.3s cubic-bezier(.4,2,.6,1);
+                        border-radius: 12px;
+                        box-shadow: 0 2px 8px rgba(40, 73, 90, 0.06);
+                        z-index: 1;
+                        position: relative;
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: inherit;
+                        min-height: 230px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-end; /* Align content to bottom */
+                        padding-bottom: 1.5rem;
+                    }
+                    .menu-hover-card:hover {
+                        box-shadow: 0 8px 24px rgba(40, 73, 90, 0.18), 0 1.5px 6px rgba(40, 73, 90, 0.10);
+                        transform: translateY(-8px) scale(1.04);
+                        z-index: 2;
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                    @media (max-width: 991px) {
+                        .menu-hover-card {
+                            min-height: 180px;
+                        }
+                    }
+                </style>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 w-25">
+                    <div class="menu-hover-card" onclick="window.location.href='./About_us.html'" style="height: 300px; width: auto;">
+                        <img src="./img/hero/Menu1.webp" class="img-fluid p-2" alt="High-power Lasers Ceramic Substrates" style="width: auto; max-height: 150px;">
+                        <h4 class="p-2" style="font-size: 20px"><b>About <br>Jimei</b></h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 w-25">
+                    <div class="menu-hover-card" onclick="window.location.href='./Bare_Ceramic_Substrates.html'" style="height: 300px; width: auto;">
+                        <img src="./img/hero/Menu2.webp" class="img-fluid p-2" alt="Semiconductor Microelectronics Ceramic Substrates" style="width: auto; max-height: 250px;">
+                        <h4 class="p-2" style="font-size: 20px"><b>Bare Ceramic <br>Substrates</b></h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 w-25">
+                    <div class="menu-hover-card" onclick="window.location.href='./Ceramic_Metalization_Substrates.html'" style="height: 300px; width: auto;">
+                        <img src="./img/hero/Menu3.webp" class="img-fluid p-2" alt="" style="width: auto; max-height: 250px;">
+                        <h4 class="p-2" style="font-size: 20px"><b>Metallized Ceramic <br>Substrates</b></h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 w-25">
+                    <div class="menu-hover-card" onclick="window.location.href='./Contact.html'" style="height: 300px; width: auto;">
+                        <img src="./img/hero/Menu4.webp" class="img-fluid p-2" alt="5G Communications Ceramic Substrates" style="width: auto; max-height: 150px;">
+                        <h4 class="p-2" style="font-size: 20px"><b>Contact<br> </b></h4>
+                    </div>
+                </div>
             </div>
         </div>
-                <!-- <div class="container mt-3 mb-3">
-            <div class="row align-items-center text-center">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="m-3">
-                            <img src="img/hero/banner-6.jpg" alt="Advanced packaging - Chiplet">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="m-3">
-                            <img src="img/hero/banner-7.jpg" alt="Advanced packaging - Chiplet">
-                        </div>
-                    </div>
-            </div>
-        </div> -->
 
-        <div class="container mt-3">
+     <!-- Menu Section end -->
 
-                <div class="row text-center align-items-center">
-
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="m-3">
-                            <h4 style="text-align: justify;"><b>Metalized ceramic substrates</b> combine the benefits of ceramic and metal materials, making them essential in the semiconductor 
-                            industry. They primarily serve to provide reliable electrical and thermal connections between electronic components and 
-                            printed circuit boards. Common ceramic materials used include <b>Aluminum Oxide (Al2O3)</b> and <b>Aluminum Nitride (AlN)</b>. 
-                            The metallization is typically carried out through <b>Direct Bonded Copper (DBC)</b> or <b>Direct Plated Copper (DPC)</b> processes.
-                            </h4>
-                        </div>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block"><h4>Direct Plated Copper (DPC)</h4></span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block"><h4>Direct Bonded Copper (DBC)</h4></span>
-                    </div>
-                        
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                            <img src="img/hero/banner-6.jpg" class="img-fluid w-75 pb-5"alt="Advanced packaging - Chiplet">
-                            <img src="img/hero/banner-7.jpg" class="img-fluid w-75" alt="Advanced packaging - Chiplet">
-                    </div>
-            </div>
-        </div>
-
-
-
-
-    </section>
-
-    <!-- Featured Section Begin -->
-    <section class="featured spad" id="products">
+    <!-- Product Display Section Begin -->
+    <section class="featured spad pt-5" id="products">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2><b>FEATURED PRODUCTS</b></h2>
+                        <h2 style="font-size: 32px;"><b>Product Display</b></h2>
                     </div>
                 </div>
             </div>
             <div class="row featured__filter bg-light pt-5">
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/categories/cat-2.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <span class="bg-white text-dark border border-dark rounded-pill px-3 py-1 d-inline-block" style="font-weight: bold;">Ceramic plate for TEC</span>
+                            <span class="text-dark d-inline-block" style="font-weight: bold; font-size: 16px;">Ceramic plate for TEC</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/categories/cat-3.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <span class="bg-white text-dark border border-dark rounded-pill px-3 py-1 d-inline-block" style="font-weight: bold;">Laser Array AlN</span>
+                            <span class="text-dark d-inline-block" style="font-weight: bold; font-size: 16px;">Laser Array AlN</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/categories/cat-4.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <span class="bg-white text-dark border border-dark rounded-pill px-3 py-1 d-inline-block" style="font-weight: bold;">Fused Quartz</span>
+                            <span class="text-dark d-inline-block" style="font-weight: bold; font-size: 16px;">Fused Quartz</span>
                         </div>                        
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/categories/cat-5.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <span class="bg-white text-dark border border-dark rounded-pill px-3 py-1 d-inline-block" style="font-weight: bold;">Heat Sink</span>
+                            <span class="text-dark d-inline-block" style="font-weight: bold; font-size: 16px;">Heat Sink</span>
                         </div>                        
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/categories/cat-6.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <span class="bg-white text-dark border border-dark rounded-pill px-3 py-1 d-inline-block" style="font-weight: bold;">Interdigitated Electrode</span>
+                            <span class="text-dark d-inline-block" style="font-weight: bold; font-size: 16px;">Interdigitated Electrode</span>
                         </div>                        
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/categories/cat-7.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <span class="bg-white text-dark border border-dark rounded-pill px-3 py-1 d-inline-block" style="font-weight: bold;">Isolation Spacer</span>
+                            <span class="text-dark d-inline-block" style="font-weight: bold; font-size: 16px;">Isolation Spacer</span>
                         </div>                        
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/categories/cat-8.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <span class="bg-white text-dark border border-dark rounded-pill px-3 py-1 d-inline-block" style="font-weight: bold;">Sink hole + Circular</span>
+                            <span class="text-dark d-inline-block" style="font-weight: bold; font-size: 16px;">Sink hole + Circular</span>
                         </div>                        
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/categories/cat-9.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <span class="bg-white text-dark border border-dark rounded-pill px-3 py-1 d-inline-block" style="font-weight: bold;">Encapsulation Dam</span>
+                            <span class="text-dark d-inline-block" style="font-weight: bold; font-size: 16px;">Encapsulation Dam</span>
                         </div>                        
                     </div>
                 </div>
+
+            </div>
+            <div class="col-lg-12 align-items-center text-center">
+                <a href="./Products.html" class="btn btn-dark mt-4 mb-4" style="font-weight: bold; font-size: 18px;">View All Products</a>
             </div>
         </div>
-
-
     </section>
-    <!-- Hero Section End -->
+    <!-- Product Display Section End -->
 
+    <!-- Manufacturing Section Begin -->
 
-    <!-- ABOUT Section Begin -->
-    <section class="featured spad" id="about">
-        <div class="container mt-3">
+    <div class="container mt-3">
             <div class="row text-center align-items-center">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2><b>ABOUT OUR COMPANY</b></h2>
+                        <h2 style="font-size: 32px;"><b>Production Floor</b></h2>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container mb-3">
-            <div class="row text-left">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                        <h4 style="text-align: justify;"><b>ABOUT US</b><br><br>Located in Building A4, First Industrial Zone, Haosan Linpokeng, 253 Nanpu Road, Xingiao Street, Bao’an District, Shenzhen, 
-                            we are a high-tech enterprise dedicated to the research, development, and production of ceramic metallization products. 
-                            With state-of-the-art manufacturing facilities and advanced technology, we offer comprehensive solutions for ceramic 
-                            metallization process design and manufacturing.
-                        </h4>
-                        <br>
-                        <br>
-                        <h4 style="text-align: justify;"><b>OUR STRENGTHS</b><br><br></h4>
-                            <li> <h4 style="text-align: justify;">Core team of 300+ professionals with years of expertise in ceramic metallization. </h4></li>
-                            <li> <h4 style="text-align: justify;">Advanced manufacturing facilities with cutting-edge equipment. </h4></li>
-                            <li> <h4 style="text-align: justify;">Rigorous quality control processes ensuring high product reliability. </h4></li>
-                            <li> <h4 style="text-align: justify;">Strong R&D capabilities to innovate and meet evolving market and technological demands. </h4></li>
-                            <li> <h4 style="text-align: justify;">Customer-centric approach with tailored solutions. </h4></li>
-                            <li> <h4 style="text-align: justify;">Stable mass production of high thermal conductivity laser heat sinks. </h4></li>
-                            <br>
-                </div>
-                            
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                        <h4 style="text-align: justify;">
-                            <b>MAIN PRODUCTS</b><br><br> Single/Double-sided metallization of:<br><br>
-                        </h4>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Aluminum Nitride (AIN)</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Aluminum Oxide (Al2O3)</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Beryllium Oxide (BeO)</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Silicon Nitride (Si3N4)</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Silicon Carbide (SiC)</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Fused Quartz (SiO2)</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Sapphire (Al2O3)</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Diamond (C)</span>
-                        <br><br><br>
-                        <h4 style="text-align: justify;">
-                            <b>APPLICATIONS</b><br><br>
-                        </h4>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">High-power Lasers</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Semiconductor Microelectronics</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Optical Communications</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">5G Communications</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Electric Vehicles (EV)</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Photovoltaic Inverters</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Aerospace & Defense</span>
-                        <span class="bg-dark text-white rounded-pill px-3 py-1 m-1 d-inline-block">Medical Electronics</span>
-                        <br><br><br>
-                        <h4 style="text-align: justify;">
-                            <b>CERTIFICATIONS</b><br><br>
-                        </h4>
-                        <img src="img/certificate.png" alt="ISO 9001 Certification" width="100px" height="auto" class="m-2">
-                </div>
-            </div>
-        </div>
+            <div class="row text-center">
 
-    </section>
-    <!-- ABOUT Section End -->
+                <div class="col-lg-3 col-md-4 col-sm-6 bg-light">
+                    <img src="./img/ProductionFloor/LaserDrilling.png" class="img-fluid p-2" alt="Laser Drilling Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Laser Drilling</b></h4>
+                    <p class= "p-2" style="text-align: center; font-size: 14px; color: black;">High-precision laser drilling for creating microvias and intricate patterns on ceramic substrates.
+                    </p>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/Sputtering.png" class="img-fluid p-2" alt="Sputtering Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Sputtering</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Advanced sputtering technology for depositing thin metal films on ceramic substrates, ensuring strong adhesion and conductivity.
+                    </p>
+                </div>
 
 
-    <!-- Blog Section Begin -->
-    <!-- <section class="from-blog spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title from-blog__title">
-                        <h2>From The Blog</h2>
-                    </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/Circuits.png" class="img-fluid p-2" alt="Circuits on Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Circuits</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Precision circuit patterning using photolithography and etching techniques to create reliable electrical pathways on ceramic substrates.
+                    </p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-1.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                <li><i class="fa fa-comment-o"></i> 5</li>
-                            </ul>
-                            <h5><a href="#">Cooking tips make cooking simple</a></h5>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                        </div>
-                    </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/Plating.png" class="img-fluid p-2" alt="Plating Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Plating</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        High-quality electroplating services to enhance the surface properties of metallized ceramic substrates, improving durability and performance.
+                    </p>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-2.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                <li><i class="fa fa-comment-o"></i> 5</li>
-                            </ul>
-                            <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                        </div>
-                    </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/Leveling_and_Polishing.png" class="img-fluid p-2" alt="Leveling and Polishing Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Leveling and Polishing</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Precision leveling and polishing to achieve ultra-smooth surfaces on ceramic substrates, essential for high-performance applications.
+                    </p>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-3.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                <li><i class="fa fa-comment-o"></i> 5</li>
-                            </ul>
-                            <h5><a href="#">Visit the clean farm in the US</a></h5>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                        </div>
-                    </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/FilmRemovalEtching.png" class="img-fluid p-2" alt="Film Removal Etching Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Film Removal Etching</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Advanced etching techniques for precise removal of unwanted metal films, ensuring clean and accurate circuit patterns on ceramic substrates.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/E_Test.png" class="img-fluid p-2" alt="E-Test Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>E-Test</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Comprehensive electrical testing to ensure the integrity and performance of metallized ceramic substrates, including continuity and insulation tests.        
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/Soldermask_and_Silkscreen.png" class="img-fluid p-2" alt="Soldermask and Silkscreen on Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Soldermask and Silkscreen</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Application of soldermask for protection and silkscreen for component identification, enhancing the functionality and aesthetics of ceramic substrates.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/SurfaceTreatment.png" class="img-fluid p-2" alt="Surface Treatment of Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Surface Treatment</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Specialized surface treatments to enhance adhesion, corrosion resistance, and overall performance of ceramic substrates in various applications.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/LaserShape.png" class="img-fluid p-2" alt="Laser Shaping of Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Laser Shape</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Precision laser cutting and shaping to create complex geometries and custom designs on ceramic substrates, meeting specific application requirements.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/FQC_and_FQA.png" class="img-fluid p-2" alt="FQC and FQA of Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>FQC and FQA</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Rigorous Final Quality Control (FQC) and Final Quality Assurance (FQA) processes to ensure each ceramic substrate meets stringent quality standards before shipment.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <img src="./img/ProductionFloor/Packing_and_shipping.png" class="img-fluid p-2" alt="Packing and Shipping of Ceramic Substrates">
+                    <h4 class="p-2" style="font-weight: bold; font-size: 16px;"><b>Packing and Shipping</b></h4>
+                    <p class="p-2" style="text-align: center; font-size: 14px; color: black;">
+                        Secure packing and reliable shipping solutions to ensure ceramic substrates arrive safely and on time to customers worldwide.
+                    </p>
                 </div>
             </div>
         </div>
-    </section> -->
-    <!-- Blog Section End -->
+    <!-- Manufacturing Section End -->
 
 
-        <!-- Contact Start -->
-    <section class="featured spad" id="contact">
-        <div class="container mt-3">
-            <div class="row text-center align-items-center">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2><b>CONTACT US</b></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="container mb-3">
-            <div class="row text-left bg-light p-5">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <h4 style="text-align: justify;"><b>Please Feel Free to Contact Us.</b><br><br>We’re here to help! Our team will provide a clear, 
-                        personalized quote tailored to your project needs. Reach out today to get started!
-                    </h4>
-                    <br>
-                    <br>
-                    <h4>
-                        <i class="fa fa-envelope me-3"></i> sales@jimei-materials.com
-                    </h4>
-                    <br>
-                    <a href="https://wa.me/8614745373293" target="_blank" rel="noopener noreferrer">
-                        <h4><i class="fa fa-whatsapp me-3"></i> Message on Whatsapp</h4>
-                    </a>
-                    <br>
-                    <a href="#" onclick="openWeChatModal(); return false;">
-                        <h4><i class="fa fa-weixin me-3"></i> Connect with us on WeChat</h4>
-                    </a>
 
-                    <a href="#" onclick="document.getElementById('wechatModal').style.display='block'">
-                    </a>
-
-                    <!-- Modal Background Overlay -->
-                    <div id="wechatOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-                        background:rgba(0, 0, 0, 0.5); z-index:999;">
-                    </div>
-
-                    <!-- Modal Box -->
-                    <div id="wechatModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
-                        background:#fff; padding:10px; box-shadow:0 0 20px rgba(0,0,0,0.5); z-index:1000; border-radius:8px;">
-                    <h3 class="mb-4 text-center pt-3 pb-3 border-bottom">Scan to connect on WeChat</h3>
-                    <img src="img/wechat_qr_code.jpeg" alt="Scan to connect on WeChat" style="width:60%; height:auto; display:block; margin:0 auto;">
-                        <div style="text-align:center; margin-top:10px;">
-                            <button class="btn btn-dark w-100 py-3" onclick="closeWeChatModal()">Close</button>
-                        </div>
-                    </div>
-
-                    <!-- JS to Open/Close Modal -->
-                    <script>
-                    function openWeChatModal() {
-                        document.getElementById('wechatModal').style.display = 'block';
-                        document.getElementById('wechatOverlay').style.display = 'block';
-                        document.body.style.overflow = 'hidden'; // prevent background scroll
-                    }
-
-                    function closeWeChatModal() {
-                        document.getElementById('wechatModal').style.display = 'none';
-                        document.getElementById('wechatOverlay').style.display = 'none';
-                        document.body.style.overflow = ''; // restore scroll
-                    }
-                    </script>
-                </div>
-                            
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <br>
-                    <br>
-                    <form action='https://forms.zohopublic.com/hmalikjimeima1/form/ContactUs/formperma/lmSNOVv2_WImUL2dnkoRN0wO9hq11tkyO6lUhV1qfKI/htmlRecords/submit' name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
-                        <input type="hidden" name="zf_referrer_name" value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
-                        <input type="hidden" name="zf_redirect_url" value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
-                        <input type="hidden" name="zc_gad" value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
-
-                        <div class="row g-3">
-                            <div class="col-xl-12 m-2">
-                                <input type="text" name="Name_First" fieldType=7 class="form-control bg-white border-2" placeholder="First" style="height: 55px;" maxlength="50" required>
-                            </div>
-                            <div class="col-xl-12 m-2">
-                                <input type="text" name="Name_Last" fieldType=7 class="form-control bg-white border-2" placeholder="Last" style="height: 55px;" maxlength="50" required>
-                            </div>
-                            <div class="col-12 m-2">
-                                <input type="email" name="Email" fieldType="9" class="form-control bg-white border-2" placeholder="Your Email" style="height: 55px;" maxlength="50" required>
-                            </div>
-                            <div class="col-12 m-2">
-                                <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneFormat="1" isCountryCodeEnabled=false maxlength="20" value="" fieldType=11 id="international_PhoneNumber_countrycode" class="form-control bg-white border-2" placeholder="Contact number" style="height: 55px;"/>
-                            </div>
-                            <div class="col-12 m-2">
-                                <textarea class="form-control bg-white border-2" rows="5" placeholder="Message" minlength="10" maxlength="1000" name="MultiLine"></textarea>
-                            </div>
-                            <div class="col-12 m-2">
-                                <button class="primary-btn text-white w-100 py-3" type="submit">Request A Quote</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- CONTACT Section End -->
 
 
 
@@ -583,7 +556,7 @@
                             <b>Address:</b><br> No. 10 Meiting Road, Industrial park, Duanzhou, Zhaoqing, Guangdong, China 526020
                         </div>
                         <div class="mt-3">
-                            <b>Factory Address:</b><br> Building A4, First Industrial Zone, Haosan Linpokeng, 253 Nanpu Road, Xinqiao Street, Bao'an District, Shenzhen Guangdong, China 518104
+                            <b>Factory Address:</b><br> First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, Guangdong, China 518104
                         </div>
                         <br>
 
@@ -593,12 +566,11 @@
                 <div class="col-lg-4 col-md-12 align-items-center text-center">
                     <div class="footer__widget">
                         <h6>Useful Links</h6>
-                         <li><a href="./index.html#about" style="color: black;">About Us</a></li>
-                        <li><a href="./index.html#products" style="color: black;">Products</a></li>
-                        <!-- <li><a href="#" style="color: black;">Services</a></li> -->
-                        <!-- <li><a href="#" style="color: black;">Privacy Policy</a></li> -->
-                        <!-- <li><a href="#" style="color: black;">Our Sitemap</a></li> -->
-                        <li><a href="index.html#contact" style="color: black;">Contact</a></li>
+                        <li><a href="./About_us.html" style="color: black;">About Us</a></li>
+                        <li><a href="./Products.html" style="color: black;">Featured Products</a></li>
+                        <li><a href="./Bare_Ceramic_Substrates.html" style="color: black;">Bare Ceramic Substrates</a></li>
+                        <li><a href="./Ceramic_Metalization_Substrates.html" style="color: black;">Metallized Ceramic Substrate</a></li>
+                        <li><a href="./Contact.html" style="color: black;">Contact</a></li>
                     </div>
                 </div>
 
@@ -610,7 +582,7 @@
                     
                    
                             <p>
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Zhaoqing Jimei Siyin Co.Ltd.
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Jimei Materials Co., Ltd.
                             </p>
                         
                     
@@ -629,8 +601,6 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
-
 
 </body>
 

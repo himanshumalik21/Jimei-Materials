@@ -163,6 +163,30 @@ ol {
 	letter-spacing: 2px;
 }
 
+.dropdown-btn-primary {
+	display: inline-block;
+	font-size: 20px;
+	padding: 10px 28px 10px;
+	color: #28495a;
+	font-weight: 700;
+	background: #f8f9fa;
+	border-bottom: #28495a;
+	border-width: thick;
+
+
+}
+
+.dropdown-btn-secondaty {
+	display: inline-block;
+	font-size: 14px;
+	padding: 10px 28px 10px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 700;
+	background: #28495a;
+	letter-spacing: 2px;
+}
+
 .site-btn {
 	font-size: 14px;
 	color: #28495a;
@@ -173,6 +197,11 @@ ol {
 	background: #d4dfe7;
 	border: none;
 }
+
+.btn-group .btn.active {
+      background-color: #0056b3; /* darker blue */
+      color: white;
+    }
 
 /* Preloder */
 
