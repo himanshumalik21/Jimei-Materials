@@ -1,0 +1,6 @@
+# Redirect index.html to root domain
+Redirect 301 /index.html https://jimei-materials.com/
+
+# Alternative method using mod_rewrite (more flexible)
+RewriteEngine On
+RewriteRule ^index\.html$ / [R=301,L]
