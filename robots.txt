@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /includes/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /config/
+Crawl-delay: 2
+
+Sitemap: https://jimei-materials.com/sitemap.xml
+
+# Common helpful directives for search engines
+User-agent: Googlebot
+Allow: /products/
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /products/
+Allow: /images/
+
+User-agent: Yandex
+Crawl-delay: 3
+
+# Block AI data scrapers that may violate terms
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
