@@ -1,28 +1,23 @@
 User-agent: *
 Allow: /
+
 Disallow: /admin/
 Disallow: /cgi-bin/
 Disallow: /includes/
 Disallow: /tmp/
 Disallow: /private/
 Disallow: /config/
-Crawl-delay: 2
 
-Sitemap: https://jimei-materials.com/sitemap.xml
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-json/
+Disallow: /search/
+Disallow: /ajax/
 
-# Common helpful directives for search engines
-User-agent: Googlebot
-Allow: /products/
-Allow: /images/
+Disallow: /*?s=
+Disallow: /*?redirect=
+Disallow: /*?replytocom=
 
-User-agent: Bingbot
-Allow: /products/
-Allow: /images/
-
-User-agent: Yandex
-Crawl-delay: 3
-
-# Block AI data scrapers that may violate terms
 User-agent: CCBot
 Disallow: /
 
@@ -34,3 +29,11 @@ Disallow: /
 
 User-agent: Claude-Web
 Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+Sitemap: https://www.jimei-materials.com/sitemap.xml

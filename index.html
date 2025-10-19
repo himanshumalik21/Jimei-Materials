@@ -594,49 +594,132 @@ window.addEventListener('DOMContentLoaded', function() {
                     </p>
 
                     <div class="trusted-industries my-4">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-10">
-                                <ul class="list-group list-group-horizontal-lg flex-wrap justify-content-center" style="border: none; background: transparent;">
-                                    <li class="list-group-item border-0 m-2 px-4 py-3 shadow-sm rounded" style="background: #d4dfe7; font-size: 1.1rem; color: #18303d; font-weight: 600;">
-                                        <i class="fa fa-car mr-2" aria-hidden="true"></i> Electric Vehicle Power Modules
-                                    </li>
-                                    <li class="list-group-item border-0 m-2 px-4 py-3 shadow-sm rounded" style="background: #d4dfe7; font-size: 1.1rem; color: #18303d; font-weight: 600;">
-                                        <i class="fa fa-sun-o mr-2" aria-hidden="true"></i> Renewable Energy Systems
-                                    </li>
-                                    <li class="list-group-item border-0 m-2 px-4 py-3 shadow-sm rounded" style="background: #d4dfe7; font-size: 1.1rem; color: #18303d; font-weight: 600;">
-                                        <i class="fa fa-industry mr-2" aria-hidden="true"></i> Industrial Motor Drives
-                                    </li>
-                                    <li class="list-group-item border-0 m-2 px-4 py-3 shadow-sm rounded" style="background: #d4dfe7; font-size: 1.1rem; color: #18303d; font-weight: 600;">
-                                        <i class="fa fa-lightbulb-o mr-2" aria-hidden="true"></i> LED High-Power Lighting
-                                    </li>
-                                    <li class="list-group-item border-0 m-2 px-4 py-3 shadow-sm rounded" style="background: #d4dfe7; font-size: 1.1rem; color: #18303d; font-weight: 600;">
-                                        <i class="fa fa-signal mr-2" aria-hidden="true"></i> 5G RF Power Amplifiers
-                                    </li>
-                                    <li class="list-group-item border-0 m-2 px-4 py-3 shadow-sm rounded" style="background: #d4dfe7; font-size: 1.1rem; color: #18303d; font-weight: 600;">
-                                        <i class="fa fa-fighter-jet mr-2" aria-hidden="true"></i> Aerospace &amp; Defense Electronics
-                                    </li>
-                                </ul>
+                        <div class="trusted-industries-grid d-flex flex-wrap justify-content-center" role="list" aria-label="Trusted industries">
+                            <div class="ti-item" role="listitem" tabindex="0">
+                                <div class="ti-icon"><i class="fa fa-car" aria-hidden="true"></i></div>
+                                <div class="ti-text">Electric Vehicle Power Modules</div>
+                            </div>
+                            <div class="ti-item" role="listitem" tabindex="0">
+                                <div class="ti-icon"><i class="fa fa-sun-o" aria-hidden="true"></i></div>
+                                <div class="ti-text">Renewable Energy Systems</div>
+                            </div>
+                            <div class="ti-item" role="listitem" tabindex="0">
+                                <div class="ti-icon"><i class="fa fa-industry" aria-hidden="true"></i></div>
+                                <div class="ti-text">Industrial Motor Drives</div>
+                            </div>
+                            <div class="ti-item" role="listitem" tabindex="0">
+                                <div class="ti-icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+                                <div class="ti-text">LED High-Power Lighting</div>
+                            </div>
+                            <div class="ti-item" role="listitem" tabindex="0">
+                                <div class="ti-icon"><i class="fa fa-signal" aria-hidden="true"></i></div>
+                                <div class="ti-text">5G RF Power Amplifiers</div>
+                            </div>
+                            <div class="ti-item" role="listitem" tabindex="0">
+                                <div class="ti-icon"><i class="fa fa-fighter-jet" aria-hidden="true"></i></div>
+                                <div class="ti-text">Aerospace &amp; Defense Electronics</div>
                             </div>
                         </div>
+
                         <style>
-                            @media (max-width: 991.98px) {
-                                .trusted-industries h2 {
-                                    font-size: 1.1rem !important;
-                                }
-                                .trusted-industries .list-group-item {
-                                    font-size: 0.95rem !important;
-                                    padding: 0.75rem 1rem !important;
-                                }
+                            .trusted-industries-grid {
+                                gap: 1rem;
+                                margin: 0 auto;
+                                padding: 0.25rem;
                             }
+
+                            /* ensure pointer shows as hand for the item and its children (overrides other rules) */
+                            .ti-item,
+                            .ti-item * {
+                                cursor: default !important;
+                                pointer-events: auto;
+                            }
+
+                            /* Tile */
+                            .ti-item {
+                                display: flex;
+                                flex-direction: column; /* icon on top */
+                                align-items: center;
+                                text-align: center;
+                                gap: 0.6rem;
+                                background: linear-gradient(180deg, #ffffff 0%, #f4fbff 100%);
+                                border-radius: 12px;
+                                padding: 1rem;
+                                box-shadow: 0 6px 18px rgba(40,73,90,0.06);
+                                transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+                                color: #18303d;
+                                font-weight: 600;
+                                min-height: 110px;
+                                border: 1px solid rgba(40,73,90,0.06);
+                                text-decoration: none;
+                                flex: 0 0 calc(33.333% - 1rem); /* default: 3 per row on large screens */
+                                cursor: default;
+                            }
+
+                            .ti-item:hover,
+                            .ti-item:focus {
+                                transform: translateY(-6px);
+                                box-shadow: 0 18px 40px rgba(40,73,90,0.12);
+                                background: linear-gradient(180deg, #eaf6fb 0%, #d4e9f2 100%);
+                                cursor: pointer;
+                            }
+
+                            .ti-icon {
+                                width: 72px;
+                                height: 72px;
+                                min-width: 72px;
+                                min-height: 72px;
+                                border-radius: 12px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: linear-gradient(135deg, rgba(40,73,90,0.08), rgba(40,73,90,0.02));
+                                color: #28495a;
+                                box-shadow: inset 0 -2px 6px rgba(0,0,0,0.02);
+                            }
+
+                            .ti-icon i {
+                                font-size: 2rem; /* larger icon */
+                                line-height: 1;
+                            }
+
+                            .ti-text {
+                                font-size: 1.05rem;
+                                color: #18303d;
+                                padding: 0 0.25rem;
+                            }
+
+                            /* Medium / large screens: keep 3 per row */
+                            @media (min-width: 992px) {
+                                .ti-item { flex: 0 0 calc(33.333% - 1rem); max-width: calc(33.333% - 1rem); }
+                                .ti-icon { width: 72px; height: 72px; min-width: 72px; min-height: 72px; }
+                                .ti-icon i { font-size: 2rem; }
+                                .ti-text { font-size: 1.05rem; }
+                            }
+
+                            /* Tablet: 3 per row (fits medium screens) */
+                            @media (max-width: 991.98px) and (min-width: 768px) {
+                                .ti-item { flex: 0 0 calc(33.333% - 1rem); max-width: calc(33.333% - 1rem); min-height: 100px; padding: 0.9rem; }
+                                .ti-icon { width: 60px; height: 60px; min-width: 60px; min-height: 60px; }
+                                .ti-icon i { font-size: 1.6rem; }
+                                .ti-text { font-size: 1rem; }
+                            }
+
+                            /* Small screens: 2 per row */
                             @media (max-width: 767.98px) {
-                                .trusted-industries .list-group {
-                                    flex-direction: column !important;
-                                    align-items: stretch !important;
-                                }
-                                .trusted-industries .list-group-item {
-                                    margin: 0.5rem 0 !important;
-                                    font-size: 0.9rem !important;
-                                }
+                                .trusted-industries-grid { gap: 0.6rem; }
+                                .ti-item { flex: 0 0 calc(50% - 0.75rem); max-width: calc(50% - 0.75rem); min-height: 92px; padding: 0.75rem; }
+                                .ti-icon { width: 52px; height: 52px; min-width: 52px; min-height: 52px; border-radius: 10px; }
+                                .ti-icon i { font-size: 1.4rem; }
+                                .ti-text { font-size: 0.95rem; }
+                            }
+
+                            /* Very small phones */
+                            @media (max-width: 420px) {
+                                .ti-item { padding: 0.6rem; }
+                                .ti-icon { width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
+                                .ti-icon i { font-size: 1.2rem; }
+                                .ti-text { font-size: 0.88rem; }
                             }
                         </style>
                     </div>
