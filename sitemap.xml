@@ -1,92 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- The canonical homepage is the most important page -->
-  <url>
-    <loc>https://jimei-materials.com/</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Use the actual date you last updated the homepage -->
-    <priority>1.00</priority>
-  </url>
+    <url>
+    <loc>https://jimei-materials.com/</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
 
-  <!-- Key product category pages have high priority -->
-  <url>
-    <loc>https://jimei-materials.com/Direct_Plated_Copper.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://jimei-materials.com/Direct_Bonded_Copper.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://jimei-materials.com/Article_DBC.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://jimei-materials.com/Article_DPC.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.80</priority>
-  </url>
-    <url>
-    <loc>https://jimei-materials.com/Article_Bare_Ceramics.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.80</priority>
-  </url>
-      <url>
-    <loc>https://jimei-materials.com/Article_Metallization_Ceramics.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.80</priority>
-  </url>
-    <url>
-    <loc>https://jimei-materials.com/Bare_Ceramic_Substrates.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.70</priority>
-  </url>
+    <url>
+    <loc>https://jimei-materials.com/Direct_Bonded_Copper.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://jimei-materials.com/Direct_Plated_Copper.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://jimei-materials.com/Ceramic_Metalization_Substrates.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://jimei-materials.com/Bare_Ceramic_Substrates.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 
-  <url>
-    <loc>https://jimei-materials.com/Ceramic_Metalization_Substrates.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.70</priority>
-  </url>
+    <url>
+    <loc>https://jimei-materials.com/Article_DBC.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jimei-materials.com/Article_DPC.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jimei-materials.com/Article_Bare_Ceramics.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jimei-materials.com/Article_Metallization_Ceramics.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 
-  <url>
-    <loc>https://jimei-materials.com/Bare_Ceramic_Substrates.html.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.70</priority>
-  </url>
-
-
-  <!-- The main products page is a directory, so slightly lower priority -->
-  <url>
-    <loc>https://jimei-materials.com/Products.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.70</priority>
-  </url>
-
-  <!-- Contact page is important for conversions -->
-  <url>
-    <loc>https://jimei-materials.com/Contact.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.60</priority>
-  </url>
-
-  <!-- About Us is important for trust but less critical for search -->
-  <url>
-    <loc>https://jimei-materials.com/About_us.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.50</priority>
-  </url>
-
-    <url>
-    <loc>https://jimei-materials.com/resources.html</loc>
-    <lastmod>2025-10-17</lastmod> <!-- Example: Updated when product info was last changed -->
-    <priority>0.50</priority>
-  </url>
+    <url>
+    <loc>https://jimei-materials.com/Products.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://jimei-materials.com/Contact.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://jimei-materials.com/About_us.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://jimei-materials.com/resources.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
 
 </urlset>
