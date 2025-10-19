@@ -59,12 +59,12 @@
     <meta name="theme-color" content="#28495a">
 
 
-    <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": ["Organization", "ManufacturingCompany"],
   "name": "Jimei Materials",
-  "description": "Manufacturer of Ceramic Metallization Substrates, DBC and DPC substrates for semiconductor, power electronics, and advanced packaging applications",
+  "description": "Leading manufacturer of Ceramic Metallization Substrates, DBC and DPC substrates for semiconductor packaging, power electronics, and thermal management applications",
   "url": "https://www.jimei-materials.com",
   "logo": "https://jimei-materials.com/img/logo.webp",
   "telephone": "+86-147-4537-3293",
@@ -79,92 +79,106 @@
     "addressCountry": "CN"
   },
 
-  <!-- TARGETING TOP 15 SEMICONDUCTOR COUNTRIES -->
   "areaServed": [
-    {"@type": "Country", "name": "Taiwan", "description": "Advanced foundry and semiconductor packaging"},
-    {"@type": "Country", "name": "South Korea", "description": "Memory chips and foundry services"},
-    {"@type": "Country", "name": "United States", "description": "Semiconductor manufacturing and R&D"},
-    {"@type": "Country", "name": "India", "description": "Growing domestic semiconductor production"},
+    {"@type": "Country", "name": "Taiwan", "description": "Advanced semiconductor foundry and packaging"},
+    {"@type": "Country", "name": "South Korea", "description": "Memory chips and semiconductor manufacturing"},
+    {"@type": "Country", "name": "United States", "description": "Semiconductor fabrication and R&D centers"},
     {"@type": "Country", "name": "Japan", "description": "Semiconductor equipment and materials"},
+    {"@type": "Country", "name": "India", "description": "Domestic semiconductor production"},
     {"@type": "Country", "name": "Singapore", "description": "Semiconductor manufacturing hub"},
     {"@type": "Country", "name": "Germany", "description": "European semiconductor production"},
-    {"@type": "Country", "name": "Israel", "description": "Semiconductor R&D and manufacturing"},
-    {"@type": "Country", "name": "Malaysia", "description": "Testing and packaging operations"},
+    {"@type": "Country", "name": "Malaysia", "description": "Semiconductor testing and packaging"},
     {"@type": "Country", "name": "Netherlands", "description": "Semiconductor equipment manufacturing"},
-    {"@type": "Country", "name": "Ireland", "description": "European semiconductor fabrication"},
-    {"@type": "Country", "name": "France", "description": "Semiconductor research and production"},
-    {"@type": "Country", "name": "Vietnam", "description": "Emerging semiconductor manufacturing"},
-    {"@type": "Country", "name": "Thailand", "description": "Backend semiconductor operations"},
-    {"@type": "Country", "name": "Philippines", "description": "Semiconductor testing and assembly"}
+    {"@type": "Country", "name": "Vietnam", "description": "Emerging semiconductor manufacturing"}
   ],
 
   "makesOffer": [
     {
       "@type": "Offer",
       "itemOffered": {
-        "@type": "Service",
-        "name": "Ceramic Metallization Substrates for Semiconductor Packaging",
-        "description": "Advanced ceramic substrates for chip packaging, thermal management, and power distribution in semiconductor devices"
+        "@type": "Product",
+        "name": "Direct Bonded Copper (DBC) Substrates",
+        "description": "High thermal conductivity DBC ceramic substrates for IGBT modules, power semiconductors, and automotive power modules",
+        "category": "Power Semiconductor Packaging"
       },
-      "areaServed": ["TW", "KR", "US", "JP", "SG", "DE", "IN"]
+      "areaServed": ["TW", "KR", "US", "JP", "DE", "IN"],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Power Semiconductor Manufacturers"
+      }
     },
     {
       "@type": "Offer",
       "itemOffered": {
-        "@type": "Service", 
-        "name": "Direct Bonded Copper (DBC) Substrates for Power Semiconductors",
-        "description": "High thermal conductivity DBC substrates for IGBT modules, power devices, and automotive semiconductors"
+        "@type": "Product", 
+        "name": "Direct Plated Copper (DPC) Substrates",
+        "description": "Precision DPC ceramic substrates for RF semiconductors, advanced packaging, and fine-pitch applications",
+        "category": "Advanced Semiconductor Packaging"
       },
-      "areaServed": ["US", "DE", "JP", "KR", "TW", "IN"]
+      "areaServed": ["TW", "KR", "US", "JP", "SG", "VN"],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "RF and Advanced Packaging Foundries"
+      }
     },
     {
       "@type": "Offer",
       "itemOffered": {
-        "@type": "Service",
-        "name": "Direct Plated Copper (DPC) Substrates for Advanced Packaging", 
-        "description": "Precision DPC ceramic substrates for fine-pitch interconnects, RF devices, and high-density semiconductor packaging"
+        "@type": "Product",
+        "name": "Ceramic Metallization Substrates", 
+        "description": "Advanced ceramic substrates with metallization for semiconductor packaging, thermal management, and power distribution",
+        "category": "Semiconductor Packaging Materials"
       },
-      "areaServed": ["TW", "KR", "US", "JP", "VN", "MY"]
+      "areaServed": ["TW", "KR", "US", "JP", "MY", "SG"],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Semiconductor Package Assembly"
+      }
     },
     {
       "@type": "Offer",
       "itemOffered": {
-        "@type": "Service",
-        "name": "Thermal Management Solutions for Semiconductor Fabs",
-        "description": "Custom ceramic heat spreaders and substrates for semiconductor manufacturing equipment and process tools"
+        "@type": "Product",
+        "name": "Thermoelectric Cooling Substrates",
+        "description": "Ceramic substrates for Peltier modules and thermoelectric cooling solutions in semiconductor testing and laser applications",
+        "category": "Thermal Management Solutions"
       },
-      "areaServed": ["NL", "JP", "US", "KR", "TW", "SG"]
+      "areaServed": ["US", "JP", "DE", "KR", "TW"],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Thermal Management and Test Equipment"
+      }
     }
   ],
 
-  <!-- INDUSTRY-SPECIFIC EXPERTISE -->
   "knowsAbout": [
     "Semiconductor Packaging Substrates",
+    "Direct Bonded Copper (DBC) Technology",
+    "Direct Plated Copper (DPC) Process",
     "Power Device Thermal Management",
-    "Advanced Ceramic Metallization",
-    "DBC Technology for IGBT Modules",
-    "DPC Process for RF Semiconductors",
+    "Ceramic Metallization for Electronics",
+    "IGBT Module Substrates",
+    "RF Semiconductor Packaging",
+    "Advanced Chip Packaging",
     "Thermal Interface Materials",
-    "Chip-Scale Packaging Solutions",
-    "Fan-Out Wafer Level Packaging",
-    "3D IC Integration Substrates",
     "High-Power LED Packaging",
     "Automotive Power Modules",
     "5G RF Power Amplifiers",
     "Peltier Cooling Substrates",
-    "Peltier Modules",
-    "Thermoelectric Cooling Solutions",
-    "Micro Thermoelectric Modules"
-
+    "Thermoelectric Modules",
+    "Laser Array Packaging",
+    "Encapsulation Dam Technology",
+    "Fan-Out Wafer Level Packaging",
+    "3D IC Integration Substrates"
   ],
 
-  <!-- SEMICONDUCTOR INDUSTRY CREDENTIALS -->
   "industry": "Semiconductor Manufacturing Materials",
   "serviceType": [
     "Ceramic Substrate Manufacturing",
     "Semiconductor Packaging Materials",
     "Thermal Management Solutions",
-    "Power Electronics Substrates"
+    "Power Electronics Substrates",
+    "Custom Metallization Services"
   ],
 
   "hasCredential": [
@@ -182,7 +196,6 @@
     "maxValue": 300
   },
 
-  <!-- GLOBAL TRADE CAPABILITIES -->
   "additionalProperty": [
     {
       "@type": "PropertyValue",
@@ -198,18 +211,32 @@
       "@type": "PropertyValue",
       "name": "Minimum Order Quantity",
       "value": "Flexible MOQ for semiconductor customers"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Substrate Materials",
+      "value": "Alumina (Al2O3), Aluminum Nitride (AlN), Silicon Nitride (Si3N4)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Copper Thickness Range",
+      "value": "0.1mm to 0.6mm for DBC, 0.005mm to 0.1mm for DPC"
     }
   ],
 
   "sameAs": [
     "https://www.linkedin.com/company/jimei-materials"
-  ]
+  ],
+
+  "brand": {
+    "@type": "Brand",
+    "name": "Jimei Materials",
+    "description": "Premium ceramic substrate solutions for semiconductor and power electronics industries",
+    "logo": "https://jimei-materials.com/img/logo.webp"
+  }
 }
 </script>
 
-
-
-</head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF30RCX51H"></script>
@@ -267,6 +294,8 @@
     background: #18303d;
 }
 </style>
+
+
 <script>
 window.addEventListener('DOMContentLoaded', function() {
     var btn = document.createElement('button');
@@ -286,21 +315,7 @@ window.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</head>
 
 
 <body>
@@ -396,7 +411,7 @@ window.addEventListener('DOMContentLoaded', function() {
     </header>
     <!-- Header Section End -->
 
-    <section class="article-section py-5" style="margin-top: 75px;">
+    <section class="hero article-section py-5" style="margin-top: 75px;">
         <style>
             @media (max-width: 991.98px) {
                 .article-section {
@@ -435,10 +450,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
             }
         </style>
-    </section>
 
-        <!-- Hero Section Begin -->
-        <section class="hero" id="home">
             <div id="heroCarousel" class="carousel slide h-100" data-ride="carousel" style="height: 100%;">
                 <ol class="carousel-indicators">
                     <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
@@ -447,34 +459,26 @@ window.addEventListener('DOMContentLoaded', function() {
                 </ol>
                 <div class="carousel-inner h-100">
                     <div class="carousel-item active h-100 position-relative">
-                        <img src="img/hero/hero4.webp" class="d-block w-100 h-100 hero-img" alt="Ceramic Substrates" style="object-fit: scale-down;">
+                        <img src="img/hero/hero4.webp" class="d-block w-100 h-100 hero-img" alt="Ceramic Substrates" style="object-fit: cover;">
                         <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(40,73,90,0.18);"></div>
                         <div class="carousel-caption d-none d-md-block"></div>
                     </div>
                     <div class="carousel-item h-100 position-relative">
-                        <img src="img/hero/hero3.webp" class="d-block w-100 h-100 hero-img" alt="Metallized Substrates" style="object-fit: scale-down;">
+                        <img src="img/hero/hero3.webp" class="d-block w-100 h-100 hero-img" alt="Metallized Substrates" style="object-fit: cover;">
                         <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(40,73,90,0.18);"></div>
                         <div class="carousel-caption d-none d-md-block"></div>
                     </div>
                     <div class="carousel-item h-100 position-relative">
-                        <img src="img/hero/hero2.webp" class="d-block w-100 h-100 hero-img" alt="Heat Sink Solutions" style="object-fit: scale-down;">
+                        <img src="img/hero/hero2.webp" class="d-block w-100 h-100 hero-img" alt="Heat Sink Solutions" style="object-fit: cover;">
                         <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(40,73,90,0.18);"></div>
                         <div class="carousel-caption d-none d-md-block"></div>
                     </div>
                     <div class="carousel-item h-100 position-relative">
-                        <img src="img/hero/hero1.webp" class="d-block w-100 h-100 hero-img" alt="Heat Sink Solutions" style="object-fit: scale-down;">
+                        <img src="img/hero/hero1.webp" class="d-block w-100 h-100 hero-img" alt="Heat Sink Solutions" style="object-fit: cover;">
                         <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(40,73,90,0.18);"></div>
                         <div class="carousel-caption d-none d-md-block"></div>
                     </div>
                 </div>
-                <style>
-                    @media (max-width: 767.98px) {
-                        .hero {
-                            display: none !important;
-                            visibility: hidden;
-                        }
-                    }
-                </style>
                 <style>
                 .carousel-control-prev-icon,
                 .carousel-control-next-icon {
