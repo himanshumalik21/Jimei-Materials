@@ -367,7 +367,7 @@ window.addEventListener('DOMContentLoaded', function() {
     <footer class="footer spad" id="footer">
         <div class="container">
             <div class="row align-items-center text-center">
-                <div class="col-lg-4 col-md-12">
+                <div class="col-12">
                     <div class="footer__about">
                         <div class="footer__about__logo">
                             <a href="./index.html"><img src="img/logo.webp" alt="Jimei Materials Logo" width="150px" height="auto"></a>
@@ -375,26 +375,80 @@ window.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
 
-                <div class="col-lg-8 col-md-12 align-items-center text-center">
-                    <div class="footer__widget">
-                        <h6>Useful Links</h6>
-                        <a href="./About_us.html" style="color: black; white-space: nowrap; font-size: 1.05rem;">About Us</a>
-                        |
-                        <a href="./Products.html" style="color: black; white-space: nowrap; font-size: 1.05rem;">Featured Products</a>
-                        |
-                        <a href="./Bare_Ceramic_Substrates.html" style="color: black; white-space: nowrap; font-size: 1.05rem;">Bare Ceramic Substrates</a>
-                        |
-                        <a href="./Direct_Plated_Copper.html" style="color: black; white-space: nowrap; font-size: 1.05rem;">Direct Plated Copper (DPC)</a>
-                        |
-                        <a href="./Direct_Bonded_Copper.html" style="color: black; white-space: nowrap; font-size: 1.05rem;">Direct Bonded Copper (DBC)</a>
-                        |
-                        <a href="./Contact.html" style="color: black; white-space: nowrap; font-size: 1.05rem;">Contact</a>
-                    </div>
+                <div class="col-12 align-items-center text-center">
+                    <nav class="footer__links d-flex flex-wrap justify-content-center gap-2" aria-label="Footer navigation">
+                        <a href="./About_us.html" class="footer-link px-2 py-1">About Us</a>
+                        <span class="footer-divider mx-1">|</span>
+                        <a href="./Products.html" class="footer-link px-2 py-1">Products</a>
+                        <span class="footer-divider mx-1">|</span>
+                        <a href="./Bare_Ceramic_Substrates.html" class="footer-link px-2 py-1">Bare Ceramic Substrates</a>
+                        <span class="footer-divider mx-1">|</span>
+                        <a href="./Direct_Plated_Copper.html" class="footer-link px-2 py-1">DPC Substrates</a>
+                        <span class="footer-divider mx-1">|</span>
+                        <a href="./Direct_Bonded_Copper.html" class="footer-link px-2 py-1">DBC Substrates</a>
+                        <span class="footer-divider mx-1">|</span>
+                        <a href="./Contact.html" class="footer-link px-2 py-1">Contact</a>
+                    </nav>
+                    <style>
+                        .footer__links .footer-link {
+                            color: #18303d;
+                            font-size: 1.05rem;
+                            text-decoration: none;
+                            transition: color 0.2s;
+                            border-radius: 6px;
+                        }
+                        .footer__links .footer-link:hover {
+                            color: #28495a;
+                            background: #d4dfe7;
+                            text-decoration: none;
+                        }
+                        .footer-divider {
+                            color: #28495a;
+                            font-weight: 600;
+                            font-size: 1.05rem;
+                        }
+                        @media (max-width: 767.98px) {
+                            .footer__links .footer-link,
+                            .footer-divider {
+                                font-size: 0.85rem !important;
+                                padding: 0.5em 0.3em !important;
+                            }
+                        }
+                    </style>
                 </div>
             </div>
 
+            <div class="row align-items-center text-center">
+                <div class="col-12">
+                    <div class="footer__social">
+                        <!-- <h6 style="font-size: 1.05rem; font-weight: 600; color: #18303d;">Connect with us</h6> -->
+                        <a href="https://www.linkedin.com/company/jimei-materials/" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        <!-- <a href="#" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="Twitter"><i class="fa fa-twitter"></i></a> -->
+                        <!-- <a href="#" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="Facebook"><i class="fa fa-facebook"></i></a> -->
+                        <!-- <a href="#" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="YouTube"><i class="fa fa-youtube"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <style>
+                .footer__social a:hover {
+                    color: #18303d !important;
+                    text-decoration: none;
+                    transform: scale(1.15);
+                    transition: color 0.2s, transform 0.2s;
+                }
+                @media (max-width: 767.98px) {
+                    .footer__social h6 {
+                        font-size: 0.85rem !important;
+                    }
+                    .footer__social a {
+                        font-size: 1.2rem !important;
+                        margin: 0 6px !important;
+                    }
+                }
+            </style>
+
             <div class="row align-items-center text-center mt-3">
-                <div class="col-lg-12 align-items-center text-center">
+                <div class="col-12 align-items-center text-center">
                     <p>
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Jimei Materials Co., Ltd.
                     </p>
