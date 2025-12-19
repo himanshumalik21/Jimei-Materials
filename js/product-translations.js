@@ -166,13 +166,13 @@
         
         zh: {
             // 元标签 - 微调以更匹配产品目录页的搜索意图
-            "products_page_title": "陶瓷基板产品目录 | DBC/DPC陶瓷基板方案 | 吉美材料",
-            "products_meta_description": "探索吉美材料完整的陶瓷基板产品线：直接覆铜(DBC)、直接镀铜(DPC)及裸陶瓷基板。专为功率电子、电动汽车、5G及半导体应用设计的高性能热管理解决方案。",
+            "products_page_title": "陶瓷基板产品目录 | DBC/DPC陶瓷基板方案 | 集美材料",
+            "products_meta_description": "探索集美材料完整的陶瓷基板产品线：直接覆铜(DBC)、直接镀铜(DPC)及裸陶瓷基板。专为功率电子、电动汽车、5G及半导体应用设计的高性能热管理解决方案。",
             "products_meta_keywords": "DBC陶瓷基板, DPC陶瓷基板, 陶瓷基板产品, 氮化铝基板, 氧化铝基板, 功率电子基板, 热管理基板, IGBT基板, 射频基板, 半导体封装基板, 陶瓷散热片",
-            "products_og_title": "陶瓷基板产品总览 | DBC/DPC解决方案 | 吉美材料",
-            "products_og_description": "吉美材料提供全系列高性能陶瓷基板，包括DBC、DPC及裸陶瓷基板，满足功率电子与先进热管理需求。",
-            "products_twitter_title": "陶瓷基板产品总览 | DBC/DPC解决方案 | 吉美材料",
-            "products_twitter_description": "吉美材料提供全系列高性能陶瓷基板，包括DBC、DPC及裸陶瓷基板，满足功率电子与先进热管理需求。",
+            "products_og_title": "陶瓷基板产品总览 | DBC/DPC解决方案 | 集美材料",
+            "products_og_description": "集美材料提供全系列高性能陶瓷基板，包括DBC、DPC及裸陶瓷基板，满足功率电子与先进热管理需求。",
+            "products_twitter_title": "陶瓷基板产品总览 | DBC/DPC解决方案 | 集美材料",
+            "products_twitter_description": "集美材料提供全系列高性能陶瓷基板，包括DBC、DPC及裸陶瓷基板，满足功率电子与先进热管理需求。",
             
             // 面包屑导航
             "breadcrumb_home": "首页",
@@ -294,9 +294,9 @@
             "cta_phone": "电话: +86-147-4537-3293",
             
             // 页脚 (与首页风格统一)
-            "footer_description": "吉美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+            "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
             "footer_products": "产品中心",
-            "footer_company": "关于吉美",
+            "footer_company": "关于集美",
             "footer_contact": "联系我们",
             "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
             "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",

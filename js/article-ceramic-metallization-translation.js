@@ -172,11 +172,11 @@
     zh: {
          // 元数据与结构元素
         "article_page_title": "陶瓷金属化工艺：技术综述与可靠性考量 | JIMEI 陶瓷基板",
-        "article_meta_description": "全面解析陶瓷金属化工艺，涵盖DBC与DPC基板的工艺技术、方法及可靠性考量。吉美材料专家的深度技术洞见。",
+        "article_meta_description": "全面解析陶瓷金属化工艺，涵盖DBC与DPC基板的工艺技术、方法及可靠性考量。集美材料专家的深度技术洞见。",
         "article_meta_keywords": "陶瓷金属化, DBC工艺, DPC技术, 金属化陶瓷基板, 热管理, 电子封装, 功率电子, 可靠性测试",
-        "article_og_title": "陶瓷金属化工艺：技术综述与可靠性 | 吉美材料",
+        "article_og_title": "陶瓷金属化工艺：技术综述与可靠性 | 集美材料",
         "article_og_description": "关于陶瓷金属化方法的技术概览，包括DBC与DPC基板的工艺步骤与可靠性考量。",
-        "article_twitter_title": "陶瓷金属化工艺：技术综述与可靠性 | 吉美材料",
+        "article_twitter_title": "陶瓷金属化工艺：技术综述与可靠性 | 集美材料",
         "article_twitter_description": "关于陶瓷金属化方法的技术概览，包括工艺步骤与可靠性考量。",
         "skip_to_content": "跳至主要内容",
         
@@ -188,7 +188,7 @@
         "nav_bare": "裸陶瓷基板",
         "nav_all_products": "全部产品",
         "nav_resources": "技术资源",
-        "nav_about": "关于吉美",
+        "nav_about": "关于集美",
         "nav_contact": "联系我们",
         "nav_request_quote": "在线询价",
         
@@ -278,7 +278,7 @@
         "application4_title": "医疗设备与传感器",
         "application4_description": "气密密封的金属化陶瓷用于可植入电子设备、传感器和诊断设备，确保生物相容性和可靠性。",
             
-        "technical_note": "<strong>专家洞见:</strong> 在吉美材料，我们专注于根据特定应用需求优化金属化工艺，通过严格的测试和质量控制，在热性能、电气特性和长期可靠性之间取得最佳平衡。",
+        "technical_note": "<strong>专家洞见:</strong> 在集美材料，我们专注于根据特定应用需求优化金属化工艺，通过严格的测试和质量控制，在热性能、电气特性和长期可靠性之间取得最佳平衡。",
             
         "article_section6_title": "结论",
         "article_conclusion": "陶瓷金属化工艺是开发高性能电子设备的基础，它将技术陶瓷的优势与金属互连的功能性相结合。通过选择合适的金属化方法并优化工艺步骤，制造商能够为功率电子、光电子、射频电路和医疗应用实现可靠、高效且可扩展的解决方案。随着技术进步，对坚固耐用的金属化陶瓷基板的需求将持续增长，推动热管理、电气隔离和器件小型化领域的创新。",
@@ -314,9 +314,9 @@
         "btn_contact_experts": "联系技术团队",
 
         // 页脚（风格统一）
-        "footer_description": "吉美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+        "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
         "footer_products": "产品中心",
-        "footer_company": "关于吉美",
+        "footer_company": "关于集美",
         "footer_contact": "联系我们",
         "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
         "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",

@@ -171,9 +171,9 @@
         "article_page_title": "直接镀铜围坝封装技术在功率电子中的应用 | JIMEI 陶瓷基板",
         "article_meta_description": "DPC围坝封装为功率电子封装提供卓越的热管理能力和机械鲁棒性。面向高可靠性应用场景的直接镀铜解决方案。",
         "article_meta_keywords": "DPC围坝封装, 直接镀铜, 功率电子封装, 热管理, 半导体保护, 高可靠性封装, 铜围坝",
-        "article_og_title": "用于功率电子的直接镀铜围坝封装技术 | 吉美材料",
+        "article_og_title": "用于功率电子的直接镀铜围坝封装技术 | 集美材料",
         "article_og_description": "DPC围坝封装为功率电子封装提供卓越的热管理能力和机械鲁棒性。",
-        "article_twitter_title": "用于功率电子的直接镀铜围坝封装技术 | 吉美材料",
+        "article_twitter_title": "用于功率电子的直接镀铜围坝封装技术 | 集美材料",
         "article_twitter_description": "DPC围坝封装为功率电子封装提供卓越的热管理能力和机械鲁棒性。",
         "skip_to_content": "跳至主要内容",
         
@@ -185,7 +185,7 @@
         "nav_bare": "裸陶瓷基板",
         "nav_all_products": "全部产品",
         "nav_resources": "技术资源",
-        "nav_about": "关于吉美",
+        "nav_about": "关于集美",
         "nav_contact": "联系我们",
         "nav_request_quote": "在线询价",
         
@@ -308,9 +308,9 @@
         "btn_contact_experts": "联系我们的专家",
 
         // 页脚（风格统一）
-        "footer_description": "吉美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+        "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
         "footer_products": "产品中心",
-        "footer_company": "关于吉美",
+        "footer_company": "关于集美",
         "footer_contact": "联系我们",
         "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
         "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",

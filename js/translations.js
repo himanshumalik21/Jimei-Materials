@@ -124,12 +124,12 @@ const translations = {
             
             zh: {
                     // Meta tags - 优化了关键词顺序和表述，更符合SEO习惯
-                    "page_title": "DBC与DPC陶瓷基板制造商 | 吉美材料",
+                    "page_title": "DBC与DPC陶瓷基板制造商 | 集美材料",
                     "meta_description": "ISO 14001:2015认证制造商，专精于直接覆铜陶瓷基板和直接镀铜陶瓷基板的生产，为全球功率电子、电动汽车及5G应用提供卓越的热管理解决方案。",
                     "meta_keywords": "陶瓷金属化基板, DBC基板, DPC基板, 直接覆铜, 直接镀铜, 陶瓷基板制造商, 热管理解决方案, 功率电子封装, 氮化铝基板, 氧化铝基板, IGBT模块基板, 射频功率放大器基板, 半导体封装材料",
-                    "og_title": "高端DBC与DPC陶瓷基板制造商 | 吉美材料",
+                    "og_title": "高端DBC与DPC陶瓷基板制造商 | 集美材料",
                     "og_description": "高性能直接覆铜陶瓷基板和直接镀铜陶瓷基板的领先制造商，专注于功率电子与先进热管理解决方案。",
-                    "twitter_title": "高端DBC与DPC陶瓷基板制造商 | 吉美材料",
+                    "twitter_title": "高端DBC与DPC陶瓷基板制造商 | 集美材料",
                     "twitter_description": "高性能直接覆铜陶瓷基板和直接镀铜陶瓷基板的领先制造商，专注于功率电子与先进热管理解决方案。",
                     
                     // Navigation - 微调以更符合中文网站导航习惯
@@ -140,7 +140,7 @@ const translations = {
                     "nav_bare": "裸陶瓷基片",
                     "nav_all_products": "全部产品",
                     "nav_resources": "技术资源",
-                    "nav_about": "关于吉美",
+                    "nav_about": "关于集美",
                     "nav_contact": "联系我们",
                     "nav_request_quote": "在线询价",
                     "nav_blog": "技术博客",
@@ -148,7 +148,7 @@ const translations = {
                     // Hero Section - 强化了技术标签和号召力
                     "hero_title": "高端陶瓷金属化基板制造专家",
                     "hero_subtitle": "用于电力电子热管理的先进DBC与DPC陶瓷基板",
-                    "hero_description": "吉美材料专注于高性能直接覆铜陶瓷和直接镀铜陶瓷基板的研发与制造，为全球汽车、可再生能源及功率电子行业客户提供可靠解决方案。",
+                    "hero_description": "集美材料专注于高性能直接覆铜陶瓷和直接镀铜陶瓷基板的研发与制造，为全球汽车、可再生能源及功率电子行业客户提供可靠解决方案。",
                     "btn_view_products": "浏览产品",
                     "btn_request_quote": "立即询价",
                     "stats_certified": "体系认证",
@@ -161,7 +161,7 @@ const translations = {
                     
                     // Industries Section - 优化了行业描述，更具技术深度
                     "industries_title": "全球行业信赖的陶瓷基板供应商",
-                    "industries_description": "凭借八年以上的行业深耕，吉美材料已成为功率电子领域领先制造商的首选合作伙伴，提供在热管理与电气性能方面表现卓越的可靠陶瓷基板解决方案。",
+                    "industries_description": "凭借八年以上的行业深耕，集美材料已成为功率电子领域领先制造商的首选合作伙伴，提供在热管理与电气性能方面表现卓越的可靠陶瓷基板解决方案。",
                     "industry_ev_title": "电动汽车功率模块",
                     "industry_ev_desc": "用于电动汽车逆变器、牵引电机控制器及车载充电器的高性能DBC基板，导热系数高达200W/mK，提供卓越散热。",
                     "industry_renewable_title": "可再生能源系统",
@@ -232,7 +232,7 @@ const translations = {
                     "cta_phone": "咨询电话: +86-147-4537-3293",
                     
                     // Footer - 信息更完整、正式
-                    "footer_description": "吉美材料自2016年起，始终是功率电子与热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
+                    "footer_description": "集美材料自2016年起，始终是功率电子与热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
                     "footer_products": "产品系列",
                     "footer_company": "关于我们",
                     "footer_contact": "联系方式",

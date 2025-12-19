@@ -107,8 +107,8 @@
         },
         zh: {
             // 页面元数据
-        "sitemap_page_title": "网站地图 | 吉美材料 - 陶瓷基板制造商",
-        "sitemap_meta_description": "吉美材料网站完整导航地图。一览我们所有的陶瓷基板产品、技术资源和公司信息。",
+        "sitemap_page_title": "网站地图 | 集美材料 - 陶瓷基板制造商",
+        "sitemap_meta_description": "集美材料网站完整导航地图。一览我们所有的陶瓷基板产品、技术资源和公司信息。",
 
         // Navigation - 微调以更符合中文网站导航习惯
                     "nav_home": "首页",
@@ -118,7 +118,7 @@
                     "nav_bare": "裸陶瓷基片",
                     "nav_all_products": "全部产品",
                     "nav_resources": "技术资源",
-                    "nav_about": "关于吉美",
+                    "nav_about": "关于集美",
                     "nav_contact": "联系我们",
                     "nav_request_quote": "在线询价",
                     "nav_blog": "技术博客",
@@ -195,9 +195,9 @@
         "btn_contact_for_help": "联系获取帮助",
 
         // 页脚
-        "footer_description": "吉美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+        "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
         "footer_products": "产品中心",
-        "footer_company": "关于吉美",
+        "footer_company": "关于集美",
         "footer_contact": "联系我们",
         "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
         "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",

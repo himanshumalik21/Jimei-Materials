@@ -138,9 +138,9 @@
         "dbc_article_title": "深度解析DBC基板：技术指南 | JIMEI 陶瓷基板",
         "dbc_article_meta_description": "全面技术指南：深入了解直接覆铜陶瓷基板的原理、制造工艺及其在功率电子、热管理与半导体封装中的关键应用。",
         "dbc_article_meta_keywords": "直接覆铜, DBC基板, 功率电子, 热管理, 陶瓷基板, IGBT模块, 半导体封装, 导热系数",
-        "dbc_article_og_title": "深度解析DBC基板：技术指南 | 吉美材料",
+        "dbc_article_og_title": "深度解析DBC基板：技术指南 | 集美材料",
         "dbc_article_og_description": "全面技术指南：深入了解直接覆铜陶瓷基板的原理、制造工艺及其在功率电子与热管理中的关键应用。",
-        "dbc_article_twitter_title": "深度解析DBC基板：技术指南 | 吉美材料",
+        "dbc_article_twitter_title": "深度解析DBC基板：技术指南 | 集美材料",
         "dbc_article_twitter_description": "全面技术指南：深入了解直接覆铜陶瓷基板的原理、制造工艺及其在功率电子与热管理中的关键应用。",
         "skip_to_content": "跳至主要内容",
         
@@ -152,7 +152,7 @@
         "nav_bare": "裸陶瓷基板",
         "nav_all_products": "全部产品",
         "nav_resources": "技术资源",
-        "nav_about": "关于吉美",
+        "nav_about": "关于集美",
         "nav_contact": "联系我们",
         "nav_request_quote": "在线询价",
         
@@ -242,9 +242,9 @@
         "btn_contact_experts": "联系我们的专家",
 
         // 页脚
-        "footer_description": "吉美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+        "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
         "footer_products": "产品中心",
-        "footer_company": "关于吉美",
+        "footer_company": "关于集美",
         "footer_contact": "联系我们",
         "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
         "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",

@@ -148,8 +148,8 @@
         zh: {
                     
             // Page meta
-            'privacy_page_title': '隐私政策 | 吉美材料 - 陶瓷基板制造商',
-            'privacy_meta_description': '吉美材料隐私政策。了解我们如何依据数据保护法规收集、使用和保护您的个人信息。',
+            'privacy_page_title': '隐私政策 | 集美材料 - 陶瓷基板制造商',
+            'privacy_meta_description': '集美材料隐私政策。了解我们如何依据数据保护法规收集、使用和保护您的个人信息。',
 
             // Navigation - 微调以更符合中文网站导航习惯
                     "nav_home": "首页",
@@ -159,7 +159,7 @@
                     "nav_bare": "裸陶瓷基片",
                     "nav_all_products": "全部产品",
                     "nav_resources": "技术资源",
-                    "nav_about": "关于吉美",
+                    "nav_about": "关于集美",
                     "nav_contact": "联系我们",
                     "nav_request_quote": "在线询价",
                     "nav_blog": "技术博客",
@@ -170,11 +170,11 @@
             'breadcrumb_privacy': '隐私政策',
             'privacy_last_updated': '最后更新：',
             'privacy_last_updated_date': '2025年12月19日',
-            'privacy_intro_note': '本隐私政策阐述了当您访问我们的网站 www.jimei-materials.com 时，吉美材料有限公司（"我们"）如何收集、使用和保护您的个人信息。',
+            'privacy_intro_note': '本隐私政策阐述了当您访问我们的网站 www.jimei-materials.com 时，集美材料有限公司（"我们"）如何收集、使用和保护您的个人信息。',
             
             // Sections
             'privacy_section1_title': '1. 引言',
-            'privacy_section1_content': '吉美材料有限公司致力于保护您个人信息的隐私和安全。本隐私政策说明了当您访问我们的网站或使用我们的服务时，我们如何收集、使用、披露和保护您的信息。我们遵守适用的数据保护法律，包括《中华人民共和国个人信息保护法》（PIPL）及其他相关的国际法规。',
+            'privacy_section1_content': '集美材料有限公司致力于保护您个人信息的隐私和安全。本隐私政策说明了当您访问我们的网站或使用我们的服务时，我们如何收集、使用、披露和保护您的信息。我们遵守适用的数据保护法律，包括《中华人民共和国个人信息保护法》（PIPL）及其他相关的国际法规。',
             
             'privacy_section2_title': '2. 我们收集的信息',
             'privacy_section2a_title': '2.1 您直接提供的信息',
@@ -258,7 +258,7 @@
             
             'privacy_section14_title': '14. 联系我们',
             'privacy_section14_content': '如果您对本隐私政策或我们的数据实践有任何疑问、关切或请求，请通过以下方式联系我们：',
-            'privacy_contact_title': '吉美材料有限公司',
+            'privacy_contact_title': '集美材料有限公司',
             'privacy_contact_address': '中国广东省深圳市宝安区新桥街道耗三林坡坑第一工业区 518104',
             'privacy_contact_email': 'yfu@jimei-materials.com',
             'privacy_contact_phone': '+86-147-4537-3293',

@@ -157,12 +157,12 @@
     zh: {
                 // 元数据与结构元素
         "article_page_title": "DPC陶瓷金属化技术助力高性能热电模块(TEC/TEG) | JIMEI 陶瓷基板",
-        "article_meta_description": "采用吉美材料的直接镀铜陶瓷金属化技术，最大化TEC/TEG性能。基于高导热氮化铝/氧化铝基板的热电制冷与发电解决方案。",
+        "article_meta_description": "采用集美材料的直接镀铜陶瓷金属化技术，最大化TEC/TEG性能。基于高导热氮化铝/氧化铝基板的热电制冷与发电解决方案。",
         "article_meta_keywords": "DPC陶瓷金属化, 热电模块, TEC封装, TEG封装, 直接镀铜, 氮化铝基板, 热管理, 帕尔贴制冷器, 热电发电机",
-        "article_og_title": "用于高性能热电模块(TEC/TEG)的DPC陶瓷金属化技术 | 吉美材料",
-        "article_og_description": "采用吉美基于氮化铝/氧化铝基板的DPC陶瓷金属化技术，最大化TEC/TEG性能。",
-        "article_twitter_title": "用于高性能热电模块(TEC/TEG)的DPC陶瓷金属化技术 | 吉美材料",
-        "article_twitter_description": "采用吉美基于氮化铝/氧化铝基板的DPC陶瓷金属化技术，最大化TEC/TEG性能。",
+        "article_og_title": "用于高性能热电模块(TEC/TEG)的DPC陶瓷金属化技术 | 集美材料",
+        "article_og_description": "采用集美基于氮化铝/氧化铝基板的DPC陶瓷金属化技术，最大化TEC/TEG性能。",
+        "article_twitter_title": "用于高性能热电模块(TEC/TEG)的DPC陶瓷金属化技术 | 集美材料",
+        "article_twitter_description": "采用集美基于氮化铝/氧化铝基板的DPC陶瓷金属化技术，最大化TEC/TEG性能。",
         "skip_to_content": "跳至主要内容",
         
         // 导航（与全站一致）
@@ -173,7 +173,7 @@
         "nav_bare": "裸陶瓷基板",
         "nav_all_products": "全部产品",
         "nav_resources": "技术资源",
-        "nav_about": "关于吉美",
+        "nav_about": "关于集美",
         "nav_contact": "联系我们",
         "nav_request_quote": "在线询价",
         
@@ -184,7 +184,7 @@
         
         // 文章标题区
         "article_title": "用于高性能热电模块(TEC/TEG)的DPC陶瓷金属化技术",
-        "article_description": "采用吉美基于氮化铝/氧化铝基板的直接镀铜陶瓷金属化技术，最大化TEC/TEG性能",
+        "article_description": "采用集美基于氮化铝/氧化铝基板的直接镀铜陶瓷金属化技术，最大化TEC/TEG性能",
         "article_published": "发布日期:",
         "article_read_time": "阅读时长:",
         
@@ -241,7 +241,7 @@
         
         "article_section4_title": "关键性能数据摘要",
 
-        "technical_note": "<strong>技术提示:</strong> 为满足您关键的热电封装需求，请与吉美材料合作。我们的DPC陶瓷金属化技术是您在TEC和TEG设计中实现最大热性能和长期可靠性的基石。",
+        "technical_note": "<strong>技术提示:</strong> 为满足您关键的热电封装需求，请与集美材料合作。我们的DPC陶瓷金属化技术是您在TEC和TEG设计中实现最大热性能和长期可靠性的基石。",
 
         // 技术规格表
         "table_header_material": "材料",
@@ -284,9 +284,9 @@
         "btn_contact_experts": "联系我们的专家",
 
         // 页脚（风格统一）
-        "footer_description": "吉美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+        "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
         "footer_products": "产品中心",
-        "footer_company": "关于吉美",
+        "footer_company": "关于集美",
         "footer_contact": "联系我们",
         "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
         "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",

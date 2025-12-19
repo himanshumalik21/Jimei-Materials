@@ -121,12 +121,12 @@
         
         zh: {
             // 联系页面特定翻译
-            "contact_page_title": "联系我们 | 吉美材料 - 陶瓷基板制造商",
-            "contact_meta_description": "联系吉美材料，获取高品质DBC与DPC陶瓷基板解决方案。申请报价、获取技术支持与样品。全球领先的陶瓷金属化解决方案制造商。",
+            "contact_page_title": "联系我们 | 集美材料 - 陶瓷基板制造商",
+            "contact_meta_description": "联系集美材料，获取高品质DBC与DPC陶瓷基板解决方案。申请报价、获取技术支持与样品。全球领先的陶瓷金属化解决方案制造商。",
             "contact_meta_keywords": "陶瓷基板联系, DBC制造商联系, DPC基板询价, 热管理解决方案, 申请陶瓷样品, 功率电子基板咨询",
-            "contact_og_title": "联系吉美材料 - DBC与DPC陶瓷基板制造商",
+            "contact_og_title": "联系集美材料 - DBC与DPC陶瓷基板制造商",
             "contact_og_description": "获取高性能陶瓷基板的报价、技术支持与样品。联系我们的团队，获取定制化解决方案。",
-            "contact_twitter_title": "联系吉美材料 - 陶瓷基板制造商",
+            "contact_twitter_title": "联系集美材料 - 陶瓷基板制造商",
             "contact_twitter_description": "获取DBC与DPC陶瓷基板报价及技术支持。立即联系我们的团队。",
             
             // 导航（与全站一致）
@@ -137,14 +137,14 @@
             "nav_bare": "裸陶瓷基板",
             "nav_all_products": "全部产品",
             "nav_resources": "技术资源",
-            "nav_about": "关于吉美",
+            "nav_about": "关于集美",
             "nav_contact": "联系我们",
             "nav_request_quote": "在线询价",
             "nav_blog": "技术博客",
             
             // 页面标题区
             "contact_hero_title": "与我们取得联系",
-            "contact_hero_description": "联系吉美材料，获取高性能陶瓷基板解决方案、技术咨询与定制化报价。我们的专家团队已准备好为您的项目需求提供支持。",
+            "contact_hero_description": "联系集美材料，获取高性能陶瓷基板解决方案、技术咨询与定制化报价。我们的专家团队已准备好为您的项目需求提供支持。",
             "btn_contact_form": "在线留言",
             "btn_contact_info": "联系信息",
             
@@ -211,9 +211,9 @@
             "wechat_modal_note": "添加后，请发送消息“陶瓷基板咨询”以便我们更快处理。",
             
             // 页脚 (风格统一)
-            "footer_description": "吉美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+            "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
             "footer_products": "产品中心",
-            "footer_company": "关于吉美",
+            "footer_company": "关于集美",
             "footer_contact": "联系我们",
             "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
             "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",

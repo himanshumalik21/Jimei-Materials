@@ -195,9 +195,9 @@
         "article_page_title": "深度解析DPC技术：革新先进封装 | JIMEI 陶瓷基板",
         "article_meta_description": "直接镀铜技术正在重塑半导体与光电子领域的先进封装格局。了解其精密图形化、卓越附着力与热管理优势。",
         "article_meta_keywords": "DPC技术, 直接镀铜, 半导体封装, 光电子, 陶瓷基板, 热管理, 铜线路图形化, 先进封装方案",
-        "article_og_title": "DPC技术详解：革新先进封装 | 吉美材料",
+        "article_og_title": "DPC技术详解：革新先进封装 | 集美材料",
         "article_og_description": "直接镀铜技术通过精密铜线路图形化，为先进半导体及光电子封装提供卓越的热管理解决方案。",
-        "article_twitter_title": "DPC技术详解：革新先进封装 | 吉美材料",
+        "article_twitter_title": "DPC技术详解：革新先进封装 | 集美材料",
         "article_twitter_description": "直接镀铜技术通过精密铜线路图形化，为先进半导体及光电子封装提供卓越的热管理解决方案。",
         "skip_to_content": "跳至主要内容",
         
@@ -209,7 +209,7 @@
         "nav_bare": "裸陶瓷基板",
         "nav_all_products": "全部产品",
         "nav_resources": "技术资源",
-        "nav_about": "关于吉美",
+        "nav_about": "关于集美",
         "nav_contact": "联系我们",
         "nav_request_quote": "在线询价",
         
@@ -313,7 +313,7 @@
         "dpc_process_step6": "表面处理: 根据需要，进行镍/金镀层或阻焊层涂覆等额外表面处理。",
         "dpc_process_step7": "检测与测试: 最终检测尺寸精度、电气连续性及附着质量。",
   
-        "technical_note": "制造优势: 在吉美材料，我们的DPC制造工艺经过优化，既适合大批量生产，也适合定制化打样，并在每个阶段实施严格的质量控制，以确保所有应用场景下性能与可靠性的高度一致。",
+        "technical_note": "制造优势: 在集美材料，我们的DPC制造工艺经过优化，既适合大批量生产，也适合定制化打样，并在每个阶段实施严格的质量控制，以确保所有应用场景下性能与可靠性的高度一致。",
   
         "article_section6_title": "DPC技术未来趋势",
         "article_section6_paragraph1": "随着电子设备持续向更高频率、更高功率密度和更小型化发展，DPC技术有望扮演更关键的角色。新兴趋势包括：",
@@ -356,9 +356,9 @@
         "btn_contact_experts": "联系DPC专家",
 
         // 页脚
-        "footer_description": "吉美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+        "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
         "footer_products": "产品中心",
-        "footer_company": "关于吉美",
+        "footer_company": "关于集美",
         "footer_contact": "联系我们",
         "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
         "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",
