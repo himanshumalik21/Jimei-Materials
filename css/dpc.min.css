@@ -1,0 +1,143 @@
+/* DPC Specific Styles */
+
+/* Table improvements */
+.table th {
+    font-weight: 600;
+    color: var(--primary);
+    background-color: rgba(40, 73, 90, 0.05);
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Card improvements */
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Feature badges */
+.feature-badge {
+    transition: all 0.3s ease;
+}
+
+.feature-badge:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .display-4 {
+        font-size: calc(1.475rem + 2.7vw);
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .table {
+        font-size: 0.9rem;
+    }
+    
+    .application-card {
+        padding: 15px;
+    }
+}
+
+/* Print styles */
+@media print {
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .card {
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+}
+
+/* Accessibility improvements */
+:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary: #00008b;
+        --secondary: #000;
+    }
+    
+    .feature-badge {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    
+    .bg-light {
+        background-color: #1e1e1e !important;
+    }
+    
+    .card {
+        background-color: #2d2d2d;
+        color: #e0e0e0;
+    }
+    
+    .text-secondary {
+        color: #b0b0b0 !important;
+    }
+}

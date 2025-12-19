@@ -1,49 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Comprehensive overview of ceramic metallization processes, techniques, and reliability considerations for DBC and DPC substrates.">
-    <meta name="keywords" content="Ceramic Metallization, DBC, DPC, Direct Bonded Copper, Direct Plated Copper, Metallized Ceramic Substrates, Power Electronics, 
-    Thermal Management, Electronic Packaging">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="index, follow">
+    <title data-i18n="article_page_title">Ceramic Metallization: Processes & Reliability | JIMEI Ceramic Substrates</title>
+
+    <!-- Critical Meta Tags for SEO -->
+    <meta name="description" data-i18n="article_meta_description" content="Comprehensive overview of ceramic metallization processes, techniques, and reliability considerations for DBC and DPC substrates. Technical insights from Jimei Materials experts.">
+    <meta name="keywords" data-i18n="article_meta_keywords" content="ceramic metallization, DBC process, DPC technology, metallized ceramic substrates, thermal management, electronic packaging, power electronics, reliability testing">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Jimei Materials">
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://www.jimei-materials.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="DBC & DPC Substrate Manufacturer | Jimei Materials">
-    <meta property="og:description" content="Leading manufacturer and supplier of Metallized Ceramic Substrates - Direct Bonded Copper (DBC) and Direct Platted Copper (DPC).">
-    <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg?token=CSrSvFTMEGBnKthfNtNYYcFReQ5FRUKvplRT4J9LmCg&height=1183&width=1200&expires=33296685124">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="jimei-materials.com">
-    <meta property="twitter:url" content="https://www.jimei-materials.com">
-    <meta name="twitter:title" content="DBC & DPC Substrate Manufacturer | Jimei Materials">
-    <meta name="twitter:description" content="Leading manufacturer and supplier of Metallized Ceramic Substrates - Direct Bonded Copper (DBC) and Direct Platted Copper (DPC).">
-    <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg?token=CSrSvFTMEGBnKthfNtNYYcFReQ5FRUKvplRT4J9LmCg&height=1183&width=1200&expires=33296685124">
-
-    <link rel="canonical" href="https://www.jimei-materials.com/ceramic-metallization-processes.html" />
     
-    <title>Ceramic Metallization: Processes & Reliability | Jimei Materials</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.jimei-materials.com/ceramic-metallization-processes.html">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.jimei-materials.com/ceramic-metallization-processes.html">
+    <meta property="og:title" data-i18n="article_og_title" content="Ceramic Metallization: Processes & Reliability | Jimei Materials">
+    <meta property="og:description" data-i18n="article_og_description" content="Technical overview of metallization methods for ceramics, including process steps and reliability considerations for DBC and DPC substrates.">
+    <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2024-01-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-01-25T00:00:00+00:00">
+    <meta property="article:author" content="Jimei Materials Technical Team">
+    <meta property="article:section" content="Design Guide">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jimei-materials.com/ceramic-metallization-processes.html">
+    <meta name="twitter:title" data-i18n="article_twitter_title" content="Ceramic Metallization: Processes & Reliability | Jimei Materials">
+    <meta name="twitter:description" data-i18n="article_twitter_description" content="Technical overview of metallization methods for ceramics, including process steps and reliability considerations.">
+    <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="img/logo.webp" as="image" type="image/webp">
+    <link rel="preload" href="img/MetalCeramics/DPC/DPC4.webp" as="image" type="image/webp">
+    
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://flagcdn.com">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+          crossorigin="anonymous"
+          media="print" onload="this.media='all'">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer"
+          media="print" onload="this.media='all'">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- Critical CSS (above the fold) -->
+    <style>
+        :root {
+            --primary: #28495a;
+            --secondary: #1a6b8a;
+            --accent: #28495a;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
 
-<!-- Favicon and App Icons -->
+        img { 
+            max-width: 100%; 
+            height: auto; 
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 120px 0 60px;
+            margin-top: 70px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0V100H1000V0C800,50 600,75 400,50S200,25 0,0Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        .page-header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .breadcrumb {
+            background: transparent;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .breadcrumb-item a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb-item a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-item.active {
+            color: white;
+            font-weight: 500;
+        }
+        
+        .breadcrumb-item + .breadcrumb-item::before {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Skip to main content */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 8px;
+            z-index: 9999;
+        }
+        
+        .skip-to-content:focus {
+            top: 0;
+        }
+        
+        /* Article content */
+        .article-content {
+            line-height: 1.7;
+            font-size: 1.125rem;
+            color: #333;
+        }
+        
+        .article-content h2 {
+            color: var(--primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(40, 73, 90, 0.1);
+        }
+        
+        .article-content h3 {
+            color: var(--secondary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .article-content ul, .article-content ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .article-content strong {
+            color: var(--primary);
+        }
+        
+        .article-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 2rem auto;
+            display: block;
+        }
+        
+        .article-meta {
+            background: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
+        }
+        
+        .article-navigation {
+            border-top: 1px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+            padding: 2rem 0;
+        }
+        
+        /* Process steps styling */
+        .process-step {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .process-step-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+        
+        /* Comparison table styles */
+        .tech-table {
+            margin: 2rem 0;
+        }
+        
+        .tech-table th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem;
+        }
+        
+        .tech-table td {
+            padding: 0.75rem;
+            vertical-align: top;
+        }
+        
+        .tech-table tbody tr:nth-child(even) {
+            background-color: rgba(40, 73, 90, 0.05);
+        }
+        
+        .badge-metallization {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 100px 0 40px;
+                margin-top: 60px;
+            }
+            
+            .article-content {
+                font-size: 1rem;
+            }
+            
+            .article-content h2 {
+                font-size: 1.75rem;
+            }
+            
+            .tech-table {
+                font-size: 0.875rem;
+            }
+            
+            .process-step {
+                padding: 1rem;
+            }
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/main.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/article.min.css" media="print" onload="this.media='all'">
+
+    <!-- Favicon and App Icons -->
     <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
@@ -53,580 +286,609 @@
     <link rel="manifest" href="icons/site.webmanifest">
     <meta name="theme-color" content="#28495a">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF30RCX51H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MF30RCX51H');
-</script>
-
-<style>
-    /* Hide scrollbar for all browsers */
-    html, body {
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* IE and Edge */
-    }
-    html::-webkit-scrollbar, body::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
-    }
-</style>
-
-<style>
-#scrollToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    z-index: 999;
-    background: #28495a;
-    color: #fff;
-    border: none;
-    outline: none;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    font-size: 24px;
-    box-shadow: 0 2px 8px rgba(40,73,90,0.18);
-    cursor: pointer;
-    transition: background 0.2s;
-}
-#scrollToTopBtn:hover {
-    background: #18303d;
-}
-</style>
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-    var btn = document.createElement('button');
-    btn.id = 'scrollToTopBtn';
-    btn.title = 'Scroll to top';
-    btn.innerHTML = '<i class="fa fa-chevron-up"></i>';
-    document.body.appendChild(btn);
-
-    window.addEventListener('scroll', function() {
-        btn.style.display = (window.scrollY > 200) ? 'block' : 'none';
-    });
-
-    btn.addEventListener('click', function() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-});
-</script>
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@graph": [
-        {
+    <!-- Article Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.jimei-materials.com/ceramic-metallization-processes.html"
+        },
+        "headline": "Ceramic Metallization Processes: Technical Overview & Reliability",
+        "description": "Comprehensive overview of ceramic metallization processes, techniques, and reliability considerations for DBC and DPC substrates.",
+        "image": [
+            "https://www.jimei-materials.com/img/MetalCeramics/DPC/DPC4.webp",
+            "https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg"
+        ],
+        "author": {
             "@type": "Organization",
-            "@id": "https://www.jimei-materials.com/#organization",
-            "name": "Jimei Materials",
-            "url": "https://www.jimei-materials.com/",
+            "name": "Jimei Materials Technical Team",
+            "url": "https://www.jimei-materials.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Jimei Materials Co., Ltd.",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg?token=CSrSvFTMEGBnKthfNtNYYcFReQ5FRUKvplRT4J9LmCg&height=1183&width=1200&expires=33296685124",
-                "width": 1200,
-                "height": 1183,
-                "caption": "Jimei Materials"
-            },
-            "sameAs": [
-                "https://www.linkedin.com/company/jimei-materials/"
-            ],
-            "contactPoint": [
-                {
-                    "@type": "ContactPoint",
-                    "telephone": "+86 147 4537 3293",
-                    "contactType": "sales",
-                    "email": "sales@jimei-materials.com",
-                    "areaServed": "Worldwide"
-                }
+                "url": "https://www.jimei-materials.com/img/logo.webp",
+                "width": 160,
+                "height": 45
+            }
+        },
+        "datePublished": "2024-01-25T00:00:00+00:00",
+        "dateModified": "2024-01-25T00:00:00+00:00",
+        "articleSection": "Design Guide",
+        "keywords": "ceramic metallization, DBC process, DPC technology, metallized ceramic substrates, thermal management, electronic packaging, power electronics, reliability testing",
+        "inLanguage": "en-US",
+        "wordCount": 1800,
+        "timeRequired": "PT12M",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "xpath": [
+                "/html/head/title",
+                "/html/body/main//h1",
+                "/html/body/main//h2[1]",
+                "/html/body/main//p[1]"
             ]
-        },
-        {
-            "@type": "WebSite",
-            "@id": "https://www.jimei-materials.com/#website",
-            "url": "https://www.jimei-materials.com/",
-            "name": "Jimei Materials",
-            "publisher": {
-                "@id": "https://www.jimei-materials.com/#organization"
-            },
-            "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.jimei-materials.com/?s={search_term_string}",
-                "query-input": "required name=search_term_string"
-            }
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.jimei-materials.com/ceramic-metallization-processes.html#webpage",
-            "url": "https://www.jimei-materials.com/ceramic-metallization-processes.html",
-            "inLanguage": "en-US",
-            "name": "Ceramic Metallization: Processes & Reliability | Jimei Materials",
-            "isPartOf": {
-                "@id": "https://www.jimei-materials.com/#website"
-            },
-            "primaryImageOfPage": {
-                "@type": "ImageObject",
-                "url": "https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg?token=CSrSvFTMEGBnKthfNtNYYcFReQ5FRUKvplRT4J9LmCg&height=1183&width=1200&expires=33296685124",
-                "width": 1200,
-                "height": 1183
-            },
-            "description": "Comprehensive overview of ceramic metallization processes, techniques, and reliability considerations for DBC and DPC substrates.",
-            "breadcrumb": {
-                "@id": "https://www.jimei-materials.com/ceramic-metallization-processes.html#breadcrumblist"
-            }
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.jimei-materials.com/ceramic-metallization-processes.html#breadcrumblist",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://www.jimei-materials.com/"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Resources",
-                    "item": "https://www.jimei-materials.com/technical-resources.html"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Ceramic Metallization: Processes & Reliability",
-                    "item": "https://www.jimei-materials.com/ceramic-metallization-processes.html"
-                }
-            ]
-        },
-        {
-            "@type": "Article",
-            "@id": "https://www.jimei-materials.com/ceramic-metallization-processes.html#article",
-            "mainEntityOfPage": {
-                "@id": "https://www.jimei-materials.com/ceramic-metallization-processes.html#webpage"
-            },
-            "headline": "Ceramic Metallization: Processes & Reliability",
-            "alternativeHeadline": "Technical overview of DBC, DPC and metallized ceramic substrate reliability",
-            "image": [
-                "https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg?token=CSrSvFTMEGBnKthfNtNYYcFReQ5FRUKvplRT4J9LmCg&height=1183&width=1200&expires=33296685124",
-                "https://www.jimei-materials.com/img/MetalCeramics/DPC/DPC4.webp"
-            ],
-            "author": {
-                "@type": "Organization",
-                "@id": "https://www.jimei-materials.com/#organization"
-            },
-            "publisher": {
-                "@id": "https://www.jimei-materials.com/#organization"
-            },
-            "datePublished": "2024-06-01T08:00:00+00:00",
-            "dateModified": "2024-06-01T08:00:00+00:00",
-            "inLanguage": "en-US",
-            "description": "Ceramic metallization is a critical process in advanced electronics manufacturing, enabling the integration of conductive pathways onto ceramic substrates for applications such as power modules, sensors, and optoelectronics.",
-            "keywords": "Ceramic Metallization, DBC, DPC, Direct Bonded Copper, Direct Plated Copper, Metallized Ceramic Substrates, Power Electronics, Thermal Management, Electronic Packaging",
-            "articleSection": "Technical Resources",
-            "wordCount": 1300,
-            "sponsor": {
-                "@type": "Organization",
-                "name": "Jimei Materials"
-            },
-            "copyrightYear": 2024,
-            "isAccessibleForFree": true,
-            "mainEntity": {
-                "@type": "Thing",
-                "name": "Ceramic Metallization Processes"
-            },
-            "potentialAction": {
-                "@type": "ReadAction",
-                "target": [
-                    "https://www.jimei-materials.com/ceramic-metallization-processes.html"
-                ]
-            }
         }
-    ]
-}
-</script>
-
-
-
-</head>
-
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Humberger Begin -->
-    <div class="humberger__menu__overlay">
-        <div class="humberger__menu__wrapper">
-            <div class="humberger__menu__logo">
-                <a href="./index.html"><img src="img/logo.webp" alt="Jimei Materials Logo" width="120px" height="auto"></a>
-            </div>
-            <nav class="humberger__menu__nav mobile-menu">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./products.html">Featured Products</a>
-                            <li><a href="./dpc-ceramic-substrate.html">Direct Plated Copper (DPC)</a></li>
-                            <li><a href="./dbc-ceramic-substrate.html">Direct Bonded Copper (DBC)</a></li>
-                            <li><a href="./bare-ceramic-substrates.html">Bare Ceramic Substrates</a></li>
-                    </li>
-                    <li class="active"><a href="./technical-resources.html">Resources</a></li>
-                    <li><a href="./about.html">About us</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div id="mobile-menu-wrap"></div>
-            <div class="humberger__menu__contact">
-                <ul>
-                    <li><i class="fa fa-envelope"></i> sales@jimei-materials.com</li>
-                    <li><i class="fa fa-phone"></i> (+86) 147 4537 3293</li>
-                </ul>
-            </div>
-            <div class="humberger__menu__contact">
-                <a href="./contact.html" class="primary-btn">Request A Quote</a>
-            </div>
-        </div>
-    </div>
-    <!-- Humberger End -->
-
-    <!-- Header Section Begin -->
-    <header class="header fixed-top" style="background-color:#d4dfe7; align-content:center;">
-        <div class="header__top text-white" style="background-color:#28495a;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__left text-white" >
-                            <ul>
-                                <li class="text-white"><i class="fa fa-envelope text-white"></i> sales@jimei-materials.com</li>
-                                <li class="text-white"><i class="fa fa-phone text-white"></i> (+86) 147 4537 3293</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__right">
-                            <div class="header__top__right__auth">
-                                <a href="./contact.html" class="site-btn">Request A Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row align-items-center m-4">
-                <div class="col-lg-3">
-                        <a href="./index.html"><img src="img/logo.webp" alt="Jimei Materials Logo" width="120px" height="auto" ></a>
-                </div>
-                <div class="col-lg-9">
-                    <nav class="header__menu">
-                        <ul>
-                            <li><a href="./index.html" style="font-size: 1.1rem;">Home</a></li>
-                            <li><a href="./products.html" style="font-size: 1.1rem;">Products</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./dpc-ceramic-substrate.html" style="font-size: 1.1rem; font-weight: 700; padding-top: 1em; padding-bottom: 1em;">Direct Plated <br> Copper (DPC)</a></li>
-                                    <li><a href="./dbc-ceramic-substrate.html" style="font-size: 1.1rem; font-weight: 700; padding-top: 1em; padding-bottom: 1em;">Direct Bonded <br> Copper (DBC)</a></li>
-                                    <li><a href="./bare-ceramic-substrates.html" style="font-size: 1.1rem; font-weight: 700;  padding-top: 1em; padding-bottom: 1em;">Bare Ceramic <br> Substrates</a></li>
-                                </ul>
-                            </li>
-                            <li class="active"><a href="./technical-resources.html" style="font-size: 1.1rem;">Resources</a></li>
-                            <li><a href="./about.html" style="font-size: 1.1rem;">About us</a></li>
-                            <li><a href="./contact.html" style="font-size: 1.1rem;">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="humberger__open" style="border: none;">
-                <i class="fa fa-bars" style="color: #28495a; font-size: 2rem;"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
-
-
-    <!-- Article Section Begin -->
-    <section class="article-section py-5" style="margin-top: 150px;">
-        <style>
-            @media (max-width: 991.98px) {
-                .article-section {
-                    margin-top: 120px !important;
-                }
-            }
-            @media (max-width: 767.98px) {
-                .article-section {
-                    margin-top: 100px !important;
-                }
-            }
-        </style>
-
-        <div class="container mb-4">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-12">
-                    <nav aria-label="Article navigation">
-                        <div class="row text-center">
-                            <div class="col-4 text-start">
-                                <a class="page-link" href="https://www.jimei-materials.com/bare-ceramic-substrates-explained.html" style="color:#28495a; font-weight:600;">
-                                    &laquo; Previous
-                                </a>
-                            </div>
-                            <div class="col-4 text-center">
-                                <a class="page-link" href="https://www.jimei-materials.com/technical-resources.html" style="color:#28495a; font-weight:600;">
-                                    All Links
-                                </a>
-                            </div>
-                            <div class="col-4 text-end">
-                                <a class="page-link" href="https://www.jimei-materials.com/dpc-encapsulation-dam.html" style="color:#28495a; font-weight:600;">
-                                    Next &raquo;
-                                </a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container mb-4">
-            <div class="row justify-content-center">
-            <div class="col-lg-10 col-md-12">
-                <article>
-                    <div class="row justify-content-center">
-                        <div class="col-12 text-center">
-                            <h1 class="mb-3 metallization-title" style="font-size: 3rem;">Ceramic Metallization Processes: Technical Overview & Reliability</h1>
-                        </div>
-                    </div>
-                    <style>
-                        @media (max-width: 767.98px) {
-                            .metallization-title {
-                                font-size: 2rem !important;
-                            }
-                        }
-                    </style>
-                    <p style="color: black;">
-                        Ceramic metallization is a critical process in advanced electronics manufacturing, enabling the integration of conductive pathways onto ceramic substrates for applications such as power modules, sensors, optoelectronics, and medical devices. Metallized ceramics combine the inherent thermal, electrical, and mechanical advantages of technical ceramics—such as alumina (Al<sub>2</sub>O<sub>3</sub>) and aluminum nitride (AlN)—with the functionality of metal layers, supporting reliable interconnection, packaging, and thermal management in demanding environments.
-                    </p>
-                    <br>
-                    <h2 class="mt-5" style="font-weight: 600;">What Is Ceramic Metallization?</h2>
-                    <br>
-                    <p style="color: black;"></p>
-                        Ceramic metallization refers to the application of thin metal films or patterns onto ceramic substrates to create electrical contacts, circuit traces, or bonding pads. This process is essential for producing substrates used in Direct Bonded Copper (DBC), Direct Plated Copper (DPC), and other advanced packaging solutions. Metallized ceramics are widely used in high-power electronics, RF/microwave circuits, LED modules, and hermetic packages, where robust electrical performance and environmental resistance are required.
-                    </p>
-                    <div class="my-4 text-center">
-                        <img src="img/MetalCeramics/DPC/DPC4.webp" alt="Ceramic Metallization Example" class="img-fluid rounded shadow-sm" style="width: 50%; height: auto;">
-                    </div>
-                    <h2 class="mt-4" style="font-weight: 600;">Key Metallization Methods for Ceramics</h2>
-                    <br>
-                    <ul style="color: black; padding-left: 2em;"></ul>
-                        <li><strong>Thick Film Metallization:</strong> Utilizes screen printing of metal pastes (typically silver, gold, or platinum-based) onto the ceramic surface, followed by firing at high temperatures to sinter the metal and achieve adhesion. This method is cost-effective and suitable for mass production of circuit patterns and electrodes.</li>
-                        <li><strong>Thin Film Metallization:</strong> Involves vacuum deposition techniques such as sputtering or evaporation to deposit thin layers of metals (e.g., titanium, tungsten, nickel, gold) onto ceramics. Thin film processes offer precise control over layer thickness and pattern resolution, ideal for microelectronics and high-frequency applications.</li>
-                        <li><strong>Direct Bonded Copper (DBC):</strong> A process where copper foil is bonded directly to ceramic substrates (usually Al<sub>2</sub>O<sub>3</sub> or AlN) through high-temperature oxidation and diffusion. DBC substrates provide excellent thermal conductivity and high current-carrying capability, making them preferred for power modules and IGBT packaging.</li>
-                        <li><strong>Direct Plated Copper (DPC):</strong> Uses photolithography and electroplating to deposit copper patterns onto ceramic surfaces. DPC enables fine line resolution and multilayer structures, supporting advanced packaging for semiconductor devices and laser diodes.</li>
-                        <li><strong>Active Metal Brazing (AMB):</strong> Employs active brazing alloys (e.g., Ag-Cu-Ti) to bond metal layers to ceramics at elevated temperatures. AMB is used for hermetic sealing and high-reliability applications where strong metal-ceramic adhesion is required.</li>
-                    </ul>
-                    <br>
-                    <h2 class="mt-4" style="font-weight: 600;">Ceramic Metallization Process Steps</h2>
-                    <br>
-                    <ol style="color: black; padding-left: 2em;">
-                        <li><strong>Surface Preparation:</strong> The ceramic substrate is cleaned and, if necessary, roughened to enhance metal adhesion. Techniques include ultrasonic cleaning, plasma treatment, and chemical etching.</li>
-                        <li><strong>Metal Deposition:</strong> Metal layers are applied using screen printing, sputtering, evaporation, or electroplating, depending on the chosen metallization method and application requirements.</li>
-                        <li><strong>Patterning:</strong> Photolithography, laser ablation, or mask printing are used to define circuit traces, bonding pads, or electrode geometries on the substrate.</li>
-                        <li><strong>Firing/Annealing:</strong> For thick film processes, the metallized substrate is fired at high temperatures to sinter the metal and achieve strong adhesion. Thin film and plated layers may undergo annealing to improve crystallinity and interface quality.</li>
-                        <li><strong>Post-Processing:</strong> Additional steps such as soldering, wire bonding, or encapsulation are performed to integrate the metallized ceramic into electronic assemblies.</li>
-                        <li><strong>Inspection & Testing:</strong> Metallized substrates are inspected for adhesion, pattern accuracy, and electrical continuity. Reliability testing may include thermal cycling, humidity exposure, and high-voltage breakdown assessment.</li>
-                    </ol>
-                    <br>
-                    <h2 class="mt-4" style="font-weight: 600;">Reliability Considerations in Ceramic Metallization</h2>
-                    <br>
-                    <ul style="color: black; padding-left: 2em;">
-                        <li><strong>Adhesion Strength:</strong> The bond between metal and ceramic must withstand thermal cycling, mechanical stress, and environmental exposure. Poor adhesion can lead to delamination, electrical failure, or reduced device lifespan.</li>
-                        <li><strong>Thermal Expansion Matching:</strong> Differences in thermal expansion coefficients between metal and ceramic can induce stress during temperature changes. Metallization processes and material selection are optimized to minimize cracking or warping.</li>
-                        <li><strong>Corrosion Resistance:</strong> Metallized layers are often exposed to moisture, chemicals, or high voltages. Protective coatings or alloy selection help prevent oxidation and maintain long-term reliability.</li>
-                        <li><strong>Electrical Performance:</strong> Low contact resistance, high current-carrying capability, and stable dielectric properties are essential for power electronics and RF applications. Process control ensures consistent electrical characteristics across batches.</li>
-                        <li><strong>Hermeticity:</strong> For medical, aerospace, and sensor applications, metallized ceramics may require hermetic sealing to prevent ingress of moisture or contaminants. Brazing and encapsulation techniques are used to achieve robust seals.</li>
-                    </ul>
-                    <br>
-                    <h2 class="mt-4" style="font-weight: 600;">Applications of Metallized Ceramic Substrates</h2>
-                    <br>
-                    <ul style="color: black; padding-left: 2em;"></ul>
-                        <li><strong>Power Modules & IGBT Substrates:</strong> Metallized ceramics provide electrical isolation and efficient heat dissipation for high-voltage, high-current devices in industrial and automotive systems.</li>
-                        <li><strong>Laser Diode & Optoelectronic Packaging:</strong> Thin film metallization enables precise electrode patterns and reliable bonding for photonic devices requiring thermal management and electrical connectivity.</li>
-                        <li><strong>RF & Microwave Circuits:</strong> Metallized ceramics offer low-loss, high-frequency performance for communication modules, radar systems, and wireless infrastructure.</li>
-                        <li><strong>Medical Devices:</strong> Hermetically sealed metallized ceramics are used in implantable electronics, sensors, and diagnostic equipment, ensuring biocompatibility and reliability.</li>
-                        <li><strong>LED Modules & Sensors:</strong> Metallized substrates support efficient power delivery and thermal management for solid-state lighting and sensor platforms.</li>
-                    </ul>
-                    <br>
-                    <h2 class="mt-4" style="font-weight: 600;">Conclusion</h2>
-                    <br>
-                    <p style="color: black;">
-                        Ceramic metallization processes are foundational to the development of high-performance electronic devices, combining the advantages of technical ceramics with the functionality of metal interconnects. By selecting appropriate metallization methods and optimizing process steps, manufacturers achieve reliable, efficient, and scalable solutions for power electronics, optoelectronics, RF circuits, and medical applications. As technology advances, the demand for robust metallized ceramic substrates will continue to grow, driving innovation in thermal management, electrical isolation, and device miniaturization.
-                    </p>
-                    <br>
-                </article>
-            </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Article Section End -->
-
-
-    <!-- Footer Section Begin -->
-    <footer class="footer spad" id="footer">
-        <div class="container">
-            <div class="row align-items-center text-center">
-                <div class="col-12">
-                    <div class="footer__about">
-                        <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.webp" alt="Jimei Materials Logo" width="150px" height="auto"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 align-items-center text-center">
-                    <nav class="footer__links d-flex flex-wrap justify-content-center gap-2" aria-label="Footer navigation">
-                        <a href="./about.html" class="footer-link px-2 py-1">About Us</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./products.html" class="footer-link px-2 py-1">Products</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./bare-ceramic-substrates.html" class="footer-link px-2 py-1">Bare Ceramic Substrates</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./dpc-ceramic-substrate.html" class="footer-link px-2 py-1">DPC Substrates</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./dbc-ceramic-substrate.html" class="footer-link px-2 py-1">DBC Substrates</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./contact.html" class="footer-link px-2 py-1">Contact</a>
-                    </nav>
-                    <style>
-                        .footer__links .footer-link {
-                            color: #18303d;
-                            font-size: 1.05rem;
-                            text-decoration: none;
-                            transition: color 0.2s;
-                            border-radius: 6px;
-                        }
-                        .footer__links .footer-link:hover {
-                            color: #28495a;
-                            background: #d4dfe7;
-                            text-decoration: none;
-                        }
-                        .footer-divider {
-                            color: #28495a;
-                            font-weight: 600;
-                            font-size: 1.05rem;
-                        }
-                        @media (max-width: 767.98px) {
-                            .footer__links .footer-link,
-                            .footer-divider {
-                                font-size: 0.85rem !important;
-                                padding: 0.5em 0.3em !important;
-                            }
-                        }
-                    </style>
-                </div>
-            </div>
-
-            <div class="row align-items-center text-center">
-                <div class="col-12">
-                    <div class="footer__social">
-                        <!-- <h6 style="font-size: 1.05rem; font-weight: 600; color: #18303d;">Connect with us</h6> -->
-                        <a href="https://www.linkedin.com/company/jimei-materials/" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-                        <!-- <a href="#" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="Twitter"><i class="fa fa-twitter"></i></a> -->
-                        <!-- <a href="#" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="Facebook"><i class="fa fa-facebook"></i></a> -->
-                        <!-- <a href="#" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="YouTube"><i class="fa fa-youtube"></i></a> -->
-                    </div>
-                </div>
-            </div>
-            <style>
-                .footer__social a:hover {
-                    color: #18303d !important;
-                    text-decoration: none;
-                    transform: scale(1.15);
-                    transition: color 0.2s, transform 0.2s;
-                }
-                @media (max-width: 767.98px) {
-                    .footer__social h6 {
-                        font-size: 0.85rem !important;
-                    }
-                    .footer__social a {
-                        font-size: 1.2rem !important;
-                        margin: 0 6px !important;
-                    }
-                }
-            </style>
-
-            <div class="row align-items-center text-center mt-3">
-                <div class="col-12 align-items-center text-center">
-                    <p>
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Jimei Materials Co., Ltd.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <style>
-            @media (max-width: 767.98px) {
-                .footer__about,
-                .footer__widget,
-                .footer__widget__contact,
-                .footer__widget h6,
-                .footer__widget li,
-                .footer__widget a,
-                .footer__widget__contact b,
-                .footer__widget__contact,
-                .footer__about__logo a img,
-                .footer p {
-                    font-size: 0.85rem !important;
-                }
-                .footer__about__logo a img {
-                    width: 100px !important;
-                }
-            }
-        </style>
-    </footer>
-    <!-- Footer Section End -->
-
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-
-
-    <!-- Script to handle button active state and collapse synchronization -->
+    }
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF30RCX51H"></script>
     <script>
-        $(document).ready(function(){
-        // On button click, set that button active, remove active from others
-        $('.btn-group button').on('click', function() {
-            $('.btn-group button').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        // Also listen to collapse show/hide events to sync button highlight
-        $('.collapse').on('show.bs.collapse', function () {
-            var id = $(this).attr('id');
-            $('.btn-group button').removeClass('active');
-            $('.btn-group button[data-target="#' + id + '"]').addClass('active');
-        });
-
-        // Optional: clear active class if collapse hides all (no panels open)
-        $('.collapse').on('hide.bs.collapse', function () {
-            var anyOpen = $('.collapse.show').length;
-            if (anyOpen === 0) {
-            $('.btn-group button').removeClass('active');
-            }
-        });
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MF30RCX51H', {
+            'page_title': 'Ceramic Metallization Processes',
+            'page_location': window.location.href,
+            'page_path': '/ceramic-metallization-processes.html'
         });
     </script>
 
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GT-WBKSVDXG');
+    </script>
+</head>
 
+<body class="d-flex flex-column h-100">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-WBKSVDXG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-to-content visually-hidden-focusable" data-i18n="skip_to_content">Skip to main content</a>
+    
+    <!-- Navigation - Consistent with technical resources page -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html" aria-label="Jimei Materials Home">
+                <picture>
+                    <source srcset="img/logo.webp" type="image/webp">
+                    <img src="img/logo.png" alt="Jimei Materials Logo" width="160" height="45" loading="eager">
+                </picture>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="./index.html" data-i18n="nav_home">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+                           aria-expanded="false" data-i18n="nav_products">Products</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./dpc-ceramic-substrate.html" data-i18n="nav_dpc">Direct Plated Copper (DPC)</a></li>
+                            <li><a class="dropdown-item" href="./dbc-ceramic-substrate.html" data-i18n="nav_dbc">Direct Bonded Copper (DBC)</a></li>
+                            <li><a class="dropdown-item" href="./bare-ceramic-substrates.html" data-i18n="nav_bare">Bare Ceramic Substrates</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./products.html" data-i18n="nav_all_products">All Products</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link" href="./technical-resources.html" data-i18n="nav_resources">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html" data-i18n="nav_about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+                    
+                    <!-- Language Switcher -->
+                    <li class="nav-item language-switcher ms-3">
+                        <button class="language-dropdown-btn" id="languageBtn" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <span id="currentLanguage">English</span>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <ul class="language-dropdown" id="languageDropdown" role="menu" aria-labelledby="languageBtn">
+                            <li class="language-option active" data-lang="en" role="menuitem">
+                                <img src="https://flagcdn.com/w20/gb.png" class="language-flag" alt="English flag" width="20" height="15" loading="lazy">
+                                <span>English</span>
+                            </li>
+                            <li class="language-option" data-lang="zh" role="menuitem">
+                                <img src="https://flagcdn.com/w20/cn.png" class="language-flag" alt="Chinese flag" width="20" height="15" loading="lazy">
+                                <span>中文</span>
+                            </li>
+                            <li class="language-option" data-lang="ja" role="menuitem">
+                                <img src="https://flagcdn.com/w20/jp.png" class="language-flag" alt="Japanese flag" width="20" height="15" loading="lazy">
+                                <span>日本語</span>
+                            </li>
+                            <li class="language-option" data-lang="ko" role="menuitem">
+                                <img src="https://flagcdn.com/w20/kr.png" class="language-flag" alt="Korean flag" width="20" height="15" loading="lazy">
+                                <span>한국어</span>
+                            </li>
+                            <li class="language-option" data-lang="de" role="menuitem">
+                                <img src="https://flagcdn.com/w20/de.png" class="language-flag" alt="German flag" width="20" height="15" loading="lazy">
+                                <span>Deutsch</span>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-primary" href="./contact.html" data-i18n="nav_request_quote">Request Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-shrink-0" id="main-content">
+        
+        <!-- Page Header -->
+        <header class="page-header" role="banner">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" data-i18n="breadcrumb_home"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item" data-i18n="breadcrumb_resources"><a href="./technical-resources.html">Technical Resources</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" data-i18n="article_breadcrumb">Ceramic Metallization</li>
+                    </ol>
+                </nav>
+                <h1 id="page-title" data-i18n="article_title">Ceramic Metallization Processes: Technical Overview & Reliability</h1>
+                <div class="article-meta mt-4 text-white">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <p class="mb-2" data-i18n="article_description">A technical overview of metallization methods for ceramics, including process steps and reliability considerations for power electronics applications.</p>
+                        </div>
+                        <div class="col-md-4 text-md-end">
+                            <div class="small">
+                                <span data-i18n="article_published">Published:</span> <time datetime="2024-01-25">January 25, 2024</time><br>
+                                <span data-i18n="article_read_time">Read time:</span> 12 minutes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Navigation -->
+        <section class="article-navigation">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-4 text-start">
+                        <a href="bare-ceramic-substrates-explained.html" class="btn btn-outline-primary" data-i18n="article_previous">
+                            Previous
+                        </a>
+                    </div>
+                    <div class="col-4 text-center">
+                        <a href="technical-resources.html" class="btn btn-outline-secondary" data-i18n="article_all_resources">
+                            All Resources
+                        </a>
+                    </div>
+                    <div class="col-4 text-end">
+                        <a href="dpc-encapsulation-dam.html" class="btn btn-outline-primary" data-i18n="article_next">
+                            Next
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <article class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="article-content">
+                            <p data-i18n="article_intro_paragraph1">
+                                Ceramic metallization is a critical process in advanced electronics manufacturing, enabling the integration of conductive pathways onto ceramic substrates for applications such as power modules, sensors, optoelectronics, and medical devices. Metallized ceramics combine the inherent thermal, electrical, and mechanical advantages of technical ceramics—such as alumina (Al<sub>2</sub>O<sub>3</sub>) and aluminum nitride (AlN)—with the functionality of metal layers, supporting reliable interconnection, packaging, and thermal management in demanding environments.
+                            </p>
+                            
+                            <figure class="text-center my-5">
+                                <img src="img/MetalCeramics/DPC/DPC4.webp" 
+                                     alt="Ceramic Metallization Process Example - DPC Technology" 
+                                     class="article-img img-fluid" 
+                                     width="450" 
+                                     height="200"
+                                     loading="lazy"
+                                     decoding="async">
+                                <figcaption class="mt-2 text-muted small" data-i18n="article_image_caption">Direct Plated Copper (DPC) metallization on ceramic substrate for advanced packaging applications</figcaption>
+                            </figure>
+
+                            <h2 data-i18n="article_section1_title">What Is Ceramic Metallization?</h2>
+                            
+                            <p data-i18n="article_section1_paragraph1">
+                                Ceramic metallization refers to the application of thin metal films or patterns onto ceramic substrates to create electrical contacts, circuit traces, or bonding pads. This process is essential for producing substrates used in Direct Bonded Copper (DBC), Direct Plated Copper (DPC), and other advanced packaging solutions. Metallized ceramics are widely used in high-power electronics, RF/microwave circuits, LED modules, and hermetic packages, where robust electrical performance and environmental resistance are required.
+                            </p>
+
+                            <h2 data-i18n="article_section2_title">Key Metallization Methods for Ceramics</h2>
+                            
+                            <p data-i18n="article_section2_paragraph1">
+                                Different applications require specific metallization techniques, each with unique advantages and considerations:
+                            </p>
+                            
+                            <h3 data-i18n="article_subsection1_title">1. Thick Film Metallization</h3>
+                            
+                            <p data-i18n="article_subsection1_paragraph1">
+                                Utilizes screen printing of metal pastes (typically silver, gold, or platinum-based) onto the ceramic surface, followed by firing at high temperatures to sinter the metal and achieve adhesion. This method is cost-effective and suitable for mass production of circuit patterns and electrodes.
+                            </p>
+                            
+                            <h3 data-i18n="article_subsection2_title">2. Thin Film Metallization</h3>
+                            
+                            <p data-i18n="article_subsection2_paragraph1">
+                                Involves vacuum deposition techniques such as sputtering or evaporation to deposit thin layers of metals (e.g., titanium, tungsten, nickel, gold) onto ceramics. Thin film processes offer precise control over layer thickness and pattern resolution, ideal for microelectronics and high-frequency applications.
+                            </p>
+                            
+                            <h3 data-i18n="article_subsection3_title">3. Direct Bonded Copper (DBC)</h3>
+                            
+                            <p data-i18n="article_subsection3_paragraph1">
+                                A process where copper foil is bonded directly to ceramic substrates (usually Al<sub>2</sub>O<sub>3</sub> or AlN) through high-temperature oxidation and diffusion. DBC substrates provide excellent thermal conductivity and high current-carrying capability, making them preferred for power modules and IGBT packaging.
+                            </p>
+                            
+                            <h3 data-i18n="article_subsection4_title">4. Direct Plated Copper (DPC)</h3>
+                            
+                            <p data-i18n="article_subsection4_paragraph1">
+                                Uses photolithography and electroplating to deposit copper patterns onto ceramic surfaces. DPC enables fine line resolution and multilayer structures, supporting advanced packaging for semiconductor devices and laser diodes.
+                            </p>
+                            
+                            <h3 data-i18n="article_subsection5_title">5. Active Metal Brazing (AMB)</h3>
+                            
+                            <p data-i18n="article_subsection5_paragraph1">
+                                Employs active brazing alloys (e.g., Ag-Cu-Ti) to bond metal layers to ceramics at elevated temperatures. AMB is used for hermetic sealing and high-reliability applications where strong metal-ceramic adhesion is required.
+                            </p>
+
+                            <h2 data-i18n="article_section3_title">Ceramic Metallization Process Steps</h2>
+                            
+                            <div class="process-step">
+                                <div class="d-flex align-items-start">
+                                    
+                                    <div>
+                                        <h4 class="h5" data-i18n="process_step1_title">Surface Preparation</h4>
+                                        <p data-i18n="process_step1_description">The ceramic substrate is cleaned and, if necessary, roughened to enhance metal adhesion. Techniques include ultrasonic cleaning, plasma treatment, and chemical etching.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="d-flex align-items-start">
+                                    
+                                    <div>
+                                        <h4 class="h5" data-i18n="process_step2_title">Metal Deposition</h4>
+                                        <p data-i18n="process_step2_description">Metal layers are applied using screen printing, sputtering, evaporation, or electroplating, depending on the chosen metallization method and application requirements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="d-flex align-items-start">
+                                    
+                                    <div>
+                                        <h4 class="h5" data-i18n="process_step3_title">Patterning</h4>
+                                        <p data-i18n="process_step3_description">Photolithography, laser ablation, or mask printing are used to define circuit traces, bonding pads, or electrode geometries on the substrate.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="d-flex align-items-start">
+                                    
+                                    <div>
+                                        <h4 class="h5" data-i18n="process_step4_title">Firing/Annealing</h4>
+                                        <p data-i18n="process_step4_description">For thick film processes, the metallized substrate is fired at high temperatures to sinter the metal and achieve strong adhesion. Thin film and plated layers may undergo annealing to improve crystallinity and interface quality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="d-flex align-items-start">
+                                    
+                                    <div>
+                                        <h4 class="h5" data-i18n="process_step5_title">Post-Processing</h4>
+                                        <p data-i18n="process_step5_description">Additional steps such as soldering, wire bonding, or encapsulation are performed to integrate the metallized ceramic into electronic assemblies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="d-flex align-items-start">
+                                    
+                                    <div>
+                                        <h4 class="h5" data-i18n="process_step6_title">Inspection & Testing</h4>
+                                        <p data-i18n="process_step6_description">Metallized substrates are inspected for adhesion, pattern accuracy, and electrical continuity. Reliability testing may include thermal cycling, humidity exposure, and high-voltage breakdown assessment.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 data-i18n="article_section4_title">Reliability Considerations in Ceramic Metallization</h2>
+                            
+                            <div class="table-responsive tech-table">
+                                <table class="table table-striped table-bordered" role="table" aria-label="Reliability considerations for ceramic metallization">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" data-i18n="table_header_factor">Reliability Factor</th>
+                                            <th scope="col" data-i18n="table_header_consideration">Key Consideration</th>
+                                            <th scope="col" data-i18n="table_header_impact">Impact on Performance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" data-i18n="table_row1_factor">Adhesion Strength</th>
+                                            <td data-i18n="table_row1_consideration">The bond between metal and ceramic must withstand thermal cycling, mechanical stress, and environmental exposure.</td>
+                                            <td data-i18n="table_row1_impact">Poor adhesion can lead to delamination, electrical failure, or reduced device lifespan.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" data-i18n="table_row2_factor">Thermal Expansion Matching</th>
+                                            <td data-i18n="table_row2_consideration">Differences in thermal expansion coefficients between metal and ceramic can induce stress during temperature changes.</td>
+                                            <td data-i18n="table_row2_impact">Optimized material selection and processes minimize cracking or warping during thermal cycling.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" data-i18n="table_row3_factor">Corrosion Resistance</th>
+                                            <td data-i18n="table_row3_consideration">Metallized layers are often exposed to moisture, chemicals, or high voltages.</td>
+                                            <td data-i18n="table_row3_impact">Protective coatings or alloy selection help prevent oxidation and maintain long-term reliability.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" data-i18n="table_row4_factor">Electrical Performance</th>
+                                            <td data-i18n="table_row4_consideration">Low contact resistance, high current-carrying capability, and stable dielectric properties are essential.</td>
+                                            <td data-i18n="table_row4_impact">Process control ensures consistent electrical characteristics across production batches.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" data-i18n="table_row5_factor">Hermeticity</th>
+                                            <td data-i18n="table_row5_consideration">For medical, aerospace, and sensor applications, metallized ceramics may require hermetic sealing.</td>
+                                            <td data-i18n="table_row5_impact">Brazing and encapsulation techniques achieve robust seals against moisture and contaminants.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 data-i18n="article_section5_title">Applications of Metallized Ceramic Substrates</h2>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="h5 card-title" data-i18n="application1_title">Power Modules & IGBT Substrates</h4>
+                                            <p class="card-text" data-i18n="application1_description">Metallized ceramics provide electrical isolation and efficient heat dissipation for high-voltage, high-current devices in industrial and automotive systems.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="h5 card-title" data-i18n="application2_title">Laser Diode & Optoelectronic Packaging</h4>
+                                            <p class="card-text" data-i18n="application2_description">Thin film metallization enables precise electrode patterns and reliable bonding for photonic devices requiring thermal management and electrical connectivity.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="h5 card-title" data-i18n="application3_title">RF & Microwave Circuits</h4>
+                                            <p class="card-text" data-i18n="application3_description">Metallized ceramics offer low-loss, high-frequency performance for communication modules, radar systems, and wireless infrastructure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="h5 card-title" data-i18n="application4_title">Medical Devices & Sensors</h4>
+                                            <p class="card-text" data-i18n="application4_description">Hermetically sealed metallized ceramics are used in implantable electronics, sensors, and diagnostic equipment, ensuring biocompatibility and reliability.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4" role="alert">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="fas fa-info-circle fa-2x" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0" data-i18n="technical_note">
+                                            <strong>Expert Insight:</strong> At Jimei Materials, we specialize in optimizing metallization processes for specific application requirements, balancing thermal performance, electrical characteristics, and long-term reliability through rigorous testing and quality control.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 data-i18n="article_section6_title">Conclusion</h2>
+                            
+                            <p data-i18n="article_conclusion">
+                                Ceramic metallization processes are foundational to the development of high-performance electronic devices, combining the advantages of technical ceramics with the functionality of metal interconnects. By selecting appropriate metallization methods and optimizing process steps, manufacturers achieve reliable, efficient, and scalable solutions for power electronics, optoelectronics, RF circuits, and medical applications. As technology advances, the demand for robust metallized ceramic substrates will continue to grow, driving innovation in thermal management, electrical isolation, and device miniaturization.
+                            </p>
+                        </div>
+                        
+                        <!-- Article Tags -->
+                        <div class="mt-5 pt-4 border-top">
+                            <div class="d-flex flex-wrap align-items-center">
+                                <span class="fw-bold me-3" data-i18n="article_tags">Tags:</span>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_metallization">Ceramic Metallization</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_dbc">DBC Technology</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_dpc">DPC Technology</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_reliability">Reliability</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_thermal">Thermal Management</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Related Articles -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5" data-i18n="related_articles_title">Related Technical Articles</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2" data-i18n="badge_dbc_technology">DBC Technology</span>
+                                <h3 class="h5 card-title" data-i18n="related_article1_title">Understanding DBC Substrates</h3>
+                                <p class="card-text small" data-i18n="related_article1_description">Explore the advantages and applications of Direct Bonded Copper substrates in power electronics and thermal management.</p>
+                                <a href="./understanding-dbc-substrates.html" class="btn btn-link p-0" data-i18n="btn_read_more">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2" data-i18n="badge_dpc_technology">DPC Technology</span>
+                                <h3 class="h5 card-title" data-i18n="related_article2_title">DPC Technology Explained</h3>
+                                <p class="card-text small" data-i18n="related_article2_description">Learn how Direct Plated Copper technology is revolutionizing advanced packaging for semiconductors and optoelectronics.</p>
+                                <a href="./dpc-technology-explained.html" class="btn btn-link p-0" data-i18n="btn_read_more">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2" data-i18n="badge_application_note">Application Note</span>
+                                <h3 class="h5 card-title" data-i18n="related_article3_title">DPC Encapsulation Dam Advantages</h3>
+                                <p class="card-text small" data-i18n="related_article3_description">Discover how Direct Plated Copper (DPC) encapsulation dams enhance power module reliability and performance.</p>
+                                <a href="./dpc-encapsulation-dam.html" class="btn btn-link p-0" data-i18n="btn_read_more">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="h1 fw-bold mb-3" data-i18n="article_cta_title">Need Metallization Expertise?</h2>
+                        <p class="lead mb-4" data-i18n="article_cta_description">Our technical team specializes in ceramic metallization processes for demanding applications. Contact us for process optimization and reliability testing.</p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-3 fa-lg" aria-hidden="true"></i>
+                                    <div>
+                                        <div class="fw-bold" data-i18n="cta_feature1_title">Process Consultation</div>
+                                        <small data-i18n="cta_feature1_desc">Expert guidance on metallization methods and process optimization</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-3 fa-lg" aria-hidden="true"></i>
+                                    <div>
+                                        <div class="fw-bold" data-i18n="cta_feature2_title">Reliability Testing</div>
+                                        <small data-i18n="cta_feature2_desc">Comprehensive testing including thermal cycling, adhesion, and hermeticity</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <a href="./contact.html" class="btn btn-light btn-lg px-5" data-i18n="btn_contact_experts">
+                            <i class="fas fa-microscope me-2" aria-hidden="true"></i> Contact Technical Team
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Consistent with technical resources page -->
+    <footer class="bg-light mt-auto py-5 border-top" role="contentinfo">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a href="./index.html" class="d-inline-block mb-3" aria-label="Jimei Materials Home">
+                        <picture>
+                            <source srcset="img/logo.webp" type="image/webp">
+                            <img src="img/logo.png" alt="Jimei Materials Logo" width="160" height="45" loading="lazy">
+                        </picture>
+                    </a>
+                    <p class="small" data-i18n="footer_description">Leading manufacturer of ceramic metallization substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.</p>
+                    <div class="mt-3">
+                        <a href="https://www.linkedin.com/company/jimei-materials/" class="text-secondary me-3" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-6">
+                    <h3 class="fw-bold mb-3" data-i18n="footer_products">Products</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./dpc-ceramic-substrate.html" class="text-decoration-none text-secondary" data-i18n="nav_dpc">DPC Substrates</a></li>
+                        <li class="mb-2"><a href="./dbc-ceramic-substrate.html" class="text-decoration-none text-secondary" data-i18n="nav_dbc">DBC Substrates</a></li>
+                        <li class="mb-2"><a href="./bare-ceramic-substrates.html" class="text-decoration-none text-secondary" data-i18n="nav_bare">Bare Ceramic</a></li>
+                        <li class="mb-2"><a href="./products.html" class="text-decoration-none text-secondary" data-i18n="nav_all_products">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-6">
+                    <h3 class="fw-bold mb-3" data-i18n="footer_company">Company</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./about.html" class="text-decoration-none text-secondary" data-i18n="nav_about">About Us</a></li>
+                        <li class="mb-2"><a href="./technical-resources.html" class="text-decoration-none text-secondary" data-i18n="nav_resources">Resources</a></li>
+                        <li class="mb-2"><a href="./contact.html" class="text-decoration-none text-secondary" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h3 class="fw-bold mb-3" data-i18n="footer_contact">Contact Info</h3>
+                    <address class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-envelope me-2" aria-hidden="true"></i> sales@jimei-materials.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2" aria-hidden="true"></i> +86-147-4537-3293</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> <span data-i18n="footer_address">First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China</span></li>
+                        <li class="mb-2"><i class="fas fa-clock me-2" aria-hidden="true"></i> <span data-i18n="footer_hours">Mon-Fri: 8:00 AM - 6:00 PM (GMT+8)</span></li>
+                        <li class="mb-2"><i class="fas fa-language me-2" aria-hidden="true"></i> <span data-i18n="footer_languages">Support: English, Chinese, Japanese, Korean, German</span></li>
+                    </address>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="small mb-0">Copyright &copy; <span id="currentYear"></span> Jimei Materials Co., Ltd. <span data-i18n="footer_rights">All rights reserved.</span></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="./privacy-policy.html" class="text-decoration-none text-secondary small me-3" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="./terms-of-service.html" class="text-decoration-none text-secondary small me-3" data-i18n="footer_terms">Terms of Service</a>
+                    <a href="./sitemap.html" class="text-decoration-none text-secondary small" data-i18n="footer_sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+            crossorigin="anonymous" defer></script>
+    
+    <!-- External JavaScript -->
+    <script src="js/main.min.js" defer></script>
+    <script src="js/article.min.js" defer></script>
+    
+    <!-- Translation Data for this article -->
+    <script src="js/article-ceramic-metallization-translation.js" defer></script>
 
 </body>
-
 </html>

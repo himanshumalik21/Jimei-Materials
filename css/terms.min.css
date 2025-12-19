@@ -1,0 +1,255 @@
+/* 
+ * Terms of Service CSS - Jimei Materials
+ * Optimized for performance and responsiveness
+ */
+
+/* Terms of Service Specific Styles */
+.terms-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.terms-content h2 {
+    color: #28495a;
+    border-bottom: 2px solid #28495a;
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.terms-content h3 {
+    color: #1a6b8a;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.terms-content h4 {
+    color: #444;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.terms-content p {
+    margin-bottom: 1.5rem;
+}
+
+.terms-content ul, .terms-content ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.terms-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.terms-content strong {
+    color: #28495a;
+}
+
+.update-date {
+    background-color: #f8f9fa;
+    border-left: 4px solid #28495a;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.update-date p:last-child {
+    margin-bottom: 0;
+}
+
+.notice-box {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.notice-box h3 {
+    color: #856404;
+    margin-top: 0;
+}
+
+.contact-info {
+    background-color: #f8f9fa;
+    border-left: 4px solid #1a6b8a;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.contact-info a {
+    color: #1a6b8a;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #28495a;
+    text-decoration: underline;
+}
+
+/* Accessibility enhancements */
+.terms-content a[href] {
+    color: #1a6b8a;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.terms-content a[href]:hover {
+    color: #28495a;
+    text-decoration-thickness: 2px;
+}
+
+/* Focus styles for accessibility */
+.terms-content a[href]:focus,
+.terms-content button:focus {
+    outline: 2px solid #28495a;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .terms-content {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .update-date,
+    .notice-box,
+    .contact-info {
+        border: 1px solid #ddd;
+        break-inside: avoid;
+    }
+    
+    .btn,
+    .navbar,
+    .footer {
+        display: none !important;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .terms-content {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    .terms-content h2 {
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+    }
+    
+    .terms-content h3 {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .update-date,
+    .notice-box,
+    .contact-info {
+        padding: 1.25rem;
+        margin: 1.5rem -15px;
+        border-radius: 0;
+        border-left: none;
+        border-top: 3px solid #28495a;
+    }
+    
+    .notice-box {
+        border-top-color: #ffc107;
+    }
+    
+    .contact-info {
+        border-top-color: #1a6b8a;
+    }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .terms-content {
+        font-size: 1.05rem;
+    }
+    
+    .terms-content h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Performance optimizations */
+.terms-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.terms-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.terms-content table th,
+.terms-content table td {
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.terms-content table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .terms-content a[href],
+    .terms-content button {
+        transition: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .terms-content {
+        color: #e0e0e0;
+    }
+    
+    .terms-content h2,
+    .terms-content h3 {
+        color: #5dade2;
+    }
+    
+    .update-date,
+    .contact-info {
+        background-color: #2d3748;
+        border-color: #5dade2;
+        color: #e0e0e0;
+    }
+    
+    .notice-box {
+        background-color: #443d00;
+        border-color: #ffc107;
+        color: #e0e0e0;
+    }
+    
+    .terms-content a[href] {
+        color: #5dade2;
+    }
+}
+
+/* Loading optimizations */
+.terms-content {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}

@@ -1,0 +1,135 @@
+:root {
+    --primary: #28495a;
+    --secondary: #1a6b8a;
+    --accent: #28495a;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Resource Cards */
+.resource-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(40, 73, 90, 0.1);
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(40, 73, 90, 0.15);
+}
+
+.resource-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.resource-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.resource-content {
+    padding: 1.5rem;
+}
+
+/* Category Filter */
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    background: white;
+    border: 2px solid rgba(40, 73, 90, 0.1);
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    color: var(--primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Partner Grid */
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.partner-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(40, 73, 90, 0.1);
+    transition: all 0.3s ease;
+    color: var(--primary);
+}
+
+.partner-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+    .partner-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .category-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .category-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .resource-img {
+        height: 150px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .category-filter {
+        display: none !important;
+    }
+}

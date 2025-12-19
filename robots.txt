@@ -1,39 +1,97 @@
 User-agent: *
 Allow: /
+Crawl-delay: 2
 
+# Block only sensitive/private directories
 Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-json/
 Disallow: /cgi-bin/
 Disallow: /includes/
 Disallow: /tmp/
 Disallow: /private/
 Disallow: /config/
-
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /wp-json/
 Disallow: /search/
 Disallow: /ajax/
 
+# Block parameter-based URLs that create duplicate content
 Disallow: /*?s=
 Disallow: /*?redirect=
 Disallow: /*?replytocom=
+Disallow: /*?utm_
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
 
-User-agent: CCBot
-Disallow: /
+# IMPORTANT: Allow AI crawlers (previously blocked)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
 
 User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: GPTBot
-Disallow: /
+Allow: /
+Crawl-delay: 2
 
 User-agent: Claude-Web
-Disallow: /
+Allow: /
+Crawl-delay: 2
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
+Crawl-delay: 2
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
 
 User-agent: FacebookBot
-Disallow: /
+Allow: /
+Crawl-delay: 2
 
-Sitemap: https://www.jimei-materials.com/sitemap.xml
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 2
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Diffbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 2
+
+User-agent: cohere-ai
+Allow: /
+Crawl-delay: 2
+
+# Search engine crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Sitemap location - CRITICAL for indexing
+Sitemap: https://jimei-materials.com/sitemap.xml

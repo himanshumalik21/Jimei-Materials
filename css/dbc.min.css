@@ -1,0 +1,218 @@
+/* DBC Specific Styles */
+
+/* Power-themed styles */
+.power-badge {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 5px;
+    font-size: 0.85rem;
+}
+
+/* Enhanced table for power specifications */
+.table-power {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.table-power thead th {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 16px;
+}
+
+.table-power tbody tr {
+    border-bottom: 1px solid #e9ecef;
+    transition: background 0.3s ease;
+}
+
+.table-power tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* Material comparison cards */
+.material-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.material-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.material-card.featured {
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(40, 73, 90, 0.15);
+}
+
+.material-card.featured::before {
+    content: 'RECOMMENDED';
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 40px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    transform: rotate(45deg);
+}
+
+/* Application icons */
+.app-icon-container {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.app-icon-container.igbt {
+    background: linear-gradient(135deg, #ffebee, #ffcdd2);
+}
+
+.app-icon-container.ev {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.app-icon-container.industrial {
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+}
+
+/* Performance metrics */
+.metric-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments for DBC page */
+@media (max-width: 992px) {
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .material-card.featured::before {
+        right: -40px;
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .power-badge {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+    
+    .table-power {
+        font-size: 0.9rem;
+    }
+    
+    .metric-card {
+        padding: 15px;
+    }
+    
+    .metric-value {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .material-card.featured::before {
+        right: -45px;
+        font-size: 0.6rem;
+        padding: 4px 35px;
+    }
+    
+    .app-icon-container {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* Dark mode support for DBC */
+@media (prefers-color-scheme: dark) {
+    .table-power {
+        background: #2d2d2d;
+    }
+    
+    .table-power thead th {
+        background: linear-gradient(135deg, #1a3d4f, #2a5d7a);
+    }
+    
+    .table-power tbody tr:hover {
+        background: #3d3d3d;
+    }
+    
+    .metric-card {
+        background: #2d2d2d;
+        border-color: #3d3d3d;
+    }
+    
+    .app-icon-container {
+        background: linear-gradient(135deg, #2d3d4d, #3d4d5d);
+    }
+}
+
+/* Print styles for DBC */
+@media print {
+    .metric-card {
+        break-inside: avoid;
+    }
+    
+    .material-card {
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+    
+    .material-card.featured::before {
+        content: 'RECOMMENDED FOR HIGH POWER';
+        position: static;
+        transform: none;
+        background: none;
+        color: black;
+        font-weight: bold;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+}

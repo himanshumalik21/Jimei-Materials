@@ -1,50 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Leading manufacturer and supplier of Metallized Ceramic Substrates - Direct Bonded Copper (DBC), Direct Platted Copper (DPC), and 
-    Bare Ceramic Substrates for advanced packaging - Peltier modules substrate, IGBT substrate, Laser Diode substrate, heat sinks, power modules, and semiconductor applications.">
-    <meta name="keywords" content="Peltier modules substrate, IGBT substrate, Laser Diode substrate, Ceramic Metallization, DBC, DPC, Direct Bonded Copper, Advanced Packaging, Semiconductor, Heat Sink, Thermoelectric Cooler, 
-    Interdigital Electrodes, Bare Ceramic Substrate, Metallized Ceramic Substrate, Encapsulation Dam, LiDAR, Jimei Materials">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="index, follow">
+    <title data-i18n="dbc_article_title">Understanding DBC Substrates: Technical Guide | JIMEI Ceramic Substrates</title>
+
+    <!-- Critical Meta Tags for SEO -->
+    <meta name="description" data-i18n="dbc_article_meta_description" content="Complete technical guide to Direct Bonded Copper (DBC) substrates. Learn about DBC applications in power electronics, thermal management, and semiconductor packaging.">
+    <meta name="keywords" data-i18n="dbc_article_meta_keywords" content="Direct Bonded Copper, DBC substrates, power electronics, thermal management, ceramic substrates, IGBT modules, semiconductor packaging, thermal conductivity">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Jimei Materials">
-
-        <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://www.jimei-materials.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="DBC & DPC Substrate Manufacturer | Jimei Materials">
-    <meta property="og:description" content="Leading manufacturer and supplier of Metallized Ceramic Substrates - Direct Bonded Copper (DBC) and Direct Platted Copper (DPC).">
-    <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg?token=CSrSvFTMEGBnKthfNtNYYcFReQ5FRUKvplRT4J9LmCg&height=1183&width=1200&expires=33296685124">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="jimei-materials.com">
-    <meta property="twitter:url" content="https://www.jimei-materials.com">
-    <meta name="twitter:title" content="DBC & DPC Substrate Manufacturer | Jimei Materials">
-    <meta name="twitter:description" content="Leading manufacturer and supplier of Metallized Ceramic Substrates - Direct Bonded Copper (DBC) and Direct Platted Copper (DPC).">
-    <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/608e008f-ade3-44a4-9981-aa8a30f56c9a.jpg?token=CSrSvFTMEGBnKthfNtNYYcFReQ5FRUKvplRT4J9LmCg&height=1183&width=1200&expires=33296685124">
-
-    <link rel="canonical" href="https://www.jimei-materials.com/understanding-dbc-substrates.html" />
     
-    <title>Ceramic Metallization Substrates | DBC & DPC Solutions | Jimei Materials</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.jimei-materials.com/understanding-dbc-substrates.html">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.jimei-materials.com/understanding-dbc-substrates.html">
+    <meta property="og:title" data-i18n="dbc_article_og_title" content="Understanding DBC Substrates: Technical Guide | Jimei Materials">
+    <meta property="og:description" data-i18n="dbc_article_og_description" content="Complete technical guide to Direct Bonded Copper (DBC) substrates for power electronics and thermal management applications.">
+    <meta property="og:image" content="https://www.jimei-materials.com/img/Article1/DBC1.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2024-01-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-01-15T00:00:00+00:00">
+    <meta property="article:author" content="Jimei Materials Engineering Team">
+    <meta property="article:section" content="DBC Technology">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jimei-materials.com/understanding-dbc-substrates.html">
+    <meta name="twitter:title" data-i18n="dbc_article_twitter_title" content="Understanding DBC Substrates: Technical Guide | Jimei Materials">
+    <meta name="twitter:description" data-i18n="dbc_article_twitter_description" content="Complete technical guide to Direct Bonded Copper (DBC) substrates for power electronics and thermal management applications.">
+    <meta name="twitter:image" content="https://www.jimei-materials.com/img/Article1/DBC1.jpeg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="img/logo.webp" as="image" type="image/webp">
+    <link rel="preload" href="img/Article1/DBC1.jpeg" as="image" type="image/jpeg">
+    
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://flagcdn.com">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+          crossorigin="anonymous"
+          media="print" onload="this.media='all'">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer"
+          media="print" onload="this.media='all'">
+    
+    <!-- Critical CSS (above the fold) -->
+    <style>
+        :root {
+            --primary: #28495a;
+            --secondary: #1a6b8a;
+            --accent: #28495a;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+        img { 
+            max-width: 100%; 
+            height: auto; 
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 120px 0 60px;
+            margin-top: 70px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0V100H1000V0C800,50 600,75 400,50S200,25 0,0Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        .page-header h1 {
+            font-size: clamp(1.75rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .breadcrumb {
+            background: transparent;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .breadcrumb-item a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb-item a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-item.active {
+            color: white;
+            font-weight: 500;
+        }
+        
+        .breadcrumb-item + .breadcrumb-item::before {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Skip to main content */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 8px;
+            z-index: 9999;
+        }
+        
+        .skip-to-content:focus {
+            top: 0;
+        }
+        
+        /* Article content */
+        .article-content {
+            line-height: 1.7;
+            font-size: 1.125rem;
+        }
+        
+        .article-content h2 {
+            color: var(--primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+            font-size: 1.75rem;
+        }
+        
+        .article-content h3 {
+            color: var(--secondary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.375rem;
+        }
+        
+        .article-content ul, .article-content ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .article-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 2rem auto;
+            display: block;
+        }
+        
+        .article-meta {
+            background: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
+        }
+        
+        .article-navigation {
+            border-top: 1px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+            padding: 2rem 0;
+        }
+        
+        /* Feature highlights */
+        .feature-highlight {
+            background: linear-gradient(135deg, rgba(40, 73, 90, 0.05) 0%, rgba(26, 107, 138, 0.05) 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .comparison-table {
+            margin: 2rem 0;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem;
+        }
+        
+        .comparison-table td {
+            padding: 0.75rem;
+            vertical-align: top;
+        }
+        
+        .comparison-table tbody tr:nth-child(even) {
+            background-color: rgba(40, 73, 90, 0.05);
+        }
+        
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 100px 0 40px;
+                margin-top: 60px;
+            }
+            
+            .article-content {
+                font-size: 1rem;
+            }
+            
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .article-content h3 {
+                font-size: 1.25rem;
+            }
+            
+            .feature-highlight {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 
-<!-- Favicon and App Icons -->
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/main.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/article.min.css" media="print" onload="this.media='all'">
+
+    <!-- Favicon and App Icons -->
     <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
@@ -54,460 +274,539 @@
     <link rel="manifest" href="icons/site.webmanifest">
     <meta name="theme-color" content="#28495a">
 
-</head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF30RCX51H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MF30RCX51H');
-</script>
-
-<!-- AHREF -->
-
-<script>
-  var ahrefs_analytics_script = document.createElement('script');
-  ahrefs_analytics_script.async = true;
-  ahrefs_analytics_script.src = 'https://analytics.ahrefs.com/analytics.js';
-  ahrefs_analytics_script.setAttribute('data-key', 'aZiWaLuUDKy+MSZk4g+BlQ');
-  document.getElementsByTagName('head')[0].appendChild(ahrefs_analytics_script);
-</script>
-
-<style>
-    /* Hide scrollbar for all browsers */
-    html, body {
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* IE and Edge */
+    <!-- Article Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.jimei-materials.com/understanding-dbc-substrates.html"
+        },
+        "headline": "Understanding DBC Substrates: Complete Technical Guide",
+        "description": "Complete technical guide to Direct Bonded Copper (DBC) substrates for power electronics, thermal management, and semiconductor packaging applications.",
+        "image": [
+            "https://www.jimei-materials.com/img/Article1/DBC1.jpeg",
+            "https://www.jimei-materials.com/img/Article1/DBC2.png"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Jimei Materials Engineering Team",
+            "url": "https://www.jimei-materials.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Jimei Materials Co., Ltd.",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.jimei-materials.com/img/logo.webp",
+                "width": 160,
+                "height": 45
+            }
+        },
+        "datePublished": "2024-01-15T00:00:00+00:00",
+        "dateModified": "2024-01-15T00:00:00+00:00",
+        "articleSection": "DBC Technology",
+        "keywords": "Direct Bonded Copper, DBC substrates, power electronics, thermal management, ceramic substrates, IGBT modules, semiconductor packaging",
+        "inLanguage": "en-US",
+        "wordCount": 1200,
+        "timeRequired": "PT8M",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "xpath": [
+                "/html/head/title",
+                "/html/body/main//h1",
+                "/html/body/main//h2[1]",
+                "/html/body/main//p[1]"
+            ]
+        }
     }
-    html::-webkit-scrollbar, body::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
-    }
-</style>
-
-<style>
-#scrollToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    z-index: 999;
-    background: #28495a;
-    color: #fff;
-    border: none;
-    outline: none;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    font-size: 24px;
-    box-shadow: 0 2px 8px rgba(40,73,90,0.18);
-    cursor: pointer;
-    transition: background 0.2s;
-}
-#scrollToTopBtn:hover {
-    background: #18303d;
-}
-</style>
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-    var btn = document.createElement('button');
-    btn.id = 'scrollToTopBtn';
-    btn.title = 'Scroll to top';
-    btn.innerHTML = '<i class="fa fa-chevron-up"></i>';
-    document.body.appendChild(btn);
-
-    window.addEventListener('scroll', function() {
-        btn.style.display = (window.scrollY > 200) ? 'block' : 'none';
-    });
-
-    btn.addEventListener('click', function() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-});
-</script>
-
-
-
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Humberger Begin -->
-    <div class="humberger__menu__overlay">
-        <div class="humberger__menu__wrapper">
-            <div class="humberger__menu__logo">
-                <a href="./index.html"><img src="img/logo.webp" alt="Jimei Materials Logo" width="120px" height="auto"></a>
-            </div>
-            <nav class="humberger__menu__nav mobile-menu">
-                <ul>
-                    <li class="active"><a href="./index.html">Home</a></li>
-                    <li><a href="./products.html">Featured Products</a>
-                            <li><a href="./dpc-ceramic-substrate.html">Direct Plated Copper (DPC)</a></li>
-                            <li><a href="./dbc-ceramic-substrate.html">Direct Bonded Copper (DBC)</a></li>
-                            <li><a href="./bare-ceramic-substrates.html">Bare Ceramic Substrates</a></li>
-                    </li>
-                    <li><a href="./technical-resources.html">Resources</a></li>
-                    <li><a href="./about.html">About us</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div id="mobile-menu-wrap"></div>
-            <div class="humberger__menu__contact">
-                <ul>
-                    <li><i class="fa fa-envelope"></i> sales@jimei-materials.com</li>
-                    <li><i class="fa fa-phone"></i> (+86) 147 4537 3293</li>
-                </ul>
-            </div>
-            <div class="humberger__menu__contact">
-                <a href="./contact.html" class="primary-btn">Request A Quote</a>
-            </div>
-        </div>
-    </div>
-    <!-- Humberger End -->
-
-    <!-- Header Section Begin -->
-    <header class="header fixed-top" style="background-color:#d4dfe7; align-content:center;">
-        <div class="header__top text-white" style="background-color:#28495a;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__left text-white" >
-                            <ul>
-                                <li class="text-white"><i class="fa fa-envelope text-white"></i> sales@jimei-materials.com</li>
-                                <li class="text-white"><i class="fa fa-phone text-white"></i> (+86) 147 4537 3293</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__right">
-                            <div class="header__top__right__auth">
-                                <a href="./contact.html" class="site-btn">Request A Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row align-items-center m-4">
-                <div class="col-lg-3">
-                        <a href="./index.html"><img src="img/logo.webp" alt="Jimei Materials Logo" width="120px" height="auto" ></a>
-                </div>
-                <div class="col-lg-9">
-                    <nav class="header__menu">
-                        <ul>
-                            <li><a href="./index.html" style="font-size: 1.1rem;">Home</a></li>
-                            <li class="active"><a href="./products.html" style="font-size: 1.1rem;">Products</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./dpc-ceramic-substrate.html" style="font-size: 1.1rem; font-weight: 700; padding-top: 1em; padding-bottom: 1em;">Direct Plated <br> Copper (DPC)</a></li>
-                                    <li><a href="./dbc-ceramic-substrate.html" style="font-size: 1.1rem; font-weight: 700; padding-top: 1em; padding-bottom: 1em;">Direct Bonded <br> Copper (DBC)</a></li>
-                                    <li><a href="./bare-ceramic-substrates.html" style="font-size: 1.1rem; font-weight: 700;  padding-top: 1em; padding-bottom: 1em;">Bare Ceramic <br> Substrates</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./technical-resources.html" style="font-size: 1.1rem;">Resources</a></li>
-                            <li><a href="./about.html" style="font-size: 1.1rem;">About us</a></li>
-                            <li><a href="./contact.html" style="font-size: 1.1rem;">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="humberger__open" style="border: none;">
-                <i class="fa fa-bars" style="color: #28495a; font-size: 2rem;"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
-
-
-    <!-- Article Section Begin -->
-    <section class="article-section py-5" style="margin-top: 150px;">
-        <style>
-            @media (max-width: 991.98px) {
-                .article-section {
-                    margin-top: 120px !important;
-                }
-            }
-            @media (max-width: 767.98px) {
-                .article-section {
-                    margin-top: 100px !important;
-                }
-            }
-        </style>
-
-        <div class="container mb-4">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-12">
-                    <nav aria-label="Article navigation">
-                        <div class="row text-center">
-                            <div class="col-4 text-start" style="opacity: 0.4; pointer-events: none;">
-                                <a class="page-link" href="" style="color:#28495a; font-weight:600;">
-                                    &laquo; Previous
-                                </a>
-                            </div>
-                            <div class="col-4 text-center">
-                                <a class="page-link" href="technical-resources.html" style="color:#28495a; font-weight:600;">
-                                    All Links
-                                </a>
-                            </div>
-                            <div class="col-4 text-end">
-                                <a class="page-link" href="dpc-technology-explained.html" style="color:#28495a; font-weight:600;">
-                                    Next &raquo;
-                                </a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-12">
-                    <article>
-                        <div class="row justify-content-center">
-                            <div class="col-12 text-center">
-                                <h1 class="mb-3 dpc-title" style="font-size: 3rem;">Understanding DBC Substrates</h1>
-                            </div>
-                        </div>
-                        <style>
-                            @media (max-width: 767.98px) {
-                                .dpc-title {
-                                    font-size: 2rem !important;
-                                }
-                            }
-                        </style>
-                        
-                        <p style="color: black;">
-                            Direct Bonded Copper (DBC) substrates are a cornerstone in the world of power electronics, offering exceptional thermal conductivity, electrical insulation, and mechanical strength. As industries demand higher performance and reliability, understanding the fundamentals of DBC substrates becomes essential for engineers, designers, and manufacturers.
-                        </p>
-                        <br>
-
-                        <!-- Placeholder for main article image -->
-                        <div class="my-4 text-center">
-                            <img src="img/Article1/DBC1.jpeg" alt="Direct Bonded Copper Substrate Example" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
-                            <p class="text-muted" style="font-size: 0.95rem;">Image Source: Research Gate</p>
-                        </div>
-
-                        <h2 class="mt-5" style="font-weight: 600;">What is a DBC Substrate?</h2>
-                        <br>
-                        <p style="color: black;">
-                            A DBC substrate is a composite material consisting of a ceramic base, typically alumina (Al<sub>2</sub>O<sub>3</sub>) or aluminum nitride (AlN), onto which pure copper is directly bonded using a high-temperature oxidation process. This unique structure combines the electrical insulation of ceramics with the excellent thermal and electrical conductivity of copper.
-                        </p>
-
-                        <h2 class="mt-4" style="font-weight: 600;">Key Features and Advantages</h2>
-                        <br>                        
-                        <ul style="color: black; padding-left: 2em;">
-                            <li><strong>High Thermal Conductivity:</strong> The copper layer efficiently dissipates heat, making DBC substrates ideal for high-power applications.</li>
-                            <li><strong>Electrical Insulation:</strong> The ceramic core provides robust insulation between the copper layers, ensuring device safety and performance.</li>
-                            <li><strong>Mechanical Strength:</strong> DBC substrates offer excellent mechanical stability, supporting reliable operation under thermal cycling and vibration.</li>
-                            <li><strong>Corrosion Resistance:</strong> The ceramic and copper combination resists oxidation and environmental degradation.</li>
-                            <li><strong>Design Flexibility:</strong> DBC substrates can be manufactured in various shapes and sizes to meet specific application requirements.</li>
-                        </ul>
-                        <br>
-
-                        <!-- Placeholder for technical diagram/image -->
-                        <div class="my-4 text-center">
-                            <img src="img/Article1/DBC2.png" alt="DBC Substrate Structure Diagram" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
-                            <p class="text-muted" style="font-size: 0.95rem;">Image Source: Research Gate</p>
-                        </div>
-
-                        <br>
-
-                        <h2 class="mt-4" style="font-weight: 600;">Applications of DBC Substrates</h2>
-                        <br>
-                        <p style="color: black;">
-                            DBC substrates are widely used in power modules, IGBT modules, automotive electronics, renewable energy systems, laser diode packaging, and thermoelectric coolers. Their ability to handle high voltages and currents while maintaining thermal stability makes them indispensable in modern electronics <sup>[2]</sup>.
-                        </p>
-                        <ul>
-                            <li>Power semiconductor modules (IGBT, MOSFET)</li>
-                            <li>Electric vehicle inverters and chargers</li>
-                            <li>Industrial motor drives</li>
-                            <li>LED lighting and laser diode modules</li>
-                            <li>Solar inverters and wind power converters</li>
-                        </ul>
-
-                        <br>
-
-                        <h2 class="mt-4" style="font-weight: 600;">Why Choose DBC Over Other Substrates?</h2>
-                        <br>
-                        <p style="color: black;">
-                            Compared to traditional PCB materials or thick film substrates, DBC offers superior thermal management and reliability. This results in longer device lifespans, higher efficiency, and reduced risk of failure in demanding environments.
-                        </p>
-
-                        <br>
-
-                        <h2 class="mt-4" style="font-weight: 600;">Conclusion</h2>
-                        <br>
-                        <p style="color: black;">
-                            Direct Bonded Copper substrates are a critical enabler for advanced power electronics, providing unmatched thermal and electrical performance. As technology evolves, DBC substrates will continue to play a vital role in supporting innovation across industries.
-                        </p>
-                        <br>
-
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Article Section End -->
-
-
-    <!-- Footer Section Begin -->
-    <footer class="footer spad" id="footer">
-        <div class="container">
-            <div class="row align-items-center text-center">
-                <div class="col-12">
-                    <div class="footer__about">
-                        <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.webp" alt="Jimei Materials Logo" width="150px" height="auto"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 align-items-center text-center">
-                    <nav class="footer__links d-flex flex-wrap justify-content-center gap-2" aria-label="Footer navigation">
-                        <a href="./about.html" class="footer-link px-2 py-1">About Us</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./products.html" class="footer-link px-2 py-1">Products</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./bare-ceramic-substrates.html" class="footer-link px-2 py-1">Bare Ceramic Substrates</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./dpc-ceramic-substrate.html" class="footer-link px-2 py-1">DPC Substrates</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./dbc-ceramic-substrate.html" class="footer-link px-2 py-1">DBC Substrates</a>
-                        <span class="footer-divider mx-1">|</span>
-                        <a href="./contact.html" class="footer-link px-2 py-1">Contact</a>
-                    </nav>
-                    <style>
-                        .footer__links .footer-link {
-                            color: #18303d;
-                            font-size: 1.05rem;
-                            text-decoration: none;
-                            transition: color 0.2s;
-                            border-radius: 6px;
-                        }
-                        .footer__links .footer-link:hover {
-                            color: #28495a;
-                            background: #d4dfe7;
-                            text-decoration: none;
-                        }
-                        .footer-divider {
-                            color: #28495a;
-                            font-weight: 600;
-                            font-size: 1.05rem;
-                        }
-                        @media (max-width: 767.98px) {
-                            .footer__links .footer-link,
-                            .footer-divider {
-                                font-size: 0.85rem !important;
-                                padding: 0.5em 0.3em !important;
-                            }
-                        }
-                    </style>
-                </div>
-            </div>
-
-            <div class="row align-items-center text-center">
-                <div class="col-12">
-                    <div class="footer__social">
-                        <!-- <h6 style="font-size: 1.05rem; font-weight: 600; color: #18303d;">Connect with us</h6> -->
-                        <a href="https://www.linkedin.com/company/jimei-materials/" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-                        <!-- <a href="#" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="Twitter"><i class="fa fa-twitter"></i></a> -->
-                        <!-- <a href="#" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="Facebook"><i class="fa fa-facebook"></i></a> -->
-                        <!-- <a href="#" style="margin: 0 10px; color: #28495a; font-size: 1.7rem;" title="YouTube"><i class="fa fa-youtube"></i></a> -->
-                    </div>
-                </div>
-            </div>
-            <style>
-                .footer__social a:hover {
-                    color: #18303d !important;
-                    text-decoration: none;
-                    transform: scale(1.15);
-                    transition: color 0.2s, transform 0.2s;
-                }
-                @media (max-width: 767.98px) {
-                    .footer__social h6 {
-                        font-size: 0.85rem !important;
-                    }
-                    .footer__social a {
-                        font-size: 1.2rem !important;
-                        margin: 0 6px !important;
-                    }
-                }
-            </style>
-
-            <div class="row align-items-center text-center mt-3">
-                <div class="col-12 align-items-center text-center">
-                    <p>
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Jimei Materials Co., Ltd.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <style>
-            @media (max-width: 767.98px) {
-                .footer__about,
-                .footer__widget,
-                .footer__widget__contact,
-                .footer__widget h6,
-                .footer__widget li,
-                .footer__widget a,
-                .footer__widget__contact b,
-                .footer__widget__contact,
-                .footer__about__logo a img,
-                .footer p {
-                    font-size: 0.85rem !important;
-                }
-                .footer__about__logo a img {
-                    width: 100px !important;
-                }
-            }
-        </style>
-    </footer>
-    <!-- Footer Section End -->
-
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-
-
-    <!-- Script to handle button active state and collapse synchronization -->
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF30RCX51H"></script>
     <script>
-        $(document).ready(function(){
-        // On button click, set that button active, remove active from others
-        $('.btn-group button').on('click', function() {
-            $('.btn-group button').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        // Also listen to collapse show/hide events to sync button highlight
-        $('.collapse').on('show.bs.collapse', function () {
-            var id = $(this).attr('id');
-            $('.btn-group button').removeClass('active');
-            $('.btn-group button[data-target="#' + id + '"]').addClass('active');
-        });
-
-        // Optional: clear active class if collapse hides all (no panels open)
-        $('.collapse').on('hide.bs.collapse', function () {
-            var anyOpen = $('.collapse.show').length;
-            if (anyOpen === 0) {
-            $('.btn-group button').removeClass('active');
-            }
-        });
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MF30RCX51H', {
+            'page_title': 'Understanding DBC Substrates',
+            'page_location': window.location.href,
+            'page_path': '/understanding-dbc-substrates.html'
         });
     </script>
 
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='https://www.googletagmanager.com/gtag/js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GT-WBKSVDXG');
+    </script>
+</head>
 
+<body class="d-flex flex-column h-100">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-WBKSVDXG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-to-content visually-hidden-focusable" data-i18n="skip_to_content">Skip to main content</a>
+    
+    <!-- Navigation - Same as technical resources page -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html" aria-label="Jimei Materials Home">
+                <picture>
+                    <source srcset="img/logo.webp" type="image/webp">
+                    <img src="img/logo.png" alt="Jimei Materials Logo" width="160" height="45" loading="eager">
+                </picture>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="./index.html" data-i18n="nav_home">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+                           aria-expanded="false" data-i18n="nav_products">Products</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./dpc-ceramic-substrate.html" data-i18n="nav_dpc">Direct Plated Copper (DPC)</a></li>
+                            <li><a class="dropdown-item" href="./dbc-ceramic-substrate.html" data-i18n="nav_dbc">Direct Bonded Copper (DBC)</a></li>
+                            <li><a class="dropdown-item" href="./bare-ceramic-substrates.html" data-i18n="nav_bare">Bare Ceramic Substrates</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./products.html" data-i18n="nav_all_products">All Products</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link" href="./technical-resources.html" data-i18n="nav_resources">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html" data-i18n="nav_about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+                    
+                    <!-- Language Switcher -->
+                    <li class="nav-item language-switcher ms-3">
+                        <button class="language-dropdown-btn" id="languageBtn" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <span id="currentLanguage">English</span>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <ul class="language-dropdown" id="languageDropdown" role="menu" aria-labelledby="languageBtn">
+                            <li class="language-option active" data-lang="en" role="menuitem">
+                                <img src="https://flagcdn.com/w20/gb.png" class="language-flag" alt="English flag" width="20" height="15" loading="lazy">
+                                <span>English</span>
+                            </li>
+                            <li class="language-option" data-lang="zh" role="menuitem">
+                                <img src="https://flagcdn.com/w20/cn.png" class="language-flag" alt="Chinese flag" width="20" height="15" loading="lazy">
+                                <span>中文</span>
+                            </li>
+                            <li class="language-option" data-lang="ja" role="menuitem">
+                                <img src="https://flagcdn.com/w20/jp.png" class="language-flag" alt="Japanese flag" width="20" height="15" loading="lazy">
+                                <span>日本語</span>
+                            </li>
+                            <li class="language-option" data-lang="ko" role="menuitem">
+                                <img src="https://flagcdn.com/w20/kr.png" class="language-flag" alt="Korean flag" width="20" height="15" loading="lazy">
+                                <span>한국어</span>
+                            </li>
+                            <li class="language-option" data-lang="de" role="menuitem">
+                                <img src="https://flagcdn.com/w20/de.png" class="language-flag" alt="German flag" width="20" height="15" loading="lazy">
+                                <span>Deutsch</span>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-primary" href="./contact.html" data-i18n="nav_request_quote">Request Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-shrink-0" id="main-content">
+        
+        <!-- Page Header -->
+        <header class="page-header" role="banner">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" data-i18n="breadcrumb_home"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item" data-i18n="breadcrumb_resources"><a href="./technical-resources.html">Technical Resources</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" data-i18n="article_breadcrumb">Understanding DBC Substrates</li>
+                    </ol>
+                </nav>
+                <h1 id="page-title" data-i18n="dbc_article_main_title">Understanding Direct Bonded Copper (DBC) Substrates</h1>
+                <div class="article-meta mt-4 text-white">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <p class="mb-2" data-i18n="dbc_article_description">Complete technical guide to DBC substrates for power electronics, thermal management, and semiconductor packaging applications</p>
+                        </div>
+                        <div class="col-md-4 text-md-end">
+                            <div class="small">
+                                <span data-i18n="article_published">Published:</span> <time datetime="2024-01-15">January 15, 2024</time><br>
+                                <span data-i18n="article_read_time">Read time:</span> 8 minutes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Navigation -->
+        <section class="article-navigation">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-4 text-start">
+                        <a href="dpc-ceramic-metallization-tec-teg.html" class="btn btn-outline-primary" data-i18n="article_previous">
+                            Previous
+                        </a>
+                    </div>
+                    <div class="col-4 text-center">
+                        <a href="technical-resources.html" class="btn btn-outline-secondary" data-i18n="article_all_resources">
+                            All Resources
+                        </a>
+                    </div>
+                    <div class="col-4 text-end">
+                        <a href="dpc-technology-explained.html" class="btn btn-outline-primary" data-i18n="article_next">
+                            Next
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <article class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="article-content">
+                            <p data-i18n="dbc_article_intro_paragraph1">
+                                Direct Bonded Copper (DBC) substrates are a cornerstone in the world of power electronics, offering exceptional thermal conductivity, electrical insulation, and mechanical strength. As industries demand higher performance and reliability, understanding the fundamentals of DBC substrates becomes essential for engineers, designers, and manufacturers.
+                            </p>
+
+                            <figure class="text-center my-5">
+                                <img src="img/Article1/DBC1.jpeg" 
+                                     alt="Direct Bonded Copper Substrate Structure and Applications" 
+                                     class="article-img img-fluid" 
+                                     width="450" 
+                                     height="400"
+                                     loading="lazy"
+                                     decoding="async">
+                                <figcaption class="mt-2 text-muted small" data-i18n="dbc_image_caption1">Direct Bonded Copper substrate structure showing ceramic core and copper layers</figcaption>
+                            </figure>
+
+                            <h2 data-i18n="dbc_section1_title">What is a DBC Substrate?</h2>
+                            
+                            <p data-i18n="dbc_section1_paragraph1">
+                                A DBC substrate is a composite material consisting of a ceramic base, typically alumina (Al<sub>2</sub>O<sub>3</sub>) or aluminum nitride (AlN), onto which pure copper is directly bonded using a high-temperature oxidation process. This unique structure combines the electrical insulation of ceramics with the excellent thermal and electrical conductivity of copper.
+                            </p>
+
+                            <!-- Key Features Highlight -->
+                            <div class="feature-highlight">
+                                <div class="row">
+                                    <div class="col-md-3 text-center mb-4 mb-md-0">
+                                        <div class="feature-icon mx-auto">
+                                            <i class="fas fa-thermometer-three-quarters"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold mt-2" data-i18n="feature1_title">Thermal Management</h4>
+                                    </div>
+                                    <div class="col-md-3 text-center mb-4 mb-md-0">
+                                        <div class="feature-icon mx-auto">
+                                            <i class="fas fa-bolt"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold mt-2" data-i18n="feature2_title">Electrical Insulation</h4>
+                                    </div>
+                                    <div class="col-md-3 text-center mb-4 mb-md-0">
+                                        <div class="feature-icon mx-auto">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold mt-2" data-i18n="feature3_title">Mechanical Strength</h4>
+                                    </div>
+                                    <div class="col-md-3 text-center">
+                                        <div class="feature-icon mx-auto">
+                                            <i class="fas fa-cogs"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold mt-2" data-i18n="feature4_title">Design Flexibility</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 data-i18n="dbc_section2_title">Key Features and Advantages</h2>
+                            
+                            <ul data-i18n="dbc_features_list">
+                                <li><strong>High Thermal Conductivity:</strong> The copper layer efficiently dissipates heat, making DBC substrates ideal for high-power applications</li>
+                                <li><strong>Electrical Insulation:</strong> The ceramic core provides robust insulation between the copper layers, ensuring device safety and performance</li>
+                                <li><strong>Mechanical Strength:</strong> DBC substrates offer excellent mechanical stability, supporting reliable operation under thermal cycling and vibration</li>
+                                <li><strong>Corrosion Resistance:</strong> The ceramic and copper combination resists oxidation and environmental degradation</li>
+                                <li><strong>Design Flexibility:</strong> DBC substrates can be manufactured in various shapes and sizes to meet specific application requirements</li>
+                            </ul>
+
+                            <figure class="text-center my-5">
+                                <img src="img/Article1/DBC2.png" 
+                                     alt="DBC Substrate Manufacturing Process Diagram" 
+                                     class="article-img img-fluid" 
+                                     width="600" 
+                                     height="400"
+                                     loading="lazy"
+                                     decoding="async">
+                                <figcaption class="mt-2 text-muted small" data-i18n="dbc_image_caption2">DBC manufacturing process showing copper bonding to ceramic substrate</figcaption>
+                            </figure>
+
+                            <h2 data-i18n="dbc_section3_title">Applications of DBC Substrates</h2>
+                            
+                            <p data-i18n="dbc_section3_paragraph1">
+                                DBC substrates are widely used in power modules, IGBT modules, automotive electronics, renewable energy systems, laser diode packaging, and thermoelectric coolers. Their ability to handle high voltages and currents while maintaining thermal stability makes them indispensable in modern electronics.
+                            </p>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="fas fa-car me-3 mt-1 feature-icon"></i>
+                                        <div>
+                                            <h5 class="h6 fw-bold" data-i18n="app1_title">Automotive Electronics</h5>
+                                            <p class="small mb-0" data-i18n="app1_desc">EV inverters, battery management systems</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="fas fa-industry me-3 mt-1 feature-icon"></i>
+                                        <div>
+                                            <h5 class="h6 fw-bold" data-i18n="app2_title">Industrial Drives</h5>
+                                            <p class="small mb-0" data-i18n="app2_desc">Motor drives, power converters</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="fas fa-solar-panel me-3 mt-1 feature-icon"></i>
+                                        <div>
+                                            <h5 class="h6 fw-bold" data-i18n="app3_title">Renewable Energy</h5>
+                                            <p class="small mb-0" data-i18n="app3_desc">Solar inverters, wind power systems</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="fas fa-lightbulb me-3 mt-1 feature-icon"></i>
+                                        <div>
+                                            <h5 class="h6 fw-bold" data-i18n="app4_title">LED & Laser Systems</h5>
+                                            <p class="small mb-0" data-i18n="app4_desc">High-power lighting, laser diode modules</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 data-i18n="dbc_section4_title">Why Choose DBC Over Other Substrates?</h2>
+                            
+                            <p data-i18n="dbc_section4_paragraph1">
+                                Compared to traditional PCB materials or thick film substrates, DBC offers superior thermal management and reliability. This results in longer device lifespans, higher efficiency, and reduced risk of failure in demanding environments.
+                            </p>
+
+                            <div class="alert alert-primary mt-4" role="alert">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="fas fa-info-circle fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0" data-i18n="dbc_technical_note">
+                                            <strong>Technical Advantage:</strong> DBC substrates provide superior thermal performance and reliability compared to traditional PCB materials, resulting in longer device lifespans, higher efficiency, and reduced risk of failure in demanding environments.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 data-i18n="dbc_section5_title">Conclusion</h2>
+                            
+                            <p data-i18n="dbc_conclusion_paragraph1">
+                                Direct Bonded Copper substrates are a critical enabler for advanced power electronics, providing unmatched thermal and electrical performance. As technology evolves, DBC substrates will continue to play a vital role in supporting innovation across industries including automotive, renewable energy, industrial automation, and telecommunications.
+                            </p>
+                            
+                            <p data-i18n="dbc_conclusion_paragraph2">
+                                The combination of excellent thermal management, electrical insulation, and mechanical robustness makes DBC technology essential for next-generation power electronics applications where reliability, efficiency, and power density are paramount.
+                            </p>
+                        </div>
+                        
+                        <!-- Article Tags -->
+                        <div class="mt-5 pt-4 border-top">
+                            <div class="d-flex flex-wrap align-items-center">
+                                <span class="fw-bold me-3" data-i18n="article_tags">Tags:</span>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_dbc">DBC Technology</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_thermal">Thermal Management</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_power">Power Electronics</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_semiconductor">Semiconductor Packaging</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2" data-i18n="tag_cooling">Heat Dissipation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Related Articles -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5" data-i18n="related_articles_title">Related Articles</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2" data-i18n="badge_dpc_technology">DPC Technology</span>
+                                <h3 class="h5 card-title" data-i18n="related_article1_title">DPC Technology Explained</h3>
+                                <p class="card-text small" data-i18n="related_article1_description">Learn how Direct Plated Copper technology is revolutionizing advanced packaging for semiconductors.</p>
+                                <a href="./dpc-technology-explained.html" class="btn btn-link p-0" data-i18n="btn_read_more">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2" data-i18n="badge_application_note">Application Note</span>
+                                <h3 class="h5 card-title" data-i18n="related_article2_title">DPC Encapsulation Dam</h3>
+                                <p class="card-text small" data-i18n="related_article2_description">Discover how DPC encapsulation dams enhance power module reliability and performance.</p>
+                                <a href="./dpc-encapsulation-dam.html" class="btn btn-link p-0" data-i18n="btn_read_more">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2" data-i18n="badge_design_guide">Design Guide</span>
+                                <h3 class="h5 card-title" data-i18n="related_article3_title">Ceramic Metallization</h3>
+                                <p class="card-text small" data-i18n="related_article3_description">Technical overview of metallization methods for ceramics and reliability considerations.</p>
+                                <a href="./ceramic-metallization-processes.html" class="btn btn-link p-0" data-i18n="btn_read_more">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="h1 fw-bold mb-3" data-i18n="dbc_cta_title">Need DBC Substrate Solutions?</h2>
+                        <p class="lead mb-4" data-i18n="dbc_cta_description">Our engineering team specializes in custom DBC substrate designs for high-power applications. Contact us for technical consultation.</p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-3 fa-lg"></i>
+                                    <div>
+                                        <div class="fw-bold" data-i18n="cta_feature1_title">Custom DBC Designs</div>
+                                        <small data-i18n="dbc_cta_feature1_desc">Tailored solutions for specific power requirements</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-3 fa-lg"></i>
+                                    <div>
+                                        <div class="fw-bold" data-i18n="cta_feature2_title">Thermal Analysis</div>
+                                        <small data-i18n="dbc_cta_feature2_desc">Comprehensive thermal modeling and validation</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <a href="./contact.html" class="btn btn-light btn-lg px-5" data-i18n="btn_contact_experts">
+                            <i class="fas fa-headset me-2"></i> Contact Our Experts
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Same as technical resources page -->
+    <footer class="bg-light mt-auto py-5 border-top" role="contentinfo">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a href="./index.html" class="d-inline-block mb-3" aria-label="Jimei Materials Home">
+                        <picture>
+                            <source srcset="img/logo.webp" type="image/webp">
+                            <img src="img/logo.png" alt="Jimei Materials Logo" width="160" height="45" loading="lazy">
+                        </picture>
+                    </a>
+                    <p class="small" data-i18n="footer_description">Leading manufacturer of ceramic metallization substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.</p>
+                    <div class="mt-3">
+                        <a href="https://www.linkedin.com/company/jimei-materials/" class="text-secondary me-3" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-6">
+                    <h3 class="fw-bold mb-3" data-i18n="footer_products">Products</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./dpc-ceramic-substrate.html" class="text-decoration-none text-secondary" data-i18n="nav_dpc">DPC Substrates</a></li>
+                        <li class="mb-2"><a href="./dbc-ceramic-substrate.html" class="text-decoration-none text-secondary" data-i18n="nav_dbc">DBC Substrates</a></li>
+                        <li class="mb-2"><a href="./bare-ceramic-substrates.html" class="text-decoration-none text-secondary" data-i18n="nav_bare">Bare Ceramic</a></li>
+                        <li class="mb-2"><a href="./products.html" class="text-decoration-none text-secondary" data-i18n="nav_all_products">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-6">
+                    <h3 class="fw-bold mb-3" data-i18n="footer_company">Company</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./about.html" class="text-decoration-none text-secondary" data-i18n="nav_about">About Us</a></li>
+                        <li class="mb-2"><a href="./technical-resources.html" class="text-decoration-none text-secondary" data-i18n="nav_resources">Resources</a></li>
+                        <li class="mb-2"><a href="./contact.html" class="text-decoration-none text-secondary" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h3 class="fw-bold mb-3" data-i18n="footer_contact">Contact Info</h3>
+                    <address class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> sales@jimei-materials.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +86-147-4537-3293</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> <span data-i18n="footer_address">First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China</span></li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i> <span data-i18n="footer_hours">Mon-Fri: 8:00 AM - 6:00 PM (GMT+8)</span></li>
+                        <li class="mb-2"><i class="fas fa-language me-2"></i> <span data-i18n="footer_languages">Support: English, Chinese, Japanese, Korean, German</span></li>
+                    </address>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="small mb-0">Copyright &copy; <span id="currentYear"></span> Jimei Materials Co., Ltd. <span data-i18n="footer_rights">All rights reserved.</span></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="./privacy-policy.html" class="text-decoration-none text-secondary small me-3" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="./terms-of-service.html" class="text-decoration-none text-secondary small me-3" data-i18n="footer_terms">Terms of Service</a>
+                    <a href="./sitemap.html" class="text-decoration-none text-secondary small" data-i18n="footer_sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+            crossorigin="anonymous" defer></script>
+    
+    <!-- External JavaScript -->
+    <script src="js/main.min.js" defer></script>
+    <script src="js/article.min.js" defer></script>
+    
+    <!-- Translation Data -->
+    <script src="js/article-dbc-translation.js" defer></script>
 
 </body>
-
 </html>
