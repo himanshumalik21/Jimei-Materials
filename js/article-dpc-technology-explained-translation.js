@@ -26,6 +26,7 @@
             "nav_dpc": "Direct Plated Copper (DPC)",
             "nav_dbc": "Direct Bonded Copper (DBC)",
             "nav_bare": "Bare Ceramic Substrates",
+            "nav_htcc": "HTCC Ceramic Packaging",
             "nav_all_products": "All Products",
             "nav_resources": "Resources",
             "nav_about": "About",
@@ -177,7 +178,7 @@
             "btn_contact_experts": "Contact DPC Experts",
 
             //Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",
@@ -207,6 +208,7 @@
         "nav_dpc": "直接镀铜陶瓷基板 (DPC)",
         "nav_dbc": "直接覆铜陶瓷基板 (DBC)",
         "nav_bare": "裸陶瓷基板",
+        "nav_htcc": "HTCC陶瓷封装",
         "nav_all_products": "全部产品",
         "nav_resources": "技术资源",
         "nav_about": "关于集美",
@@ -356,7 +358,7 @@
         "btn_contact_experts": "联系DPC专家",
 
         // 页脚
-        "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+        "footer_description": "集美材料——自2016年起，始终是热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
         "footer_products": "产品中心",
         "footer_company": "关于集美",
         "footer_contact": "联系我们",
@@ -387,6 +389,7 @@
         "nav_dpc": "直接鍍金銅（DPC）基板",
         "nav_dbc": "直接接合銅（DBC）基板",
         "nav_bare": "未金属化セラミック基板",
+        "nav_htcc": "HTCCセラミックパッケージング",
         "nav_all_products": "製品一覧",
         "nav_resources": "技術資料",
         "nav_about": "会社概要",
@@ -536,7 +539,7 @@
         "btn_contact_experts": "DPC専門家に相談",
 
         // Footer (統一維持)
-        "footer_description": "2016年創業以来、パワーエレクトロニクスおよび熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
+        "footer_description": "2016年創業以来、熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
         "footer_products": "製品カテゴリ",
         "footer_company": "企業情報",
         "footer_contact": "連絡先",
@@ -566,6 +569,7 @@
     "nav_dpc": "DPC (Direct Plated Copper) 기판",
     "nav_dbc": "DBC (Direct Bonded Copper) 기판",
     "nav_bare": "비금속화 세라믹 기판",
+    "nav_htcc": "HTCC 세라믹 패키징",
     "nav_all_products": "제품 전체보기",
     "nav_resources": "기술 자료",
     "nav_about": "회사소개",
@@ -715,7 +719,7 @@
     "btn_contact_experts": "DPC 전문가에게 문의",
 
     //Footer (일관성 유지)
-    "footer_description": "Jimei Materials는 2016년 설립 이래 전력전자 및 열 관리 응용 분야를 위한 세라믹 기판을 제조해 왔습니다. ISO 14001:2015 인증을 보유한 글로벌 제조 능력을 갖추고 있습니다.",
+    "footer_description": "2016년 설립 이래 열 관리 애플리케이션을 위한 세라믹 금속화 기판의 선도적 제조사. ISO 14001:2015 인증을 보유한 글로벌 제조 능력.",
     "footer_products": "제품",
     "footer_company": "회사",
     "footer_contact": "연락처",
@@ -745,6 +749,7 @@
     "nav_dpc": "Direct Plated Copper (DPC)",
     "nav_dbc": "Direct Bonded Copper (DBC)",
     "nav_bare": "Reinkeramik-Substrate",
+    "nav_htcc": "HTCC-Keramikgehäuse",
     "nav_all_products": "Alle Produkte",
     "nav_resources": "Wissenswertes",
     "nav_about": "Über uns",
@@ -894,7 +899,7 @@
     "btn_contact_experts": "DPC-Experten kontaktieren",
 
     // Footer
-    "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Leistungselektronik und Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
+    "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
     "footer_products": "Produkte",
     "footer_company": "Unternehmen",
     "footer_contact": "Kontakt",

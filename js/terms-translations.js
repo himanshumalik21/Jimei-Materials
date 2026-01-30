@@ -14,6 +14,7 @@
                 "nav_dpc": "Direct Plated Copper (DPC)",
                 "nav_dbc": "Direct Bonded Copper (DBC)",
                 "nav_bare": "Bare Ceramic Substrates",
+                "nav_htcc": "HTCC Ceramic Packaging",
                 "nav_all_products": "All Products",
                 "nav_resources": "Resources",
                 "nav_about": "About",
@@ -174,7 +175,7 @@
             'btn_contact_us': 'Contact Us',
 
             //Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",
@@ -197,6 +198,7 @@
                     "nav_dpc": "直接镀铜陶瓷基板",
                     "nav_dbc": "直接覆铜陶瓷基板",
                     "nav_bare": "裸陶瓷基片",
+                    "nav_htcc": "HTCC陶瓷封装",
                     "nav_all_products": "全部产品",
                     "nav_resources": "技术资源",
                     "nav_about": "关于集美",
@@ -357,7 +359,7 @@
             'btn_contact_us': '联系我们',
 
             //Footer
-            "footer_description": "自2016年起，专业生产用于电力电子和热管理应用的陶瓷金属化基板。通过ISO 14001:2015认证，具备全球制造能力。",
+            "footer_description": "集美材料——自2016年起，始终是热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
             "footer_products": "产品",
             "footer_company": "公司",
             "footer_contact": "联系信息",
@@ -380,6 +382,7 @@
                 "nav_dpc": "直接鍍金銅（DPC）基板",
                 "nav_dbc": "直接接合銅（DBC）基板",
                 "nav_bare": "未金属化セラミック基板",
+                "nav_htcc": "HTCCセラミックパッケージング",
                 "nav_all_products": "製品一覧",
                 "nav_resources": "技術資料",
                 "nav_about": "会社概要",
@@ -540,7 +543,7 @@
             'btn_contact_us': 'お問い合わせ',
 
             // フッター
-            "footer_description": "2016年設立。パワーエレクトロニクスおよび熱マネジメント用途向けセラミックメタライゼーション基板の主力メーカー。ISO 14001:2015認証取得、グローバルな製造能力を有します。",
+            "footer_description": "2016年創業以来、熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
             "footer_products": "製品",
             "footer_company": "会社情報",
             "footer_contact": "連絡先情報",
@@ -563,6 +566,7 @@
                 "nav_dpc": "DPC (Direct Plated Copper) 기판",
                 "nav_dbc": "DBC (Direct Bonded Copper) 기판",
                 "nav_bare": "비금속화 세라믹 기판", // 'Bare'는 '무처리'보다 '비금속화'가 기술적
+                "nav_htcc": "HTCC 세라믹 패키징",
                 "nav_all_products": "제품 전체보기",
                 "nav_resources": "기술 자료",
                 "nav_about": "회사소개",
@@ -723,7 +727,7 @@
             'btn_contact_us': '문의하기',
 
             //Footer
-            "footer_description": "2016년 설립 이래 파워 일렉트로닉스 및 열 관리 애플리케이션을 위한 세라믹 금속화 기판의 선도적인 제조업체입니다. ISO 14001:2015 인증을 보유한 글로벌 생산 능력을 갖추고 있습니다.",
+            "footer_description": "2016년 설립 이래 열 관리 애플리케이션을 위한 세라믹 금속화 기판의 선도적 제조사. ISO 14001:2015 인증을 보유한 글로벌 제조 능력.",
             "footer_products": "제품",
             "footer_company": "회사",
             "footer_contact": "연락처 정보",
@@ -746,6 +750,7 @@
                 "nav_dpc": "Direct Plated Copper (DPC)",
                 "nav_dbc": "Direct Bonded Copper (DBC)",
                 "nav_bare": "Reinkeramik-Substrate",
+                "nav_htcc": "HTCC-Keramikgehäuse",
                 "nav_all_products": "Alle Produkte",
                 "nav_resources": "Wissenswertes",
                 "nav_about": "Über uns",
@@ -907,7 +912,7 @@
             'btn_contact_us': 'Kontakt aufnehmen',
 
             //Footer
-            "footer_description": "Führender Hersteller von keramischen Metallisierungssubstraten für Leistungselektronik und Wärmemanagement-Anwendungen seit 2016. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
+            "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
             "footer_products": "Produkte",
             "footer_company": "Unternehmen",
             "footer_contact": "Kontakt",

@@ -11,12 +11,12 @@
         en: {
             // Contact Page Specific Translations
             "contact_page_title": "Contact Us | Jimei Materials - Ceramic Substrate Manufacturer",
-            "contact_meta_description": "Contact Jimei Materials for high-quality DBC & DPC ceramic substrates. Get quotes, technical support, and samples. Global manufacturer of metallized ceramic solutions.",
-            "contact_meta_keywords": "ceramic substrate contact, DBC manufacturer contact, DPC substrate quote, thermal management solutions, request ceramic sample, power electronics substrate inquiry",
-            "contact_og_title": "Contact Jimei Materials - DBC & DPC Ceramic Substrate Manufacturer",
-            "contact_og_description": "Get quotes, technical support and samples for high-performance ceramic substrates. Contact our team for custom solutions.",
-            "contact_twitter_title": "Contact Jimei Materials - Ceramic Substrate Manufacturer",
-            "contact_twitter_description": "Get quotes and technical support for DBC & DPC ceramic substrates. Contact our team today.",
+            "contact_meta_description": "Contact Jimei Materials for ceramic substrate manufacturing: DBC, DPC & HTCC solutions. Get technical consultation, request quotes, samples, and engineering support for power electronics, thermal management, and hermetic packaging applications.",
+            "contact_meta_keywords": "ceramic substrate manufacturer contact, DBC substrate quote request, DPC technical support, HTCC packaging inquiry, metallized ceramic solutions, ceramic substrate samples, thermal management engineering support, power electronics substrate manufacturing, custom ceramic substrate design, rapid prototyping ceramic substrates",
+            "contact_og_title": "Contact Jimei Materials | Ceramic Substrate Manufacturing Solutions",
+            "contact_og_description": "Connect with our engineering team for DBC, DPC & HTCC ceramic substrate solutions. Get quotes, technical consultation, samples, and custom design support for your power electronics and thermal management requirements.",
+            "contact_twitter_title": "Contact Jimei Materials | Ceramic Substrate Manufacturing Solutions",
+            "contact_twitter_description": "Connect with our engineering team for DBC, DPC & HTCC ceramic substrate solutions. Get quotes, technical consultation, samples, and custom design support for your power electronics and thermal management requirements.",
             
             // Navigation (Shared with other pages)
             "nav_home": "Home",
@@ -24,6 +24,7 @@
             "nav_dpc": "Direct Plated Copper (DPC)",
             "nav_dbc": "Direct Bonded Copper (DBC)",
             "nav_bare": "Bare Ceramic Substrates",
+            "nav_htcc": "HTCC Ceramic Packaging",
             "nav_all_products": "All Products",
             "nav_resources": "Resources",
             "nav_about": "About",
@@ -76,6 +77,7 @@
             "form_option_dbc": "Direct Bonded Copper (DBC)",
             "form_option_dpc": "Direct Plated Copper (DPC)",
             "form_option_bare": "Bare Ceramic Substrates",
+            "form_option_htcc": "HTCC Ceramic Packaging",
             "form_option_custom": "Custom Solution",
             "form_option_other": "Other/Not Sure",
             "form_label_company": "Company/Organization",
@@ -100,7 +102,7 @@
             "wechat_modal_note": "After scanning, please send a message with 'Ceramic Substrate Inquiry' for faster response.",
             
             // Footer (Shared with other pages)
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",
@@ -122,12 +124,12 @@
         zh: {
             // 联系页面特定翻译
             "contact_page_title": "联系我们 | 集美材料 - 陶瓷基板制造商",
-            "contact_meta_description": "联系集美材料，获取高品质DBC与DPC陶瓷基板解决方案。申请报价、获取技术支持与样品。全球领先的陶瓷金属化解决方案制造商。",
-            "contact_meta_keywords": "陶瓷基板联系, DBC制造商联系, DPC基板询价, 热管理解决方案, 申请陶瓷样品, 功率电子基板咨询",
-            "contact_og_title": "联系集美材料 - DBC与DPC陶瓷基板制造商",
-            "contact_og_description": "获取高性能陶瓷基板的报价、技术支持与样品。联系我们的团队，获取定制化解决方案。",
-            "contact_twitter_title": "联系集美材料 - 陶瓷基板制造商",
-            "contact_twitter_description": "获取DBC与DPC陶瓷基板报价及技术支持。立即联系我们的团队。",
+            "contact_meta_description": "联系集美材料获取陶瓷基板制造服务：DBC、DPC及HTCC解决方案。为您的电力电子、热管理及气密封装应用提供技术咨询、报价申请、样品获取与工程支持。",
+            "contact_meta_keywords": "陶瓷基板制造商联系, DBC基板报价申请, DPC技术支持, HTCC封装咨询, 金属化陶瓷解决方案, 陶瓷基板样品, 热管理工程支持, 电力电子基板制造, 定制陶瓷基板设计, 陶瓷基板快速打样",
+            "contact_og_title": "联系集美材料 | 陶瓷基板制造解决方案",
+            "contact_og_description": "联系我们的工程团队，获取DBC、DPC及HTCC陶瓷基板解决方案。为满足您的电力电子与热管理需求，我们提供报价、技术咨询、样品及定制设计支持。",
+            "contact_twitter_title": "联系集美材料 | 陶瓷基板制造解决方案",
+            "contact_twitter_description": "联系我们的工程团队，获取DBC、DPC及HTCC陶瓷基板解决方案。为满足您的电力电子与热管理需求，我们提供报价、技术咨询、样品及定制设计支持。",
             
             // 导航（与全站一致）
             "nav_home": "首页",
@@ -135,6 +137,7 @@
             "nav_dpc": "直接镀铜陶瓷基板 (DPC)",
             "nav_dbc": "直接覆铜陶瓷基板 (DBC)",
             "nav_bare": "裸陶瓷基板",
+            "nav_htcc": "HTCC陶瓷封装",
             "nav_all_products": "全部产品",
             "nav_resources": "技术资源",
             "nav_about": "关于集美",
@@ -187,6 +190,7 @@
             "form_option_dbc": "直接覆铜陶瓷基板 (DBC)",
             "form_option_dpc": "直接镀铜陶瓷基板 (DPC)",
             "form_option_bare": "裸陶瓷基板",
+            "form_option_htcc": "HTCC陶瓷封装",
             "form_option_custom": "定制解决方案",
             "form_option_other": "其他/尚未确定",
             "form_label_company": "公司/机构名称",
@@ -211,7 +215,7 @@
             "wechat_modal_note": "添加后，请发送消息“陶瓷基板咨询”以便我们更快处理。",
             
             // 页脚 (风格统一)
-            "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+            "footer_description": "集美材料——自2016年起，始终是热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
             "footer_products": "产品中心",
             "footer_company": "关于集美",
             "footer_contact": "联系我们",
@@ -232,13 +236,13 @@
         
         ja: {
             // Contact Page Specific Translations
-            "contact_page_title": "お問い合わせ | セラミック基板メーカー Jimei Materials",
-            "contact_meta_description": "高品質DBC・DPCセラミック基板に関するお問い合わせはJimei Materialsへ。見積もり、技術サポート、サンプルのご提供。メタライズセラミックソリューションのグローバルメーカー。",
-            "contact_meta_keywords": "セラミック基板 お問い合わせ, DBCメーカー 連絡先, DPC基板 見積もり, 熱管理ソリューション, セラミックサンプル 請求, パワーエレクトロニクス基板 お問い合わせ",
-            "contact_og_title": "Jimei Materials お問い合わせ - DBC・DPCセラミック基板メーカー",
-            "contact_og_description": "高性能セラミック基板の見積もり、技術サポート、サンプルをご希望ですか？カスタムソリューションについては当チームまでお問い合わせください。",
-            "contact_twitter_title": "Jimei Materials お問い合わせ - セラミック基板メーカー",
-            "contact_twitter_description": "DBC・DPCセラミック基板の見積もりと技術サポートはこちら。今すぐお問い合わせください。",
+            "contact_page_title": "お問い合わせ | Jimei Materials - セラミック基板メーカー",
+            "contact_meta_description": "セラミック基板製造（DBC、DPC、HTCCソリューション）についてはJimei Materialsまでお問い合わせください。パワーエレクトロニクス、熱管理、気密封装アプリケーション向けの技術相談、見積もり請求、サンプル提供、エンジニアリングサポートをご利用いただけます。",
+            "contact_meta_keywords": "セラミック基板メーカー お問い合わせ, DBC基板 見積依頼, DPC 技術サポート, HTCCパッケージ お問合せ, メタライズドセラミックソリューション, セラミック基板 サンプル, 熱管理 エンジニアリングサポート, パワーエレクトロニクス基板 製造, カスタムセラミック基板設計, セラミック基板 迅速試作",
+            "contact_og_title": "Jimei Materials お問い合わせ | セラミック基板製造ソリューション",
+            "contact_og_description": "DBC、DPC、HTCCセラミック基板ソリューションについては、当社エンジニアリングチームにご連絡ください。パワーエレクトロニクスおよび熱管理要件に対応した、見積もり、技術相談、サンプル、カスタム設計サポートを提供します。",
+            "contact_twitter_title": "Jimei Materials お問い合わせ | セラミック基板製造ソリューション",
+            "contact_twitter_description": "DBC、DPC、HTCCセラミック基板ソリューションについては、当社エンジニアリングチームにご連絡ください。パワーエレクトロニクスおよび熱管理要件に対応した、見積もり、技術相談、サンプル、カスタム設計サポートを提供します。",
             
             // Navigation (Shared with other pages)
             "nav_home": "ホーム",
@@ -246,6 +250,7 @@
             "nav_dpc": "直接鍍金銅（DPC）基板",
             "nav_dbc": "直接接合銅（DBC）基板",
             "nav_bare": "未金属化セラミック基板",
+            "nav_htcc": "HTCCセラミックパッケージング",
             "nav_all_products": "製品一覧",
             "nav_resources": "技術資料",
             "nav_about": "会社概要",
@@ -298,6 +303,7 @@
             "form_option_dbc": "直接接合銅（DBC）基板",
             "form_option_dpc": "直接鍍金銅（DPC）基板",
             "form_option_bare": "未金属化セラミック基板",
+            "form_option_htcc": "未金属化セラミック基板",
             "form_option_custom": "カスタムソリューション",
             "form_option_other": "その他 / 未定",
             "form_label_company": "会社名・組織名",
@@ -322,7 +328,7 @@
             "wechat_modal_note": "スキャン後、'Ceramic Substrate Inquiry'（セラミック基板お問い合わせ）のメッセージを送信いただくと、より迅速に対応いたします。",
             
             // Footer (Shared with other pages)
-            "footer_description": "2016年創業以来、パワーエレクトロニクスおよび熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
+            "footer_description": "2016年創業以来、熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
             "footer_products": "製品カテゴリ",
             "footer_company": "企業情報",
             "footer_contact": "連絡先",
@@ -344,12 +350,12 @@
         ko: {
             // Contact Page Specific Translations
             "contact_page_title": "문의하기 | Jimei Materials - 세라믹 기판 제조사",
-            "contact_meta_description": "고품질 DBC 및 DPC 세라믹 기판에 대해 Jimei Materials에 문의하십시오. 견적, 기술 지원, 샘플을 제공받으세요. 금속화 세라믹 솔루션의 글로벌 제조사.",
-            "contact_meta_keywords": "세라믹 기판 문의, DBC 제조사 연락처, DPC 기판 견적, 열 관리 솔루션, 세라믹 샘플 요청, 전력전자 기판 문의",
-            "contact_og_title": "Jimei Materials 문의 - DBC & DPC 세라믹 기판 제조사",
-            "contact_og_description": "고성능 세라믹 기판에 대한 견적, 기술 지원 및 샘플을 받아보세요. 맞춤형 솔루션에 대해 당사 팀에 문의하십시오.",
-            "contact_twitter_title": "Jimei Materials 문의 - 세라믹 기판 제조사",
-            "contact_twitter_description": "DBC 및 DPC 세라믹 기판에 대한 견적 및 기술 지원을 받아보세요. 지금 당사 팀에 문의하십시오.",
+            "contact_meta_description": "세라믹 기판 제조 관련 Jimei Materials에 문의하세요: DBC, DPC 및 HTCC 솔루션. 파워일렉트로닉스, 열관리 및 기밀 패키징 응용 분야에 대한 기술 상담, 견적 요청, 샘플 및 엔지니어링 지원을 받아보세요.",
+            "contact_meta_keywords": "세라믹 기판 제조사 문의, DBC 기판 견적 문의, DPC 기술 지원, HTCC 패키징 문의, 금속화 세라믹 솔루션, 세라믹 기판 샘플, 열관리 엔지니어링 지원, 파워일렉트로닉스 기판 제조, 맞춤형 세라믹 기판 설계, 신속한 프로토타이핑 세라믹 기판",
+            "contact_og_title": "Jimei Materials 문의 | 세라믹 기판 제조 솔루션",
+            "contact_og_description": "DBC, DPC 및 HTCC 세라믹 기판 솔루션에 대해 당사 엔지니어링 팀에 문의하세요. 파워일렉트로닉스 및 열관리 요구사항에 대한 견적, 기술 상담, 샘플 및 맞춤형 설계 지원을 받아보세요.",
+            "contact_twitter_title": "Jimei Materials 문의 | 세라믹 기판 제조 솔루션",
+            "contact_twitter_description": "DBC, DPC 및 HTCC 세라믹 기판 솔루션에 대해 당사 엔지니어링 팀에 문의하세요. 파워일렉트로닉스 및 열관리 요구사항에 대한 견적, 기술 상담, 샘플 및 맞춤형 설계 지원을 받아보세요.",
             
             // Navigation (일관성 유지)
             "nav_home": "홈",
@@ -357,6 +363,7 @@
             "nav_dpc": "DPC (Direct Plated Copper) 기판",
             "nav_dbc": "DBC (Direct Bonded Copper) 기판",
             "nav_bare": "비금속화 세라믹 기판",
+            "nav_htcc": "HTCC 세라믹 패키징",
             "nav_all_products": "제품 전체보기",
             "nav_resources": "기술 자료",
             "nav_about": "회사소개",
@@ -409,6 +416,7 @@
             "form_option_dbc": "직접 접합 동 (DBC) 기판",
             "form_option_dpc": "직접 도금 동 (DPC) 기판",
             "form_option_bare": "비금속화 세라믹 기판",
+            "form_option_htcc": "비금속화 세라믹 기판",
             "form_option_custom": "맞춤형 솔루션",
             "form_option_other": "기타/확실하지 않음",
             "form_label_company": "회사/조직명",
@@ -433,7 +441,7 @@
             "wechat_modal_note": "스캔 후 '세라믹 기판 문의'라는 메시지를 보내시면 더 빠른 응답을 받으실 수 있습니다.",
             
             // Footer (일관성 유지)
-            "footer_description": "Jimei Materials는 2016년 설립 이래 전력전자 및 열 관리 응용 분야를 위한 세라믹 기판을 제조해 왔습니다. ISO 14001:2015 인증을 보유한 글로벌 제조 능력을 갖추고 있습니다.",
+            "footer_description": "2016년 설립 이래 열 관리 애플리케이션을 위한 세라믹 금속화 기판의 선도적 제조사. ISO 14001:2015 인증을 보유한 글로벌 제조 능력.",
             "footer_products": "제품",
             "footer_company": "회사",
             "footer_contact": "연락처",
@@ -454,13 +462,13 @@
 
         de: {
             // Contact Page Specific Translations
-            "contact_page_title": "Kontakt | Jimei Materials - Hersteller von Keramiksubstraten",
-            "contact_meta_description": "Kontaktieren Sie Jimei Materials für hochwertige DBC- & DPC-Keramiksubstrate. Erhalten Sie Angebote, technischen Support und Muster. Globaler Hersteller von metallisierten Keramiklösungen.",
-            "contact_meta_keywords": "Keramiksubstrat Kontakt, DBC Hersteller Kontakt, DPC Substrat Angebot, Wärmemanagement Lösungen, Keramikmuster anfordern, Anfrage Substrat Leistungselektronik",
-            "contact_og_title": "Kontakt Jimei Materials - Hersteller von DBC- & DPC-Keramiksubstraten",
-            "contact_og_description": "Erhalten Sie Angebote, technischen Support und Muster für Hochleistungs-Keramiksubstrate. Kontaktieren Sie unser Team für kundenspezifische Lösungen.",
-            "contact_twitter_title": "Kontakt Jimei Materials - Hersteller von Keramiksubstraten",
-            "contact_twitter_description": "Erhalten Sie Angebote und technischen Support für DBC- & DPC-Keramiksubstrate. Kontaktieren Sie unser Team.",
+            "contact_page_title": "Kontaktieren Sie uns | Jimei Materials - Hersteller von Keramiksubstraten",
+            "contact_meta_description": "Kontaktieren Sie Jimei Materials für die Fertigung von Keramiksubstraten: DBC-, DPC- und HTCC-Lösungen. Erhalten Sie technische Beratung, Angebote, Muster und Engineering-Support für Leistungselektronik, Wärmemanagement und hermetische Gehäuseanwendungen.",
+            "contact_meta_keywords": "Keramiksubstrat Hersteller Kontakt, DBC Substrat Angebotsanfrage, DPC technischer Support, HTCC Gehäuseanfrage, metallisierte Keramiklösungen, Keramiksubstrat Muster, Wärmemanagement Engineering-Support, Leistungselektronik Substratfertigung, kundenspezifisches Keramiksubstrat Design, schnelle Prototypenfertigung Keramiksubstrate",
+            "contact_og_title": "Jimei Materials kontaktieren | Lösungen für die Keramiksubstrat-Fertigung",
+            "contact_og_description": "Kontaktieren Sie unser Engineering-Team für DBC-, DPC- und HTCC-Keramiksubstrat-Lösungen. Erhalten Sie Angebote, technische Beratung, Muster und kundenspezifischen Design-Support für Ihre Anforderungen in Leistungselektronik und Wärmemanagement.",
+            "contact_twitter_title": "Jimei Materials kontaktieren | Lösungen für die Keramiksubstrat-Fertigung",
+            "contact_twitter_description": "Kontaktieren Sie unser Engineering-Team für DBC-, DPC- und HTCC-Keramiksubstrat-Lösungen. Erhalten Sie Angebote, technische Beratung, Muster und kundenspezifischen Design-Support für Ihre Anforderungen in Leistungselektronik und Wärmemanagement.",
             
             // Navigation (Shared with other pages)
             "nav_home": "Startseite",
@@ -468,6 +476,7 @@
             "nav_dpc": "Direct Plated Copper (DPC)",
             "nav_dbc": "Direct Bonded Copper (DBC)",
             "nav_bare": "Reinkeramik-Substrate",
+            "nav_htcc": "HTCC-Keramikgehäuse",
             "nav_all_products": "Alle Produkte",
             "nav_resources": "Wissenswertes",
             "nav_about": "Über uns",
@@ -520,6 +529,7 @@
             "form_option_dbc": "Direct Bonded Copper (DBC)",
             "form_option_dpc": "Direct Plated Copper (DPC)",
             "form_option_bare": "Reinkeramik-Substrate",
+            "form_option_htcc": "Reinkeramik-Substrate",
             "form_option_custom": "Kundenspezifische Lösung",
             "form_option_other": "Sonstiges/Unklar",
             "form_label_company": "Firma/Organisation",
@@ -544,7 +554,7 @@
             "wechat_modal_note": "Nach dem Scannen senden Sie bitte eine Nachricht mit 'Keramiksubstrat-Anfrage' für eine schnellere Antwort.",
             
             // Footer (Shared with other pages)
-            "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Leistungselektronik und Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
+            "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
             "footer_products": "Produkte",
             "footer_company": "Unternehmen",
             "footer_contact": "Kontakt",

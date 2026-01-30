@@ -5,15 +5,17 @@
     const translations = {
         en: {
             // Page meta
-            'sitemap_page_title': 'Sitemap | Jimei Materials - Ceramic Substrate Manufacturer',
-            'sitemap_meta_description': 'Complete sitemap of Jimei Materials website. Find all our ceramic substrate products, technical resources, and company information in one organized page.',
+            "sitemap_page_title": "Sitemap | Jimei Materials - Ceramic Substrate Manufacturer",
+            "sitemap_meta_description": "Complete sitemap of Jimei Materials website. Find all our ceramic substrate products, technical resources, and company information in one organized page.",
+            "sitemap_meta_keywords": "DPC ceramic substrate manufacturer, DBC substrate factory, HTCC ceramic packages, ceramic metallization, thermal management solutions, power electronics packaging, RF substrates, hermetic ceramic packages, IGBT substrates, LED ceramic substrates, MEMS packaging, Peltier cooler substrates",
 
-                            // Navigation
+                // Navigation
                 "nav_home": "Home",
                 "nav_products": "Products",
                 "nav_dpc": "Direct Plated Copper (DPC)",
                 "nav_dbc": "Direct Bonded Copper (DBC)",
                 "nav_bare": "Bare Ceramic Substrates",
+                "nav_htcc": "HTCC Ceramic Packaging",
                 "nav_all_products": "All Products",
                 "nav_resources": "Resources",
                 "nav_about": "About",
@@ -51,6 +53,8 @@
             'sitemap_dbc_desc': 'Direct Bonded Copper ceramic substrate products',
             'sitemap_bare': 'Bare Ceramic Substrates',
             'sitemap_bare_desc': 'Alumina and aluminum nitride ceramic substrates',
+            "sitemap_htcc": "HTCC Ceramic Packaging",
+            "sitemap_htcc_desc": "High Temperature Co-fired Ceramic substrate products",
             
             // Technical resources
             'sitemap_technical_resources': 'Technical Resources',
@@ -93,7 +97,7 @@
             'btn_contact_for_help': 'Contact for Help',
 
             //Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",
@@ -109,6 +113,7 @@
             // 页面元数据
         "sitemap_page_title": "网站地图 | 集美材料 - 陶瓷基板制造商",
         "sitemap_meta_description": "集美材料网站完整导航地图。一览我们所有的陶瓷基板产品、技术资源和公司信息。",
+        "sitemap_meta_keywords": "DPC陶瓷基板制造商, DBC基板工厂, HTCC陶瓷封装, 陶瓷金属化, 热管理解决方案, 功率电子封装, 射频基板, 气密陶瓷封装, IGBT基板, LED陶瓷基板, MEMS封装, 帕尔贴制冷器基板",
 
         // Navigation - 微调以更符合中文网站导航习惯
                     "nav_home": "首页",
@@ -116,6 +121,7 @@
                     "nav_dpc": "直接镀铜陶瓷基板",
                     "nav_dbc": "直接覆铜陶瓷基板",
                     "nav_bare": "裸陶瓷基片",
+                    "nav_htcc": "HTCC陶瓷封装",
                     "nav_all_products": "全部产品",
                     "nav_resources": "技术资源",
                     "nav_about": "关于集美",
@@ -153,6 +159,8 @@
         "sitemap_dbc_desc": "直接覆铜陶瓷基板产品",
         "sitemap_bare": "裸陶瓷基板",
         "sitemap_bare_desc": "氧化铝与氮化铝陶瓷基板",
+        "sitemap_htcc": "HTCC陶瓷封装",
+        "sitemap_htcc_desc": "高温共烧陶瓷基板产品",
         
         // 技术资源
         "sitemap_technical_resources": "技术资源中心",
@@ -195,7 +203,7 @@
         "btn_contact_for_help": "联系获取帮助",
 
         // 页脚
-        "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+        "footer_description": "集美材料——自2016年起，始终是热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
         "footer_products": "产品中心",
         "footer_company": "关于集美",
         "footer_contact": "联系我们",
@@ -211,6 +219,7 @@
             // Page meta
         'sitemap_page_title': 'サイトマップ | Jimei Materials - セラミック基板メーカー',
         'sitemap_meta_description': 'Jimei Materialsウェブサイトの完全なサイトマップ。セラミック基板製品、技術資料、会社情報を整理されたページでご覧いただけます。',
+        "sitemap_meta_keywords": "DPCセラミック基板メーカー, DBC基板製造, HTCCセラミックパッケージ, セラミックメタライゼーション, 熱管理ソリューション, パワーエレクトロニクスパッケージング, RF基板, 気密封止セラミックパッケージ, IGBT基板, LEDセラミック基板, MEMSパッケージング, ペルチェ冷却器基板",
         
         // Navigation
                 "nav_home": "ホーム",
@@ -218,6 +227,7 @@
                 "nav_dpc": "直接鍍金銅（DPC）基板",
                 "nav_dbc": "直接接合銅（DBC）基板",
                 "nav_bare": "未金属化セラミック基板",
+                "nav_htcc": "HTCCセラミックパッケージング",
                 "nav_all_products": "製品一覧",
                 "nav_resources": "技術資料",
                 "nav_about": "会社概要",
@@ -256,6 +266,8 @@
         'sitemap_dbc_desc': '直接接合銅（DBC）セラミック基板製品',
         'sitemap_bare': '未金属化セラミック基板',
         'sitemap_bare_desc': 'アルミナおよび窒化アルミニウムセラミック基板',
+        "sitemap_htcc": "HTCCセラミックパッケージ",
+        "sitemap_htcc_desc": "高温共焼セラミック（HTCC）基板製品",
         
         // Technical resources
         'sitemap_technical_resources': '技術資料',
@@ -298,7 +310,7 @@
         'btn_contact_for_help': 'ヘルプのために連絡',
 
         // Footer (統一維持)
-        "footer_description": "2016年創業以来、パワーエレクトロニクスおよび熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
+        "footer_description": "2016年創業以来、熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
         "footer_products": "製品カテゴリ",
         "footer_company": "企業情報",
         "footer_contact": "連絡先",
@@ -314,6 +326,7 @@
             // Page meta
     'sitemap_page_title': '사이트맵 | Jimei Materials - 세라믹 기판 제조사',
     'sitemap_meta_description': 'Jimei Materials 웹사이트의 완전한 사이트맵입니다. 모든 세라믹 기판 제품, 기술 자료 및 회사 정보를 체계적으로 확인하십시오.',
+    "sitemap_meta_keywords": "DPC 세라믹 기판 제조사, DBC 기판 공장, HTCC 세라믹 패키지, 세라믹 금속화, 열 관리 솔루션, 전력전자 패키징, RF 기판, 기밀 세라믹 패키지, IGBT 기판, LED 세라믹 기판, MEMS 패키징, 펠티어 쿨러 기판",
 
     // Navigation
                 "nav_home": "홈",
@@ -321,6 +334,7 @@
                 "nav_dpc": "DPC (Direct Plated Copper) 기판",
                 "nav_dbc": "DBC (Direct Bonded Copper) 기판",
                 "nav_bare": "비금속화 세라믹 기판", // 'Bare'는 '무처리'보다 '비금속화'가 기술적
+                "nav_htcc": "HTCC 세라믹 패키징",
                 "nav_all_products": "제품 전체보기",
                 "nav_resources": "기술 자료",
                 "nav_about": "회사소개",
@@ -358,6 +372,8 @@
     'sitemap_dbc_desc': '직접 접합 동 세라믹 기판 제품',
     'sitemap_bare': '비금속화 세라믹 기판',
     'sitemap_bare_desc': '알루미나 및 질화알루미늄 세라믹 기판',
+    "sitemap_htcc": "HTCC 세라믹 패키징",
+    "sitemap_htcc_desc": "고온 동시 소성 세라믹(HTCC) 기판 제품",
     
     // Technical resources
     'sitemap_technical_resources': '기술 자료',
@@ -400,7 +416,7 @@
     'btn_contact_for_help': '도움 요청하기',
 
     //Footer (일관성 유지)
-    "footer_description": "Jimei Materials는 2016년 설립 이래 전력전자 및 열 관리 응용 분야를 위한 세라믹 기판을 제조해 왔습니다. ISO 14001:2015 인증을 보유한 글로벌 제조 능력을 갖추고 있습니다.",
+    "footer_description": "2016년 설립 이래 열 관리 애플리케이션을 위한 세라믹 금속화 기판의 선도적 제조사. ISO 14001:2015 인증을 보유한 글로벌 제조 능력.",
     "footer_products": "제품",
     "footer_company": "회사",
     "footer_contact": "연락처",
@@ -416,13 +432,15 @@
             // Page meta
     'sitemap_page_title': 'Sitemap | Jimei Materials - Hersteller von Keramiksubstraten',
     'sitemap_meta_description': 'Vollständige Sitemap der Jimei Materials Website. Finden Sie alle unsere Keramiksubstrat-Produkte, technischen Ressourcen und Unternehmensinformationen auf einer organisierten Seite.',
-    
+    "sitemap_meta_keywords": "DPC Keramiksubstrat Hersteller, DBC Substrat Fabrik, HTCC Keramikgehäuse, Keramikmetallisierung, Wärmemanagement Lösungen, Leistungselektronik Packaging, HF Substrate, hermetische Keramikgehäuse, IGBT Substrate, LED Keramiksubstrate, MEMS Packaging, Peltier-Kühler Substrate",
+
     // Navigation
                 "nav_home": "Startseite",
                 "nav_products": "Produkte",
                 "nav_dpc": "Direct Plated Copper (DPC)",
                 "nav_dbc": "Direct Bonded Copper (DBC)",
                 "nav_bare": "Reinkeramik-Substrate",
+                "nav_htcc": "HTCC-Keramikgehäuse",
                 "nav_all_products": "Alle Produkte",
                 "nav_resources": "Wissenswertes",
                 "nav_about": "Über uns",
@@ -460,6 +478,8 @@
     'sitemap_dbc_desc': 'Direct Bonded Copper Keramiksubstrat-Produkte',
     'sitemap_bare': 'Reinkeramik-Substrate',
     'sitemap_bare_desc': 'Aluminiumoxid- und Aluminiumnitrid-Keramiksubstrate',
+    "sitemap_htcc": "HTCC Keramikgehäuse",
+    "sitemap_htcc_desc": "Hochtemperatur-ko-gesinterte Keramiksubstrate und Gehäuse",
     
     // Technical resources
     'sitemap_technical_resources': 'Technische Ressourcen',
@@ -502,7 +522,7 @@
     'btn_contact_for_help': 'Hilfe kontaktieren',
 
     // Footer
-    "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Leistungselektronik und Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
+    "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
     "footer_products": "Produkte",
     "footer_company": "Unternehmen",
     "footer_contact": "Kontakt",

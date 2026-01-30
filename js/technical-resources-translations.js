@@ -11,12 +11,12 @@
         en: {
             // Meta & SEO
             "tr_page_title": "Technical Resources & Industry Insights | JIMEI Ceramic Substrates",
-            "tr_meta_description": "Technical resources, white papers, application notes, and industry insights for DBC & DPC ceramic substrates. Expert guidance on thermal management, power electronics, and ceramic metallization.",
-            "tr_meta_keywords": "ceramic substrate technical papers, DBC application notes, DPC design guides, thermal management resources, power electronics whitepapers, ceramic metallization technical resources, semiconductor packaging guides",
-            "tr_og_title": "Ceramic Substrate Products Catalog | DBC & DPC Solutions | Jimei Materials",
-            "tr_og_description": "Complete range of high-performance ceramic metallization substrates including DBC, DPC, and bare ceramic substrates for power electronics and thermal management applications.",
-            "tr_twitter_title": "Ceramic Substrate Products Catalog | DBC & DPC Solutions | Jimei Materials",
-            "tr_twitter_description": "Complete range of high-performance ceramic metallization substrates including DBC, DPC, and bare ceramic substrates for power electronics and thermal management applications.",
+            "tr_meta_description": "Technical documentation library for ceramic substrate engineering: DBC (Direct Bonded Copper), DPC (Direct Plated Copper), and HTCC (High-Temperature Co-fired Ceramic) design guidelines, application notes, and material selection tools for power electronics, RF, and thermal management systems.",
+            "tr_meta_keywords": "ceramic substrate design guidelines, DBC technical data sheet, DPC application notes, HTCC design manual, thermal interface material selection, power module layout guide, RF substrate design rules, semiconductor packaging technical resources, AlN thermal properties, alumina dielectric constant, ceramic metallization specifications, multilayer ceramic fabrication, hermetic sealing standards, thermal management white papers, material compatibility guide, reliability testing methods, design for manufacturability, ceramic substrate CAD files, simulation models, failure analysis reports",
+            "tr_og_title": "Ceramic Substrate Technical Resources | DBC, DPC, HTCC Design Guides | Jimei Materials",
+            "tr_og_description": "Download technical documents including design guidelines, application notes, and material specifications for ceramic metallization substrates (DBC, DPC, HTCC) from Jimei Materials.",
+            "tr_twitter_title": "Ceramic Substrate Technical Resources | Jimei Materials",
+            "tr_twitter_description": "Free technical resources: Design guides, application notes, and specifications for DBC, DPC & HTCC ceramic substrates.",
 
             // Navigation
             "nav_home": "Home",
@@ -24,6 +24,7 @@
             "nav_dpc": "Direct Plated Copper (DPC)",
             "nav_dbc": "Direct Bonded Copper (DBC)",
             "nav_bare": "Bare Ceramic Substrates",
+            "nav_htcc": "HTCC Ceramic Packaging",
             "nav_all_products": "All Products",
             "nav_resources": "Resources",
             "nav_about": "About",
@@ -105,7 +106,7 @@
             "cta_feature2_desc": "Root cause analysis and reliability testing",
 
             // Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",
@@ -120,13 +121,13 @@
         
         zh: {
             // 元标签 - 修正了键名（应为resources_*），内容突出“技术资源”与“行业洞察”
-            "tr_page_title": "技术资源与行业洞察 | JIMEI 陶瓷基板",
-            "tr_meta_description": "获取DBC与DPC陶瓷基板的技术资料、白皮书、应用笔记及行业洞察。关于热管理、功率电子及陶瓷金属化的专家指南与深度解析。",
-            "tr_meta_keywords": "陶瓷基板技术资料, DBC应用指南, DPC设计白皮书, 热管理资源, 功率电子技术论文, 陶瓷金属化工艺, 半导体封装指南",
-            "tr_og_title": "技术资源中心 | 陶瓷基板白皮书与应用指南 | 集美材料",
-            "tr_og_description": "集美材料技术资源中心，提供DBC、DPC及裸陶瓷基板的深度技术论文、设计指南、应用笔记与行业趋势分析。",
-            "tr_twitter_title": "技术资源中心 | 陶瓷基板白皮书与应用指南 | 集美材料",
-            "tr_twitter_description": "集美材料技术资源中心，提供DBC、DPC及裸陶瓷基板的深度技术论文、设计指南、应用笔记与行业趋势分析。",
+            "tr_page_title": "技术资源与行业洞察 | 集美陶瓷基板",
+            "tr_meta_description": "陶瓷基板工程技术文档库：提供用于电力电子、射频及热管理系统的 DBC（直接覆铜）、DPC（直接镀铜）和 HTCC（高温共烧陶瓷）基板设计指南、应用说明及材料选型工具。",
+            "tr_meta_keywords": "陶瓷基板设计指南, DBC技术数据手册, DPC应用说明, HTCC设计手册, 热界面材料选型, 功率模块布局指南, 射频基板设计规则, 半导体封装技术资源, 氮化铝热学性能, 氧化铝介电常数, 陶瓷金属化规格, 多层陶瓷制造工艺, 气密封装标准, 热管理白皮书, 材料兼容性指南, 可靠性测试方法, 可制造性设计, 陶瓷基板CAD文件, 仿真模型, 失效分析报告",
+            "tr_og_title": "陶瓷基板技术资源 | DBC、DPC、HTCC设计指南 | 集美材料",
+            "tr_og_description": "下载集美材料提供的陶瓷金属化基板（DBC、DPC、HTCC）技术文档，包括设计指南、应用说明及材料规格。",
+            "tr_twitter_title": "陶瓷基板技术资源 | 集美材料",
+            "tr_twitter_description": "免费技术资源：DBC、DPC 和 HTCC 陶瓷基板的设计指南、应用说明及规格文件。",
 
             // 导航 (与产品页保持一致，确保全站统一)
             "nav_home": "首页",
@@ -134,6 +135,7 @@
             "nav_dpc": "直接镀铜陶瓷基板 (DPC)",
             "nav_dbc": "直接覆铜陶瓷基板 (DBC)",
             "nav_bare": "裸陶瓷基板",
+            "nav_htcc": "HTCC陶瓷封装",
             "nav_all_products": "全部产品",
             "nav_resources": "技术资源",
             "nav_about": "关于集美",
@@ -215,7 +217,7 @@
             "cta_feature2_desc": "提供根本原因分析、可靠性测试与工艺改进建议",
 
             // 页脚 (风格统一)
-            "footer_description": "集美材料——专注于高性能陶瓷基板研发与制造，为全球功率电子及热管理应用提供可靠解决方案。自2016年成立以来，凭借ISO 14001:2015体系认证与先进制程，服务各行业领先客户。",
+            "footer_description": "集美材料——自2016年起，始终是热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
             "footer_products": "产品中心",
             "footer_company": "关于集美",
             "footer_contact": "联系我们",
@@ -230,14 +232,13 @@
         
         ja: {
             // Meta & SEO
-            "tr_page_title": "技術資料・業界インサイト | JIMEI セラミック基板",
-            "tr_meta_description": "DBC・DPCセラミック基板に関する技術資料、技術白書、アプリケーションノート、業界インサイトを提供。熱管理、パワーエレクトロニクス、セラミックメタライゼーションに関する専門家によるガイダンス。",
-            "tr_meta_keywords": "セラミック基板 技術論文, DBC アプリケーションノート, DPC 設計ガイド, 熱管理 技術資料, パワーエレクトロニクス 白書, セラミックメタライゼーション 技術リソース, 半導体パッケージング ガイド",
-            // 注意: og_title/description, twitter_title/description の内容が製品ページと重複しているため、リソースページ用に修正が必要です。
-            "tr_og_title": "技術資料・業界インサイト | JIMEI セラミック基板",
-            "tr_og_description": "DBC・DPCセラミック基板の技術資料、設計ガイド、アプリケーション情報を提供。パワーエレクトロニクス設計をサポート。",
-            "tr_twitter_title": "技術資料・業界インサイト | JIMEI セラミック基板",
-            "tr_twitter_description": "DBC・DPCセラミック基板の技術資料、設計ガイド、アプリケーション情報を提供。パワーエレクトロニクス設計をサポート。",
+            "tr_page_title": "技術資料・業界情報 | JIMEI セラミック基板",
+            "tr_meta_description": "セラミック基板エンジニアリングのための技術文書ライブラリ：パワーエレクトロニクス、RF、熱管理システム向けのDBC（直接接合銅）、DPC（直接めっき銅）、HTCC（高温共焼セラミック）の設計ガイドライン、アプリケーションノート、材料選定ツール。",
+            "tr_meta_keywords": "セラミック基板設計ガイド, DBC技術データシート, DPCアプリケーションノート, HTCC設計マニュアル, 熱界面材料選定, パワーモジュールレイアウトガイド, RF基板設計ルール, 半導体パッケージング技術資料, AlN熱特性, アルミナ誘電率, セラミックメタライゼーション仕様, 多層セラミック製造, 気密封装規格, 熱管理ホワイトペーパー, 材料互換性ガイド, 信頼性試験方法, 製造容易性設計, セラミック基板CADファイル, シミュレーションモデル, 故障解析報告書",
+            "tr_og_title": "セラミック基板技術資料 | DBC、DPC、HTCC設計ガイド | Jimei Materials",
+            "tr_og_description": "Jimei Materialsのセラミックメタライゼーション基板（DBC、DPC、HTCC）に関する設計ガイドライン、アプリケーションノート、材料仕様書などの技術文書をダウンロードできます。",
+            "tr_twitter_title": "セラミック基板技術資料 | Jimei Materials",
+            "tr_twitter_description": "無料技術資料：DBC、DPC、HTCCセラミック基板の設計ガイド、アプリケーションノート、仕様書を提供しています。",
 
             // Navigation (前ページと統一)
             "nav_home": "ホーム",
@@ -245,6 +246,7 @@
             "nav_dpc": "直接鍍金銅（DPC）基板",
             "nav_dbc": "直接接合銅（DBC）基板",
             "nav_bare": "未金属化セラミック基板",
+            "nav_htcc": "HTCCセラミックパッケージング",
             "nav_all_products": "製品一覧",
             "nav_resources": "技術資料",
             "nav_about": "会社概要",
@@ -326,7 +328,7 @@
             "cta_feature2_desc": "根本原因解析および信頼性試験",
 
             // Footer (前ページと統一)
-            "footer_description": "2016年創業以来、パワーエレクトロニクスおよび熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
+            "footer_description": "2016年創業以来、熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
             "footer_products": "製品カテゴリ",
             "footer_company": "企業情報",
             "footer_contact": "連絡先",
@@ -341,13 +343,13 @@
         
         ko: {
             // Meta & SEO
-            "tr_page_title": "기술 자료 및 산업 인사이트 | JIMEI 세라믹 기판",
-            "tr_meta_description": "DBC 및 DPC 세라믹 기판에 관한 기술 자료, 백서, 애플리케이션 노트 및 산업 동향 분석. 열 관리, 전력전자, 세라믹 금속화 분야의 전문 가이드.",
-            "tr_meta_keywords": "세라믹 기판 기술 논문, DBC 애플리케이션 노트, DPC 설계 가이드, 열 관리 기술 자료, 전력전자 백서, 세라믹 금속화 기술 리소스, 반도체 패키징 가이드",
-            "tr_og_title": "세라믹 기판 기술 자료 | DBC & DPC 솔루션 | Jimei Materials",
-            "tr_og_description": "전력전자 및 열 관리 애플리케이션을 위한 DBC, DPC, 비금속화 세라믹 기판 관련 포괄적인 기술 자료 및 산업 인사이트.",
-            "tr_twitter_title": "세라믹 기판 기술 자료 | DBC & DPC 솔루션 | Jimei Materials",
-            "tr_twitter_description": "전력전자 및 열 관리 애플리케이션을 위한 DBC, DPC, 비금속화 세라믹 기판 관련 포괄적인 기술 자료 및 산업 인사이트.",
+            "tr_page_title": "기술 자료 및 산업 동향 | JIMEI 세라믹 기판",
+            "tr_meta_description": "세라믹 기판 엔지니어링을 위한 기술 문서 라이브러리: 파워일렉트로닉스, RF 및 열관리 시스템용 DBC(직접 접합 구리), DPC(직접 도금 구리), HTCC(고온 동시 소성 세라믹) 설계 지침, 응용 노트 및 재료 선택 가이드",
+            "tr_meta_keywords": "세라믹 기판 설계 지침, DBC 기술 데이터시트, DPC 응용 노트, HTCC 설계 매뉴얼, 열계면 재료 선택, 파워 모듈 레이아웃 가이드, RF 기판 설계 규칙, 반도체 패키징 기술 자료, AlN 열적 특성, 알루미나 유전율, 세라믹 금속화 사양, 다층 세라믹 제조, 기밀 밀봉 표준, 열관리 백서, 재료 호환성 가이드, 신뢰성 시험 방법, 생산성 고려 설계, 세라믹 기판 CAD 파일, 시뮬레이션 모델, 고장 분석 보고서",
+            "tr_og_title": "세라믹 기판 기술 자료 | DBC, DPC, HTCC 설계 가이드 | Jimei Materials",
+            "tr_og_description": "Jimei Materials의 세라믹 금속화 기판(DBC, DPC, HTCC) 설계 지침, 응용 노트 및 재료 사양을 포함한 기술 문서를 다운로드하세요.",
+            "tr_twitter_title": "세라믹 기판 기술 자료 | Jimei Materials",
+            "tr_twitter_description": "무료 기술 자료: DBC, DPC 및 HTCC 세라믹 기판용 설계 가이드, 응용 노트 및 사양서",
 
             // Navigation (일관성 유지)
             "nav_home": "홈",
@@ -355,6 +357,7 @@
             "nav_dpc": "DPC (Direct Plated Copper) 기판",
             "nav_dbc": "DBC (Direct Bonded Copper) 기판",
             "nav_bare": "비금속화 세라믹 기판",
+            "nav_htcc": "HTCC 세라믹 패키징",
             "nav_all_products": "제품 전체보기",
             "nav_resources": "기술 자료",
             "nav_about": "회사소개",
@@ -436,7 +439,7 @@
             "cta_feature2_desc": "근본 원인 분석 및 신뢰성 테스트",
 
             // Footer (일관성 유지)
-            "footer_description": "Jimei Materials는 2016년 설립 이래 전력전자 및 열 관리 응용 분야를 위한 세라믹 기판을 제조해 왔습니다. ISO 14001:2015 인증을 보유한 글로벌 제조 능력을 갖추고 있습니다.",
+            "footer_description": "2016년 설립 이래 열 관리 애플리케이션을 위한 세라믹 금속화 기판의 선도적 제조사. ISO 14001:2015 인증을 보유한 글로벌 제조 능력.",
             "footer_products": "제품",
             "footer_company": "회사",
             "footer_contact": "연락처",
@@ -452,12 +455,12 @@
         de: {
             // Meta & SEO
             "tr_page_title": "Technische Ressourcen & Branchenwissen | JIMEI Keramiksubstrate",
-            "tr_meta_description": "Technische Ressourcen, Whitepapers, Applikationshinweise und Branchenwissen zu DBC- & DPC-Keramiksubstraten. Expertenwissen zu Wärmemanagement, Leistungselektronik und Keramikmetallisierung.",
-            "tr_meta_keywords": "Technische Papiere Keramiksubstrate, DBC Applikationshinweise, DPC Designleitfäden, Ressourcen Wärmemanagement, Whitepapers Leistungselektronik, Technische Ressourcen Keramikmetallisierung, Leitfäden Halbleiter-Verpackung",
-            "tr_og_title": "Technische Ressourcen: Keramiksubstrate | Jimei Materials",
-            "tr_og_description": "Umfassende technische Ressourcen zu Keramikmetallisierungssubstraten: Whitepapers, Applikationshinweise und Designleitfäden für Leistungselektronik.",
-            "tr_twitter_title": "Technische Ressourcen: Keramiksubstrate | Jimei Materials",
-            "tr_twitter_description": "Umfassende technische Ressourcen zu Keramikmetallisierungssubstraten: Whitepapers, Applikationshinweise und Designleitfäden für Leistungselektronik.",
+            "tr_meta_description": "Technische Dokumentenbibliothek für Keramiksubstrat-Engineering: DBC (Direct Bonded Copper), DPC (Direct Plated Copper) und HTCC (Hochtemperatur-ko-gesinterte Keramik) Designrichtlinien, Applikationsnotizen und Materialauswahl-Tools für Leistungselektronik, Hochfrequenztechnik und Wärmemanagement-Systeme.",
+            "tr_meta_keywords": "Keramiksubstrat Designrichtlinien, DBC technisches Datenblatt, DPC Applikationsnotizen, HTCC Designhandbuch, Wärmeleitmaterial Auswahl, Leistungsmodul Layout-Leitfaden, HF-Substrat Designregeln, Technische Ressourcen Halbleitergehäuse, AlN thermische Eigenschaften, Aluminiumoxid Dielektrizitätskonstante, Keramikmetallisierung Spezifikationen, Mehrlagenkeramik Fertigung, Hermetische Dichtung Standards, Wärmemanagement White Papers, Materialverträglichkeit Leitfaden, Zuverlässigkeitstest Methoden, Design for Manufacturability, Keramiksubstrat CAD-Dateien, Simulationsmodelle, Fehleranalysen Berichte",
+            "tr_og_title": "Technische Ressourcen für Keramiksubstrate | DBC, DPC, HTCC Designleitfäden | Jimei Materials",
+            "tr_og_description": "Laden Sie technische Dokumente herunter, einschließlich Designrichtlinien, Applikationsnotizen und Materialspezifikationen für metallisierte Keramiksubstrate (DBC, DPC, HTCC) von Jimei Materials.",
+            "tr_twitter_title": "Technische Ressourcen für Keramiksubstrate | Jimei Materials",
+            "tr_twitter_description": "Kostenlose technische Ressourcen: Designleitfäden, Applikationsnotizen und Spezifikationen für DBC, DPC & HTCC Keramiksubstrate.",
 
             // Navigation
             "nav_home": "Startseite",
@@ -465,6 +468,7 @@
             "nav_dpc": "Direct Plated Copper (DPC)",
             "nav_dbc": "Direct Bonded Copper (DBC)",
             "nav_bare": "Reinkeramik-Substrate",
+            "nav_htcc": "HTCC-Keramikgehäuse",
             "nav_all_products": "Alle Produkte",
             "nav_resources": "Wissenswertes",
             "nav_about": "Über uns",
@@ -546,7 +550,7 @@
             "cta_feature2_desc": "Root-Cause-Analyse und Zuverlässigkeitstests",
 
             // Footer
-            "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Leistungselektronik und Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
+            "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
             "footer_products": "Produkte",
             "footer_company": "Unternehmen",
             "footer_contact": "Kontakt",

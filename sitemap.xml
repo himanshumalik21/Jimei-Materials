@@ -4,7 +4,7 @@
 <!-- Homepage - Highest priority, changes occasionally -->
 <url>
 <loc>https://jimei-materials.com/index.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.00</priority>
 </url>
@@ -12,7 +12,7 @@
 <!-- Primary Product Category Page - Key for conversions -->
 <url>
 <loc>https://jimei-materials.com/products.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.90</priority>
 </url>
@@ -20,51 +20,51 @@
 <!-- Main Product Pages - High commercial value -->
 <url>
 <loc>https://jimei-materials.com/dpc-ceramic-substrate.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.90</priority>
 </url>
 
 <url>
 <loc>https://jimei-materials.com/dbc-ceramic-substrate.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.90</priority>
 </url>
 
 <!-- Secondary Product Page -->
 <url>
-<loc>https://jimei-materials.com/bare-ceramic-substrates.html</loc>
-<lastmod>2025-12-19</lastmod>
+<loc>https://jimei-materials.com/htcc-ceramic-substrates.html</loc>
+<lastmod>2026-01-30</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.85</priority>
+<priority>0.90</priority>
 </url>
 
 <!-- Informational/Educational Content - Important for SEO -->
 <url>
 <loc>https://jimei-materials.com/understanding-dbc-substrates.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://jimei-materials.com/dpc-technology-explained.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://jimei-materials.com/ceramic-metallization-processes.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
 <loc>https://jimei-materials.com/bare-ceramic-substrates-explained.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.80</priority>
 </url>
@@ -72,14 +72,14 @@
 <!-- Technical Application Content -->
 <url>
 <loc>https://jimei-materials.com/dpc-encapsulation-dam.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.75</priority>
 </url>
 
 <url>
 <loc>https://jimei-materials.com/dpc-ceramic-metallization-tec-teg.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.75</priority>
 </url>
@@ -87,21 +87,21 @@
 <!-- Supporting Pages -->
 <url>
 <loc>https://jimei-materials.com/technical-resources.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.60</priority>
 </url>
 
 <url>
 <loc>https://jimei-materials.com/about.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.50</priority>
 </url>
 
 <url>
 <loc>https://jimei-materials.com/contact.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.50</priority>
 </url>
@@ -109,21 +109,21 @@
 <!-- Legal & Utility Pages - Low priority -->
 <url>
 <loc>https://jimei-materials.com/privacy-policy.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.20</priority>
 </url>
 
 <url>
 <loc>https://jimei-materials.com/terms-of-service.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.20</priority>
 </url>
 
 <url>
 <loc>https://jimei-materials.com/sitemap.html</loc>
-<lastmod>2025-12-19</lastmod>
+<lastmod>2026-01-30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.20</priority>
 </url>
