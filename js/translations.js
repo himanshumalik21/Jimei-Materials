@@ -129,7 +129,7 @@ const translations = {
         "product_dpc_spec3_value": "Line: 20-50μm",
         "product_htcc_spec1_value": "1600°C Firing",
         "product_htcc_spec2_value": "Multilayer",
-        "product_htcc_spec3_value": "Hermetic: &lt;1×10⁻⁸",
+        "product_htcc_spec3_value": "Hermetic: <1×10⁻⁸",
         
         // Manufacturing Section
         "manufacturing_title": "Our Manufacturing Excellence",
@@ -176,11 +176,11 @@ const translations = {
         "footer_privacy": "Privacy Policy",
         "footer_terms": "Terms of Service",
         "footer_sitemap": "Sitemap",
-        "footer_linkedin": "LinkedIn",
+        // "footer_linkedin": "LinkedIn",
         
         // Accessibility
         "skip_to_main": "Skip to main content",
-        "back_to_top": "Back to top"
+        // "back_to_top": "^"
     },
     
     zh: {
@@ -313,7 +313,7 @@ const translations = {
 "product_dpc_spec3_value": "线路宽度：20-50μm",
 "product_htcc_spec1_value": "烧结温度：1600°C",
 "product_htcc_spec2_value": "结构：多层",
-"product_htcc_spec3_value": "气密性：&lt;1×10⁻⁸",
+"product_htcc_spec3_value": "气密性：<1×10⁻⁸",
 
 // 制造工艺板块
 "manufacturing_title": "我们的卓越制造",
@@ -360,11 +360,11 @@ const translations = {
 "footer_privacy": "隐私政策",
 "footer_terms": "服务条款",
 "footer_sitemap": "网站地图",
-"footer_linkedin": "领英",
+// "footer_linkedin": "领英",
 
 // 无障碍访问
 "skip_to_main": "跳转到主内容",
-"back_to_top": "返回顶部"
+// "back_to_top": "^"
     },
     
     ja: {
@@ -497,7 +497,7 @@ const translations = {
     "product_dpc_spec3_value": "線幅: 20-50μm",
     "product_htcc_spec1_value": "1600°C焼成",
     "product_htcc_spec2_value": "多層構造",
-    "product_htcc_spec3_value": "気密性: &lt;1×10⁻⁸",
+    "product_htcc_spec3_value": "気密性: <1×10⁻⁸",
 
     // Manufacturing Section
     "manufacturing_title": "製造の卓越性",
@@ -544,11 +544,11 @@ const translations = {
     "footer_privacy": "プライバシーポリシー",
     "footer_terms": "利用規約",
     "footer_sitemap": "サイトマップ",
-    "footer_linkedin": "LinkedIn",
+    // "footer_linkedin": "LinkedIn",
 
     // Accessibility
     "skip_to_main": "メインコンテンツへスキップ",
-    "back_to_top": "トップへ戻る"
+    // "back_to_top": "^"
 },
     
     ko: {
@@ -681,7 +681,7 @@ const translations = {
     "product_dpc_spec3_value": "선폭: 20-50μm",
     "product_htcc_spec1_value": "1600°C 소성",
     "product_htcc_spec2_value": "다층",
-    "product_htcc_spec3_value": "기밀성: &lt;1×10⁻⁸",
+    "product_htcc_spec3_value": "기밀성: <1×10⁻⁸",
 
     // 제조 섹션
     "manufacturing_title": "당사의 제조 우수성",
@@ -728,11 +728,11 @@ const translations = {
     "footer_privacy": "개인정보처리방침",
     "footer_terms": "이용약관",
     "footer_sitemap": "사이트맵",
-    "footer_linkedin": "LinkedIn",
+    // "footer_linkedin": "LinkedIn",
 
     // 접근성
     "skip_to_main": "본문으로 건너뛰기",
-    "back_to_top": "맨 위로"
+    // "back_to_top": "^"
 },
 
     de: {
@@ -865,7 +865,7 @@ const translations = {
     "product_dpc_spec3_value": "Leiterbahn: 20-50 µm",
     "product_htcc_spec1_value": "Sintern bei 1600°C",
     "product_htcc_spec2_value": "Mehrlagen",
-    "product_htcc_spec3_value": "Hermetisch: &lt;1×10⁻⁸",
+    "product_htcc_spec3_value": "Hermetisch: <1×10⁻⁸",
     
     // Manufacturing Section
     "manufacturing_title": "Unsere Fertigungsexzellenz",
@@ -912,11 +912,11 @@ const translations = {
     "footer_privacy": "Datenschutzrichtlinie",
     "footer_terms": "Nutzungsbedingungen",
     "footer_sitemap": "Sitemap",
-    "footer_linkedin": "LinkedIn",
+    // "footer_linkedin": "LinkedIn",
     
     // Accessibility
     "skip_to_main": "Zum Hauptinhalt springen",
-    "back_to_top": "Zurück zum Anfang"
+    // "back_to_top": "^"
 }
 };
         
