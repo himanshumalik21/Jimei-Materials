@@ -110,6 +110,10 @@
         .skip-to-content:focus {
             top: 0;
         }
+
+        .fa-icon {
+            color: #28495a;
+        }
     </style>
     
     <!-- External CSS -->
@@ -307,14 +311,6 @@
     })(window,document,'script','dataLayer','GT-WBKSVDXG');
     </script>
 
-    <!-- Alternate language versions -->
-    <link rel="alternate" hreflang="en" href="https://www.jimei-materials.com/htcc-ceramic-substrates.html" />
-    <link rel="alternate" hreflang="zh" href="https://www.jimei-materials.com/htcc-ceramic-substrates.html?lang=zh" />
-    <link rel="alternate" hreflang="ja" href="https://www.jimei-materials.com/htcc-ceramic-substrates.html?lang=ja" />
-    <link rel="alternate" hreflang="ko" href="https://www.jimei-materials.com/htcc-ceramic-substrates.html?lang=ko" />
-    <link rel="alternate" hreflang="de" href="https://www.jimei-materials.com/htcc-ceramic-substrates.html?lang=de" />
-    <link rel="alternate" hreflang="x-default" href="https://www.jimei-materials.com/htcc-ceramic-substrates.html" />
-
 </head>
 
 <body class="d-flex flex-column h-100" itemscope itemtype="https://schema.org/WebPage">
@@ -435,18 +431,6 @@
                         <p class="mb-4" data-i18n="overview_description2">
                             The HTCC manufacturing process enables the creation of complex 3D structures with superior hermeticity, excellent thermal stability, and high mechanical strength. These packages are specifically engineered for applications requiring protection from extreme environments, including aerospace, medical implants, automotive sensors, and industrial controls.
                         </p>
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fas fa-fire text-primary me-3"></i>
-                            <div>
-                                <strong data-i18n="process_highlight">High-Temperature Processing:</strong> <span data-i18n="process_highlight_desc">1500-1600°C sintering for maximum density and reliability</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-layer-group text-primary me-3"></i>
-                            <div>
-                                <strong data-i18n="layer_highlight">Multilayer Integration:</strong> <span data-i18n="layer_highlight_desc">Up to 40+ layers with complex internal routing</span>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="position-relative">
@@ -624,7 +608,7 @@
                     <h3 class="h4 fw-bold mb-4 text-center" data-i18n="material_comparison_title">Material Comparison</h3>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped">
-                            <thead class="table-dark">
+                            <thead class="text-primary">
                                 <tr>
                                     <th scope="col" data-i18n="material_property">Property</th>
                                     <th scope="col" data-i18n="material_alumina">Alumina (Al₂O₃) HTCC</th>
@@ -683,7 +667,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-plane text-primary"></i>
+                                    <i class="fas fa-plane fa-icon fa-2x"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_aerospace_title">Aerospace & Defense</h3>
                             </div>
@@ -701,7 +685,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-heartbeat text-primary"></i>
+                                    <i class="fas fa-heartbeat fa-icon fa-2x"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_medical_title">Medical & Life Sciences</h3>
                             </div>
@@ -719,7 +703,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-car text-primary"></i>
+                                    <i class="fas fa-car fa-icon fa-2x"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_automotive_title">Automotive & Transportation</h3>
                             </div>
@@ -737,7 +721,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-industry text-primary"></i>
+                                    <i class="fas fa-industry fa-icon fa-2x"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_industrial_title">Industrial & Energy</h3>
                             </div>
@@ -755,7 +739,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-satellite-dish text-primary"></i>
+                                    <i class="fas fa-satellite-dish fa-icon fa-2x"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_telecom_title">Telecommunications</h3>
                             </div>
@@ -773,7 +757,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-flask text-primary"></i>
+                                    <i class="fas fa-flask fa-icon fa-2x"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_test_title">Test & Measurement</h3>
                             </div>
@@ -1014,60 +998,8 @@
     
     <!-- Main JavaScript -->
     <script src="js/main.min.js" defer></script>
-    
-    <!-- HTCC Translations -->
+    <script src="js/global-translations.js" defer></script>
     <script src="js/htcc-translations.js" defer></script>
-    
-    <!-- Performance optimization -->
-    <script>
-        // Lazy load images with Intersection Observer
-        if ('IntersectionObserver' in window) {
-            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src || img.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            lazyImages.forEach(img => {
-                if (img.complete) return;
-                imageObserver.observe(img);
-            });
-        }
-        
-        // Set current year in footer
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentYear = new Date().getFullYear();
-            const yearElement = document.getElementById('currentYear');
-            if (yearElement) {
-                yearElement.textContent = currentYear;
-            }
-            
-            // Back to top button functionality
-            const backToTopButton = document.getElementById('btn-back-to-top');
-            if (backToTopButton) {
-                window.addEventListener('scroll', function() {
-                    if (window.pageYOffset > 300) {
-                        backToTopButton.style.display = 'block';
-                    } else {
-                        backToTopButton.style.display = 'none';
-                    }
-                });
-                
-                backToTopButton.addEventListener('click', function() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            }
-        });
-    </script>
 
 </body>
 </html>

@@ -162,6 +162,10 @@
             color: white;
             font-size: 24px;
         }
+
+        .fa-icon{
+            color: var(--primary);
+        }
         
         @media (max-width: 768px) {
             .dpc-hero, .page-header {
@@ -597,7 +601,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-satellite-dish text-primary"></i>
+                                    <i class="fas fa-satellite-dish fa-2x fa-icon"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_rf_title">RF/Microwave Devices</h3>
                             </div>
@@ -609,7 +613,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-microchip text-primary"></i>
+                                    <i class="fas fa-microchip fa-2x fa-icon"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_semiconductor_title">Semiconductor Packaging</h3>
                             </div>
@@ -621,7 +625,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-radiation text-primary"></i>
+                                    <i class="fas fa-radiation fa-2x fa-icon"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_laser_title">Laser Diode Heat Sinks</h3>
                             </div>
@@ -633,7 +637,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-snowflake text-primary"></i>
+                                    <i class="fas fa-snowflake fa-2x fa-icon"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_tec_title">Thermoelectric Coolers</h3>
                             </div>
@@ -645,7 +649,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-car text-primary"></i>
+                                    <i class="fas fa-car fa-2x fa-icon"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_automotive_title">Automotive Electronics</h3>
                             </div>
@@ -657,7 +661,7 @@
                         <div class="application-card">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
-                                    <i class="fas fa-heartbeat text-primary"></i>
+                                    <i class="fas fa-heartbeat fa-2x fa-icon"></i>
                                 </div>
                                 <h3 class="h5 fw-bold mb-0" data-i18n="app_medical_title">Medical Devices</h3>
                             </div>
@@ -672,75 +676,47 @@
         <section class="py-5" aria-labelledby="ordering-title">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 id="ordering-title" class="h1 fw-bold mb-3" data-i18n="ordering_title">Ordering Information</h2>
-                    <p class="lead" data-i18n="ordering_subtitle">Complete details for procurement and manufacturing</p>
+                    <h2 id="ordering-title" class="h1 fw-bold mb-3" data-i18n="ordering_title">Ordering & Manufacturing</h2>
+                    <p class="lead" data-i18n="ordering_subtitle">Complete details for procurement and customization</p>
                 </div>
                 
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h4 fw-bold mb-4" data-i18n="ordering_logistics_title">Logistics & Manufacturing</h3>
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-3 d-flex">
-                                        <i class="fas fa-hashtag text-primary me-3 mt-1"></i>
-                                        <div>
-                                            <strong data-i18n="ordering_hs_code">HS Code:</strong> 8547100000
-                                        </div>
-                                    </li>
-                                    <li class="mb-3 d-flex">
-                                        <i class="fas fa-box text-primary me-3 mt-1"></i>
-                                        <div>
-                                            <strong data-i18n="ordering_moq">Minimum Order Quantity:</strong> 100 Pieces
-                                        </div>
-                                    </li>
-                                    <li class="mb-3 d-flex">
-                                        <i class="fas fa-industry text-primary me-3 mt-1"></i>
-                                        <div>
-                                            <strong data-i18n="ordering_supply_capacity">Supply Capacity:</strong> 500,000 pcs/month
-                                        </div>
-                                    </li>
-                                    <li class="mb-3 d-flex">
-                                        <i class="fas fa-map-marker-alt text-primary me-3 mt-1"></i>
-                                        <div>
-                                            <strong data-i18n="ordering_origin">Place of Origin:</strong> Shenzhen, China
-                                        </div>
-                                    </li>
-                                </ul>
+                <!-- How to Order Section -->
+                <div class="mt-5">
+                    <div class="row g-4">
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <div class="order-step">
+                                    <div class="step-number">1</div>
+                                    <h4 class="h6 fw-bold mt-3" data-i18n="step_submit">Submit Design</h4>
+                                    <p class="small mb-0" data-i18n="step_submit_desc">Gerber, DXF, or STEP files</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h4 fw-bold mb-4" data-i18n="ordering_shipping_title">Shipping & Payment</h3>
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-3 d-flex">
-                                        <i class="fas fa-shipping-fast text-primary me-3 mt-1"></i>
-                                        <div>
-                                            <strong data-i18n="ordering_incoterm">Incoterm:</strong> DAP
-                                        </div>
-                                    </li>
-                                    <li class="mb-3 d-flex">
-                                        <i class="fas fa-plane text-primary me-3 mt-1"></i>
-                                        <div>
-                                            <strong data-i18n="ordering_transportation">Transportation:</strong> Air Express
-                                        </div>
-                                    </li>
-                                    <li class="mb-3 d-flex">
-                                        <i class="fas fa-credit-card text-primary me-3 mt-1"></i>
-                                        <div>
-                                            <strong data-i18n="ordering_payment">Payment Terms:</strong> T/T (Advance)
-                                        </div>
-                                    </li>
-                                    <li class="mb-3 d-flex">
-                                        <i class="fas fa-cube text-primary me-3 mt-1"></i>
-                                        <div>
-                                            <strong data-i18n="ordering_packaging">Packaging:</strong> Export carton
-                                        </div>
-                                    </li>
-                                </ul>
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <div class="order-step">
+                                    <div class="step-number">2</div>
+                                    <h4 class="h6 fw-bold mt-3" data-i18n="step_quote">Request Quote</h4>
+                                    <p class="small mb-0" data-i18n="step_quote_desc">Include specifications & quantity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <div class="order-step">
+                                    <div class="step-number">3</div>
+                                    <h4 class="h6 fw-bold mt-3" data-i18n="step_review">Engineering Review</h4>
+                                    <p class="small mb-0" data-i18n="step_review_desc">DFM feedback within 48 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <div class="order-step">
+                                    <div class="step-number">4</div>
+                                    <h4 class="h6 fw-bold mt-3" data-i18n="step_production">Production</h4>
+                                    <p class="small mb-0" data-i18n="step_production_desc">Scheduled after prototype approval</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -908,8 +884,9 @@
             crossorigin="anonymous"></script>
     
     <!-- Main JavaScript -->
-    <script src="js/main.min.js"></script>
-    <script src="js/dpc-translations.js"></script>
+    <script src="js/main.min.js" defer></script>
+    <script src="js/global-translations.js" defer></script> 
+    <script src="js/dpc-translations.js" defer></script>
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 // Jimei Materials Development Team
 // Version: 1.0.0
 
-(function() {
+(function () {
     'use strict';
 
     // Translations object for HTCC page
@@ -16,25 +16,13 @@
             "htcc_og_description": "HTCC ceramic packaging for aerospace, medical, automotive, and harsh environment applications. Hermetic sealing, multilayer structures, extreme temperature stability.",
             "htcc_twitter_title": "HTCC Ceramic Packaging | High-Temperature Co-fired Ceramic Solutions | Jimei Materials",
             "htcc_twitter_description": "HTCC ceramic packaging for aerospace, medical, automotive, and harsh environment applications. Hermetic sealing, multilayer structures, extreme temperature stability.",
-            
-            // Navigation (shared)
-            "nav_home": "Home",
-            "nav_products": "Products",
-            "nav_dpc": "Direct Plated Copper (DPC)",
-            "nav_dbc": "Direct Bonded Copper (DBC)",
-            "nav_htcc": "HTCC Ceramic Packaging",
-            "nav_all_products": "All Products",
-            "nav_resources": "Resources",
-            "nav_about": "About",
-            "nav_contact": "Contact",
-            "nav_request_quote": "Request Quote",
-            
+
             // Breadcrumbs
             "breadcrumb_home": "Home",
             "breadcrumb_products": "Products",
             "breadcrumb_htcc": "HTCC Ceramic Packaging",
             "skip_to_main": "Skip to main content",
-            
+
             // Hero Section
             "htcc_main_title": "High-Temperature Co-fired Ceramic (HTCC) Packaging Solutions",
             "htcc_subtitle": "Hermetic multilayer ceramic packages for extreme environment applications requiring superior reliability and thermal performance",
@@ -42,7 +30,7 @@
             "feature_extreme_temp": "Extreme Temperature (-55°C to 800°C)",
             "feature_multilayer": "Multilayer Integration",
             "feature_custom_design": "Custom Design Flexibility",
-            
+
             // Technology Overview
             "overview_title": "HTCC Technology Overview",
             "overview_description": "High-Temperature Co-fired Ceramic (HTCC) is an advanced ceramic packaging technology that involves co-firing alumina or aluminum nitride green tapes with refractory metal conductors (tungsten or molybdenum) at temperatures exceeding 1500°C. This process creates dense, monolithic multilayer structures with embedded conductors, cavities, and feedthroughs.",
@@ -52,7 +40,7 @@
             "layer_highlight": "Multilayer Integration:",
             "layer_highlight_desc": "Up to 40+ layers with complex internal routing",
             "process_diagram_caption": "HTCC Manufacturing Process: Tape Casting → Via Formation → Screen Printing → Lamination → Co-firing → Post-processing",
-            
+
             // Key Features
             "features_title": "Key Features & Benefits",
             "features_subtitle": "Superior performance characteristics for demanding applications",
@@ -68,7 +56,7 @@
             "feature_mechanical_desc": "High flexural strength (400-500 MPa), hardness (15-20 GPa), and resistance to vibration and mechanical shock.",
             "feature_material_title": "Material Flexibility",
             "feature_material_desc": "Available in Alumina (Al₂O₃) for standard applications or Aluminum Nitride (AlN) for enhanced thermal performance.",
-            
+
             // Specifications
             "specifications_title": "Technical Specifications",
             "specifications_subtitle": "Comprehensive specifications for HTCC ceramic packages",
@@ -86,7 +74,7 @@
             "spec_dielectric_constant": "Dielectric Constant",
             "spec_flexural_strength": "Flexural Strength",
             "spec_cte": "CTE (×10⁻⁶/K)",
-            
+
             // Material Comparison
             "material_comparison_title": "Material Comparison",
             "material_property": "Property",
@@ -102,7 +90,7 @@
             "property_applications": "Typical Applications",
             "app_alumina": "General hermetic packaging, RF/microwave, automotive sensors",
             "app_aln": "High-power devices, laser packaging, aerospace electronics",
-            
+
             // Applications
             "applications_title": "Industry Applications",
             "applications_subtitle": "HTCC packaging solutions across critical industries",
@@ -136,26 +124,10 @@
             "app_test_2": "Vacuum system components",
             "app_test_3": "Analytical instrument housings",
             "app_test_4": "Laboratory equipment packaging",
-            
+
             // Ordering Information
             "ordering_title": "Ordering & Manufacturing",
             "ordering_subtitle": "Complete details for procurement and customization",
-            "ordering_standard_title": "Standard Products Series",
-            "series_model": "Model",
-            "series_description": "Description",
-            "series_lead_time": "Lead Time",
-            "series_aero_desc": "Aerospace-grade alumina packages (2-10 layers)",
-            "series_power_desc": "AlN packages for power electronics (4-8 layers)",
-            "series_rf_desc": "Low-loss packages for microwave applications (3-6 layers)",
-            "series_med_desc": "Biocompatible medical packages (2-6 layers)",
-            "series_custom_desc": "Fully customized solutions",
-            "ordering_logistics_title": "Logistics & Manufacturing",
-            "ordering_hs_code": "HS Code",
-            "ordering_moq": "Minimum Order Quantity",
-            "ordering_supply_capacity": "Supply Capacity",
-            "ordering_origin": "Place of Origin",
-            "ordering_certification": "Certifications",
-            "ordering_process_title": "How to Order",
             "step_submit": "Submit Design",
             "step_submit_desc": "Gerber, DXF, or STEP files",
             "step_quote": "Request Quote",
@@ -166,7 +138,7 @@
             "step_production_desc": "Scheduled after prototype approval",
             "ordering_note": "Our engineering team provides comprehensive design support, including thermal simulation, stress analysis, and material selection guidance to ensure optimal performance for your specific application requirements.",
             "btn_request_quote": "Request A Custom Quote",
-            
+
             // Gallery
             "gallery_title": "HTCC Product Gallery",
             "gallery_subtitle": "High-quality High-Temperature Co-fired Ceramic packages",
@@ -174,7 +146,7 @@
             "gallery_caption_2": "6-layer AlN HTCC with thermal vias for power applications",
             "gallery_caption_3": "Complex 3D HTCC structure for MEMS packaging",
             "gallery_caption_4": "RF HTCC package with coplanar waveguide structures",
-            
+
             // CTA Section
             "cta_title": "Ready to Discuss Your HTCC Requirements?",
             "cta_description": "Our HTCC specialists are ready to help you design the perfect ceramic packaging solution for your extreme environment application. Get expert consultation and engineering samples.",
@@ -183,143 +155,118 @@
             "cta_prototyping": "Rapid Prototyping",
             "cta_prototyping_desc": "Samples available in 2-4 weeks",
             "btn_contact_us": "Contact Our HTCC Team",
-            "cta_phone": "+86-147-4537-3293",
-            
-            // Footer (shared)
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
-            "footer_products": "Products",
-            "footer_company": "Company",
-            "footer_contact": "Contact Info",
-            "footer_address": "First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China",
-            "footer_hours": "Mon-Fri: 8:00 AM - 6:00 PM (GMT+8)",
-            "footer_languages": "Support: English, Chinese, Japanese, Korean, German",
-            "footer_rights": "All rights reserved.",
-            "footer_privacy": "Privacy Policy",
-            "footer_terms": "Terms of Service",
-            "footer_sitemap": "Sitemap"
+            "cta_phone": "+86-147-4537-3293"
         },
-        
+
         zh: {
-            // Meta tags - Chinese
-            "htcc_page_title": "高温共烧陶瓷(HTCC)封装解决方案 | 极端环境应用 | 集美材料",
-            "htcc_page_description": "集美材料提供高温共烧陶瓷(HTCC)封装解决方案，适用于航空航天、医疗、汽车及严苛环境应用。具备优异的气密密封性、多层结构及极端温度稳定性。",
-            "htcc_page_keywords": "HTCC陶瓷封装, 高温共烧陶瓷, 气密陶瓷封装, 多层陶瓷基板, 氧化铝封装, 氮化铝封装, 航空航天电子封装, 医疗器件封装, 高温电子, 陶瓷馈通",
-            "htcc_og_title": "HTCC陶瓷封装 | 高温共烧陶瓷解决方案专家 | 集美材料",
-            "htcc_og_description": "适用于航空航天、医疗、汽车及严苛环境应用的高温共烧陶瓷(HTCC)封装方案，提供卓越的气密性与多层集成能力。",
-            "htcc_twitter_title": "HTCC陶瓷封装 | 高温共烧陶瓷解决方案专家 | 集美材料",
-            "htcc_twitter_description": "适用于航空航天、医疗、汽车及严苛环境应用的高温共烧陶瓷(HTCC)封装方案，提供卓越的气密性与多层集成能力。",
-            
-            // Navigation (Chinese)
-            "nav_home": "首页",
-            "nav_products": "产品中心",
-            "nav_dpc": "直接镀铜陶瓷基板(DPC)",
-            "nav_dbc": "直接覆铜陶瓷基板(DBC)",
-            "nav_htcc": "HTCC陶瓷封装",
-            "nav_all_products": "全部产品",
-            "nav_resources": "技术资源",
-            "nav_about": "关于集美",
-            "nav_contact": "联系我们",
-            "nav_request_quote": "在线询价",
-            
-            // Breadcrumbs
+            // 元数据
+            "htcc_page_title": "HTCC陶瓷封装解决方案 | 高温共烧陶瓷 | 集美材料",
+            "htcc_page_description": "用于航空航天、医疗、汽车及严苛环境应用的高温共烧陶瓷（HTCC）封装解决方案。提供气密性、多层结构、极端温度稳定性。",
+            "htcc_page_keywords": "HTCC陶瓷封装, 高温共烧陶瓷, 陶瓷气密封装, 多层陶瓷基板, 氧化铝封装, 氮化铝封装, 航空航天电子封装, 医疗器械封装, 高温电子, 陶瓷馈通",
+            "htcc_og_title": "HTCC陶瓷封装 | 高温共烧陶瓷解决方案 | 集美材料",
+            "htcc_og_description": "用于航空航天、医疗、汽车及严苛环境应用的HTCC陶瓷封装。提供气密性、多层结构、极端温度稳定性。",
+            "htcc_twitter_title": "HTCC陶瓷封装 | 高温共烧陶瓷解决方案 | 集美材料",
+            "htcc_twitter_description": "用于航空航天、医疗、汽车及严苛环境应用的HTCC陶瓷封装。提供气密性、多层结构、极端温度稳定性。",
+
+            // 面包屑导航
             "breadcrumb_home": "首页",
-            "breadcrumb_products": "产品中心",
+            "breadcrumb_products": "产品",
             "breadcrumb_htcc": "HTCC陶瓷封装",
-            "skip_to_main": "跳至主要内容",
-            
-            // Hero Section
-            "htcc_main_title": "高温共烧陶瓷(HTCC)封装解决方案",
-            "htcc_subtitle": "为极端环境应用设计的优异气密性多层陶瓷封装，提供卓越的可靠性与热性能",
-            "feature_hermetic": "气密密封",
-            "feature_extreme_temp": "极端温度(-55°C至800°C)",
+            "skip_to_main": "跳转到主要内容",
+
+            // 核心横幅 (Hero Section)
+            "htcc_main_title": "高温共烧陶瓷 (HTCC) 封装解决方案",
+            "htcc_subtitle": "为需要卓越可靠性与热性能的极端环境应用提供多层气密陶瓷封装。",
+            "feature_hermetic": "气密封装",
+            "feature_extreme_temp": "极端温度 (-55°C 至 800°C)",
             "feature_multilayer": "多层集成",
-            "feature_custom_design": "定制设计灵活",
-            
-            // Technology Overview
-            "overview_title": "HTCC技术概述",
-            "overview_description": "高温共烧陶瓷(HTCC)是一种先进的陶瓷封装技术，通过在超过1500°C的温度下共烧氧化铝或氮化铝生瓷带与难熔金属导体(钨或钼)而成。该工艺可制造出具有埋入式导体、腔体和馈通结构的致密、整体式多层结构。",
-            "overview_description2": "HTCC制造工艺能够创建具有优异气密性、良好热稳定性和高机械强度的复杂三维结构。这些封装专为需要极端环境防护的应用而设计，包括航空航天、医疗植入物、汽车传感器和工业控制。",
-            "process_highlight": "高温处理工艺：",
-            "process_highlight_desc": "1500-1600°C烧结确保最大密度与可靠性",
-            "layer_highlight": "多层集成能力：",
-            "layer_highlight_desc": "多达40+层，支持复杂内部布线",
-            "process_diagram_caption": "HTCC制造流程：流延成型 → 通孔形成 → 丝网印刷 → 层压 → 共烧 → 后处理",
-            
-            // Key Features (Chinese)
+            "feature_custom_design": "灵活定制设计",
+
+            // 技术概述
+            "overview_title": "HTCC 技术概述",
+            "overview_description": "高温共烧陶瓷（HTCC）是一种先进的陶瓷封装技术，其工艺是在超过1500°C的温度下，将氧化铝或氮化铝生瓷带与难熔金属导体（钨或钼）共同烧结。此过程能形成致密、一体化的多层结构，内部可嵌入导体、腔体和馈通。",
+            "overview_description2": "HTCC制造工艺能够创造复杂的三维结构，具备卓越的气密性、优异的热稳定性和高机械强度。这些封装专门为需要极端环境防护的应用而设计，涵盖航空航天、医疗植入体、汽车传感器和工业控制等领域。",
+            "process_highlight": "高温工艺：",
+            "process_highlight_desc": "1500-1600°C烧结，实现最大密度和可靠性",
+            "layer_highlight": "多层集成：",
+            "layer_highlight_desc": "高达40+层，支持复杂的内部布线",
+            "process_diagram_caption": "HTCC制造流程：流延成型 → 通孔成形 → 丝网印刷 → 层压 → 共烧 → 后处理",
+
+            // 关键特性
             "features_title": "核心特性与优势",
-            "features_subtitle": "满足严苛应用需求的卓越性能特性",
-            "feature_hermeticity_title": "优异的气密性",
-            "feature_hermeticity_desc": "氦气泄漏率<1×10⁻⁸ atm·cc/s (符合MIL-STD-883标准)，为敏感电子器件提供全面的环境防护。",
-            "feature_temperature_title": "极端温度稳定性",
-            "feature_temperature_desc": "连续工作温度范围-55°C至800°C，具有优异的抗热震性能(>1000次循环)。",
+            "features_subtitle": "为苛刻应用提供的卓越性能特征",
+            "feature_hermeticity_title": "卓越的气密性",
+            "feature_hermeticity_desc": "氦气泄漏率 <1×10⁻⁸ atm·cc/s (符合 MIL-STD-883 标准)，为敏感电子元件提供完整的环境防护。",
+            "feature_temperature_title": "极端的温度稳定性",
+            "feature_temperature_desc": "工作温度范围 -55°C 至 800°C（连续），具有优异的抗热震性（>1000次循环）。",
             "feature_multilayer_title": "高密度多层集成",
-            "feature_multilayer_desc": "多达40+层，通孔直径100-150μm，细线分辨率支持复杂3D封装解决方案。",
-            "feature_electrical_title": "优异的电性能",
-            "feature_electrical_desc": "高绝缘电阻(>10¹² Ω)、低介电损耗，在宽温度范围内保持稳定的电特性。",
-            "feature_mechanical_title": "机械强度高",
-            "feature_mechanical_desc": "高抗弯强度(400-500 MPa)、高硬度(15-20 GPa)，抗振动和机械冲击能力强。",
-            "feature_material_title": "材料选择灵活",
-            "feature_material_desc": "提供氧化铝(Al₂O₃)标准应用或氮化铝(AlN)增强热性能选择。",
-            
-            // Specifications (Chinese)
-            "specifications_title": "技术规格参数",
-            "specifications_subtitle": "HTCC陶瓷封装的完整规格说明",
+            "feature_multilayer_desc": "高达40+层，100-150μm通孔，高分辨率精细线路，可实现复杂的三维封装解决方案。",
+            "feature_electrical_title": "优异的电气性能",
+            "feature_electrical_desc": "高绝缘电阻 (>10¹² Ω)、低介质损耗，以及在宽温度范围内保持稳定的电气特性。",
+            "feature_mechanical_title": "机械坚固性",
+            "feature_mechanical_desc": "高抗弯强度 (400-500 MPa)、高硬度 (15-20 GPa)，并具备抗振动和机械冲击能力。",
+            "feature_material_title": "材料灵活性",
+            "feature_material_desc": "提供标准应用的氧化铝 (Al₂O₃) 或增强热性能的氮化铝 (AlN) 选项。",
+
+            // 技术规格
+            "specifications_title": "技术规格",
+            "specifications_subtitle": "HTCC陶瓷封装的详细规格参数",
             "spec_basic_title": "基本规格",
-            "spec_material_options": "材料选择",
-            "spec_firing_temp": "烧成温度",
+            "spec_material_options": "材料选项",
+            "spec_firing_temp": "烧结温度",
             "spec_conductor_material": "导体材料",
             "spec_layer_count": "最大层数",
             "spec_via_diameter": "通孔直径",
             "spec_line_resolution": "线宽/线距分辨率",
             "spec_performance_title": "性能规格",
-            "spec_hermeticity": "气密性(氦检)",
-            "spec_temp_range": "工作温度范围",
-            "spec_thermal_conductivity": "热导率",
+            "spec_hermeticity": "气密性 (氦检漏)",
+            "spec_temp_range": "工作温度",
+            "spec_thermal_conductivity": "导热系数",
             "spec_dielectric_constant": "介电常数",
             "spec_flexural_strength": "抗弯强度",
-            "spec_cte": "热膨胀系数(×10⁻⁶/K)",
-            
-            // Material Comparison (Chinese)
+            "spec_cte": "热膨胀系数 (CTE， ×10⁻⁶/K)",
+
+            // 材料对比
             "material_comparison_title": "材料对比",
             "material_property": "特性",
-            "material_alumina": "氧化铝(Al₂O₃) HTCC",
-            "material_aln": "氮化铝(AlN) HTCC",
-            "property_thermal_cond": "热导率",
+            "material_alumina": "氧化铝 (Al₂O₃) HTCC",
+            "material_aln": "氮化铝 (AlN) HTCC",
+            "property_thermal_cond": "导热系数",
             "property_dielectric": "介电常数",
-            "property_cte": "热膨胀系数(×10⁻⁶/K)",
+            "property_cte": "热膨胀系数 (CTE， ×10⁻⁶/K)",
             "property_density": "密度",
             "property_color": "颜色",
             "color_white": "白色",
             "color_gray": "灰色/黑色",
             "property_applications": "典型应用",
             "app_alumina": "通用气密封装、射频/微波、汽车传感器",
-            "app_aln": "高功率器件、激光封装、航空航天电子",
-            
-            // Applications (Chinese)
+            "app_aln": "高功率器件、激光器封装、航空航天电子",
+
+            // 行业应用
             "applications_title": "行业应用",
-            "applications_subtitle": "HTCC封装解决方案在各关键行业的应用",
+            "applications_subtitle": "HTCC封装解决方案在关键行业中的应用",
             "app_aerospace_title": "航空航天与国防",
             "app_aerospace_1": "雷达与卫星通信系统",
-            "app_aerospace_2": "飞行控制电子",
+            "app_aerospace_2": "飞控电子设备",
             "app_aerospace_3": "导弹制导模块",
-            "app_aerospace_4": "抗辐射加固封装",
+            "app_aerospace_4": "抗辐射封装",
             "app_medical_title": "医疗与生命科学",
-            "app_medical_1": "植入式医疗设备",
+            "app_medical_1": "可植入医疗设备",
             "app_medical_2": "诊断设备",
             "app_medical_3": "可灭菌传感器外壳",
             "app_medical_4": "生物相容性外壳",
-            "app_automotive_title": "汽车与交通",
+            "app_automotive_title": "汽车与交通运输",
             "app_automotive_1": "发动机控制模块",
             "app_automotive_2": "电动汽车功率电子",
             "app_automotive_3": "压力/温度传感器",
-            "app_automotive_4": "制动系统电子",
+            "app_automotive_4": "制动系统电子设备",
             "app_industrial_title": "工业与能源",
-            "app_industrial_1": "石油天然气井下电子",
+            "app_industrial_1": "石油天然气井下电子设备",
             "app_industrial_2": "工业自动化控制",
-            "app_industrial_3": "发电监测系统",
+            "app_industrial_3": "发电监控设备",
             "app_industrial_4": "高温传感器",
-            "app_telecom_title": "通信",
-            "app_telecom_1": "5G基站电子",
+            "app_telecom_title": "电信通信",
+            "app_telecom_1": "5G基站电子设备",
             "app_telecom_2": "射频/微波封装",
             "app_telecom_3": "腔体滤波器与双工器",
             "app_telecom_4": "光通信模块",
@@ -328,271 +275,496 @@
             "app_test_2": "真空系统组件",
             "app_test_3": "分析仪器外壳",
             "app_test_4": "实验室设备封装",
-            
-            // Ordering Information (Chinese)
-            "ordering_title": "订购与生产",
-            "ordering_subtitle": "采购与定制的完整细节",
-            "ordering_standard_title": "标准产品系列",
-            "series_model": "型号",
-            "series_description": "描述",
-            "series_lead_time": "交货期",
-            "series_aero_desc": "航空航天级氧化铝封装(2-10层)",
-            "series_power_desc": "功率电子用氮化铝封装(4-8层)",
-            "series_rf_desc": "微波应用低损耗封装(3-6层)",
-            "series_med_desc": "生物相容性医疗封装(2-6层)",
-            "series_custom_desc": "完全定制解决方案",
-            "ordering_logistics_title": "物流与生产",
-            "ordering_hs_code": "海关编码",
-            "ordering_moq": "最小起订量",
-            "ordering_supply_capacity": "供应能力",
-            "ordering_origin": "原产地",
-            "ordering_certification": "认证",
-            "ordering_process_title": "订购流程",
-            "step_submit": "提交设计",
-            "step_submit_desc": "Gerber、DXF或STEP文件",
-            "step_quote": "申请报价",
-            "step_quote_desc": "包含规格参数与数量",
-            "step_review": "工程评审",
-            "step_review_desc": "48小时内提供DFM反馈",
-            "step_production": "生产",
-            "step_production_desc": "样品确认后安排生产",
-            "ordering_note": "我们的工程团队提供全面的设计支持，包括热仿真、应力分析和材料选择指导，确保您的特定应用需求获得最优性能。",
+
+            // 订购信息
+            "ordering_title": "订购与生产流程",
+            "ordering_subtitle": "采购与定制服务的完整细节",
+            "step_submit": "1. 提交设计",
+            "step_submit_desc": "Gerber、DXF 或 STEP 文件",
+            "step_quote": "2. 获取报价",
+            "step_quote_desc": "请提供详细规格与数量",
+            "step_review": "3. 工程评审",
+            "step_review_desc": "48小时内提供可制造性设计反馈",
+            "step_production": "4. 投入生产",
+            "step_production_desc": "原型确认后安排生产排期",
+            "ordering_note": "我们的工程团队提供全面的设计支持，包括热仿真、应力分析和材料选型指导，以确保您的特定应用需求达到最佳性能。",
             "btn_request_quote": "申请定制报价",
-            
-            // Gallery (Chinese)
-            "gallery_title": "HTCC产品图库",
+
+            // 产品图库
+            "gallery_title": "HTCC 产品图库",
             "gallery_subtitle": "高品质高温共烧陶瓷封装展示",
-            "gallery_caption_1": "8层氧化铝HTCC，带腔体，ENIG表面处理",
-            "gallery_caption_2": "6层氮化铝HTCC，带散热通孔，适用于功率应用",
-            "gallery_caption_3": "复杂3D HTCC结构，用于MEMS封装",
+            "gallery_caption_1": "带腔体和ENIG处理的8层氧化铝HTCC",
+            "gallery_caption_2": "带导热通孔的6层氮化铝HTCC，用于功率应用",
+            "gallery_caption_3": "用于MEMS封装的复杂3D HTCC结构",
             "gallery_caption_4": "带共面波导结构的射频HTCC封装",
-            
-            // CTA Section (Chinese)
+
+            // 行动号召板块
             "cta_title": "准备好探讨您的HTCC需求了吗？",
-            "cta_description": "我们的HTCC专家团队已准备就绪，帮助您为极端环境应用设计完美的陶瓷封装解决方案。获取专家咨询与工程样品。",
+            "cta_description": "我们的HTCC专家随时准备为您设计适合极端环境应用的完美陶瓷封装解决方案。获取专家咨询与工程样品。",
             "cta_engineering": "工程支持",
-            "cta_engineering_desc": "DFM分析与热仿真",
-            "cta_prototyping": "快速样件",
-            "cta_prototyping_desc": "2-4周内提供样品",
-            "btn_contact_us": "联系HTCC团队",
-            "cta_phone": "+86-147-4537-3293",
-            
-            // Footer (Chinese)
-            "footer_description": "集美材料——自2016年起，始终是热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
-            "footer_products": "产品中心",
-            "footer_company": "关于集美",
-            "footer_contact": "联系我们",
-            "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
-            "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",
-            "footer_languages": "支持语言: 中文、英语、日语、韩语、德语",
-            "footer_rights": "版权所有。",
-            "footer_privacy": "隐私政策",
-            "footer_terms": "使用条款",
-            "footer_sitemap": "网站地图"
+            "cta_engineering_desc": "可制造性设计分析与热仿真",
+            "cta_prototyping": "快速打样",
+            "cta_prototyping_desc": "2-4周内可提供样品",
+            "btn_contact_us": "联系我们的HTCC团队",
+            "cta_phone": "+86-147-4537-3293"
         },
-        
+
         ja: {
-            // Japanese translations - similar pattern with technical accuracy
-            "htcc_page_title": "高温共焼セラミック(HTCC)パッケージングソリューション | 過酷環境用途 | Jimei Materials",
-            "htcc_page_description": "航空宇宙、医療、自動車、過酷環境用途向けの高温共焼セラミック(HTCC)パッケージングソリューション。優れた気密性、多層構造、極端な温度安定性を提供します。",
-            "htcc_page_keywords": "HTCCセラミックパッケージ, 高温共焼セラミック, 気密セラミックパッケージ, 多層セラミック基板, アルミナパッケージ, 窒化アルミニウムパッケージ, 航空宇宙電子パッケージング, 医療デバイスパッケージング, 高温電子, セラミックフィードスルー",
-            "htcc_og_title": "HTCCセラミックパッケージ | 高温共焼セラミックソリューション | Jimei Materials",
-            "htcc_og_description": "航空宇宙、医療、自動車、過酷環境用途向けの高温共焼セラミック(HTCC)パッケージ。優れた気密性と多層集積能力を提供します。",
-            "htcc_twitter_title": "HTCCセラミックパッケージ | 高温共焼セラミックソリューション | Jimei Materials",
-            "htcc_twitter_description": "航空宇宙、医療、自動車、過酷環境用途向けの高温共焼セラミック(HTCC)パッケージ。優れた気密性と多層集積能力を提供します。",
-            
-            // Navigation (Japanese)
-            "nav_home": "ホーム",
-            "nav_products": "製品情報",
-            "nav_dpc": "直接鍍金銅(DPC)基板",
-            "nav_dbc": "直接接合銅(DBC)基板",
-            "nav_htcc": "HTCCセラミックパッケージング",
-            "nav_all_products": "製品一覧",
-            "nav_resources": "技術資料",
-            "nav_about": "会社概要",
-            "nav_contact": "お問い合わせ",
-            "nav_request_quote": "見積依頼",
-            
+            // Meta tags
+            "htcc_page_title": "HTCCセラミックパッケージングソリューション | 高温共焼セラミック | Jimei Materials",
+            "htcc_page_description": "航空宇宙、医療、自動車、過酷環境アプリケーション向け高温共焼セラミック（HTCC）パッケージングソリューション。気密封装、多層構造、極端な温度安定性。",
+            "htcc_page_keywords": "HTCCセラミックパッケージング, 高温共焼セラミック, 気密セラミックパッケージ, 多層セラミック基板, アルミナパッケージ, 窒化アルミニウムパッケージ, 航空宇宙電子機器パッケージング, 医療デバイスパッケージング, 高温電子機器, セラミックフィードスルー",
+            "htcc_og_title": "HTCCセラミックパッケージング | 高温共焼セラミックソリューション | Jimei Materials",
+            "htcc_og_description": "航空宇宙、医療、自動車、過酷環境アプリケーション向けHTCCセラミックパッケージング。気密封装、多層構造、極端な温度安定性。",
+            "htcc_twitter_title": "HTCCセラミックパッケージング | 高温共焼セラミックソリューション | Jimei Materials",
+            "htcc_twitter_description": "航空宇宙、医療、自動車、過酷環境アプリケーション向けHTCCセラミックパッケージング。気密封装、多層構造、極端な温度安定性。",
+
             // Breadcrumbs
             "breadcrumb_home": "ホーム",
-            "breadcrumb_products": "製品情報",
-            "breadcrumb_htcc": "HTCCセラミックパッケージ",
+            "breadcrumb_products": "製品一覧",
+            "breadcrumb_htcc": "HTCCセラミックパッケージング",
             "skip_to_main": "メインコンテンツへスキップ",
-            
+
             // Hero Section
-            "htcc_main_title": "高温共焼セラミック(HTCC)パッケージングソリューション",
-            "htcc_subtitle": "優れた信頼性と熱性能を必要とする過酷環境アプリケーション向けの気密多層セラミックパッケージ",
-            "feature_hermetic": "気密シール",
-            "feature_extreme_temp": "極端温度(-55°C〜800°C)",
+            "htcc_main_title": "高温共焼セラミック（HTCC）パッケージングソリューション",
+            "htcc_subtitle": "優れた信頼性と熱性能が求められる極限環境アプリケーション向け気密多層セラミックパッケージ",
+            "feature_hermetic": "気密封装",
+            "feature_extreme_temp": "極限温度 (-55°C〜800°C)",
             "feature_multilayer": "多層集積",
-            "feature_custom_design": "カスタム設計の柔軟性",
-            
-            // ... Additional Japanese translations would continue in similar pattern
-            // For brevity, I've shown the pattern - full file would include all translations
+            "feature_custom_design": "カスタム設計柔軟性",
+
+            // Technology Overview
+            "overview_title": "HTCC技術概要",
+            "overview_description": "高温共焼セラミック（HTCC）は、1500°Cを超える温度でアルミナまたは窒化アルミニウムのグリーンテープと耐火金属導体（タングステンまたはモリブデン）を共焼する先進的なセラミックパッケージング技術です。このプロセスにより、埋め込み導体、キャビティ、フィードスルーを備えた高密度で一体型の多層構造が形成されます。",
+            "overview_description2": "HTCC製造プロセスにより、優れた気密性、優れた熱安定性、高い機械的強度を備えた複雑な3D構造の作成が可能になります。これらのパッケージは、航空宇宙、医療用インプラント、自動車センサー、産業用コントロールなど、極限環境からの保護を必要とするアプリケーション向けに特別に設計されています。",
+            "process_highlight": "高温処理:",
+            "process_highlight_desc": "最大密度と信頼性のための1500-1600°C焼結",
+            "layer_highlight": "多層集積:",
+            "layer_highlight_desc": "複雑な内部配線を備えた最大40層以上",
+            "process_diagram_caption": "HTCC製造プロセス: テープキャスティング → ビア形成 → スクリーン印刷 → 積層 → 共焼 → 後処理",
+
+            // Key Features
+            "features_title": "主要機能と利点",
+            "features_subtitle": "過酷なアプリケーションのための優れた性能特性",
+            "feature_hermeticity_title": "優れた気密性",
+            "feature_hermeticity_desc": "ヘリウムリーク率 <1×10⁻⁸ atm·cc/s（MIL-STD-883準拠）により、敏感な電子機器を完全に環境から保護します。",
+            "feature_temperature_title": "極限温度安定性",
+            "feature_temperature_desc": "-55°C〜800°Cの連続動作範囲で優れた耐熱衝撃性（>1000サイクル）を発揮します。",
+            "feature_multilayer_title": "高密度多層集積",
+            "feature_multilayer_desc": "100-150μmビアと微細線解像度による最大40層以上で、複雑な3Dパッケージングソリューションを実現します。",
+            "feature_electrical_title": "優れた電気的特性",
+            "feature_electrical_desc": "高絶縁抵抗（>10¹² Ω）、低誘電損失、広い温度範囲にわたる安定した電気的特性を備えています。",
+            "feature_mechanical_title": "機械的堅牢性",
+            "feature_mechanical_desc": "高い曲げ強度（400-500 MPa）、硬度（15-20 GPa）、振動および機械的衝撃に対する耐性を備えています。",
+            "feature_material_title": "材料の柔軟性",
+            "feature_material_desc": "標準アプリケーション向けアルミナ（Al₂O₃）または強化された熱性能向け窒化アルミニウム（AlN）で提供可能です。",
+
+            // Specifications
+            "specifications_title": "技術仕様",
+            "specifications_subtitle": "HTCCセラミックパッケージの包括的な仕様",
+            "spec_basic_title": "基本仕様",
+            "spec_material_options": "材料オプション",
+            "spec_firing_temp": "焼成温度",
+            "spec_conductor_material": "導体材料",
+            "spec_layer_count": "最大層数",
+            "spec_via_diameter": "ビア径",
+            "spec_line_resolution": "線幅/間隔解像度",
+            "spec_performance_title": "性能仕様",
+            "spec_hermeticity": "気密性（Heリーク）",
+            "spec_temp_range": "動作温度",
+            "spec_thermal_conductivity": "熱伝導率",
+            "spec_dielectric_constant": "比誘電率",
+            "spec_flexural_strength": "曲げ強度",
+            "spec_cte": "CTE (×10⁻⁶/K)",
+
+            // Material Comparison
+            "material_comparison_title": "材料比較",
+            "material_property": "特性",
+            "material_alumina": "アルミナ（Al₂O₃）HTCC",
+            "material_aln": "窒化アルミニウム（AlN）HTCC",
+            "property_thermal_cond": "熱伝導率",
+            "property_dielectric": "比誘電率",
+            "property_cte": "CTE (×10⁻⁶/K)",
+            "property_density": "密度",
+            "property_color": "色",
+            "color_white": "白色",
+            "color_gray": "灰色/黒色",
+            "property_applications": "典型的な用途",
+            "app_alumina": "一般的な気密パッケージング、RF/マイクロ波、自動車センサー",
+            "app_aln": "高出力デバイス、レーザーパッケージング、航空宇宙電子機器",
+
+            // Applications
+            "applications_title": "産業アプリケーション",
+            "applications_subtitle": "重要産業におけるHTCCパッケージングソリューション",
+            "app_aerospace_title": "航空宇宙・防衛",
+            "app_aerospace_1": "レーダー・衛星通信システム",
+            "app_aerospace_2": "飛行制御電子機器",
+            "app_aerospace_3": "ミサイル誘導モジュール",
+            "app_aerospace_4": "耐放射線パッケージ",
+            "app_medical_title": "医療・生命科学",
+            "app_medical_1": "植込み可能医療デバイス",
+            "app_medical_2": "診断機器",
+            "app_medical_3": "滅菌可能センサーハウジング",
+            "app_medical_4": "生体適合性エンクロージャー",
+            "app_automotive_title": "自動車・輸送",
+            "app_automotive_1": "エンジン制御モジュール",
+            "app_automotive_2": "EVパワーエレクトロニクス",
+            "app_automotive_3": "圧力/温度センサー",
+            "app_automotive_4": "ブレーキシステム電子機器",
+            "app_industrial_title": "産業・エネルギー",
+            "app_industrial_1": "石油・ガス掘削孔内電子機器",
+            "app_industrial_2": "産業オートメーション制御",
+            "app_industrial_3": "発電監視システム",
+            "app_industrial_4": "高温センサー",
+            "app_telecom_title": "通信",
+            "app_telecom_1": "5G基地局電子機器",
+            "app_telecom_2": "RF/マイクロ波パッケージ",
+            "app_telecom_3": "キャビティフィルター＆デュプレクサー",
+            "app_telecom_4": "光通信モジュール",
+            "app_test_title": "試験・計測",
+            "app_test_1": "高温プローブカード",
+            "app_test_2": "真空システム部品",
+            "app_test_3": "分析機器ハウジング",
+            "app_test_4": "実験室装置パッケージング",
+
+            // Ordering Information
+            "ordering_title": "発注・製造プロセス",
+            "ordering_subtitle": "調達とカスタマイズの詳細情報",
+            "step_submit": "設計データ提出",
+            "step_submit_desc": "Gerber、DXF、またはSTEPファイル",
+            "step_quote": "見積依頼",
+            "step_quote_desc": "仕様と数量を記載",
+            "step_review": "技術審査",
+            "step_review_desc": "48時間以内に製造適合設計（DFM）フィードバック",
+            "step_production": "製造",
+            "step_production_desc": "試作承認後スケジュール確定",
+            "ordering_note": "当社エンジニアリングチームは、熱シミュレーション、応力解析、材料選定ガイダンスを含む包括的な設計サポートを提供し、お客様の特定のアプリケーション要件に対して最適な性能を確保します。",
+            "btn_request_quote": "カスタム見積を依頼",
+
+            // Gallery
+            "gallery_title": "HTCC製品ギャラリー",
+            "gallery_subtitle": "高品質な高温共焼セラミックパッケージ",
+            "gallery_caption_1": "キャビティとENIG仕上げを備えた8層アルミナHTCC",
+            "gallery_caption_2": "パワーアプリケーション向け熱ビアを備えた6層AlN HTCC",
+            "gallery_caption_3": "MEMSパッケージング向け複雑な3D HTCC構造",
+            "gallery_caption_4": "コプレーナ導波路構造を備えたRF HTCCパッケージ",
+
+            // CTA Section
+            "cta_title": "HTCC要件について相談しませんか？",
+            "cta_description": "当社のHTCC専門家が、お客様の極限環境アプリケーションに最適なセラミックパッケージングソリューションの設計をお手伝いします。専門家の相談とエンジニアリングサンプルをご利用ください。",
+            "cta_engineering": "エンジニアリングサポート",
+            "cta_engineering_desc": "DFM解析＆熱シミュレーション",
+            "cta_prototyping": "迅速試作",
+            "cta_prototyping_desc": "サンプルは2-4週間で提供可能",
+            "btn_contact_us": "HTCCチームに連絡",
+            "cta_phone": "+86-147-4537-3293"
         },
-        
+
         ko: {
-            // Korean translations - similar pattern with technical accuracy
-            "htcc_page_title": "고온 공동 소성 세라믹(HTCC) 패키징 솔루션 | 극한 환경 응용 | Jimei Materials",
-            "htcc_page_description": "항공우주, 의료, 자동차 및 극한 환경 응용을 위한 고온 공동 소성 세라믹(HTCC) 패키징 솔루션. 우수한 기밀성, 다층 구조, 극한 온도 안정성을 제공합니다.",
-            "htcc_page_keywords": "HTCC 세라믹 패키지, 고온 공동 소성 세라믹, 기밀 세라믹 패키지, 다층 세라믹 기판, 알루미나 패키지, 질화 알루미늄 패키지, 항공우주 전자 패키징, 의료기기 패키징, 고온 전자, 세라믹 피드스루",
-            "htcc_og_title": "HTCC 세라믹 패키지 | 고온 공동 소성 세라믹 솔루션 | Jimei Materials",
-            "htcc_og_description": "항공우주, 의료, 자동차 및 극한 환경 응용을 위한 고온 공동 소성 세라믹(HTCC) 패키지. 우수한 기밀성과 다층 통합 능력을 제공합니다.",
-            "htcc_twitter_title": "HTCC 세라믹 패키지 | 고온 공동 소성 세라믹 솔루션 | Jimei Materials",
-            "htcc_twitter_description": "항공우주, 의료, 자동차 및 극한 환경 응용을 위한 고온 공동 소성 세라믹(HTCC) 패키지. 우수한 기밀성과 다층 통합 능력을 제공합니다.",
-            
-            // Navigation (Korean)
-            "nav_home": "홈",
-            "nav_products": "제품",
-            "nav_dpc": "직접 도금 동(DPC) 기판",
-            "nav_dbc": "직접 접합 동(DBC) 기판",
-            "nav_htcc": "HTCC 세라믹 패키징",
-            "nav_all_products": "제품 전체보기",
-            "nav_resources": "기술 자료",
-            "nav_about": "회사소개",
-            "nav_contact": "문의",
-            "nav_request_quote": "견적 문의",
-            
-            // ... Additional Korean translations would continue
+            // 메타 태그
+            "htcc_page_title": "HTCC 세라믹 패키징 솔루션 | 고온 동시 소성 세라믹 | Jimei Materials",
+            "htcc_page_description": "항공우주, 의료, 자동차 및 가혹한 환경 응용 분야를 위한 고온 동시 소성 세라믹(HTCC) 패키징 솔루션. 기밀 밀봉, 다층 구조, 극한 온도 안정성.",
+            "htcc_page_keywords": "HTCC 세라믹 패키징, 고온 동시 소성 세라믹, 기밀 세라믹 패키지, 다층 세라믹 기판, 알루미나 패키징, 질화알루미늄 패키지, 항공우주 전자 장치 패키징, 의료기기 패키징, 고온 전자 장치, 세라믹 피드스루",
+            "htcc_og_title": "HTCC 세라믹 패키징 | 고온 동시 소성 세라믹 솔루션 | Jimei Materials",
+            "htcc_og_description": "항공우주, 의료, 자동차 및 가혹한 환경 응용 분야를 위한 HTCC 세라믹 패키징. 기밀 밀봉, 다층 구조, 극한 온도 안정성.",
+            "htcc_twitter_title": "HTCC 세라믹 패키징 | 고온 동시 소성 세라믹 솔루션 | Jimei Materials",
+            "htcc_twitter_description": "항공우주, 의료, 자동차 및 가혹한 환경 응용 분야를 위한 HTCC 세라믹 패키징. 기밀 밀봉, 다층 구조, 극한 온도 안정성.",
+
+            // 브레드크럼
+            "breadcrumb_home": "홈",
+            "breadcrumb_products": "제품",
+            "breadcrumb_htcc": "HTCC 세라믹 패키징",
+            "skip_to_main": "본문으로 건너뛰기",
+
+            // 히어로 섹션
+            "htcc_main_title": "고온 동시 소성 세라믹(HTCC) 패키징 솔루션",
+            "htcc_subtitle": "탁월한 신뢰성과 열적 성능이 필요한 극한 환경 응용 분야를 위한 기밀 다층 세라믹 패키지",
+            "feature_hermetic": "기밀 밀봉",
+            "feature_extreme_temp": "극한 온도 (-55°C ~ 800°C)",
+            "feature_multilayer": "다층 집적",
+            "feature_custom_design": "맞춤형 설계 유연성",
+
+            // 기술 개요
+            "overview_title": "HTCC 기술 개요",
+            "overview_description": "고온 동시 소성 세라믹(HTCC)은 1500°C를 초과하는 온도에서 알루미나 또는 질화알루미늄 생테이프와 내화성 금속 도체(텅스텐 또는 몰리브덴)를 동시 소성하는 고급 세라믹 패키징 기술입니다. 이 공정은 내장된 도체, 캐비티 및 피드스루를 갖춘 고밀도 일체형 다층 구조를 생성합니다.",
+            "overview_description2": "HTCC 제조 공정은 우수한 기밀성, 탁월한 열적 안정성 및 높은 기계적 강도를 갖춘 복잡한 3D 구조의 생성이 가능합니다. 이러한 패키지는 항공우주, 의료용 임플란트, 자동차 센서 및 산업용 제어 장치를 포함한 극한 환경으로부터의 보호가 필요한 응용 분야를 위해 특별히 설계되었습니다.",
+            "process_highlight": "고온 공정:",
+            "process_highlight_desc": "최대 밀도와 신뢰성을 위한 1500-1600°C 소성",
+            "layer_highlight": "다층 집적:",
+            "layer_highlight_desc": "복잡한 내부 라우팅을 갖춘 최대 40+층",
+            "process_diagram_caption": "HTCC 제조 공정: 테이프 캐스팅 → 비아 형성 → 스크린 인쇄 → 적층 → 동시 소성 → 후가공",
+
+            // 주요 특징
+            "features_title": "주요 특징 및 장점",
+            "features_subtitle": "까다로운 응용 분야를 위한 우수한 성능 특성",
+            "feature_hermeticity_title": "탁월한 기밀성",
+            "feature_hermeticity_desc": "헬륨 누출율 <1×10⁻⁸ atm·cc/s (MIL-STD-883 준수)로 민감한 전자 장치의 완전한 환경 보호가 가능합니다.",
+            "feature_temperature_title": "극한 온도 안정성",
+            "feature_temperature_desc": "우수한 열충격 저항성(>1000사이클)으로 -55°C에서 800°C까지의 연속 작동 범위.",
+            "feature_multilayer_title": "고밀도 다층 집적",
+            "feature_multilayer_desc": "100-150μm 비아 및 미세 선 해상도로 최대 40+층까지 구현 가능한 복잡한 3D 패키징 솔루션.",
+            "feature_electrical_title": "우수한 전기적 특성",
+            "feature_electrical_desc": "높은 절연 저항(>10¹² Ω), 낮은 유전 손실 및 넓은 온도 범위에서 안정적인 전기적 특성.",
+            "feature_mechanical_title": "기계적 견고성",
+            "feature_mechanical_desc": "높은 휨 강도(400-500 MPa), 경도(15-20 GPa) 및 진동 및 기계적 충격에 대한 저항성.",
+            "feature_material_title": "재료 유연성",
+            "feature_material_desc": "표준 응용 분야용 알루미나(Al₂O₃) 또는 향상된 열 성능을 위한 질화알루미늄(AlN)으로 제공 가능.",
+
+            // 사양
+            "specifications_title": "기술 사양",
+            "specifications_subtitle": "HTCC 세라믹 패키지에 대한 포괄적인 사양",
+            "spec_basic_title": "기본 사양",
+            "spec_material_options": "재료 옵션",
+            "spec_firing_temp": "소성 온도",
+            "spec_conductor_material": "도체 재료",
+            "spec_layer_count": "최대 층수",
+            "spec_via_diameter": "비아 직경",
+            "spec_line_resolution": "선폭/간격 해상도",
+            "spec_performance_title": "성능 사양",
+            "spec_hermeticity": "기밀성 (He 누출)",
+            "spec_temp_range": "작동 온도",
+            "spec_thermal_conductivity": "열전도도",
+            "spec_dielectric_constant": "유전율",
+            "spec_flexural_strength": "휨 강도",
+            "spec_cte": "열팽창 계수 (×10⁻⁶/K)",
+
+            // 재료 비교
+            "material_comparison_title": "재료 비교",
+            "material_property": "특성",
+            "material_alumina": "알루미나 (Al₂O₃) HTCC",
+            "material_aln": "질화알루미늄 (AlN) HTCC",
+            "property_thermal_cond": "열전도도",
+            "property_dielectric": "유전율",
+            "property_cte": "열팽창 계수 (×10⁻⁶/K)",
+            "property_density": "밀도",
+            "property_color": "색상",
+            "color_white": "흰색",
+            "color_gray": "회색/검정색",
+            "property_applications": "일반적인 응용 분야",
+            "app_alumina": "일반 기밀 패키징, RF/마이크로파, 자동차 센서",
+            "app_aln": "고출력 소자, 레이저 패키징, 항공우주 전자 장치",
+
+            // 응용 분야
+            "applications_title": "산업별 응용 분야",
+            "applications_subtitle": "핵심 산업 전반에 걸친 HTCC 패키징 솔루션",
+            "app_aerospace_title": "항공우주 및 방산",
+            "app_aerospace_1": "레이더 및 위성 통신 시스템",
+            "app_aerospace_2": "비행 제어 전자 장치",
+            "app_aerospace_3": "미사일 유도 모듈",
+            "app_aerospace_4": "방사선 내성 패키지",
+            "app_medical_title": "의료 및 생명 과학",
+            "app_medical_1": "이식형 의료기기",
+            "app_medical_2": "진단 장비",
+            "app_medical_3": "멸균 가능 센서 하우징",
+            "app_medical_4": "생체 적합성 인클로저",
+            "app_automotive_title": "자동차 및 운송",
+            "app_automotive_1": "엔진 제어 모듈",
+            "app_automotive_2": "EV 파워일렉트로닉스",
+            "app_automotive_3": "압력/온도 센서",
+            "app_automotive_4": "브레이크 시스템 전자 장치",
+            "app_industrial_title": "산업 및 에너지",
+            "app_industrial_1": "석유 및 가스 시추공 전자 장치",
+            "app_industrial_2": "산업 자동화 제어 장치",
+            "app_industrial_3": "발전 모니터링",
+            "app_industrial_4": "고온 센서",
+            "app_telecom_title": "통신",
+            "app_telecom_1": "5G 기지국 전자 장치",
+            "app_telecom_2": "RF/마이크로파 패키지",
+            "app_telecom_3": "캐비티 필터 및 듀플렉서",
+            "app_telecom_4": "광통신 모듈",
+            "app_test_title": "시험 및 계측",
+            "app_test_1": "고온 프로브 카드",
+            "app_test_2": "진공 시스템 구성 요소",
+            "app_test_3": "분석 기기 하우징",
+            "app_test_4": "실험실 장비 패키징",
+
+            // 주문 정보
+            "ordering_title": "주문 및 제조 프로세스",
+            "ordering_subtitle": "조달 및 맞춤형 제작 상세 정보",
+            "step_submit": "설계 파일 제출",
+            "step_submit_desc": "Gerber, DXF 또는 STEP 파일",
+            "step_quote": "견적 요청",
+            "step_quote_desc": "사양 및 수량 포함",
+            "step_review": "엔지니어링 검토",
+            "step_review_desc": "48시간 내 제조용 설계(DFM) 피드백",
+            "step_production": "생산 진행",
+            "step_production_desc": "프로토타입 승인 후 일정 조율",
+            "ordering_note": "당사 엔지니어링 팀은 열 시뮬레이션, 응력 분석 및 재료 선택 지도를 포함한 포괄적인 설계 지원을 제공하여 귀하의 특정 응용 분야 요구사항에 최적의 성능을 보장합니다.",
+            "btn_request_quote": "맞춤형 견적 요청",
+
+            // 갤러리
+            "gallery_title": "HTCC 제품 갤러리",
+            "gallery_subtitle": "고품질 고온 동시 소성 세라믹 패키지",
+            "gallery_caption_1": "캐비티 및 ENIG 처리된 8층 알루미나 HTCC",
+            "gallery_caption_2": "파워 응용 분야를 위한 열 비아가 있는 6층 AlN HTCC",
+            "gallery_caption_3": "MEMS 패키징을 위한 복잡한 3D HTCC 구조",
+            "gallery_caption_4": "동평면 도파관 구조를 갖춘 RF HTCC 패키지",
+
+            // CTA 섹션
+            "cta_title": "HTCC 요구사항을 논의할 준비가 되셨나요?",
+            "cta_description": "당사 HTCC 전문가들이 극한 환경 응용 분야에 완벽한 세라믹 패키징 솔루션을 설계하는 데 도움을 드릴 준비가 되어 있습니다. 전문가 상담 및 엔지니어링 샘플을 받아보세요.",
+            "cta_engineering": "엔지니어링 지원",
+            "cta_engineering_desc": "제조용 설계(DFM) 분석 및 열 시뮬레이션",
+            "cta_prototyping": "신속한 프로토타이핑",
+            "cta_prototyping_desc": "2-4주 내 샘플 제공 가능",
+            "btn_contact_us": "HTCC 팀에 문의하기",
+            "cta_phone": "+86-147-4537-3293"
         },
-        
+
         de: {
-            // German translations - similar pattern with technical accuracy
-            "htcc_page_title": "Hochtemperatur-Co-Fired-Keramik (HTCC) Gehäuselösungen | Extreme Umgebungsanwendungen | Jimei Materials",
-            "htcc_page_description": "Hochtemperatur-Co-Fired-Keramik (HTCC) Gehäuselösungen für Luft- und Raumfahrt, Medizintechnik, Automobil und extreme Umgebungsanwendungen. Hermetische Dichtung, Mehrschichtstrukturen, extreme Temperaturstabilität.",
-            "htcc_page_keywords": "HTCC-Keramikgehäuse, Hochtemperatur-Co-Fired-Keramik, hermetische Keramikgehäuse, mehrschichtige Keramiksubstrate, Aluminiumoxid-Gehäuse, Aluminiumnitrid-Gehäuse, Luft- und Raumfahrtelektronik-Gehäuse, Medizingeräte-Gehäuse, Hochtemperaturelektronik, Keramik-Durchführungen",
-            "htcc_og_title": "HTCC-Keramikgehäuse | Hochtemperatur-Co-Fired-Keramik Lösungen | Jimei Materials",
-            "htcc_og_description": "HTCC-Keramikgehäuse für Luft- und Raumfahrt, Medizintechnik, Automobil und extreme Umgebungsanwendungen. Hermetische Dichtung und Mehrschichtintegration.",
-            "htcc_twitter_title": "HTCC-Keramikgehäuse | Hochtemperatur-Co-Fired-Keramik Lösungen | Jimei Materials",
-            "htcc_twitter_description": "HTCC-Keramikgehäuse für Luft- und Raumfahrt, Medizintechnik, Automobil und extreme Umgebungsanwendungen. Hermetische Dichtung und Mehrschichtintegration.",
-            
-            // Navigation (German)
-            "nav_home": "Startseite",
-            "nav_products": "Produkte",
-            "nav_dpc": "Direct Plated Copper (DPC)",
-            "nav_dbc": "Direct Bonded Copper (DBC)",
-            "nav_htcc": "HTCC-Keramikgehäuse",
-            "nav_all_products": "Alle Produkte",
-            "nav_resources": "Wissenswertes",
-            "nav_about": "Über uns",
-            "nav_contact": "Kontakt",
-            "nav_request_quote": "Angebot anfordern",
-            
-            // ... Additional German translations would continue
+            // Meta tags
+            "htcc_page_title": "HTCC Keramikgehäuse-Lösungen | Hochtemperatur-ko-gesinterte Keramik | Jimei Materials",
+            "htcc_page_description": "Hochtemperatur-ko-gesinterte Keramik (HTCC)-Gehäuselösungen für Luft- und Raumfahrt, Medizintechnik, Automotive und Anwendungen in rauen Umgebungen. Hermetische Dichtung, Mehrlagestrukturen, extreme Temperaturstabilität.",
+            "htcc_page_keywords": "HTCC Keramikgehäuse, Hochtemperatur-ko-gesinterte Keramik, hermetische Keramikgehäuse, mehrlagige Keramiksubstrate, Aluminiumoxid-Gehäuse, Aluminiumnitrid-Gehäuse, Luft- und Raumfahrtelektronik-Gehäuse, Medizingeräte-Gehäuse, Hochtemperaturelektronik, Keramik-Durchführungen",
+            "htcc_og_title": "HTCC Keramikgehäuse | Hochtemperatur-ko-gesinterte Keramik-Lösungen | Jimei Materials",
+            "htcc_og_description": "HTCC-Keramikgehäuse für Luft- und Raumfahrt, Medizintechnik, Automotive und Anwendungen in rauen Umgebungen. Hermetische Dichtung, Mehrlagestrukturen, extreme Temperaturstabilität.",
+            "htcc_twitter_title": "HTCC Keramikgehäuse | Hochtemperatur-ko-gesinterte Keramik-Lösungen | Jimei Materials",
+            "htcc_twitter_description": "HTCC-Keramikgehäuse für Luft- und Raumfahrt, Medizintechnik, Automotive und Anwendungen in rauen Umgebungen. Hermetische Dichtung, Mehrlagestrukturen, extreme Temperaturstabilität.",
+
+            // Breadcrumbs
+            "breadcrumb_home": "Startseite",
+            "breadcrumb_products": "Produkte",
+            "breadcrumb_htcc": "HTCC Keramikgehäuse",
+            "skip_to_main": "Zum Hauptinhalt springen",
+
+            // Hero Section
+            "htcc_main_title": "Hochtemperatur-ko-gesinterte Keramik (HTCC) Gehäuselösungen",
+            "htcc_subtitle": "Hermetische Mehrlagen-Keramikgehäuse für Anwendungen in extremen Umgebungen mit Anforderungen an überlegene Zuverlässigkeit und thermische Leistung",
+            "feature_hermetic": "Hermetische Dichtung",
+            "feature_extreme_temp": "Extreme Temperaturen (-55°C bis 800°C)",
+            "feature_multilayer": "Mehrlagen-Integration",
+            "feature_custom_design": "Flexibles kundenspezifisches Design",
+
+            // Technology Overview
+            "overview_title": "HTCC-Technologie-Übersicht",
+            "overview_description": "Hochtemperatur-ko-gesinterte Keramik (HTCC) ist eine fortschrittliche Keramikgehäuse-Technologie, bei der Aluminiumoxid- oder Aluminiumnitrid-Grünfolien mit Leitern aus hochschmelzenden Metallen (Wolfram oder Molybdän) bei Temperaturen über 1500°C ko-gesintert werden. Dieser Prozess erzeugt dichte, monolithische Mehrlagenstrukturen mit eingebetteten Leitern, Kavitäten und Durchführungen.",
+            "overview_description2": "Der HTCC-Fertigungsprozess ermöglicht die Herstellung komplexer 3D-Strukturen mit überlegener Hermetizität, ausgezeichneter thermischer Stabilität und hoher mechanischer Festigkeit. Diese Gehäuse sind speziell für Anwendungen entwickelt, die Schutz vor extremen Umgebungsbedingungen erfordern, einschließlich Luft- und Raumfahrt, medizinische Implantate, Automotive-Sensoren und Industriesteuerungen.",
+            "process_highlight": "Hochtemperatur-Verarbeitung:",
+            "process_highlight_desc": "Sintern bei 1500-1600°C für maximale Dichte und Zuverlässigkeit",
+            "layer_highlight": "Mehrlagen-Integration:",
+            "layer_highlight_desc": "Bis zu 40+ Lagen mit komplexer internen Verdrahtung",
+            "process_diagram_caption": "HTCC-Fertigungsprozess: Tape Casting → Durchkontaktierungsbildung → Siebdruck → Laminierung → Ko-Sintern → Nachbearbeitung",
+
+            // Key Features
+            "features_title": "Hauptmerkmale & Vorteile",
+            "features_subtitle": "Überlegene Leistungsmerkmale für anspruchsvolle Anwendungen",
+            "feature_hermeticity_title": "Außergewöhnliche Hermetizität",
+            "feature_hermeticity_desc": "Helium-Leckrate <1×10⁻⁸ atm·cm³/s (MIL-STD-883 konform) für vollständigen Umweltschutz empfindlicher Elektronik.",
+            "feature_temperature_title": "Extreme Temperaturstabilität",
+            "feature_temperature_desc": "Betriebstemperaturbereich von -55°C bis 800°C kontinuierlich mit ausgezeichneter Temperaturwechselbeständigkeit (>1000 Zyklen).",
+            "feature_multilayer_title": "Hochdichte Mehrlagen-Integration",
+            "feature_multilayer_desc": "Bis zu 40+ Lagen mit 100-150 µm Durchkontaktierungen und Feinleiter-Auflösung für komplexe 3D-Gehäuselösungen.",
+            "feature_electrical_title": "Ausgezeichnete elektrische Eigenschaften",
+            "feature_electrical_desc": "Hoher Isolationswiderstand (>10¹² Ω), geringer dielektrischer Verlust und stabile elektrische Eigenschaften über weite Temperaturbereiche.",
+            "feature_mechanical_title": "Mechanische Robustheit",
+            "feature_mechanical_desc": "Hohe Biegefestigkeit (400-500 MPa), Härte (15-20 GPa) und Widerstandsfähigkeit gegen Vibration und mechanischen Stoß.",
+            "feature_material_title": "Materialflexibilität",
+            "feature_material_desc": "Verfügbar in Aluminiumoxid (Al₂O₃) für Standardanwendungen oder Aluminiumnitrid (AlN) für verbesserte thermische Leistung.",
+
+            // Specifications
+            "specifications_title": "Technische Spezifikationen",
+            "specifications_subtitle": "Umfassende Spezifikationen für HTCC-Keramikgehäuse",
+            "spec_basic_title": "Basisspezifikationen",
+            "spec_material_options": "Materialoptionen",
+            "spec_firing_temp": "Sintertemperatur",
+            "spec_conductor_material": "Leitermaterial",
+            "spec_layer_count": "Maximale Lagenanzahl",
+            "spec_via_diameter": "Durchkontaktierungs-Durchmesser",
+            "spec_line_resolution": "Leiterbahn-/Abstand-Auflösung",
+            "spec_performance_title": "Leistungsspezifikationen",
+            "spec_hermeticity": "Hermetizität (He-Leckrate)",
+            "spec_temp_range": "Betriebstemperatur",
+            "spec_thermal_conductivity": "Wärmeleitfähigkeit",
+            "spec_dielectric_constant": "Dielektrizitätskonstante",
+            "spec_flexural_strength": "Biegefestigkeit",
+            "spec_cte": "CTE (×10⁻⁶/K)",
+
+            // Material Comparison
+            "material_comparison_title": "Materialvergleich",
+            "material_property": "Eigenschaft",
+            "material_alumina": "Aluminiumoxid (Al₂O₃) HTCC",
+            "material_aln": "Aluminiumnitrid (AlN) HTCC",
+            "property_thermal_cond": "Wärmeleitfähigkeit",
+            "property_dielectric": "Dielektrizitätskonstante",
+            "property_cte": "CTE (×10⁻⁶/K)",
+            "property_density": "Dichte",
+            "property_color": "Farbe",
+            "color_white": "Weiß",
+            "color_gray": "Grau/Schwarz",
+            "property_applications": "Typische Anwendungen",
+            "app_alumina": "Allgemeine hermetische Gehäuse, HF-/Mikrowellentechnik, Automotive-Sensoren",
+            "app_aln": "Hochleistungsbauelemente, Laser-Gehäuse, Luft- und Raumfahrtelektronik",
+
+            // Applications
+            "applications_title": "Branchenanwendungen",
+            "applications_subtitle": "HTCC-Gehäuselösungen für kritische Industrien",
+            "app_aerospace_title": "Luft- und Raumfahrt & Verteidigung",
+            "app_aerospace_1": "Radar- & Satellitenkommunikationssysteme",
+            "app_aerospace_2": "Flugsteuerelektronik",
+            "app_aerospace_3": "Lenkflugkörper-Steuermodule",
+            "app_aerospace_4": "Strahlungsharte Gehäuse",
+            "app_medical_title": "Medizintechnik & Life Sciences",
+            "app_medical_1": "Implantierbare Medizingeräte",
+            "app_medical_2": "Diagnosegeräte",
+            "app_medical_3": "Sterilisierbare Sensorgehäuse",
+            "app_medical_4": "Biokompatible Gehäuse",
+            "app_automotive_title": "Automotive & Transport",
+            "app_automotive_1": "Motorsteuermodule",
+            "app_automotive_2": "E-Mobilität Leistungselektronik",
+            "app_automotive_3": "Druck-/Temperatursensoren",
+            "app_automotive_4": "Bremsystemelektronik",
+            "app_industrial_title": "Industrie & Energie",
+            "app_industrial_1": "Öl- & Gas-Downhole-Elektronik",
+            "app_industrial_2": "Industrielle Automatisierungssteuerungen",
+            "app_industrial_3": "Kraftwerksüberwachung",
+            "app_industrial_4": "Hochtemperatursensoren",
+            "app_telecom_title": "Telekommunikation",
+            "app_telecom_1": "5G-Basisstationselektronik",
+            "app_telecom_2": "HF-/Mikrowellengehäuse",
+            "app_telecom_3": "Hohlraumfilter & Duplexer",
+            "app_telecom_4": "Optische Kommunikationsmodule",
+            "app_test_title": "Prüf- & Messtechnik",
+            "app_test_1": "Hochtemperatur-Probecards",
+            "app_test_2": "Vakuumsystemkomponenten",
+            "app_test_3": "Gehäuse für Analyseinstrumente",
+            "app_test_4": "Laborgeräte-Gehäuse",
+
+            // Ordering Information
+            "ordering_title": "Bestellung & Fertigung",
+            "ordering_subtitle": "Vollständige Details für Beschaffung und Individualisierung",
+            "step_submit": "Design einreichen",
+            "step_submit_desc": "Gerber-, DXF- oder STEP-Dateien",
+            "step_quote": "Angebot anfordern",
+            "step_quote_desc": "Spezifikationen und Menge angeben",
+            "step_review": "Technische Prüfung",
+            "step_review_desc": "DFM-Feedback innerhalb von 48 Stunden",
+            "step_production": "Fertigung",
+            "step_production_desc": "Geplant nach Prototyp-Freigabe",
+            "ordering_note": "Unser Engineering-Team bietet umfassende Designunterstützung, einschließlich thermischer Simulation, Spannungsanalyse und Materialauswahlberatung, um optimale Leistung für Ihre spezifischen Anwendungsanforderungen sicherzustellen.",
+            "btn_request_quote": "Individuelles Angebot anfordern",
+
+            // Gallery
+            "gallery_title": "HTCC-Produktgalerie",
+            "gallery_subtitle": "Hochwertige Hochtemperatur-ko-gesinterte Keramikgehäuse",
+            "gallery_caption_1": "8-lagiges Aluminiumoxid-HTTCC mit Kavität und ENIG-Oberfläche",
+            "gallery_caption_2": "6-lagiges AlN-HTTCC mit thermischen Durchkontaktierungen für Leistungsanwendungen",
+            "gallery_caption_3": "Komplexe 3D-HTTCC-Struktur für MEMS-Gehäuse",
+            "gallery_caption_4": "HF-HTTCC-Gehäuse mit koplanaren Wellenleiterstrukturen",
+
+            // CTA Section
+            "cta_title": "Bereit, Ihre HTCC-Anforderungen zu besprechen?",
+            "cta_description": "Unsere HTCC-Spezialisten sind bereit, Ihnen bei der Entwicklung der perfekten Keramikgehäuselösung für Ihre Anwendung in extremen Umgebungen zu helfen. Erhalten Sie Expertenberatung und Engineering-Muster.",
+            "cta_engineering": "Engineering-Support",
+            "cta_engineering_desc": "DFM-Analyse & thermische Simulation",
+            "cta_prototyping": "Rapid Prototyping",
+            "cta_prototyping_desc": "Muster verfügbar in 2-4 Wochen",
+            "btn_contact_us": "Unser HTCC-Team kontaktieren",
+            "cta_phone": "+86-147-4537-3293"
         }
     };
 
-    // Default language
-    let currentLang = 'en';
-
-    // Function to change language
-    function changeLanguage(lang) {
-        currentLang = lang;
-        document.documentElement.lang = lang;
-        
-        // Update all elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.value = translations[lang][key];
-                } else if (element.hasAttribute('placeholder')) {
-                    element.setAttribute('placeholder', translations[lang][key]);
-                } else if (element.hasAttribute('title')) {
-                    element.setAttribute('title', translations[lang][key]);
-                } else if (element.hasAttribute('alt')) {
-                    element.setAttribute('alt', translations[lang][key]);
-                } else if (element.hasAttribute('content')) {
-                    element.setAttribute('content', translations[lang][key]);
-                } else {
-                    element.textContent = translations[lang][key];
-                }
-            } else {
-                console.warn(`Missing translation for key: ${key} in language: ${lang}`);
-            }
-        });
-        
-        // Update language dropdown
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.classList.remove('active');
-            if (option.getAttribute('data-lang') === lang) {
-                option.classList.add('active');
-            }
-        });
-        
-        // Update current language display
-        const langNames = { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', de: 'Deutsch' };
-        const currentLangElement = document.getElementById('currentLanguage');
-        if (currentLangElement) {
-            currentLangElement.textContent = langNames[lang];
-        }
-        
-        // Save preference to localStorage
-        localStorage.setItem('preferredLanguage', lang);
-        
-        // Close dropdown if it exists
-        const languageDropdown = document.getElementById('languageDropdown');
-        if (languageDropdown) {
-            languageDropdown.classList.remove('show');
-        }
+    // Initialize with common translations system
+    if (window.CommonTranslations) {
+        window.translations = window.CommonTranslations.initLanguageSystem(translations);
     }
-
-    // Initialize language on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check for saved language preference
-        const savedLang = localStorage.getItem('preferredLanguage');
-        if (savedLang && translations[savedLang]) {
-            changeLanguage(savedLang);
-        } else {
-            // Default to browser language or English
-            const browserLang = navigator.language.split('-')[0];
-            if (translations[browserLang]) {
-                changeLanguage(browserLang);
-            } else {
-                changeLanguage('en');
-            }
-        }
-        
-        // Language dropdown toggle
-        const languageBtn = document.getElementById('languageBtn');
-        if (languageBtn) {
-            languageBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const dropdown = document.getElementById('languageDropdown');
-                if (dropdown) {
-                    dropdown.classList.toggle('show');
-                }
-            });
-        }
-        
-        // Language selection
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                changeLanguage(lang);
-            });
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function() {
-            const dropdown = document.getElementById('languageDropdown');
-            if (dropdown) {
-                dropdown.classList.remove('show');
-            }
-        });
-        
-        // Stop propagation for dropdown clicks
-        const languageDropdown = document.getElementById('languageDropdown');
-        if (languageDropdown) {
-            languageDropdown.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-        }
-    });
-
-    // Export for use in other scripts if needed
-    window.HTCCTranslations = {
-        changeLanguage: changeLanguage,
-        translations: translations
-    };
 })();
