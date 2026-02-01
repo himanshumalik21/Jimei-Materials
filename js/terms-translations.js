@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     // Translations object
@@ -8,38 +8,24 @@
             'terms_page_title': 'Terms of Service | Jimei Materials - Ceramic Substrate Manufacturer',
             'terms_meta_description': 'Terms of Service for Jimei Materials website and services. Legal terms governing the use of our website, products, and services.',
 
-                            // Navigation
-                "nav_home": "Home",
-                "nav_products": "Products",
-                "nav_dpc": "Direct Plated Copper (DPC)",
-                "nav_dbc": "Direct Bonded Copper (DBC)",
-                "nav_bare": "Bare Ceramic Substrates",
-                "nav_htcc": "HTCC Ceramic Packaging",
-                "nav_all_products": "All Products",
-                "nav_resources": "Resources",
-                "nav_about": "About",
-                "nav_contact": "Contact",
-                "nav_request_quote": "Request Quote",
-                "nav_blog": "Blog",
-            
             // Content
             'terms_main_title': 'Terms of Service',
             'terms_subtitle': 'Legal terms governing your use of our website and services',
             'breadcrumb_terms': 'Terms of Service',
-            
+
             // Notice Box
             'terms_notice_title': 'Important Legal Notice',
             'terms_notice_content': 'Please read these Terms of Service carefully before using our website. By accessing or using our website, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use our website or services.',
-            
+
             // Update Date
             'terms_last_updated': 'Last Updated:',
-            'terms_last_updated_date': 'January 1, 2024',
+            'terms_last_updated_date': 'January 1, 2026',
             'terms_intro_note': 'These Terms of Service ("Terms") govern your access to and use of the Jimei Materials Co., Ltd. website (www.jimei-materials.com) and our services. These Terms constitute a legally binding agreement between you and Jimei Materials Co., Ltd.',
-            
+
             // Sections
             'terms_section1_title': '1. Acceptance of Terms',
             'terms_section1_content': 'By accessing, browsing, or using our website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you are using our website on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these Terms.',
-            
+
             'terms_section2_title': '2. Definitions',
             'terms_section2_content': 'In these Terms:',
             'terms_section2_list1': '"Company," "we," "us," or "our" refers to Jimei Materials Co., Ltd., a company registered in China.',
@@ -47,14 +33,14 @@
             'terms_section2_list3': '"Services" refers to all products, services, content, features, and functionality offered through our website.',
             'terms_section2_list4': '"User," "you," or "your" refers to any individual or entity accessing or using our website or services.',
             'terms_section2_list5': '"Content" includes all text, images, graphics, logos, videos, audio, data, and other materials available on our website.',
-            
+
             'terms_section3_title': '3. Eligibility',
             'terms_section3_content': 'By using our website, you represent and warrant that:',
             'terms_section3_list1': 'You are at least 18 years old or have reached the age of majority in your jurisdiction',
             'terms_section3_list2': 'You have the legal capacity to enter into a binding agreement',
             'terms_section3_list3': 'You are not prohibited from receiving our services under applicable laws',
             'terms_section3_list4': 'All information you provide is accurate, current, and complete',
-            
+
             'terms_section4_title': '4. Account Registration',
             'terms_section4_content': 'Certain features of our website may require you to create an account. When creating an account, you agree to:',
             'terms_section4_list1': 'Provide accurate, current, and complete information',
@@ -62,7 +48,7 @@
             'terms_section4_list3': 'Notify us immediately of any unauthorized access or security breach',
             'terms_section4_list4': 'Accept responsibility for all activities under your account',
             'terms_section4_note': 'We reserve the right to suspend or terminate accounts that violate these Terms or are used for fraudulent activities.',
-            
+
             'terms_section5_title': '5. Use of Website',
             'terms_section5_content': 'You agree to use our website only for lawful purposes and in accordance with these Terms. You shall not:',
             'terms_section5_list1': 'Use our website in any way that violates applicable laws or regulations',
@@ -72,46 +58,46 @@
             'terms_section5_list5': 'Use any automated means to access or collect data from our website without permission',
             'terms_section5_list6': 'Upload or transmit viruses, malware, or other harmful code',
             'terms_section5_list7': 'Harass, abuse, or harm other users',
-            
+
             'terms_section6_title': '6. Intellectual Property Rights',
             'terms_section6_content': 'All content, features, and functionality on our website are owned by Jimei Materials Co., Ltd., its licensors, or other providers and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.',
-            
+
             'terms_section6a_title': '6.1 Copyright',
             'terms_section6a_content': 'The website and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof) are owned by Jimei Materials Co., Ltd., its licensors, or other providers of such material and are protected by copyright laws.',
-            
+
             'terms_section6b_title': '6.2 Trademarks',
             'terms_section6b_content': 'The Jimei Materials name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Jimei Materials Co., Ltd. or its affiliates or licensors. You must not use such marks without our prior written permission.',
-            
+
             'terms_section6c_title': '6.3 Limited License',
             'terms_section6c_content': 'We grant you a limited, non-exclusive, non-transferable, revocable license to access and use our website for personal, non-commercial purposes. This license does not include:',
             'terms_section6c_list1': 'Resale or commercial use of our website or its contents',
             'terms_section6c_list2': 'Collection and use of any product listings, descriptions, or prices',
             'terms_section6c_list3': 'Downloading or copying of account information for the benefit of another merchant',
             'terms_section6c_list4': 'Any use of data mining, robots, or similar data gathering and extraction tools',
-            
+
             'terms_section7_title': '7. User Content',
             'terms_section7_content': 'Our website may allow you to submit content, including but not limited to comments, reviews, and inquiries ("User Content"). By submitting User Content, you:',
             'terms_section7_list1': 'Grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, translate, and distribute your User Content',
             'terms_section7_list2': 'Represent and warrant that you own or have the necessary rights to submit the User Content',
             'terms_section7_list3': 'Agree that User Content will not violate any third-party rights or applicable laws',
             'terms_section7_list4': 'Acknowledge that we are not responsible for User Content and may remove it at our discretion',
-            
+
             'terms_section8_title': '8. Product Information and Quotations',
             'terms_section8_content': 'All product descriptions, specifications, and technical information on our website are provided for informational purposes only. We make reasonable efforts to ensure accuracy but do not guarantee that product descriptions or other content are accurate, complete, reliable, current, or error-free.',
-            
+
             'terms_section8a_title': '8.1 Quotations and Orders',
             'terms_section8a_content': 'Quotations provided through our website are non-binding and subject to:',
             'terms_section8a_list1': 'Verification of technical specifications',
             'terms_section8a_list2': 'Availability of materials and production capacity',
             'terms_section8a_list3': 'Final written confirmation from our sales department',
             'terms_section8a_list4': 'Execution of a separate purchase agreement',
-            
+
             'terms_section8b_title': '8.2 Export Controls',
             'terms_section8b_content': 'Our products and technology may be subject to export controls and sanctions laws. You agree to comply with all applicable export control regulations, including those of China, the United States, and other countries.',
-            
+
             'terms_section9_title': '9. Third-Party Links',
             'terms_section9_content': 'Our website may contain links to third-party websites or services that are not owned or controlled by Jimei Materials. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You acknowledge and agree that Jimei Materials shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods, or services available on or through any such websites or services.',
-            
+
             'terms_section10_title': '10. Disclaimer of Warranties',
             'terms_section10_content': 'YOUR USE OF OUR WEBSITE AND SERVICES IS AT YOUR SOLE RISK. THE WEBSITE AND SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. JIMEI MATERIALS EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.',
             'terms_section10_content2': 'We do not warrant that:',
@@ -119,7 +105,7 @@
             'terms_section10_list2': 'The website will be uninterrupted, timely, secure, or error-free',
             'terms_section10_list3': 'The results that may be obtained from the use of the website will be accurate or reliable',
             'terms_section10_list4': 'The quality of any products, services, information, or other material purchased or obtained by you through the website will meet your expectations',
-            
+
             'terms_section11_title': '11. Limitation of Liability',
             'terms_section11_content': 'TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, JIMEI MATERIALS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:',
             'terms_section11_list1': 'YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE WEBSITE',
@@ -127,38 +113,38 @@
             'terms_section11_list3': 'ANY CONTENT OBTAINED FROM THE WEBSITE',
             'terms_section11_list4': 'UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT',
             'terms_section11_content2': 'IN NO EVENT SHALL JIMEI MATERIALS\' TOTAL LIABILITY TO YOU FOR ALL CLAIMS EXCEED THE AMOUNT OF ONE HUNDRED UNITED STATES DOLLARS (USD 100.00).',
-            
+
             'terms_section12_title': '12. Indemnification',
             'terms_section12_content': 'You agree to defend, indemnify, and hold harmless Jimei Materials Co., Ltd., its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys\' fees) arising out of or relating to your violation of these Terms or your use of the website.',
-            
+
             'terms_section13_title': '13. Termination',
             'terms_section13_content': 'We may terminate or suspend your access to our website immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms. Upon termination, your right to use the website will immediately cease.',
-            
+
             'terms_section14_title': '14. Governing Law and Dispute Resolution',
             'terms_section14a_title': '14.1 Governing Law',
             'terms_section14a_content': 'These Terms shall be governed and construed in accordance with the laws of the People\'s Republic of China, without regard to its conflict of law provisions.',
-            
+
             'terms_section14b_title': '14.2 Dispute Resolution',
             'terms_section14b_content': 'Any dispute, controversy, or claim arising out of or relating to these Terms shall be resolved through amicable negotiations. If the dispute cannot be resolved through negotiation within thirty (30) days, either party may submit the dispute to the people\'s court having jurisdiction in Shenzhen, Guangdong, China.',
-            
+
             'terms_section14c_title': '14.3 International Users',
             'terms_section14c_content': 'If you are accessing our website from outside China, you are responsible for compliance with local laws. We make no representation that materials on our website are appropriate or available for use in locations outside China.',
-            
+
             'terms_section15_title': '15. Changes to Terms',
             'terms_section15_content': 'We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days\' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By continuing to access or use our website after those revisions become effective, you agree to be bound by the revised terms.',
-            
+
             'terms_section16_title': '16. Severability',
             'terms_section16_content': 'If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. The invalid or unenforceable provision shall be replaced by a valid and enforceable provision that most closely achieves the intent of the original provision.',
-            
+
             'terms_section17_title': '17. Entire Agreement',
             'terms_section17_content': 'These Terms constitute the entire agreement between you and Jimei Materials regarding our website and supersede and replace any prior agreements we might have had between us regarding the website.',
-            
+
             'terms_section18_title': '18. Waiver',
             'terms_section18_content': 'Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. The waiver of any such right or provision will be effective only if in writing and signed by a duly authorized representative of Jimei Materials.',
-            
+
             'terms_section19_title': '19. Force Majeure',
             'terms_section19_content': 'We shall not be liable for any failure to perform our obligations under these Terms where such failure results from any cause beyond our reasonable control, including, without limitation, mechanical, electronic, or communications failure or degradation, acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, or shortages of transportation facilities, fuel, energy, labor, or materials.',
-            
+
             'terms_section20_title': '20. Contact Information',
             'terms_section20_content': 'If you have any questions about these Terms, please contact us:',
             'terms_contact_title': 'Jimei Materials Co., Ltd.',
@@ -166,64 +152,37 @@
             'terms_contact_email': 'yfu@jimei-materials.com',
             'terms_contact_phone': '+86-147-4537-3293',
             'terms_contact_hours': 'Business Hours: Monday-Friday, 8:00 AM - 6:00 PM (GMT+8)',
-            
+
             'terms_footer_note': 'These Terms of Service are written in English. In case of any discrepancies between the English version and translations, the English version shall prevail.',
-            
+
             // CTA Section
             'terms_cta_title': 'Questions About Our Terms?',
             'terms_cta_description': 'Our legal team is available to address any questions or concerns you may have about our Terms of Service.',
-            'btn_contact_us': 'Contact Us',
-
-            //Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
-            "footer_products": "Products",
-            "footer_company": "Company",
-            "footer_contact": "Contact Info",
-            "footer_address": "First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China",
-            "footer_hours": "Mon-Fri: 8:00 AM - 6:00 PM (GMT+8)",
-            "footer_languages": "Support: English, Chinese, Japanese, Korean, German",
-            "footer_rights": "All rights reserved.",
-            "footer_privacy": "Privacy Policy",
-            "footer_terms": "Terms of Service",
-            "footer_sitemap": "Sitemap"
+            'btn_contact_us': 'Contact Us'
         },
         zh: {
-                    // Page meta
+            // Page meta
             'terms_page_title': '服务条款 | 集美材料 - 陶瓷基板制造商',
             'terms_meta_description': '集美材料网站与服务条款。规范使用我们网站、产品及服务的法律条款。',
 
-            // Navigation - 微调以更符合中文网站导航习惯
-                    "nav_home": "首页",
-                    "nav_products": "产品中心",
-                    "nav_dpc": "直接镀铜陶瓷基板",
-                    "nav_dbc": "直接覆铜陶瓷基板",
-                    "nav_bare": "裸陶瓷基片",
-                    "nav_htcc": "HTCC陶瓷封装",
-                    "nav_all_products": "全部产品",
-                    "nav_resources": "技术资源",
-                    "nav_about": "关于集美",
-                    "nav_contact": "联系我们",
-                    "nav_request_quote": "在线询价",
-                    "nav_blog": "技术博客",
-            
             // Content
             'terms_main_title': '服务条款',
             'terms_subtitle': '规范您使用我们网站及服务的法律条款',
             'breadcrumb_terms': '服务条款',
-            
+
             // Notice Box
             'terms_notice_title': '重要法律声明',
             'terms_notice_content': '在使用我们的网站前，请仔细阅读本服务条款。访问或使用我们的网站即表示您同意接受本条款的约束。如果您不同意本条款的任何部分，则不得使用我们的网站或服务。',
-            
+
             // Update Date
             'terms_last_updated': '最后更新：',
-            'terms_last_updated_date': '2024年1月1日',
+            'terms_last_updated_date': '2026年1月1日',
             'terms_intro_note': '本《服务条款》（简称“条款”）规范您对集美材料有限公司网站 (www.jimei-materials.com) 及我们服务的访问和使用。本条款构成您与集美材料有限公司之间具有法律约束力的协议。',
-            
+
             // Sections
             'terms_section1_title': '1. 条款接受',
             'terms_section1_content': '通过访问、浏览或使用我们的网站，即表示您确认已阅读、理解并同意受本《服务条款》的约束。如果您代表某一公司或其他法律实体使用我们的网站，您声明您有权使该实体受本条款约束。',
-            
+
             'terms_section2_title': '2. 定义',
             'terms_section2_content': '在本条款中：',
             'terms_section2_list1': '“公司”、“我们”或“我方”指依据中国法律注册成立的集美材料有限公司。',
@@ -231,14 +190,14 @@
             'terms_section2_list3': '“服务”指通过我们网站提供的所有产品、服务、内容、特性和功能。',
             'terms_section2_list4': '“用户”、“您”或“您的”指任何访问或使用我们网站或服务的个人或实体。',
             'terms_section2_list5': '“内容”包括我们网站上提供的所有文本、图像、图形、徽标、视频、音频、数据和其他材料。',
-            
+
             'terms_section3_title': '3. 资格',
             'terms_section3_content': '使用我们的网站，即表示您声明并保证：',
             'terms_section3_list1': '您已年满18周岁，或已达到您所在司法管辖区的法定成年年龄',
             'terms_section3_list2': '您具有签订具有约束力协议的法律行为能力',
             'terms_section3_list3': '您未被适用法律禁止接收我们的服务',
             'terms_section3_list4': '您提供的所有信息均准确、最新且完整',
-            
+
             'terms_section4_title': '4. 账户注册',
             'terms_section4_content': '我们网站的某些功能可能需要您创建账户。创建账户时，您同意：',
             'terms_section4_list1': '提供准确、最新且完整的信息',
@@ -246,7 +205,7 @@
             'terms_section4_list3': '发现任何未经授权的访问或安全漏洞后立即通知我们',
             'terms_section4_list4': '对您账户下的所有活动承担责任',
             'terms_section4_note': '我们保留暂停或终止违反本条款或用于欺诈活动的账户的权利。',
-            
+
             'terms_section5_title': '5. 网站使用',
             'terms_section5_content': '您同意仅出于合法目的并依据本条款使用我们的网站。您不得：',
             'terms_section5_list1': '以任何违反适用法律法规的方式使用我们的网站',
@@ -256,46 +215,46 @@
             'terms_section5_list5': '未经许可使用任何自动化手段从我们网站访问或收集数据',
             'terms_section5_list6': '上传或传播病毒、恶意软件或其他有害代码',
             'terms_section5_list7': '骚扰、辱骂或伤害其他用户',
-            
+
             'terms_section6_title': '6. 知识产权',
             'terms_section6_content': '我们网站上的所有内容、特性和功能均为集美材料有限公司、其许可方或其他提供方所有，并受国际版权、商标、专利、商业秘密及其他知识产权法保护。',
-            
+
             'terms_section6a_title': '6.1 版权',
             'terms_section6a_content': '本网站及其全部内容、特性和功能（包括但不限于所有信息、软件、文本、展示、图像、视频、音频及其设计、选择和编排）归集美材料有限公司、其许可方或此类材料的其他提供方所有，并受版权法保护。',
-            
+
             'terms_section6b_title': '6.2 商标',
             'terms_section6b_content': '“集美材料”名称、徽标及所有相关名称、徽标、产品和服务名称、设计和标语均为集美材料有限公司或其关联公司或许可方的商标。未经我们事先书面许可，您不得使用此类标记。',
-            
+
             'terms_section6c_title': '6.3 有限许可',
             'terms_section6c_content': '我们授予您一项有限的、非排他的、不可转让的、可撤销的许可，仅为个人非商业目的访问和使用我们的网站。此许可不包括：',
             'terms_section6c_list1': '转售或商业性使用我们的网站或其内容',
             'terms_section6c_list2': '收集和使用任何产品列表、描述或价格',
             'terms_section6c_list3': '为其他商家的利益下载或复制账户信息',
             'terms_section6c_list4': '任何数据挖掘、机器人或类似数据收集和提取工具的使用',
-            
+
             'terms_section7_title': '7. 用户内容',
             'terms_section7_content': '我们的网站可能允许您提交内容，包括但不限于评论、评价和问询（“用户内容”）。通过提交用户内容，您：',
             'terms_section7_list1': '授予我们一项全球性、非独占的、免版税的许可，以使用、复制、修改、改编、发布、翻译和分发您的用户内容',
             'terms_section7_list2': '声明并保证您拥有或具有提交用户内容所必需的权利',
             'terms_section7_list3': '同意用户内容不会侵犯任何第三方权利或违反适用法律',
             'terms_section7_list4': '确认我们对用户内容不负责，并可能自行决定将其移除',
-            
+
             'terms_section8_title': '8. 产品信息与报价',
             'terms_section8_content': '我们网站上的所有产品描述、规格和技术信息仅供参考。我们虽尽合理努力确保准确性，但不保证产品描述或其他内容是准确、完整、可靠、最新或无错误的。',
-            
+
             'terms_section8a_title': '8.1 报价与订单',
             'terms_section8a_content': '通过我们网站提供的报价不具有约束力，并受制于以下条件：',
             'terms_section8a_list1': '技术规格的核实',
             'terms_section8a_list2': '材料供应与生产能力',
             'terms_section8a_list3': '我方销售部门的最终书面确认',
             'terms_section8a_list4': '单独采购协议的签订',
-            
+
             'terms_section8b_title': '8.2 出口管制',
             'terms_section8b_content': '我们的产品和技术可能受出口管制和制裁法律的约束。您同意遵守所有适用的出口管制法规，包括中国、美国及其他国家的法规。',
-            
+
             'terms_section9_title': '9. 第三方链接',
             'terms_section9_content': '我们的网站可能包含指向非集美材料所有或控制的第三方网站或服务的链接。我们对任何第三方网站或服务的内容、隐私政策或实践概不控制，也不承担任何责任。您承认并同意，对于因使用或依赖任何此类网站或服务上或通过其提供的任何此类内容、商品或服务而造成或据称造成的任何损害或损失，集美材料概不负责，无论直接或间接。',
-            
+
             'terms_section10_title': '10. 免责声明',
             'terms_section10_content': '您使用我们的网站和服务风险自担。网站和服务按“原样”和“现有”基础提供。集美材料明确声明不提供任何形式的明示或暗示保证，包括但不限于对适销性、特定用途适用性和不侵权的暗示保证。',
             'terms_section10_content2': '我们不保证：',
@@ -303,7 +262,7 @@
             'terms_section10_list2': '网站将不间断、及时、安全或无错误',
             'terms_section10_list3': '通过使用网站可能获得的结果将是准确或可靠的',
             'terms_section10_list4': '您通过网站购买或获得的任何产品、服务、信息或其他材料的质量将符合您的期望',
-            
+
             'terms_section11_title': '11. 责任限制',
             'terms_section11_content': '在适用法律允许的最大范围内，对于因以下原因导致的任何间接、附带、特殊、后果性或惩罚性损害（包括但不限于利润、数据、使用、商誉或其他无形损失的损失），集美材料不承担任何责任：',
             'terms_section11_list1': '您访问或使用或无法访问或使用网站',
@@ -311,38 +270,38 @@
             'terms_section11_list3': '从网站获得的任何内容',
             'terms_section11_list4': '对您的传输或内容的未经授权访问、使用或更改',
             'terms_section11_content2': '在任何情况下，集美材料对您提出的所有索赔的总责任不得超过一百美元（USD 100.00）。',
-            
+
             'terms_section12_title': '12. 赔偿',
             'terms_section12_content': '您同意为集美材料有限公司、其关联公司、许可方和服务提供商，及其各自的负责人、董事、员工、承包商、代理人、许可方、供应商、继承人和受让人进行辩护、赔偿并使其免受损害，赔偿范围包括因您违反本条款或使用网站而引起或与之相关的任何索赔、责任、损害、判决、裁决、损失、成本、开支或费用（包括合理的律师费）。',
-            
+
             'terms_section13_title': '13. 终止',
             'terms_section13_content': '我们可随时因任何理由（包括但不限于您违反本条款）立即终止或暂停您对我们网站的访问，且不承担事先通知或任何责任。终止后，您使用网站的权利将立即停止。',
-            
+
             'terms_section14_title': '14. 管辖法律与争议解决',
             'terms_section14a_title': '14.1 管辖法律',
             'terms_section14a_content': '本条款应受中华人民共和国法律管辖并据其解释，不适用其法律冲突规定。',
-            
+
             'terms_section14b_title': '14.2 争议解决',
             'terms_section14b_content': '因本条款引起或与之相关的任何争议、纠纷或索赔，应通过友好协商解决。若争议在三十（30）日内无法通过协商解决，任何一方均可将该争议提交至中国广东省深圳市有管辖权的人民法院诉讼解决。',
-            
+
             'terms_section14c_title': '14.3 国际用户',
             'terms_section14c_content': '如果您从中国境外访问我们的网站，您有责任遵守当地法律。我们并未声明我们网站上的材料适合或可供在中国境外使用。',
-            
+
             'terms_section15_title': '15. 条款修改',
             'terms_section15_content': '我们保留随时自行决定修改或替换本条款的权利。如果修订属于重大变更，我们将在新条款生效前至少提前30天发出通知。何为重大变更将由我们自行决定。在该等修订生效后继续访问或使用我们的网站，即表示您同意受修订后的条款约束。',
-            
+
             'terms_section16_title': '16. 可分割性',
             'terms_section16_content': '如果法院裁定本条款的任何规定无效或不可执行，本条款的其余规定仍将保持完全效力。无效或不可执行的规定应由最能实现原规定意图的有效且可执行的规定所取代。',
-            
+
             'terms_section17_title': '17. 完整协议',
             'terms_section17_content': '本条款构成您与集美材料之间关于我们网站的完整协议，并取代和替换我们之间先前就网站达成的任何协议。',
-            
+
             'terms_section18_title': '18. 弃权',
             'terms_section18_content': '我们未能执行本条款的任何权利或规定，不应被视为对该等权利的放弃。对该等权利或规定的任何弃权，仅在经集美材料正式授权代表书面签署后方为有效。',
-            
+
             'terms_section19_title': '19. 不可抗力',
             'terms_section19_content': '对于因任何超出我们合理控制范围的原因（包括但不限于机械、电子或通信故障或降级、天灾、战争、恐怖主义、骚乱、禁运、民事或军事当局行为、火灾、洪水、事故、罢工、或运输设施、燃料、能源、劳动力或材料短缺）导致我们未能履行本条款项下义务的情况，我们不承担任何责任。',
-            
+
             'terms_section20_title': '20. 联系信息',
             'terms_section20_content': '如果您对本条款有任何疑问，请通过以下方式联系我们：',
             'terms_contact_title': '集美材料有限公司',
@@ -350,45 +309,18 @@
             'terms_contact_email': 'yfu@jimei-materials.com',
             'terms_contact_phone': '+86-147-4537-3293',
             'terms_contact_hours': '工作时间：周一至周五，上午8:00 - 下午6:00（北京时间 GMT+8）',
-            
+
             'terms_footer_note': '本《服务条款》以英文书写。如英文版本与翻译版本之间存在任何差异，应以英文版本为准。',
-            
+
             // CTA Section
             'terms_cta_title': '对我们的条款有疑问？',
             'terms_cta_description': '我们的法律团队可解答您对本《服务条款》的任何疑问或关切。',
-            'btn_contact_us': '联系我们',
-
-            //Footer
-            "footer_description": "集美材料——自2016年起，始终是热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
-            "footer_products": "产品",
-            "footer_company": "公司",
-            "footer_contact": "联系信息",
-            "footer_address": "中国深圳市宝安区新桥街道耗三林坡坑第一工业区",
-            "footer_hours": "周一至周五：上午8:00 - 下午6:00（北京时间）",
-            "footer_languages": "支持语言：英语、中文、日语、韩语、德语",
-            "footer_rights": "版权所有。",
-            "footer_privacy": "隐私政策",
-            "footer_terms": "服务条款",
-            "footer_sitemap": "网站地图"
+            'btn_contact_us': '联系我们'
         },
         ja: {
             // ページメタ情報
             'terms_page_title': '利用規約 | Jimei Materials - セラミック基板メーカー',
             'terms_meta_description': 'Jimei Materialsのウェブサイトおよびサービスに関する利用規約。当社ウェブサイト、製品、サービスの利用を規定する法的条件です。',
-
-            // Navigation
-                "nav_home": "ホーム",
-                "nav_products": "製品情報",
-                "nav_dpc": "直接鍍金銅（DPC）基板",
-                "nav_dbc": "直接接合銅（DBC）基板",
-                "nav_bare": "未金属化セラミック基板",
-                "nav_htcc": "HTCCセラミックパッケージング",
-                "nav_all_products": "製品一覧",
-                "nav_resources": "技術資料",
-                "nav_about": "会社概要",
-                "nav_contact": "お問い合わせ",
-                "nav_request_quote": "見積もり依頼",
-                "nav_blog": "技術ブログ",
 
             // 本文
             'terms_main_title': '利用規約',
@@ -401,7 +333,7 @@
 
             // 更新日
             'terms_last_updated': '最終更新日：',
-            'terms_last_updated_date': '2024年1月1日',
+            'terms_last_updated_date': '2026年1月1日',
             'terms_intro_note': '本利用規約（以下「本規約」）は、Jimei Materials Co., Ltd.（以下「当社」）のウェブサイト（www.jimei-materials.com）および当社サービスへのアクセスと利用を規定するものです。本規約は、お客様と当社との間の法的拘束力のある契約を構成します。',
 
             // セクション
@@ -540,39 +472,12 @@
             // CTA セクション
             'terms_cta_title': '利用規約についてご質問は？',
             'terms_cta_description': '当社法務チームが、利用規約に関するご質問や懸念に対応いたします。',
-            'btn_contact_us': 'お問い合わせ',
-
-            // フッター
-            "footer_description": "2016年創業以来、熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
-            "footer_products": "製品",
-            "footer_company": "会社情報",
-            "footer_contact": "連絡先情報",
-            "footer_address": "中国 広東省 深圳市 宝安区 新橋街道 茘林坡坑 浩森第一工業区",
-            "footer_hours": "月～金: 8:00 - 18:00 (GMT+8)",
-            "footer_languages": "対応言語: 英語、中国語、日本語、韓国語、ドイツ語",
-            "footer_rights": "All rights reserved.",
-            "footer_privacy": "プライバシーポリシー",
-            "footer_terms": "利用規約",
-            "footer_sitemap": "サイトマップ"
+            'btn_contact_us': 'お問い合わせ'
         },
         ko: {
             // Page meta
             'terms_page_title': '서비스 이용약관 | Jimei Materials - 세라믹 기판 제조업체',
             'terms_meta_description': 'Jimei Materials 웹사이트 및 서비스 이용약관. 당사 웹사이트, 제품 및 서비스 이용을 규율하는 법적 약관입니다.',
-
-            // Navigation
-                "nav_home": "홈",
-                "nav_products": "제품",
-                "nav_dpc": "DPC (Direct Plated Copper) 기판",
-                "nav_dbc": "DBC (Direct Bonded Copper) 기판",
-                "nav_bare": "비금속화 세라믹 기판", // 'Bare'는 '무처리'보다 '비금속화'가 기술적
-                "nav_htcc": "HTCC 세라믹 패키징",
-                "nav_all_products": "제품 전체보기",
-                "nav_resources": "기술 자료",
-                "nav_about": "회사소개",
-                "nav_contact": "문의",
-                "nav_request_quote": "견적 문의",
-                "nav_blog": "기술 블로그",
 
             // Content
             'terms_main_title': '서비스 이용약관',
@@ -585,7 +490,7 @@
 
             // Update Date
             'terms_last_updated': '최종 업데이트:',
-            'terms_last_updated_date': '2024년 1월 1일',
+            'terms_last_updated_date': '2026년 1월 1일',
             'terms_intro_note': '본 서비스 이용약관(이하 "약관")은 Jimei Materials Co., Ltd. 웹사이트(www.jimei-materials.com) 및 당사 서비스에 대한 귀하의 접속 및 이용을 규율합니다. 본 약관은 귀하와 Jimei Materials Co., Ltd. 사이의 법적 구속력 있는 계약을 구성합니다.',
 
             // Sections
@@ -724,41 +629,13 @@
             // CTA Section
             'terms_cta_title': '이용약관에 대해 질문이 있으십니까?',
             'terms_cta_description': '당사 법무팀은 이용약관에 대해 귀하가 가질 수 있는 질문이나 우려사항을 해결할 수 있도록 지원합니다.',
-            'btn_contact_us': '문의하기',
-
-            //Footer
-            "footer_description": "2016년 설립 이래 열 관리 애플리케이션을 위한 세라믹 금속화 기판의 선도적 제조사. ISO 14001:2015 인증을 보유한 글로벌 제조 능력.",
-            "footer_products": "제품",
-            "footer_company": "회사",
-            "footer_contact": "연락처 정보",
-            "footer_address": "중국 광동성 심천시 바오안구 신차오 가도 호삼 임포갱 제1공업구",
-            "footer_hours": "월-금: 오전 8시 - 오후 6시 (GMT+8)",
-            "footer_languages": "지원 언어: 영어, 중국어, 일본어, 한국어, 독일어",
-            "footer_rights": "All rights reserved.",
-            "footer_privacy": "개인정보 처리방침",
-            "footer_terms": "서비스 이용약관",
-            "footer_sitemap": "사이트맵"
+            'btn_contact_us': '문의하기'
         },
         de: {
             // Page meta
             'terms_page_title': 'Allgemeine Geschäftsbedingungen (AGB) | Jimei Materials - Hersteller von Keramiksubstraten',
             'terms_meta_description': 'Allgemeine Geschäftsbedingungen (AGB) der Jimei Materials für Website und Dienstleistungen. Rechtliche Bestimmungen für die Nutzung unserer Website, Produkte und Services.',
 
-            // Navigation
-                "nav_home": "Startseite",
-                "nav_products": "Produkte",
-                "nav_dpc": "Direct Plated Copper (DPC)",
-                "nav_dbc": "Direct Bonded Copper (DBC)",
-                "nav_bare": "Reinkeramik-Substrate",
-                "nav_htcc": "HTCC-Keramikgehäuse",
-                "nav_all_products": "Alle Produkte",
-                "nav_resources": "Wissenswertes",
-                "nav_about": "Über uns",
-                "nav_contact": "Kontakt",
-                "nav_request_quote": "Angebot anfordern",
-                "nav_blog": "Blog",
-
-                
             // Content
             'terms_main_title': 'Allgemeine Geschäftsbedingungen',
             'terms_subtitle': 'Rechtliche Bestimmungen für die Nutzung unserer Website und Dienstleistungen',
@@ -770,7 +647,7 @@
 
             // Update Date
             'terms_last_updated': 'Zuletzt aktualisiert:',
-            'terms_last_updated_date': '1. Januar 2024',
+            'terms_last_updated_date': '1. Januar 2026',
             'terms_intro_note': 'Diese Allgemeinen Geschäftsbedingungen ("AGB") regeln Ihren Zugang zu und die Nutzung der Website der Jimei Materials Co., Ltd. (www.jimei-materials.com) sowie unserer Dienstleistungen. Diese AGB stellen eine rechtsverbindliche Vereinbarung zwischen Ihnen und der Jimei Materials Co., Ltd. dar.',
 
             // Sections
@@ -909,134 +786,13 @@
             // CTA Section
             'terms_cta_title': 'Fragen zu unseren AGB?',
             'terms_cta_description': 'Unser Rechtsteam steht zur Verfügung, um Fragen oder Bedenken zu unseren Allgemeinen Geschäftsbedingungen zu klären.',
-            'btn_contact_us': 'Kontakt aufnehmen',
-
-            //Footer
-            "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
-            "footer_products": "Produkte",
-            "footer_company": "Unternehmen",
-            "footer_contact": "Kontakt",
-            "footer_address": "First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China",
-            "footer_hours": "Mo-Fr: 8:00 - 18:00 Uhr (GMT+8)",
-            "footer_languages": "Unterstützte Sprachen: Englisch, Chinesisch, Japanisch, Koreanisch, Deutsch",
-            "footer_rights": "Alle Rechte vorbehalten.",
-            "footer_privacy": "Datenschutz",
-            "footer_terms": "Nutzungsbedingungen",
-            "footer_sitemap": "Sitemap"
+            'btn_contact_us': 'Kontakt aufnehmen'
         }
     };
-    
-    // Default language
-    let currentLang = 'en';
 
-    // Function to change language
-    function changeLanguage(lang) {
-        currentLang = lang;
-        document.documentElement.lang = lang;
-        
-        // Update all elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.value = translations[lang][key];
-                } else if (element.hasAttribute('placeholder')) {
-                    element.setAttribute('placeholder', translations[lang][key]);
-                } else if (element.hasAttribute('title')) {
-                    element.setAttribute('title', translations[lang][key]);
-                } else if (element.hasAttribute('alt')) {
-                    element.setAttribute('alt', translations[lang][key]);
-                } else if (element.hasAttribute('content')) {
-                    element.setAttribute('content', translations[lang][key]);
-                } else {
-                    element.innerHTML = translations[lang][key];
-                }
-            } else {
-                console.warn(`Missing translation for key: ${key} in language: ${lang}`);
-            }
-        });
-        
-        // Update language dropdown
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.classList.remove('active');
-            if (option.getAttribute('data-lang') === lang) {
-                option.classList.add('active');
-            }
-        });
-        
-        // Update current language display
-        const langNames = { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', de: 'Deutsch' };
-        const currentLangElement = document.getElementById('currentLanguage');
-        if (currentLangElement) {
-            currentLangElement.textContent = langNames[lang];
-        }
-        
-        // Save preference to localStorage
-        localStorage.setItem('preferredLanguage', lang);
-        
-        // Close dropdown if it exists
-        const languageDropdown = document.getElementById('languageDropdown');
-        if (languageDropdown) {
-            languageDropdown.classList.remove('show');
-        }
+
+    // Initialize with common translations system
+    if (window.CommonTranslations) {
+        window.translations = window.CommonTranslations.initLanguageSystem(translations);
     }
-
-    // Initialize language on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check for saved language preference
-        const savedLang = localStorage.getItem('preferredLanguage');
-        if (savedLang && translations[savedLang]) {
-            changeLanguage(savedLang);
-        } else {
-            // Default to browser language or English
-            const browserLang = navigator.language.split('-')[0];
-            if (translations[browserLang]) {
-                changeLanguage(browserLang);
-            } else {
-                changeLanguage('en');
-            }
-        }
-        
-        // Language dropdown toggle
-        const languageBtn = document.getElementById('languageBtn');
-        if (languageBtn) {
-            languageBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const dropdown = document.getElementById('languageDropdown');
-                if (dropdown) {
-                    dropdown.classList.toggle('show');
-                }
-            });
-        }
-        
-        // Language selection
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                changeLanguage(lang);
-            });
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function() {
-            const dropdown = document.getElementById('languageDropdown');
-            if (dropdown) {
-                dropdown.classList.remove('show');
-            }
-        });
-        
-        // Stop propagation for dropdown clicks
-        const languageDropdown = document.getElementById('languageDropdown');
-        if (languageDropdown) {
-            languageDropdown.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-        }
-        
-        // Update current year in footer
-        const currentYearElement = document.getElementById('currentYear');
-        if (currentYearElement) {
-            currentYearElement.textContent = new Date().getFullYear();
-        }
-    });
 })();

@@ -18,20 +18,6 @@
             "contact_twitter_title": "Contact Jimei Materials | Ceramic Substrate Manufacturing Solutions",
             "contact_twitter_description": "Connect with our engineering team for DBC, DPC & HTCC ceramic substrate solutions. Get quotes, technical consultation, samples, and custom design support for your power electronics and thermal management requirements.",
             
-            // Navigation (Shared with other pages)
-            "nav_home": "Home",
-            "nav_products": "Products",
-            "nav_dpc": "Direct Plated Copper (DPC)",
-            "nav_dbc": "Direct Bonded Copper (DBC)",
-            "nav_bare": "Bare Ceramic Substrates",
-            "nav_htcc": "HTCC Ceramic Packaging",
-            "nav_all_products": "All Products",
-            "nav_resources": "Resources",
-            "nav_about": "About",
-            "nav_contact": "Contact",
-            "nav_request_quote": "Request Quote",
-            "nav_blog": "Blog",
-            
             // Hero Section
             "contact_hero_title": "Get In Touch With Our Team",
             "contact_hero_description": "Contact Jimei Materials for high-performance ceramic substrate solutions, technical consultation, and custom quotes. Our experts are ready to assist with your project requirements.",
@@ -101,19 +87,6 @@
             "wechat_modal_description": "Scan the QR code below to add our sales team on WeChat for quick communication.",
             "wechat_modal_note": "After scanning, please send a message with 'Ceramic Substrate Inquiry' for faster response.",
             
-            // Footer (Shared with other pages)
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
-            "footer_products": "Products",
-            "footer_company": "Company",
-            "footer_contact": "Contact Info",
-            "footer_address": "First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China",
-            "footer_hours": "Mon-Fri: 8:00 AM - 6:00 PM (GMT+8)",
-            "footer_languages": "Support: English, Chinese, Japanese, Korean, German",
-            "footer_rights": "All rights reserved.",
-            "footer_privacy": "Privacy Policy",
-            "footer_terms": "Terms of Service",
-            "footer_sitemap": "Sitemap",
-            
             // Common Buttons
             "btn_view_details": "View Details",
             "btn_request_consultation": "Request Consultation",
@@ -130,20 +103,6 @@
             "contact_og_description": "联系我们的工程团队，获取DBC、DPC及HTCC陶瓷基板解决方案。为满足您的电力电子与热管理需求，我们提供报价、技术咨询、样品及定制设计支持。",
             "contact_twitter_title": "联系集美材料 | 陶瓷基板制造解决方案",
             "contact_twitter_description": "联系我们的工程团队，获取DBC、DPC及HTCC陶瓷基板解决方案。为满足您的电力电子与热管理需求，我们提供报价、技术咨询、样品及定制设计支持。",
-            
-            // 导航（与全站一致）
-            "nav_home": "首页",
-            "nav_products": "产品中心",
-            "nav_dpc": "直接镀铜陶瓷基板 (DPC)",
-            "nav_dbc": "直接覆铜陶瓷基板 (DBC)",
-            "nav_bare": "裸陶瓷基板",
-            "nav_htcc": "HTCC陶瓷封装",
-            "nav_all_products": "全部产品",
-            "nav_resources": "技术资源",
-            "nav_about": "关于集美",
-            "nav_contact": "联系我们",
-            "nav_request_quote": "在线询价",
-            "nav_blog": "技术博客",
             
             // 页面标题区
             "contact_hero_title": "与我们取得联系",
@@ -214,19 +173,6 @@
             "wechat_modal_description": "扫描下方二维码，添加我们的销售团队微信，以便快速沟通。",
             "wechat_modal_note": "添加后，请发送消息“陶瓷基板咨询”以便我们更快处理。",
             
-            // 页脚 (风格统一)
-            "footer_description": "集美材料——自2016年起，始终是热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
-            "footer_products": "产品中心",
-            "footer_company": "关于集美",
-            "footer_contact": "联系我们",
-            "footer_address": "中国广东省深圳市宝安区新桥街道豪三林坡坑第一工业区",
-            "footer_hours": "工作日 8:00 - 18:00 (北京时间 GMT+8)",
-            "footer_languages": "支持语言: 中文、英语、日语、韩语、德语",
-            "footer_rights": "版权所有。",
-            "footer_privacy": "隐私政策",
-            "footer_terms": "使用条款",
-            "footer_sitemap": "网站地图",
-            
             // 通用按钮 (与首页等页面保持绝对一致)
             "btn_view_details": "查看详情",
             "btn_request_consultation": "获取技术咨询",
@@ -243,20 +189,6 @@
             "contact_og_description": "DBC、DPC、HTCCセラミック基板ソリューションについては、当社エンジニアリングチームにご連絡ください。パワーエレクトロニクスおよび熱管理要件に対応した、見積もり、技術相談、サンプル、カスタム設計サポートを提供します。",
             "contact_twitter_title": "Jimei Materials お問い合わせ | セラミック基板製造ソリューション",
             "contact_twitter_description": "DBC、DPC、HTCCセラミック基板ソリューションについては、当社エンジニアリングチームにご連絡ください。パワーエレクトロニクスおよび熱管理要件に対応した、見積もり、技術相談、サンプル、カスタム設計サポートを提供します。",
-            
-            // Navigation (Shared with other pages)
-            "nav_home": "ホーム",
-            "nav_products": "製品情報",
-            "nav_dpc": "直接鍍金銅（DPC）基板",
-            "nav_dbc": "直接接合銅（DBC）基板",
-            "nav_bare": "未金属化セラミック基板",
-            "nav_htcc": "HTCCセラミックパッケージング",
-            "nav_all_products": "製品一覧",
-            "nav_resources": "技術資料",
-            "nav_about": "会社概要",
-            "nav_contact": "お問い合わせ",
-            "nav_request_quote": "見積もり依頼",
-            "nav_blog": "技術ブログ",
             
             // Hero Section
             "contact_hero_title": "当社チームにお問い合わせください",
@@ -327,19 +259,6 @@
             "wechat_modal_description": "以下のQRコードをスキャンして、当社営業チームをWeChatで追加し、迅速なコミュニケーションを行えます。",
             "wechat_modal_note": "スキャン後、'Ceramic Substrate Inquiry'（セラミック基板お問い合わせ）のメッセージを送信いただくと、より迅速に対応いたします。",
             
-            // Footer (Shared with other pages)
-            "footer_description": "2016年創業以来、熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
-            "footer_products": "製品カテゴリ",
-            "footer_company": "企業情報",
-            "footer_contact": "連絡先",
-            "footer_address": "中国 広東省 深圳市 宝安区 新橋街道 豪三林坡坑 第一工業区",
-            "footer_hours": "営業時間: 月〜金 8:00 - 18:00 (中国標準時 GMT+8)",
-            "footer_languages": "対応言語: 英語、中国語、日本語、韓国語、ドイツ語",
-            "footer_rights": "© Jimei Materials. All Rights Reserved.",
-            "footer_privacy": "プライバシーポリシー",
-            "footer_terms": "利用規約",
-            "footer_sitemap": "サイトマップ",
-            
             // Common Buttons
             "btn_view_details": "詳細を見る",
             "btn_request_consultation": "相談を依頼",
@@ -356,20 +275,6 @@
             "contact_og_description": "DBC, DPC 및 HTCC 세라믹 기판 솔루션에 대해 당사 엔지니어링 팀에 문의하세요. 파워일렉트로닉스 및 열관리 요구사항에 대한 견적, 기술 상담, 샘플 및 맞춤형 설계 지원을 받아보세요.",
             "contact_twitter_title": "Jimei Materials 문의 | 세라믹 기판 제조 솔루션",
             "contact_twitter_description": "DBC, DPC 및 HTCC 세라믹 기판 솔루션에 대해 당사 엔지니어링 팀에 문의하세요. 파워일렉트로닉스 및 열관리 요구사항에 대한 견적, 기술 상담, 샘플 및 맞춤형 설계 지원을 받아보세요.",
-            
-            // Navigation (일관성 유지)
-            "nav_home": "홈",
-            "nav_products": "제품",
-            "nav_dpc": "DPC (Direct Plated Copper) 기판",
-            "nav_dbc": "DBC (Direct Bonded Copper) 기판",
-            "nav_bare": "비금속화 세라믹 기판",
-            "nav_htcc": "HTCC 세라믹 패키징",
-            "nav_all_products": "제품 전체보기",
-            "nav_resources": "기술 자료",
-            "nav_about": "회사소개",
-            "nav_contact": "문의",
-            "nav_request_quote": "견적 문의",
-            "nav_blog": "기술 블로그",
             
             // Hero Section
             "contact_hero_title": "당사 팀에 문의하십시오",
@@ -440,19 +345,6 @@
             "wechat_modal_description": "아래 QR 코드를 스캔하여 당사 영업 팀을 위챗에 추가하고 빠른 의사소통을 하세요.",
             "wechat_modal_note": "스캔 후 '세라믹 기판 문의'라는 메시지를 보내시면 더 빠른 응답을 받으실 수 있습니다.",
             
-            // Footer (일관성 유지)
-            "footer_description": "2016년 설립 이래 열 관리 애플리케이션을 위한 세라믹 금속화 기판의 선도적 제조사. ISO 14001:2015 인증을 보유한 글로벌 제조 능력.",
-            "footer_products": "제품",
-            "footer_company": "회사",
-            "footer_contact": "연락처",
-            "footer_address": "중국 광동성 선전시 바오안구 신차오 가도 하오산 린포켱 제1공업구",
-            "footer_hours": "업무 시간: 월-금, 오전 8시 - 오후 6시 (GMT+8)",
-            "footer_languages": "지원 언어: 영어, 중국어, 일본어, 한국어, 독일어",
-            "footer_rights": "All rights reserved.",
-            "footer_privacy": "개인정보처리방침",
-            "footer_terms": "이용약관",
-            "footer_sitemap": "사이트맵",
-            
             // Common Buttons (일관성 유지)
             "btn_view_details": "자세히 보기",
             "btn_request_consultation": "상담 요청",
@@ -469,20 +361,6 @@
             "contact_og_description": "Kontaktieren Sie unser Engineering-Team für DBC-, DPC- und HTCC-Keramiksubstrat-Lösungen. Erhalten Sie Angebote, technische Beratung, Muster und kundenspezifischen Design-Support für Ihre Anforderungen in Leistungselektronik und Wärmemanagement.",
             "contact_twitter_title": "Jimei Materials kontaktieren | Lösungen für die Keramiksubstrat-Fertigung",
             "contact_twitter_description": "Kontaktieren Sie unser Engineering-Team für DBC-, DPC- und HTCC-Keramiksubstrat-Lösungen. Erhalten Sie Angebote, technische Beratung, Muster und kundenspezifischen Design-Support für Ihre Anforderungen in Leistungselektronik und Wärmemanagement.",
-            
-            // Navigation (Shared with other pages)
-            "nav_home": "Startseite",
-            "nav_products": "Produkte",
-            "nav_dpc": "Direct Plated Copper (DPC)",
-            "nav_dbc": "Direct Bonded Copper (DBC)",
-            "nav_bare": "Reinkeramik-Substrate",
-            "nav_htcc": "HTCC-Keramikgehäuse",
-            "nav_all_products": "Alle Produkte",
-            "nav_resources": "Wissenswertes",
-            "nav_about": "Über uns",
-            "nav_contact": "Kontakt",
-            "nav_request_quote": "Angebot anfordern",
-            "nav_blog": "Blog",
             
             // Hero Section
             "contact_hero_title": "Nehmen Sie Kontakt mit unserem Team auf",
@@ -553,19 +431,6 @@
             "wechat_modal_description": "Scannen Sie den untenstehenden QR-Code, um unser Vertriebsteam auf WeChat für schnelle Kommunikation hinzuzufügen.",
             "wechat_modal_note": "Nach dem Scannen senden Sie bitte eine Nachricht mit 'Keramiksubstrat-Anfrage' für eine schnellere Antwort.",
             
-            // Footer (Shared with other pages)
-            "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
-            "footer_products": "Produkte",
-            "footer_company": "Unternehmen",
-            "footer_contact": "Kontakt",
-            "footer_address": "First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China",
-            "footer_hours": "Mo-Fr: 8:00 - 18:00 Uhr (GMT+8)",
-            "footer_languages": "Support: Englisch, Chinesisch, Japanisch, Koreanisch, Deutsch",
-            "footer_rights": "Alle Rechte vorbehalten.",
-            "footer_privacy": "Datenschutz",
-            "footer_terms": "Nutzungsbedingungen",
-            "footer_sitemap": "Sitemap",
-            
             // Common Buttons
             "btn_view_details": "Details ansehen",
             "btn_request_consultation": "Beratung anfordern",
@@ -573,118 +438,9 @@
             "btn_request_custom": "Kundenspezifisches Angebot anfordern"
         }
     };
-
-    // Default language
-    let currentLang = 'en';
-
-    // Function to change language
-    function changeLanguage(lang) {
-        currentLang = lang;
-        document.documentElement.lang = lang;
-        
-        // Update all elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.value = translations[lang][key];
-                } else if (element.hasAttribute('placeholder')) {
-                    element.setAttribute('placeholder', translations[lang][key]);
-                } else if (element.hasAttribute('title')) {
-                    element.setAttribute('title', translations[lang][key]);
-                } else if (element.hasAttribute('alt')) {
-                    element.setAttribute('alt', translations[lang][key]);
-                } else if (element.hasAttribute('content')) {
-                    element.setAttribute('content', translations[lang][key]);
-                } else {
-                    element.innerHTML = translations[lang][key];
-                }
-            } else {
-                console.warn(`Missing translation for key: ${key} in language: ${lang}`);
-            }
-        });
-        
-        // Update language dropdown
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.classList.remove('active');
-            if (option.getAttribute('data-lang') === lang) {
-                option.classList.add('active');
-            }
-        });
-        
-        // Update current language display
-        const langNames = { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', de: 'Deutsch' };
-        const currentLangElement = document.getElementById('currentLanguage');
-        if (currentLangElement) {
-            currentLangElement.textContent = langNames[lang];
-        }
-        
-        // Save preference to localStorage
-        localStorage.setItem('preferredLanguage', lang);
-        
-        // Close dropdown if it exists
-        const languageDropdown = document.getElementById('languageDropdown');
-        if (languageDropdown) {
-            languageDropdown.classList.remove('show');
-        }
+    
+    // Initialize with common translations system
+    if (window.CommonTranslations) {
+        window.translations = window.CommonTranslations.initLanguageSystem(translations);
     }
-
-    // Initialize language on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check for saved language preference
-        const savedLang = localStorage.getItem('preferredLanguage');
-        if (savedLang && translations[savedLang]) {
-            changeLanguage(savedLang);
-        } else {
-            // Default to browser language or English
-            const browserLang = navigator.language.split('-')[0];
-            if (translations[browserLang]) {
-                changeLanguage(browserLang);
-            } else {
-                changeLanguage('en');
-            }
-        }
-        
-        // Language dropdown toggle
-        const languageBtn = document.getElementById('languageBtn');
-        if (languageBtn) {
-            languageBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const dropdown = document.getElementById('languageDropdown');
-                if (dropdown) {
-                    dropdown.classList.toggle('show');
-                }
-            });
-        }
-        
-        // Language selection
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                changeLanguage(lang);
-            });
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function() {
-            const dropdown = document.getElementById('languageDropdown');
-            if (dropdown) {
-                dropdown.classList.remove('show');
-            }
-        });
-        
-        // Stop propagation for dropdown clicks
-        const languageDropdown = document.getElementById('languageDropdown');
-        if (languageDropdown) {
-            languageDropdown.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-        }
-        
-        // Update current year in footer
-        const currentYearElement = document.getElementById('currentYear');
-        if (currentYearElement) {
-            currentYearElement.textContent = new Date().getFullYear();
-        }
-    });
 })();

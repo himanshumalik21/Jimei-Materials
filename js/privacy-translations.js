@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     // Translations object
@@ -8,20 +8,6 @@
             'privacy_page_title': 'Privacy Policy | Jimei Materials - Ceramic Substrate Manufacturer',
             'privacy_meta_description': 'Privacy Policy of Jimei Materials. Learn how we collect, use, and protect your personal information in compliance with data protection regulations.',
 
-                            // Navigation
-                "nav_home": "Home",
-                "nav_products": "Products",
-                "nav_dpc": "Direct Plated Copper (DPC)",
-                "nav_dbc": "Direct Bonded Copper (DBC)",
-                "nav_bare": "Bare Ceramic Substrates",
-                "nav_htcc": "HTCC Ceramic Packaging",
-                "nav_all_products": "All Products",
-                "nav_resources": "Resources",
-                "nav_about": "About",
-                "nav_contact": "Contact",
-                "nav_request_quote": "Request Quote",
-                "nav_blog": "Blog",
-            
             // Content
             'privacy_main_title': 'Privacy Policy',
             'privacy_subtitle': 'Our commitment to protecting your personal information',
@@ -29,11 +15,11 @@
             'privacy_last_updated': 'Last Updated:',
             'privacy_last_updated_date': 'December 19, 2025',
             'privacy_intro_note': 'This Privacy Policy describes how Jimei Materials Co., Ltd. ("we," "our," or "us") collects, uses, and protects your personal information when you visit our website www.jimei-materials.com.',
-            
+
             // Sections
             'privacy_section1_title': '1. Introduction',
             'privacy_section1_content': 'Jimei Materials Co., Ltd. is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. We comply with applicable data protection laws, including China\'s Personal Information Protection Law (PIPL) and other relevant international regulations.',
-            
+
             'privacy_section2_title': '2. Information We Collect',
             'privacy_section2a_title': '2.1 Information You Provide Directly',
             'privacy_section2a_content': 'When you interact with our website, particularly through our contact forms, we may collect:',
@@ -41,14 +27,14 @@
             'privacy_section2a_list2': 'Company name and job title',
             'privacy_section2a_list3': 'Technical requirements and project information',
             'privacy_section2a_list4': 'Any other information you voluntarily provide in your communications with us',
-            
+
             'privacy_section2b_title': '2.2 Information Collected Automatically',
             'privacy_section2b_content': 'When you visit our website, we may automatically collect certain information through cookies and similar tracking technologies:',
             'privacy_section2b_list1': 'Device information (browser type, operating system)',
             'privacy_section2b_list2': 'IP address and approximate location',
             'privacy_section2b_list3': 'Pages visited and time spent on our website',
             'privacy_section2b_list4': 'Referring website or search terms',
-            
+
             'privacy_section3_title': '3. How We Use Your Information',
             'privacy_section3_content': 'We use the collected information for the following purposes:',
             'privacy_section3_list1': 'To respond to your inquiries and provide requested information',
@@ -57,34 +43,34 @@
             'privacy_section3_list4': 'To analyze website usage and optimize our marketing efforts',
             'privacy_section3_list5': 'To comply with legal obligations and protect our legal rights',
             'privacy_section3_list6': 'To send relevant technical information, updates, and newsletters (with your consent)',
-            
+
             'privacy_section4_title': '4. Legal Basis for Processing',
             'privacy_section4_content': 'We process your personal information based on one or more of the following legal grounds:',
             'privacy_section4_list1': 'Consent: When you have given us explicit consent to process your information',
             'privacy_section4_list2': 'Contractual necessity: When processing is necessary to fulfill a contract with you',
             'privacy_section4_list3': 'Legitimate interests: When processing is necessary for our legitimate business interests',
             'privacy_section4_list4': 'Legal compliance: When processing is necessary to comply with legal obligations',
-            
+
             'privacy_section5_title': '5. Data Sharing and Disclosure',
             'privacy_section5_content': 'We do not sell, trade, or rent your personal information to third parties. We may share your information with:',
             'privacy_section5_list1': 'Service providers who assist us in operating our website and business',
             'privacy_section5_list2': 'Legal authorities when required by law or to protect our rights',
             'privacy_section5_list3': 'Third-party analytics providers (like Google Analytics) to understand website usage',
             'privacy_section5_note': 'We ensure that any third parties with access to your data provide adequate protection in accordance with applicable data protection laws.',
-            
+
             'privacy_section6_title': '6. International Data Transfers',
             'privacy_section6_content': 'As a global company serving international clients, your information may be transferred to and processed in countries outside of your residence. We implement appropriate safeguards, such as standard contractual clauses, to ensure your data receives adequate protection regardless of where it is processed.',
-            
+
             'privacy_section7_title': '7. Data Security',
             'privacy_section7_content': 'We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:',
             'privacy_section7_list1': 'Encryption of sensitive data in transit and at rest',
             'privacy_section7_list2': 'Regular security assessments and updates',
             'privacy_section7_list3': 'Access controls and authentication mechanisms',
             'privacy_section7_list4': 'Employee training on data protection best practices',
-            
+
             'privacy_section8_title': '8. Data Retention',
             'privacy_section8_content': 'We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements. Typically, we retain contact information for active business relationships and for a reasonable period thereafter to address any follow-up inquiries.',
-            
+
             'privacy_section9_title': '9. Your Rights',
             'privacy_section9_content': 'Depending on your location and applicable laws, you may have the following rights regarding your personal information:',
             'privacy_section9_list1': 'Right to access and obtain a copy of your personal information',
@@ -94,26 +80,26 @@
             'privacy_section9_list5': 'Right to data portability (where applicable)',
             'privacy_section9_list6': 'Right to withdraw consent at any time',
             'privacy_section9_note': 'To exercise these rights, please contact us using the information provided in the "Contact Us" section below.',
-            
+
             'privacy_section10_title': '10. Cookies and Tracking Technologies',
             'privacy_section10_content': 'Our website uses cookies and similar technologies to enhance user experience and analyze website traffic. We use:',
             'privacy_section10_list1': 'Essential cookies: Required for basic website functionality',
             'privacy_section10_list2': 'Analytical cookies: To understand how visitors use our website (Google Analytics)',
             'privacy_section10_list3': 'Preference cookies: To remember your settings and preferences',
             'privacy_section10_note': 'You can control cookie settings through your browser preferences. However, disabling certain cookies may affect website functionality.',
-            
+
             'privacy_google_analytics_title': 'Google Analytics',
             'privacy_google_analytics_content': 'We use Google Analytics to understand how visitors interact with our website. Google Analytics collects information anonymously and reports website trends without identifying individual visitors. You can opt-out of Google Analytics by installing the Google Analytics Opt-out Browser Add-on.',
-            
+
             'privacy_section11_title': '11. Children\'s Privacy',
             'privacy_section11_content': 'Our website is not directed to children under the age of 16, and we do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.',
-            
+
             'privacy_section12_title': '12. Third-Party Links',
             'privacy_section12_content': 'Our website may contain links to third-party websites. This Privacy Policy applies only to our website. We are not responsible for the privacy practices or content of third-party websites. We encourage you to review the privacy policies of any third-party sites you visit.',
-            
+
             'privacy_section13_title': '13. Changes to This Privacy Policy',
             'privacy_section13_content': 'We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the updated policy on our website with a new effective date. We encourage you to review this Privacy Policy periodically.',
-            
+
             'privacy_section14_title': '14. Contact Us',
             'privacy_section14_content': 'If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:',
             'privacy_contact_title': 'Jimei Materials Co., Ltd.',
@@ -121,51 +107,23 @@
             'privacy_contact_email': 'yfu@jimei-materials.com',
             'privacy_contact_phone': '+86-147-4537-3293',
             'privacy_contact_hours': 'Business Hours: Monday-Friday, 8:00 AM - 6:00 PM (GMT+8)',
-            
+
             'privacy_section15_title': '15. Complaints',
             'privacy_section15_content': 'If you have concerns about how we handle your personal information, please contact us first so we can address your concerns. You also have the right to lodge a complaint with the relevant data protection authority in your jurisdiction.',
-            
+
             'privacy_footer_note': 'This Privacy Policy is written in English. In case of any discrepancies between the English version and translations, the English version shall prevail.',
-            
+
             // CTA Section
             'privacy_cta_title': 'Questions About Our Privacy Policy?',
             'privacy_cta_description': 'Our team is here to help you understand how we protect your information and address any concerns you may have.',
-            'btn_contact_us': 'Contact Us',
-
-            //Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
-            "footer_products": "Products",
-            "footer_company": "Company",
-            "footer_contact": "Contact Info",
-            "footer_address": "First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China",
-            "footer_hours": "Mon-Fri: 8:00 AM - 6:00 PM (GMT+8)",
-            "footer_languages": "Support: English, Chinese, Japanese, Korean, German",
-            "footer_rights": "All rights reserved.",
-            "footer_privacy": "Privacy Policy",
-            "footer_terms": "Terms of Service",
-            "footer_sitemap": "Sitemap"
-
+            'btn_contact_us': 'Contact Us'
         },
         zh: {
-                    
+
             // Page meta
             'privacy_page_title': '隐私政策 | 集美材料 - 陶瓷基板制造商',
             'privacy_meta_description': '集美材料隐私政策。了解我们如何依据数据保护法规收集、使用和保护您的个人信息。',
 
-            // Navigation - 微调以更符合中文网站导航习惯
-                    "nav_home": "首页",
-                    "nav_products": "产品中心",
-                    "nav_dpc": "直接镀铜陶瓷基板",
-                    "nav_dbc": "直接覆铜陶瓷基板",
-                    "nav_bare": "裸陶瓷基片",
-                    "nav_htcc": "HTCC陶瓷封装",
-                    "nav_all_products": "全部产品",
-                    "nav_resources": "技术资源",
-                    "nav_about": "关于集美",
-                    "nav_contact": "联系我们",
-                    "nav_request_quote": "在线询价",
-                    "nav_blog": "技术博客",
-            
             // Content
             'privacy_main_title': '隐私政策',
             'privacy_subtitle': '我们保护您个人信息的承诺',
@@ -173,11 +131,11 @@
             'privacy_last_updated': '最后更新：',
             'privacy_last_updated_date': '2025年12月19日',
             'privacy_intro_note': '本隐私政策阐述了当您访问我们的网站 www.jimei-materials.com 时，集美材料有限公司（"我们"）如何收集、使用和保护您的个人信息。',
-            
+
             // Sections
             'privacy_section1_title': '1. 引言',
             'privacy_section1_content': '集美材料有限公司致力于保护您个人信息的隐私和安全。本隐私政策说明了当您访问我们的网站或使用我们的服务时，我们如何收集、使用、披露和保护您的信息。我们遵守适用的数据保护法律，包括《中华人民共和国个人信息保护法》（PIPL）及其他相关的国际法规。',
-            
+
             'privacy_section2_title': '2. 我们收集的信息',
             'privacy_section2a_title': '2.1 您直接提供的信息',
             'privacy_section2a_content': '当您通过我们的网站（特别是通过联系表单）与我们互动时，我们可能会收集：',
@@ -185,14 +143,14 @@
             'privacy_section2a_list2': '公司名称和职位',
             'privacy_section2a_list3': '技术要求与项目信息',
             'privacy_section2a_list4': '您在与我们沟通中自愿提供的任何其他信息',
-            
+
             'privacy_section2b_title': '2.2 自动收集的信息',
             'privacy_section2b_content': '当您访问我们的网站时，我们可能通过Cookie和类似追踪技术自动收集某些信息：',
             'privacy_section2b_list1': '设备信息（浏览器类型、操作系统）',
             'privacy_section2b_list2': 'IP地址和大致地理位置',
             'privacy_section2b_list3': '访问的页面和在网站停留的时间',
             'privacy_section2b_list4': '引荐网站或搜索词',
-            
+
             'privacy_section3_title': '3. 我们如何使用您的信息',
             'privacy_section3_content': '我们使用收集的信息用于以下目的：',
             'privacy_section3_list1': '回复您的问询并提供您要求的信息',
@@ -201,34 +159,34 @@
             'privacy_section3_list4': '分析网站使用情况并优化我们的营销工作',
             'privacy_section3_list5': '遵守法律义务并保护我们的合法权利',
             'privacy_section3_list6': '发送相关的技术信息、更新和新闻通讯（在取得您同意的情况下）',
-            
+
             'privacy_section4_title': '4. 个人信息处理的合法依据',
             'privacy_section4_content': '我们基于以下一项或多项合法依据处理您的个人信息：',
             'privacy_section4_list1': '同意：已取得您对处理个人信息的明确同意',
             'privacy_section4_list2': '为履行合同所必需：处理是为履行与您签订的合同所必需',
             'privacy_section4_list3': '合法利益：处理为我们追求合法商业利益所必需',
             'privacy_section4_list4': '法律合规：处理为遵守法律义务所必需',
-            
+
             'privacy_section5_title': '5. 数据共享与披露',
             'privacy_section5_content': '我们不会向第三方出售、交易或出租您的个人信息。我们可能在以下情况下共享您的信息：',
             'privacy_section5_list1': '协助我们运营网站和业务的服务提供商',
             'privacy_section5_list2': '法律要求或为保护我们的权利时向法定机构披露',
             'privacy_section5_list3': '第三方分析服务提供商（如Google Analytics），用于了解网站使用情况',
             'privacy_section5_note': '我们确保任何能够访问您数据的第三方均根据适用的数据保护法律提供充分保护。',
-            
+
             'privacy_section6_title': '6. 国际数据传输',
             'privacy_section6_content': '作为服务全球客户的跨国公司，您的信息可能会被传输至您所在国家/地区之外进行处理。我们实施适当的保障措施（例如签署标准合同），以确保您的数据无论在何处处理都能得到充分的保护。',
-            
+
             'privacy_section7_title': '7. 数据安全',
             'privacy_section7_content': '我们实施适当的技术和组织措施，以保护您的个人信息免遭未经授权的访问、更改、披露或破坏。这些措施包括：',
             'privacy_section7_list1': '对传输中和静态的敏感数据进行加密',
             'privacy_section7_list2': '定期的安全评估和更新',
             'privacy_section7_list3': '访问控制和认证机制',
             'privacy_section7_list4': '对员工进行数据保护最佳实践的培训',
-            
+
             'privacy_section8_title': '8. 数据保留',
             'privacy_section8_content': '我们仅在为实现收集目的所必需的期限内保留您的个人信息，包括为满足任何法律、会计或报告要求。通常，我们会为活跃的业务关系保留联系信息，并在此后一段合理时间内保留以处理任何后续问询。',
-            
+
             'privacy_section9_title': '9. 您的权利',
             'privacy_section9_content': '根据您所在的地域及适用的法律，您可能对您的个人信息享有下列权利：',
             'privacy_section9_list1': '访问并获取您的个人信息副本的权利',
@@ -238,26 +196,26 @@
             'privacy_section9_list5': '数据可携权（如适用）',
             'privacy_section9_list6': '随时撤回同意的权利',
             'privacy_section9_note': '如欲行使上述权利，请通过下方"联系我们"章节提供的联系方式与我们联系。',
-            
+
             'privacy_section10_title': '10. Cookie和追踪技术',
             'privacy_section10_content': '我们的网站使用Cookie和类似技术以增强用户体验和分析网站流量。我们使用：',
             'privacy_section10_list1': '必要Cookie：网站基础功能所必需',
             'privacy_section10_list2': '分析Cookie：用于了解访客如何使用我们的网站（Google Analytics）',
             'privacy_section10_list3': '偏好Cookie：用于记住您的设置和偏好',
             'privacy_section10_note': '您可以通过浏览器偏好设置控制Cookie。但请注意，禁用某些Cookie可能会影响网站功能。',
-            
+
             'privacy_google_analytics_title': 'Google Analytics',
             'privacy_google_analytics_content': '我们使用Google Analytics以了解访客如何与我们的网站互动。Google Analytics以匿名方式收集信息并报告网站趋势，不会识别具体访客。您可以通过安装"Google Analytics 退出浏览器插件"来选择退出。',
-            
+
             'privacy_section11_title': '11. 儿童隐私',
             'privacy_section11_content': '我们的网站并非面向16周岁以下的儿童，我们不会故意收集儿童的个人信息。如果您认为我们收集了儿童的信息，请立即联系我们。',
-            
+
             'privacy_section12_title': '12. 第三方链接',
             'privacy_section12_content': '我们的网站可能包含指向第三方网站的链接。本隐私政策仅适用于我们的网站。我们对第三方网站的隐私实践或内容不承担责任。我们建议您查阅所访问的任何第三方网站的隐私政策。',
-            
+
             'privacy_section13_title': '13. 本隐私政策的变更',
             'privacy_section13_content': '我们可能会不时更新本隐私政策，以反映我们实践或法律要求的变化。对于任何重大变更，我们将在网站上发布更新后的政策并注明新的生效日期，以此方式通知您。我们建议您定期查阅本隐私政策。',
-            
+
             'privacy_section14_title': '14. 联系我们',
             'privacy_section14_content': '如果您对本隐私政策或我们的数据实践有任何疑问、关切或请求，请通过以下方式联系我们：',
             'privacy_contact_title': '集美材料有限公司',
@@ -265,48 +223,21 @@
             'privacy_contact_email': 'yfu@jimei-materials.com',
             'privacy_contact_phone': '+86-147-4537-3293',
             'privacy_contact_hours': '工作时间：周一至周五，上午8:00 - 下午6:00（北京时间 GMT+8）',
-            
+
             'privacy_section15_title': '15. 投诉',
             'privacy_section15_content': '如果您对我们处理您个人信息的方式有任何疑虑，请首先联系我们以便解决您的问题。您也有权向您所在司法管辖区的相关数据保护主管部门进行投诉。',
-            
+
             'privacy_footer_note': '本隐私政策以英文书写。如英文版本与翻译版本之间存在任何差异，应以英文版本为准。',
-            
+
             // CTA Section
             'privacy_cta_title': '对我们的隐私政策有疑问？',
             'privacy_cta_description': '我们的团队随时为您提供帮助，解答我们如何保护您的信息，并处理您可能存在的任何疑虑。',
-            'btn_contact_us': '联系我们',
-
-            // Footer
-            "footer_description": "集美材料——自2016年起，始终是热管理应用领域陶瓷金属化基板的可靠制造商。拥有ISO 14001:2015体系认证，具备全球化制造与服务能力。",
-            'footer_products': '产品',
-            'footer_company': '公司',
-            'footer_contact': '联系信息',
-            'footer_address': '中国深圳市宝安区新桥街道耗三林坡坑第一工业区',
-            'footer_hours': '周一至周五：上午8:00 - 下午6:00（北京时间）',
-            'footer_languages': '支持语言：英语、中文、日语、韩语、德语',
-            'footer_rights': '版权所有。',
-            'footer_privacy': '隐私政策',
-            'footer_terms': '服务条款',
-            'footer_sitemap': '网站地图'
+            'btn_contact_us': '联系我们'
         },
         ja: {
             // ページメタ情報
             'privacy_page_title': 'プライバシーポリシー | Jimei Materials - セラミック基板メーカー',
             'privacy_meta_description': 'Jimei Materialsのプライバシーポリシー。データ保護法規に準拠し、当社がお客様の個人情報をどのように収集、利用、保護しているかをご確認ください。',
-
-            // Navigation
-                "nav_home": "ホーム",
-                "nav_products": "製品情報",
-                "nav_dpc": "直接鍍金銅（DPC）基板",
-                "nav_dbc": "直接接合銅（DBC）基板",
-                "nav_bare": "未金属化セラミック基板",
-                "nav_htcc": "HTCCセラミックパッケージング",
-                "nav_all_products": "製品一覧",
-                "nav_resources": "技術資料",
-                "nav_about": "会社概要",
-                "nav_contact": "お問い合わせ",
-                "nav_request_quote": "見積もり依頼",
-                "nav_blog": "技術ブログ",
 
             // 本文
             'privacy_main_title': 'プライバシーポリシー',
@@ -416,39 +347,12 @@
             // CTA セクション
             'privacy_cta_title': 'プライバシーポリシーについてご質問は？',
             'privacy_cta_description': '当社チームは、お客様の情報をどのように保護しているかご説明し、お持ちの懸念に対応いたします。',
-            'btn_contact_us': 'お問い合わせ',
-
-            // フッター
-            "footer_description": "2016年創業以来、熱管理アプリケーション向けの高信頼性セラミックメタライゼーション基板を提供するリーディングメーカーです。ISO 14001:2015認証を取得し、グローバルな製造・供給体制を有しています。",
-            'footer_products': '製品',
-            'footer_company': '会社情報',
-            'footer_contact': '連絡先情報',
-            'footer_address': '中国 広東省 深圳市 宝安区 新橋街道 茘林坡坑 浩森第一工業区',
-            'footer_hours': '月～金: 8:00 - 18:00 (GMT+8)',
-            'footer_languages': '対応言語: 英語、中国語、日本語、韓国語、ドイツ語',
-            'footer_rights': 'All rights reserved.',
-            'footer_privacy': 'プライバシーポリシー',
-            'footer_terms': '利用規約',
-            'footer_sitemap': 'サイトマップ'
+            'btn_contact_us': 'お問い合わせ'
         },
         ko: {
             // Page meta
             'privacy_page_title': '개인정보 처리방침 | Jimei Materials - 세라믹 기판 제조업체',
             'privacy_meta_description': 'Jimei Materials의 개인정보 처리방침입니다. 당사가 데이터 보호 규정을 준수하며 귀하의 개인정보를 어떻게 수집, 사용 및 보호하는지 알아보십시오.',
-
-            // Navigation
-                "nav_home": "홈",
-                "nav_products": "제품",
-                "nav_dpc": "DPC (Direct Plated Copper) 기판",
-                "nav_dbc": "DBC (Direct Bonded Copper) 기판",
-                "nav_bare": "비금속화 세라믹 기판", // 'Bare'는 '무처리'보다 '비금속화'가 기술적
-                "nav_htcc": "HTCC 세라믹 패키징",
-                "nav_all_products": "제품 전체보기",
-                "nav_resources": "기술 자료",
-                "nav_about": "회사소개",
-                "nav_contact": "문의",
-                "nav_request_quote": "견적 문의",
-                "nav_blog": "기술 블로그",
 
             // Content
             'privacy_main_title': '개인정보 처리방침',
@@ -558,40 +462,12 @@
             // CTA Section
             'privacy_cta_title': '개인정보 처리방침에 대해 질문이 있으십니까?',
             'privacy_cta_description': '당사 팀은 당사가 귀하의 정보를 어떻게 보호하는지 이해시키고 귀하가 가질 수 있는 모든 우려사항을 해결하는 데 도움을 드릴 수 있습니다.',
-            'btn_contact_us': '문의하기',
-
-            //Footer
-            "footer_description": "2016년 설립 이래 열 관리 애플리케이션을 위한 세라믹 금속화 기판의 선도적 제조사. ISO 14001:2015 인증을 보유한 글로벌 제조 능력.",
-            "footer_products": "제품",
-            "footer_company": "회사",
-            "footer_contact": "연락처 정보",
-            "footer_address": "중국 광동성 심천시 바오안구 신차오 가도 호삼 임포갱 제1공업구",
-            "footer_hours": "월-금: 오전 8시 - 오후 6시 (GMT+8)",
-            "footer_languages": "지원 언어: 영어, 중국어, 일본어, 한국어, 독일어",
-            "footer_rights": "All rights reserved.",
-            "footer_privacy": "개인정보 처리방침",
-            "footer_terms": "서비스 이용약관",
-            "footer_sitemap": "사이트맵"
+            'btn_contact_us': '문의하기'
         },
         de: {
             // Page meta
             'privacy_page_title': 'Datenschutzerklärung | Jimei Materials - Hersteller von Keramiksubstraten',
             'privacy_meta_description': 'Datenschutzerklärung der Jimei Materials. Erfahren Sie, wie wir Ihre personenbezogenen Daten erfassen, nutzen und schützen – im Einklang mit den Datenschutzvorschriften.',
-
-            // Navigation
-                "nav_home": "Startseite",
-                "nav_products": "Produkte",
-                "nav_dpc": "Direct Plated Copper (DPC)",
-                "nav_dbc": "Direct Bonded Copper (DBC)",
-                "nav_bare": "Reinkeramik-Substrate",
-                "nav_htcc": "HTCC-Keramikgehäuse",
-                "nav_all_products": "Alle Produkte",
-                "nav_resources": "Wissenswertes",
-                "nav_about": "Über uns",
-                "nav_contact": "Kontakt",
-                "nav_request_quote": "Angebot anfordern",
-                "nav_blog": "Blog",
-
 
             // Content
             'privacy_main_title': 'Datenschutzerklärung',
@@ -701,134 +577,12 @@
             // CTA Section
             'privacy_cta_title': 'Fragen zu unserer Datenschutzerklärung?',
             'privacy_cta_description': 'Unser Team hilft Ihnen gerne zu verstehen, wie wir Ihre Daten schützen, und beantwortet Ihre Fragen.',
-            'btn_contact_us': 'Kontakt aufnehmen',
-
-            //Footer
-            "footer_description": "Seit 2016 führender Hersteller von Keramikmetallisierungssubstraten für Wärmemanagement-Anwendungen. ISO 14001:2015 zertifiziert mit globalen Fertigungskapazitäten.",
-            "footer_products": "Produkte",
-            "footer_company": "Unternehmen",
-            "footer_contact": "Kontakt",
-            "footer_address": "First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China",
-            "footer_hours": "Mo-Fr: 8:00 - 18:00 Uhr (GMT+8)",
-            "footer_languages": "Unterstützte Sprachen: Englisch, Chinesisch, Japanisch, Koreanisch, Deutsch",
-            "footer_rights": "Alle Rechte vorbehalten.",
-            "footer_privacy": "Datenschutz",
-            "footer_terms": "Nutzungsbedingungen",
-            "footer_sitemap": "Sitemap"
+            'btn_contact_us': 'Kontakt aufnehmen'
         }
     };
-    
-    // Default language
-    let currentLang = 'en';
 
-    // Function to change language
-    function changeLanguage(lang) {
-        currentLang = lang;
-        document.documentElement.lang = lang;
-        
-        // Update all elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.value = translations[lang][key];
-                } else if (element.hasAttribute('placeholder')) {
-                    element.setAttribute('placeholder', translations[lang][key]);
-                } else if (element.hasAttribute('title')) {
-                    element.setAttribute('title', translations[lang][key]);
-                } else if (element.hasAttribute('alt')) {
-                    element.setAttribute('alt', translations[lang][key]);
-                } else if (element.hasAttribute('content')) {
-                    element.setAttribute('content', translations[lang][key]);
-                } else {
-                    element.innerHTML = translations[lang][key];
-                }
-            } else {
-                console.warn(`Missing translation for key: ${key} in language: ${lang}`);
-            }
-        });
-        
-        // Update language dropdown
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.classList.remove('active');
-            if (option.getAttribute('data-lang') === lang) {
-                option.classList.add('active');
-            }
-        });
-        
-        // Update current language display
-        const langNames = { en: 'English', zh: '中文', ja: '日本語', ko: '한국어', de: 'Deutsch' };
-        const currentLangElement = document.getElementById('currentLanguage');
-        if (currentLangElement) {
-            currentLangElement.textContent = langNames[lang];
-        }
-        
-        // Save preference to localStorage
-        localStorage.setItem('preferredLanguage', lang);
-        
-        // Close dropdown if it exists
-        const languageDropdown = document.getElementById('languageDropdown');
-        if (languageDropdown) {
-            languageDropdown.classList.remove('show');
-        }
+    // Initialize with common translations system
+    if (window.CommonTranslations) {
+        window.translations = window.CommonTranslations.initLanguageSystem(translations);
     }
-
-    // Initialize language on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check for saved language preference
-        const savedLang = localStorage.getItem('preferredLanguage');
-        if (savedLang && translations[savedLang]) {
-            changeLanguage(savedLang);
-        } else {
-            // Default to browser language or English
-            const browserLang = navigator.language.split('-')[0];
-            if (translations[browserLang]) {
-                changeLanguage(browserLang);
-            } else {
-                changeLanguage('en');
-            }
-        }
-        
-        // Language dropdown toggle
-        const languageBtn = document.getElementById('languageBtn');
-        if (languageBtn) {
-            languageBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const dropdown = document.getElementById('languageDropdown');
-                if (dropdown) {
-                    dropdown.classList.toggle('show');
-                }
-            });
-        }
-        
-        // Language selection
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                changeLanguage(lang);
-            });
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function() {
-            const dropdown = document.getElementById('languageDropdown');
-            if (dropdown) {
-                dropdown.classList.remove('show');
-            }
-        });
-        
-        // Stop propagation for dropdown clicks
-        const languageDropdown = document.getElementById('languageDropdown');
-        if (languageDropdown) {
-            languageDropdown.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-        }
-        
-        // Update current year in footer
-        const currentYearElement = document.getElementById('currentYear');
-        if (currentYearElement) {
-            currentYearElement.textContent = new Date().getFullYear();
-        }
-    });
 })();

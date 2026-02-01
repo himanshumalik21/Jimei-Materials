@@ -355,8 +355,6 @@
             <div class="container py-4">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h2 class="h1 fw-bold mb-4" data-i18n="overview_title">Our Mission</h2>
-                        <p class="lead mb-4" data-i18n="overview_mission">To advance thermal management technology through innovative ceramic substrate solutions that enable more efficient, reliable, and sustainable power electronics.</p>
                         <p class="lead mb-4" data-i18n="overview_description">Founded in 2016, Jimei Materials has established itself as a leading manufacturer of advanced ceramic substrate solutions. We master three core technologies: <strong>Direct Bonded Copper (DBC)</strong> for superior thermal performance, <strong>Direct Plated Copper (DPC)</strong> for high-precision circuits, and <strong>High-Temperature Co-fired Ceramic (HTCC)</strong> for robust, multilayer hermetic packaging. Serving industries from electric vehicles and renewable energy to RF communications and semiconductor packaging, we provide the critical foundation for next-generation electronics requiring exceptional reliability, thermal management, and performance in harsh environments.</p>
                         <div class="mt-4">
                             <a href="./contact.html" class="btn btn-primary me-3" data-i18n="btn_contact_us">Contact Us</a>
@@ -1043,35 +1041,8 @@
 
     
     <!-- Translation Data -->
+    <script src="js/global-translations.js" defer></script> 
     <script src="js/about-translations.js" defer></script>
-
-    <script>
-// Function to enhance table for mobile
-function enhanceTableForMobile() {
-    const table = document.querySelector('.table-responsive table');
-    if (!table) return;
-    
-    // Only enhance on mobile
-    if (window.innerWidth >= 768) return;
-    
-    const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
-    const tbody = table.querySelector('tbody');
-    const rows = tbody.querySelectorAll('tr');
-    
-    rows.forEach(row => {
-        const cells = row.querySelectorAll('td');
-        cells.forEach((cell, index) => {
-            if (headers[index]) {
-                cell.setAttribute('data-label', headers[index]);
-            }
-        });
-    });
-}
-
-// Run on load and resize
-document.addEventListener('DOMContentLoaded', enhanceTableForMobile);
-window.addEventListener('resize', enhanceTableForMobile);
-</script>
 
 </body>
 </html>
