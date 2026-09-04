@@ -68,7 +68,7 @@
 
             // Industries Section
             "industries_title": "Trusted Ceramic Metallization Substrate Supplier to Industries Worldwide",
-            "industries_description": "For over 8 years, Jimei Materials has delivered precision ceramic metallization substrate solutions engineered for specific industry requirements—combining DPC, DBC, and HTCC technologies to optimize performance in critical applications.",
+            "industries_description": "Jimei Materials has delivered precision ceramic metallization substrate solutions engineered for specific industry requirements—combining DPC, DBC, and HTCC technologies to optimize performance in critical applications.",
             "industry_ev_title": "Electric Vehicle Power Modules",
             "industry_ev_desc": "High-performance DBC substrates for EV inverters, traction motor controllers, and onboard chargers with superior thermal management up to 200W/mK.",
             "industry_renewable_title": "Renewable Energy & Power Conversion",
@@ -219,7 +219,7 @@
 
             // 服务行业板块
             "industries_title": "全球各行业信赖的陶瓷金属化基板供应商",
-            "industries_description": "8年多来，集美材料针对特定行业需求，交付了集DPC、DBC及HTCC技术优势于一体的精密陶瓷金属化基板解决方案，以优化关键应用性能。",
+            "industries_description": "集美材料已向全球各行业交付了为其特定需求量身打造的精密陶瓷金属化基板解决方案——通过融合DPC、DBC及HTCC技术，优化关键应用中的性能表现。",
             "industry_ev_title": "电动汽车功率模块",
             "industry_ev_desc": "用于电动汽车逆变器、牵引电机控制器和车载充电机的高性能DBC基板，导热系数高达200 W/mK，提供卓越的热管理。",
             "industry_renewable_title": "可再生能源与功率转换",
@@ -370,7 +370,7 @@
 
             // Industries Section
             "industries_title": "世界中の産業を支える信頼できるセラミックメタライゼーション基板サプライヤー",
-            "industries_description": "8年以上にわたり、Jimei Materialsは特定の産業要件に合わせて設計された高精度セラミックメタライゼーション基板ソリューションを提供してきました。DPC、DBC、HTCC技術を組み合わせ、重要アプリケーションでの性能を最適化します。",
+            "industries_description": "Jimei Materialsは特定の産業要件に合わせて設計された高精度セラミックメタライゼーション基板ソリューションを提供してきました。DPC、DBC、HTCC技術を組み合わせ、重要アプリケーションでの性能を最適化します。",
             "industry_ev_title": "電気自動車パワーモジュール",
             "industry_ev_desc": "200W/mKまでの優れた熱管理を備えたEVインバーター、トラクションモーターコントローラー、車載充電器向け高性能DBC基板。",
             "industry_renewable_title": "再生可能エネルギー・電力変換",
@@ -521,7 +521,7 @@
 
             // 산업 분야 섹션
             "industries_title": "전 세계 산업을 위한 신뢰받는 세라믹 금속화 기판 공급사",
-            "industries_description": "8년 이상 Jimei Materials는 특정 산업 요구사항에 맞게 설계된 정밀 세라믹 금속화 기판 솔루션을 제공해 왔습니다 - 중요한 응용 분야에서 성능을 최적화하기 위해 DPC, DBC 및 HTCC 기술을 결합합니다.",
+            "industries_description": "Jimei Materials는 특정 산업 요구사항에 맞게 설계된 정밀 세라믹 금속화 기판 솔루션을 제공해 왔습니다 — 중요한 응용 분야에서 성능을 최적화하기 위해 DPC, DBC 및 HTCC 기술을 결합합니다.",
             "industry_ev_title": "전기차 파워 모듈",
             "industry_ev_desc": "최대 200W/mK의 우수한 열관리 성능을 갖춘 EV 인버터, 트랙션 모터 컨트롤러 및 온보드 충전기를 위한 고성능 DBC 기판.",
             "industry_renewable_title": "재생 에너지 및 전력 변환",
@@ -673,7 +673,7 @@
 
             // Industries Section
             "industries_title": "Vertrauenswürdiger Lieferant für metallisierte Keramiksubstrate an weltweite Industrien",
-            "industries_description": "Seit über 8 Jahren liefert Jimei Materials präzise Keramiksubstrat-Lösungen, die für spezifische Branchenanforderungen entwickelt werden – unter Kombination von DPC-, DBC- und HTCC-Technologien zur Optimierung der Leistung in kritischen Anwendungen.",
+            "industries_description": "Jimei Materials liefert präzise metallisierte Keramiksubstrat-Lösungen, die für spezifische Branchenanforderungen entwickelt wurden – und kombiniert dabei DPC-, DBC- und HTCC-Technologien, um die Leistung in kritischen Anwendungen zu optimieren.",
             "industry_ev_title": "Leistungsmodule für Elektrofahrzeuge",
             "industry_ev_desc": "Hochleistungs-DBC-Substrate für EV-Wechselrichter, Traktionsmotor-Controller und Bordladegeräte mit überlegenem Wärmemanagement bis zu 200 W/mK.",
             "industry_renewable_title": "Erneuerbare Energien & Leistungswandlung",
