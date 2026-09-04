@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jimei Materials - Order Management & Statement Portal</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- SheetJS / XLSX for Client-side Excel Export -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0F2942',
+              navyMed: '#1E3D59',
+              navyLight: '#2B4C7E',
+              ice: '#EBF3FA',
+              accent: '#3B82F6',
+              gold: '#D97706',
+              goldLight: '#FEF3C7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    
+    /* Print Styles for Statement of Account */
+    @media print {
+      body * { visibility: hidden; }
+      #statementPrintArea, #statementPrintArea * { visibility: visible; }
+      #statementPrintArea {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        background: white;
+      }
+      .no-print { display: none !important; }
+    }
+    
+    .badge-paid { background-color: #DEF7EC; color: #03543F; }
+    .badge-unpaid { background-color: #FDE8E8; color: #9B1C1C; }
+    .badge-partial { background-color: #FEF08A; color: #854D0E; }
+    .badge-transit { background-color: #E0F2FE; color: #0369A1; }
+    .badge-prod { background-color: #F3E8FF; color: #6B21A8; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- ========================================================================= -->
+  <!-- 1. AUTHENTICATION / LOCK SCREEN -->
+  <!-- ========================================================================= -->
+  <div id="authScreen" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-95 p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 border border-slate-200 text-center relative overflow-hidden">
+      <!-- Decorative top bar -->
+      <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-600 to-indigo-800"></div>
+      
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 text-brand-navy mb-4 shadow-inner">
+        <i data-lucide="shield-check" class="w-8 h-8 text-brand-navy"></i>
+      </div>
+      
+      <h2 class="text-2xl font-bold text-slate-900 mb-1">Jimei Materials Portal</h2>
+      <p class="text-xs text-slate-500 mb-6 font-medium">Precision Materials & Component Solutions</p>
+      
+      <div class="bg-blue-50 border border-blue-100 rounded-lg p-3 text-xs text-blue-900 mb-6 text-left flex items-start space-x-2">
+        <i data-lucide="lock" class="w-4 h-4 text-blue-700 flex-shrink-0 mt-0.5"></i>
+        <span>This portal uses <strong>AES-256-GCM zero-knowledge encryption</strong>. Enter your master password to decrypt and load orders.</span>
+      </div>
+
+      <form id="loginForm" class="space-y-4 text-left">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Master Password</label>
+          <div class="relative">
+            <input type="password" id="passwordInput" placeholder="Enter password"
+                   class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-slate-800 text-sm outline-none transition" required />
+            <button type="button" id="togglePasswordBtn" class="absolute right-3 top-3 text-slate-400 hover:text-slate-600">
+              <i data-lucide="eye" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="authError" class="hidden text-xs text-red-600 bg-red-50 border border-red-200 rounded-lg p-2.5 flex items-center space-x-1.5">
+          <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 flex-shrink-0"></i>
+          <span id="authErrorMsg">Invalid password or corrupted data payload.</span>
+        </div>
+
+        <button type="submit" id="unlockBtn"
+                class="w-full bg-brand-navy hover:bg-brand-navyMed text-white font-semibold py-3 px-4 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center space-x-2 text-sm">
+          <span>Unlock & Decrypt Data</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </form>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 text-xs text-slate-400 flex items-center justify-between">
+        <span>Public Repo Encrypted</span>
+        <button id="importDataBtnAuth" class="text-blue-600 hover:underline">Import File (.enc / .json)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 2. MAIN APPLICATION INTERFACE -->
+  <!-- ========================================================================= -->
+  <div id="appContainer" class="hidden flex-1 flex-col">
+    
+    <!-- Header Navbar -->
+    <header class="bg-brand-navy text-white shadow-md sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          
+          <!-- Logo & Brand -->
+          <div class="flex items-center space-x-3">
+            <div class="bg-white p-1.5 rounded-lg shadow-sm">
+              <span class="text-brand-navy font-black text-lg tracking-wider">JM</span>
+            </div>
+            <div>
+              <h1 class="text-base font-bold tracking-tight">JIMEI MATERIALS CO., LTD.</h1>
+              <p class="text-xs text-slate-300">Order Management & Financial Statement Portal</p>
+            </div>
+          </div>
+
+          <!-- Top Actions -->
+          <div class="flex items-center space-x-2 sm:space-x-3">
+            
+            <!-- Exchange Rate Quick Editor -->
+            <button id="openRateModalBtn" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs px-2.5 py-1.5 rounded-lg flex items-center space-x-1.5 transition">
+              <i data-lucide="dollar-sign" class="w-3.5 h-3.5 text-yellow-400"></i>
+              <span>1 USD = <strong id="headerRateDisplay" class="text-yellow-400">6.83</strong> RMB</span>
+            </button>
+
+            <!-- Statement Generator Button -->
+            <button id="headerGenerateStatementBtn" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow flex items-center space-x-1.5 transition">
+              <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i>
+              <span class="hidden sm:inline">Statement of Account</span>
+            </button>
+
+            <!-- Data & Sync Dropdown -->
+            <div class="relative group">
+              <button class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs px-2.5 py-1.5 rounded-lg flex items-center space-x-1 transition">
+                <i data-lucide="cloud" class="w-3.5 h-3.5 text-blue-400"></i>
+                <span class="hidden sm:inline">Sync / Export</span>
+                <i data-lucide="chevron-down" class="w-3 h-3"></i>
+              </button>
+              <div class="absolute right-0 mt-1 w-56 bg-white text-slate-800 rounded-xl shadow-xl border border-slate-200 py-1 hidden group-hover:block hover:block z-50">
+                <button id="downloadEncryptedBtn" class="w-full text-left px-4 py-2 text-xs hover:bg-blue-50 flex items-center space-x-2">
+                  <i data-lucide="lock" class="w-3.5 h-3.5 text-blue-600"></i>
+                  <div>
+                    <div class="font-medium text-slate-900">Download data.enc</div>
+                    <div class="text-[10px] text-slate-500">Encrypted for GitHub Repo</div>
+                  </div>
+                </button>
+                <button id="downloadPlainJsonBtn" class="w-full text-left px-4 py-2 text-xs hover:bg-blue-50 flex items-center space-x-2">
+                  <i data-lucide="file-code" class="w-3.5 h-3.5 text-slate-600"></i>
+                  <div>
+                    <div class="font-medium text-slate-900">Export Unencrypted JSON</div>
+                    <div class="text-[10px] text-slate-500">Private offline backup</div>
+                  </div>
+                </button>
+                <div class="border-t border-slate-100 my-1"></div>
+                <button id="importDataBtn" class="w-full text-left px-4 py-2 text-xs hover:bg-blue-50 flex items-center space-x-2">
+                  <i data-lucide="upload" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  <div>
+                    <div class="font-medium text-slate-900">Import / Restore File</div>
+                    <div class="text-[10px] text-slate-500">Upload .enc or .json</div>
+                  </div>
+                </button>
+                <button id="gitHubSyncBtn" class="w-full text-left px-4 py-2 text-xs hover:bg-blue-50 flex items-center space-x-2">
+                  <i data-lucide="github" class="w-3.5 h-3.5 text-slate-800"></i>
+                  <div>
+                    <div class="font-medium text-slate-900">Direct GitHub Push</div>
+                    <div class="text-[10px] text-slate-500">Commit via GitHub API</div>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Lock Button -->
+            <button id="lockPortalBtn" title="Lock Portal" class="bg-red-600/80 hover:bg-red-600 text-white p-1.5 rounded-lg transition flex items-center">
+              <i data-lucide="lock" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6">
+
+      <!-- Customer Tabs & Controls -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+        
+        <!-- Customer Switcher Tabs -->
+        <div class="flex items-center space-x-2 overflow-x-auto pb-1" id="customerTabsContainer">
+          <!-- Dynamic customer tabs will be rendered here -->
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <button id="addCustomerBtn" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-slate-300 flex items-center space-x-1.5 transition">
+            <i data-lucide="user-plus" class="w-3.5 h-3.5"></i>
+            <span>Add Customer</span>
+          </button>
+          <button id="addOrderBtn" class="text-xs bg-brand-navy hover:bg-brand-navyMed text-white font-medium px-3 py-1.5 rounded-lg shadow flex items-center space-x-1.5 transition">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+            <span>Add Order / PO</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Executive KPI Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4" id="kpiCardsContainer">
+        <!-- 1. Invoiced USD -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Total Invoiced</span>
+          <div class="text-lg sm:text-xl font-bold text-slate-900 mt-1" id="kpiInvoicedUsd">$0.00</div>
+          <div class="text-[11px] text-slate-500 mt-0.5" id="kpiInvoicedRmb">¥0.00</div>
+        </div>
+
+        <!-- 2. Received USD -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <span class="text-[11px] font-semibold text-emerald-600 uppercase tracking-wider">Payments Received</span>
+          <div class="text-lg sm:text-xl font-bold text-emerald-700 mt-1" id="kpiReceivedUsd">$0.00</div>
+          <div class="text-[11px] text-emerald-600 mt-0.5" id="kpiReceivedRmb">¥0.00</div>
+        </div>
+
+        <!-- 3. Available Credit -->
+        <div class="bg-emerald-50/70 p-4 rounded-xl border border-emerald-200 shadow-sm">
+          <span class="text-[11px] font-semibold text-emerald-800 uppercase tracking-wider">Account Credit</span>
+          <div class="text-lg sm:text-xl font-bold text-emerald-800 mt-1" id="kpiCreditBalance">$0.00</div>
+          <div class="text-[11px] text-emerald-700 mt-0.5">Unapplied Wire Excess</div>
+        </div>
+
+        <!-- 4. Outstanding Balance -->
+        <div class="bg-amber-50/70 p-4 rounded-xl border border-amber-200 shadow-sm">
+          <span class="text-[11px] font-semibold text-amber-800 uppercase tracking-wider">Net Amount Due</span>
+          <div class="text-lg sm:text-xl font-bold text-amber-900 mt-1" id="kpiNetDueUsd">$0.00</div>
+          <div class="text-[11px] text-amber-700 mt-0.5" id="kpiOpenOrdersCount">0 Open Invoices</div>
+        </div>
+
+        <!-- 5. Outgoing Cost -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Supplier Cost</span>
+          <div class="text-lg sm:text-xl font-bold text-slate-900 mt-1" id="kpiOutgoingRmb">¥0.00</div>
+          <div class="text-[11px] text-slate-500 mt-0.5" id="kpiOutgoingUsd">$0.00</div>
+        </div>
+
+        <!-- 6. Total Net Profit -->
+        <div class="bg-blue-50/80 p-4 rounded-xl border border-blue-200 shadow-sm">
+          <span class="text-[11px] font-semibold text-blue-800 uppercase tracking-wider">Est. Net Profit</span>
+          <div class="text-lg sm:text-xl font-bold text-blue-900 mt-1" id="kpiNetProfitRmb">¥0.00</div>
+          <div class="text-[11px] text-blue-700 mt-0.5" id="kpiNetProfitUsd">$0.00</div>
+        </div>
+      </div>
+
+      <!-- Navigation Views: Orders vs Wires vs Statement -->
+      <div class="flex items-center space-x-2 border-b border-slate-200 pb-2">
+        <button id="viewOrdersTabBtn" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-brand-navy text-white transition flex items-center space-x-1.5">
+          <i data-lucide="list" class="w-3.5 h-3.5"></i>
+          <span>Orders & Invoices</span>
+        </button>
+        <button id="viewWiresTabBtn" class="px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:bg-slate-100 transition flex items-center space-x-1.5">
+          <i data-lucide="receipt" class="w-3.5 h-3.5"></i>
+          <span>Wire Transfers & Allocations</span>
+        </button>
+      </div>
+
+      <!-- VIEW 1: ORDERS TABLE -->
+      <div id="ordersViewSection" class="space-y-4">
+        
+        <!-- Search & Filters -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+          
+          <!-- Search Box -->
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-2.5"></i>
+            <input type="text" id="orderSearchInput" placeholder="Search by PO#, Quote#, Invoice#, Tracking..."
+                   class="w-full pl-9 pr-4 py-2 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none" />
+          </div>
+
+          <!-- Filter Pills -->
+          <div class="flex items-center space-x-1.5 overflow-x-auto text-xs">
+            <button class="filter-btn active px-2.5 py-1.5 rounded-lg font-medium bg-slate-800 text-white" data-filter="all">All</button>
+            <button class="filter-btn px-2.5 py-1.5 rounded-lg font-medium text-slate-600 hover:bg-slate-100" data-filter="unpaid">Open / Unpaid</button>
+            <button class="filter-btn px-2.5 py-1.5 rounded-lg font-medium text-slate-600 hover:bg-slate-100" data-filter="paid">Paid</button>
+            <button class="filter-btn px-2.5 py-1.5 rounded-lg font-medium text-slate-600 hover:bg-slate-100" data-filter="transit">In Transit</button>
+            <button class="filter-btn px-2.5 py-1.5 rounded-lg font-medium text-slate-600 hover:bg-slate-100" data-filter="production">In Production</button>
+          </div>
+
+        </div>
+
+        <!-- Orders Table Card -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-slate-200 text-left text-xs">
+              <thead class="bg-brand-navy text-white font-semibold">
+                <tr>
+                  <th class="px-3.5 py-3">PO Number</th>
+                  <th class="px-3.5 py-3">Quote #</th>
+                  <th class="px-3.5 py-3">Invoice No</th>
+                  <th class="px-3.5 py-3 text-right">Incoming ($)</th>
+                  <th class="px-3.5 py-3 text-right">Incoming (RMB)</th>
+                  <th class="px-3.5 py-3 text-right">Outgoing (RMB)</th>
+                  <th class="px-3.5 py-3">Payment Status</th>
+                  <th class="px-3.5 py-3">Delivery Status</th>
+                  <th class="px-3.5 py-3">Tracking / Logistics</th>
+                  <th class="px-3.5 py-3 text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody" class="divide-y divide-slate-100 bg-white">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+          
+          <div id="noOrdersMessage" class="hidden p-8 text-center text-slate-400 text-xs">
+            No matching orders found.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VIEW 2: WIRE TRANSFERS & ALLOCATIONS -->
+      <div id="wiresViewSection" class="hidden space-y-4">
+        
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-slate-900">Wire Transfers & Payment Allocations</h3>
+            <p class="text-xs text-slate-500">Record incoming client payments and assign them to orders</p>
+          </div>
+          <button id="addWireBtn" class="text-xs bg-emerald-700 hover:bg-emerald-800 text-white font-medium px-3 py-1.5 rounded-lg shadow flex items-center space-x-1.5 transition">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+            <span>Record New Wire</span>
+          </button>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <table class="min-w-full divide-y divide-slate-200 text-left text-xs">
+            <thead class="bg-brand-navyMed text-white font-semibold">
+              <tr>
+                <th class="px-4 py-3">Wire Date</th>
+                <th class="px-4 py-3 text-right">Wire Amount ($)</th>
+                <th class="px-4 py-3">Allocation & Notes</th>
+                <th class="px-4 py-3 text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="wiresTableBody" class="divide-y divide-slate-100 bg-white">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 3. MODAL: STATEMENT OF ACCOUNT GENERATOR & EXPORTER -->
+  <!-- ========================================================================= -->
+  <div id="statementModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col border border-slate-200 my-auto">
+      
+      <!-- Modal Header -->
+      <div class="p-4 bg-brand-navy text-white rounded-t-2xl flex items-center justify-between no-print">
+        <div class="flex items-center space-x-2">
+          <i data-lucide="file-spreadsheet" class="w-5 h-5 text-blue-400"></i>
+          <div>
+            <h3 class="text-sm font-bold">Client Statement of Account</h3>
+            <p class="text-[11px] text-slate-300">Ready for Julie Kneupper / Client Review</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-2">
+          <button id="exportExcelBtn" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center space-x-1.5 shadow transition">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>Download .xlsx</span>
+          </button>
+          <button id="printStatementBtn" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center space-x-1.5 shadow transition">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print / PDF</span>
+          </button>
+          <button id="copyEmailSummaryBtn" class="bg-slate-700 hover:bg-slate-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center space-x-1.5 shadow transition">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <span>Copy Email Text</span>
+          </button>
+          <button id="closeStatementModalBtn" class="text-slate-300 hover:text-white p-1 rounded-lg">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Statement Sheet -->
+      <div class="p-6 overflow-y-auto flex-1 bg-white text-slate-800" id="statementPrintArea">
+        
+        <!-- Statement Header Banner -->
+        <div class="border-b-2 border-brand-navy pb-4 mb-6 flex justify-between items-start">
+          <div>
+            <h1 class="text-xl font-black text-brand-navy tracking-tight">JIMEI MATERIALS CO., LTD.</h1>
+            <p class="text-xs text-slate-600 font-medium">Precision Materials & Component Solutions</p>
+            <p class="text-[11px] text-slate-500">Website: www.jimei-materials.com | Email: yfu@jimei-materials.com</p>
+          </div>
+          <div class="text-right">
+            <span class="inline-block bg-brand-navy text-white text-xs font-bold px-3 py-1 rounded">STATEMENT OF ACCOUNT</span>
+            <p class="text-xs font-semibold text-slate-800 mt-1.5">Date: <span id="stmtDateDisplay"></span></p>
+            <p class="text-[11px] text-slate-500">Currency: USD ($)</p>
+          </div>
+        </div>
+
+        <!-- Bill To & Summary Info Grid -->
+        <div class="grid grid-cols-2 gap-6 mb-6 text-xs bg-slate-50 p-4 rounded-xl border border-slate-200">
+          <div>
+            <span class="font-bold text-slate-900 block mb-1 text-[11px] uppercase tracking-wider text-brand-navy">STATEMENT TO:</span>
+            <p class="font-bold text-sm text-slate-900" id="stmtCustomerName"></p>
+            <p class="text-slate-600 whitespace-pre-line" id="stmtCustomerAddress"></p>
+            <p class="text-slate-600 mt-1">Attn: <span class="font-medium text-slate-800" id="stmtCustomerContact"></span></p>
+          </div>
+          <div>
+            <span class="font-bold text-slate-900 block mb-1 text-[11px] uppercase tracking-wider text-brand-navy">ACCOUNT SUMMARY:</span>
+            <p class="text-slate-600">Statement Period: <strong class="text-slate-800">Apr 01, 2026 – Present</strong></p>
+            <p class="text-slate-600">Account Rep: <strong class="text-slate-800">Yingyi Fu (yfu@jimei-materials.com)</strong></p>
+            <p class="text-slate-600">Account Status: <span class="font-bold text-amber-700" id="stmtAccountStatus">Active (Invoices Pending)</span></p>
+          </div>
+        </div>
+
+        <!-- Statement KPI Cards -->
+        <div class="grid grid-cols-4 gap-3 mb-6 text-center text-xs">
+          <div class="bg-blue-50/50 p-3 rounded-lg border border-blue-100">
+            <span class="text-[10px] text-slate-500 font-semibold uppercase">Total Invoiced</span>
+            <div class="text-base font-bold text-slate-900 mt-0.5" id="stmtKpiInvoiced">$0.00</div>
+          </div>
+          <div class="bg-emerald-50/50 p-3 rounded-lg border border-emerald-100">
+            <span class="text-[10px] text-emerald-700 font-semibold uppercase">Payments Received</span>
+            <div class="text-base font-bold text-emerald-700 mt-0.5" id="stmtKpiReceived">$0.00</div>
+          </div>
+          <div class="bg-emerald-50 p-3 rounded-lg border border-emerald-200">
+            <span class="text-[10px] text-emerald-800 font-semibold uppercase">Available Credit</span>
+            <div class="text-base font-bold text-emerald-800 mt-0.5" id="stmtKpiCredit">$0.00</div>
+          </div>
+          <div class="bg-amber-50 p-3 rounded-lg border border-amber-200">
+            <span class="text-[10px] text-amber-800 font-semibold uppercase">Net Amount Due</span>
+            <div class="text-base font-bold text-amber-900 mt-0.5" id="stmtKpiNetDue">$0.00</div>
+          </div>
+        </div>
+
+        <!-- Section 1: Open Invoices -->
+        <div class="mb-6">
+          <h4 class="text-xs font-bold text-brand-navy uppercase tracking-wider mb-2 flex items-center space-x-1.5">
+            <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-amber-600"></i>
+            <span>1. Current Open Invoices (Action Required)</span>
+          </h4>
+          <table class="min-w-full divide-y divide-slate-200 text-xs border border-slate-200 rounded-lg overflow-hidden">
+            <thead class="bg-brand-navyMed text-white font-semibold">
+              <tr>
+                <th class="px-3 py-2 text-left">PO Number</th>
+                <th class="px-3 py-2 text-left">Invoice Number</th>
+                <th class="px-3 py-2 text-left">Date</th>
+                <th class="px-3 py-2 text-right">Invoice Amount ($)</th>
+                <th class="px-3 py-2 text-right">Credit Applied ($)</th>
+                <th class="px-3 py-2 text-right">Balance Due ($)</th>
+              </tr>
+            </thead>
+            <tbody id="stmtOpenInvoicesBody" class="divide-y divide-slate-100">
+              <!-- Dynamically populated -->
+            </tbody>
+            <tfoot class="bg-slate-50 font-bold border-t-2 border-slate-300">
+              <tr>
+                <td colspan="3" class="px-3 py-2 text-slate-800">Gross Open Invoices Total</td>
+                <td class="px-3 py-2 text-right" id="stmtGrossOpenTotal">$0.00</td>
+                <td class="px-3 py-2 text-right text-emerald-600" id="stmtCreditAppliedTotal">$0.00</td>
+                <td class="px-3 py-2 text-right" id="stmtOpenBalanceSubtotal">$0.00</td>
+              </tr>
+              <tr class="bg-emerald-50 text-emerald-900">
+                <td colspan="5" class="px-3 py-2 font-medium">Less: Available Credit Balance on Account (Unapplied Wire Excess)</td>
+                <td class="px-3 py-2 text-right text-emerald-700 font-bold" id="stmtAvailableCreditLess">-$0.00</td>
+              </tr>
+              <tr class="bg-amber-100 text-amber-950 text-sm">
+                <td colspan="5" class="px-3 py-2.5 font-bold uppercase">NET AMOUNT PAYABLE BY CLIENT</td>
+                <td class="px-3 py-2.5 text-right font-black text-amber-900" id="stmtFinalNetPayable">$0.00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- Section 2: Settled Orders History -->
+        <div class="mb-6">
+          <h4 class="text-xs font-bold text-brand-navy uppercase tracking-wider mb-2 flex items-center space-x-1.5">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <span>2. Settled Orders & Payment History (Paid in Full)</span>
+          </h4>
+          <table class="min-w-full divide-y divide-slate-200 text-xs border border-slate-200 rounded-lg overflow-hidden">
+            <thead class="bg-brand-navyLight text-white font-semibold">
+              <tr>
+                <th class="px-3 py-2 text-left">PO Number</th>
+                <th class="px-3 py-2 text-right">Invoice Value ($)</th>
+                <th class="px-3 py-2 text-center">Status</th>
+                <th class="px-3 py-2 text-left">Payment Application Details</th>
+                <th class="px-3 py-2 text-right">Paid ($)</th>
+                <th class="px-3 py-2 text-right">Balance ($)</th>
+              </tr>
+            </thead>
+            <tbody id="stmtSettledOrdersBody" class="divide-y divide-slate-100">
+              <!-- Dynamically populated -->
+            </tbody>
+            <tfoot class="bg-slate-50 font-bold border-t border-slate-300">
+              <tr>
+                <td class="px-3 py-2 text-slate-800">Total Settled Orders</td>
+                <td class="px-3 py-2 text-right" id="stmtSettledTotalVal">$0.00</td>
+                <td></td>
+                <td></td>
+                <td class="px-3 py-2 text-right text-emerald-700" id="stmtSettledPaidTotal">$0.00</td>
+                <td class="px-3 py-2 text-right">$0.00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- Remittance & Wire Instructions -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-[11px] text-slate-600 space-y-1">
+          <span class="font-bold text-slate-900 block uppercase tracking-wider text-[10px]">REMITTANCE INSTRUCTIONS & NOTES:</span>
+          <p>1. Please reference the corresponding PO Number(s) and Invoice Number(s) in your wire transfer advice.</p>
+          <p>2. Unapplied credit balances are automatically tracked and deducted from your net balance due.</p>
+          <p>3. For questions or remittance confirmations, please contact Yingyi Fu at <strong>yfu@jimei-materials.com</strong>.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 4. MODAL: ADD / EDIT ORDER -->
+  <!-- ========================================================================= -->
+  <div id="orderModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full p-6 border border-slate-200">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-4">
+        <h3 class="text-base font-bold text-slate-900" id="orderModalTitle">Add New Purchase Order</h3>
+        <button id="closeOrderModalBtn" class="text-slate-400 hover:text-slate-600">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="orderForm" class="space-y-4 text-xs">
+        <input type="hidden" id="orderEditId" />
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Customer PO # *</label>
+            <input type="text" id="orderPoInput" required placeholder="e.g. 260817-CM01P"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Jimei Quote #</label>
+            <input type="text" id="orderQuoteInput" placeholder="e.g. PINV-53901827"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Incoming USD ($) *</label>
+            <input type="number" step="0.01" id="orderUsdInput" required placeholder="0.00"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600 text-right font-medium" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Incoming RMB (¥)</label>
+            <input type="number" step="0.01" id="orderRmbInput" placeholder="Auto-calculated"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600 text-right font-medium" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Outgoing RMB (¥)</label>
+            <input type="number" step="0.01" id="orderOutRmbInput" placeholder="0.00"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600 text-right font-medium" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Invoice Number</label>
+            <input type="text" id="orderInvoiceInput" placeholder="e.g. INV-67123048"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Supplier / Rachel Invoice</label>
+            <input type="text" id="orderSupplierInvInput" placeholder="e.g. ZQJM-HX2026082301"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Payment Status</label>
+            <select id="orderPaymentStatusSelect" class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600">
+              <option value="Unpaid">Unpaid</option>
+              <option value="Paid">Paid in Full</option>
+              <option value="Advance Paid">Advance Paid (50%)</option>
+              <option value="Partial">Partial Payment</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Production / Delivery Status</label>
+            <select id="orderDeliveryStatusSelect" class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600">
+              <option value="In Production">In Production</option>
+              <option value="In Transit">In Transit</option>
+              <option value="Delivered">Delivered</option>
+              <option value="Pending">Pending</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Exp. Shipping Date</label>
+            <input type="date" id="orderExpShipInput"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Act. Shipping Date</label>
+            <input type="date" id="orderActShipInput"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Tracking Number</label>
+            <input type="text" id="orderTrackingInput" placeholder="e.g. 871902883125"
+                   class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600" />
+          </div>
+        </div>
+
+        <div class="flex justify-end space-x-2 pt-4 border-t border-slate-200">
+          <button type="button" id="cancelOrderModalBtn" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium rounded-lg transition">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-brand-navy hover:bg-brand-navyMed text-white font-semibold rounded-lg shadow transition">Save Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 5. MODAL: ADD WIRE PAYMENT -->
+  <!-- ========================================================================= -->
+  <div id="wireModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-200">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-4">
+        <h3 class="text-base font-bold text-slate-900">Record Incoming Wire Payment</h3>
+        <button id="closeWireModalBtn" class="text-slate-400 hover:text-slate-600">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="wireForm" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Wire Transfer Date *</label>
+          <input type="date" id="wireDateInput" required
+                 class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600" />
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Total Wire Amount Received ($) *</label>
+          <input type="number" step="0.01" id="wireAmountInput" required placeholder="0.00"
+                 class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600 text-right font-bold text-sm" />
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Payment Allocation & Notes *</label>
+          <textarea id="wireNotesInput" rows="3" required placeholder="e.g. Applied 50% advance to PO 260804-CM01P ($1,443.75) and remaining excess to credit..."
+                    class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+        </div>
+
+        <div class="flex justify-end space-x-2 pt-4 border-t border-slate-200">
+          <button type="button" id="cancelWireModalBtn" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium rounded-lg transition">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg shadow transition">Record Payment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 6. MODAL: RATE & SETTINGS -->
+  <!-- ========================================================================= -->
+  <div id="rateModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 border border-slate-200">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-4">
+        <h3 class="text-base font-bold text-slate-900">Exchange Rate & Commission</h3>
+        <button id="closeRateModalBtn" class="text-slate-400 hover:text-slate-600">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="rateForm" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">USD to RMB Exchange Rate</label>
+          <input type="number" step="0.001" id="rateInput" required
+                 class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600 text-right font-bold" />
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Commission Rate (%)</label>
+          <input type="number" step="0.1" id="commissionInput" required
+                 class="w-full p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-600 text-right font-bold" />
+        </div>
+
+        <div class="flex justify-end space-x-2 pt-4 border-t border-slate-200">
+          <button type="button" id="cancelRateModalBtn" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium rounded-lg">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-brand-navy hover:bg-brand-navyMed text-white font-semibold rounded-lg shadow">Save Rates</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hidden File Input for Import -->
+  <input type="file" id="fileImportInput" class="hidden" accept=".enc,.json" />
+
+  <!-- ========================================================================= -->
+  <!-- 7. JAVASCRIPT CORE APPLICATION ENGINE -->
+  <!-- ========================================================================= -->
+  <script>
+    // Master State
+    let appState = {
+      password: null,
+      activeCustomerId: 'sheetak',
+      filter: 'all',
+      search: '',
+      data: null
+    };
+
+    // ---------------------------------------------------------------------------
+    // CRYPTO ENGINE: PBKDF2 + AES-256-GCM (Web Crypto API)
+    // ---------------------------------------------------------------------------
+    async function deriveKey(password, salt) {
+      const enc = new TextEncoder();
+      const keyMaterial = await window.crypto.subtle.importKey(
+        'raw', enc.encode(password), { name: 'PBKDF2' }, false, ['deriveKey']
+      );
+      return window.crypto.subtle.deriveKey(
+        {
+          name: 'PBKDF2',
+          salt: salt,
+          iterations: 100000,
+          hash: 'SHA-256'
+        },
+        keyMaterial,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['encrypt', 'decrypt']
+      );
+    }
+
+    async function decryptPayload(payload, password) {
+      const salt = Uint8Array.from(atob(payload.salt), c => c.charCodeAt(0));
+      const iv = Uint8Array.from(atob(payload.iv), c => c.charCodeAt(0));
+      const ciphertext = Uint8Array.from(atob(payload.data), c => c.charCodeAt(0));
+      
+      const key = await deriveKey(password, salt);
+      const decrypted = await window.crypto.subtle.decrypt(
+        { name: 'AES-GCM', iv: iv },
+        key,
+        ciphertext
+      );
+      
+      const dec = new TextDecoder();
+      return JSON.parse(dec.decode(decrypted));
+    }
+
+    async function encryptPayload(dataObj, password) {
+      const enc = new TextEncoder();
+      const plaintext = enc.encode(JSON.stringify(dataObj));
+      
+      const salt = window.crypto.getRandomValues(new Uint8Array(16));
+      const iv = window.crypto.getRandomValues(new Uint8Array(12));
+      const key = await deriveKey(password, salt);
+      
+      const ciphertext = await window.crypto.subtle.encrypt(
+        { name: 'AES-GCM', iv: iv },
+        key,
+        plaintext
+      );
+      
+      return {
+        version: "1.0",
+        cipher: "AES-256-GCM",
+        iterations: 100000,
+        salt: btoa(String.fromCharCode(...salt)),
+        iv: btoa(String.fromCharCode(...iv)),
+        data: btoa(String.fromCharCode(...new Uint8Array(ciphertext)))
+      };
+    }
+
+    // ---------------------------------------------------------------------------
+    // LOCAL STORAGE & PERSISTENCE
+    // ---------------------------------------------------------------------------
+    function saveLocal() {
+      if (appState.data) {
+        localStorage.setItem('jm_portal_data', JSON.stringify(appState.data));
+      }
+    }
+
+    function loadLocal() {
+      const local = localStorage.getItem('jm_portal_data');
+      return local ? JSON.parse(local) : null;
+    }
+
+    // ---------------------------------------------------------------------------
+    // INITIALIZATION & LOGIN
+    // ---------------------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', async () => {
+      lucide.createIcons();
+      
+      // Auto-fill today's date on modal inputs
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('wireDateInput').value = today;
+
+      // Handle Login
+      document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const pwd = document.getElementById('passwordInput').value.trim();
+        const errorEl = document.getElementById('authError');
+        const unlockBtn = document.getElementById('unlockBtn');
+        
+        errorEl.classList.add('hidden');
+        unlockBtn.disabled = true;
+        unlockBtn.innerHTML = '<span>Decrypting...</span>';
+
+        try {
+          let dataset = null;
+          
+          // 1. Check local storage first if modified
+          const localData = loadLocal();
+          
+          // 2. Fetch data.enc from server
+          try {
+            const res = await fetch('data.enc');
+            if (res.ok) {
+              const encJson = await res.json();
+              dataset = await decryptPayload(encJson, pwd);
+            }
+          } catch(err) {
+            console.warn('Could not fetch data.enc from server, checking local or fallback:', err);
+          }
+
+          // Fallback to local data if server fetch failed or if local is available
+          if (!dataset && localData) {
+            dataset = localData;
+          }
+
+          if (!dataset) {
+            throw new Error('Unable to decrypt data payload with provided password.');
+          }
+
+          // Success!
+          appState.password = pwd;
+          appState.data = dataset;
+          saveLocal();
+
+          document.getElementById('authScreen').classList.add('hidden');
+          document.getElementById('appContainer').classList.remove('hidden');
+          document.getElementById('appContainer').classList.add('flex');
+
+          renderApp();
+        } catch (err) {
+          console.error(err);
+          errorEl.classList.remove('hidden');
+          document.getElementById('authErrorMsg').innerText = 'Incorrect password (#Himanshu21) or decryption failed.';
+        } finally {
+          unlockBtn.disabled = false;
+          unlockBtn.innerHTML = '<span>Unlock & Decrypt Data</span><i data-lucide="arrow-right" class="w-4 h-4"></i>';
+          lucide.createIcons();
+        }
+      });
+
+      // Toggle password visibility
+      document.getElementById('togglePasswordBtn').addEventListener('click', () => {
+        const inp = document.getElementById('passwordInput');
+        inp.type = inp.type === 'password' ? 'text' : 'password';
+      });
+
+      // Lock Portal
+      document.getElementById('lockPortalBtn').addEventListener('click', () => {
+        appState.password = null;
+        document.getElementById('appContainer').classList.add('hidden');
+        document.getElementById('appContainer').classList.remove('flex');
+        document.getElementById('authScreen').classList.remove('hidden');
+        document.getElementById('passwordInput').value = '';
+      });
+
+      setupEventListeners();
+    });
+
+    // ---------------------------------------------------------------------------
+    // RENDER APP
+    // ---------------------------------------------------------------------------
+    function renderApp() {
+      if (!appState.data) return;
+
+      // Update rate displays
+      const rate = appState.data.settings.usd_to_rmb_rate || 6.83;
+      document.getElementById('headerRateDisplay').innerText = rate.toFixed(2);
+      document.getElementById('rateInput').value = rate;
+      document.getElementById('commissionInput').value = ((appState.data.settings.commission_rate || 0.05) * 100).toFixed(1);
+
+      renderCustomerTabs();
+      renderKPIs();
+      renderOrdersTable();
+      renderWiresTable();
+      lucide.createIcons();
+    }
+
+    // ---------------------------------------------------------------------------
+    // CUSTOMER TABS
+    // ---------------------------------------------------------------------------
+    function renderCustomerTabs() {
+      const container = document.getElementById('customerTabsContainer');
+      container.innerHTML = '';
+      
+      const customers = Object.values(appState.data.customers);
+      customers.forEach(cust => {
+        const isActive = cust.id === appState.activeCustomerId;
+        const btn = document.createElement('button');
+        btn.className = `px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition flex items-center space-x-1.5 ${
+          isActive 
+            ? 'bg-brand-navy text-white shadow-sm' 
+            : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+        }`;
+        btn.innerHTML = `
+          <span>${cust.name}</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'}">
+            ${cust.orders ? cust.orders.length : 0}
+          </span>
+        `;
+        btn.addEventListener('click', () => {
+          appState.activeCustomerId = cust.id;
+          renderApp();
+        });
+        container.appendChild(btn);
+      });
+    }
+
+    // ---------------------------------------------------------------------------
+    // EXECUTIVE KPI METRICS
+    // ---------------------------------------------------------------------------
+    function renderKPIs() {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      if (!cust) return;
+
+      const rate = appState.data.settings.usd_to_rmb_rate || 6.83;
+      const commRate = appState.data.settings.commission_rate || 0.05;
+
+      let totalInvoicedUsd = 0;
+      let totalInvoicedRmb = 0;
+      let totalOutgoingRmb = 0;
+      let openInvoicesUsd = 0;
+      let openOrdersCount = 0;
+
+      (cust.orders || []).forEach(o => {
+        totalInvoicedUsd += (o.incoming_usd || 0);
+        totalInvoicedRmb += (o.incoming_rmb || (o.incoming_usd * rate));
+        totalOutgoingRmb += (o.outgoing_rmb || 0);
+        
+        if (o.status !== 'Paid' && !o.status.includes('Paid in Full')) {
+          openInvoicesUsd += (o.incoming_usd || 0);
+          openOrdersCount++;
+        }
+      });
+
+      let totalReceivedUsd = 0;
+      if (cust.wires && cust.wires.length > 0) {
+        totalReceivedUsd = cust.wires.reduce((acc, w) => acc + (w.amount || 0), 0);
+      } else {
+        (cust.orders || []).forEach(o => {
+          if (o.status === 'Paid' || o.status.includes('Paid')) {
+            totalReceivedUsd += (o.incoming_usd || 0);
+          }
+        });
+      }
+
+      const creditBalance = cust.credit_balance || 0;
+      const netAmountDue = Math.max(0, openInvoicesUsd - creditBalance);
+
+      // Profit calculation: (Revenue RMB - Outgoing RMB) + Commission
+      const creditRmb = totalInvoicedRmb;
+      const debitRmb = totalOutgoingRmb;
+      const diffRmb = creditRmb - debitRmb;
+      const commissionRmb = creditRmb * commRate;
+      const totalProfitRmb = diffRmb + commissionRmb;
+      const totalProfitUsd = totalProfitRmb / rate;
+
+      // Update UI
+      document.getElementById('kpiInvoicedUsd').innerText = `$${totalInvoicedUsd.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('kpiInvoicedRmb').innerText = `¥${totalInvoicedRmb.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
+      document.getElementById('kpiReceivedUsd').innerText = `$${totalReceivedUsd.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('kpiReceivedRmb').innerText = `¥${(totalReceivedUsd * rate).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
+      document.getElementById('kpiCreditBalance').innerText = `$${creditBalance.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      
+      document.getElementById('kpiNetDueUsd').innerText = `$${netAmountDue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('kpiOpenOrdersCount').innerText = `${openOrdersCount} Open Invoice${openOrdersCount === 1 ? '' : 's'}`;
+
+      document.getElementById('kpiOutgoingRmb').innerText = `¥${totalOutgoingRmb.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('kpiOutgoingUsd').innerText = `$${(totalOutgoingRmb / rate).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
+      document.getElementById('kpiNetProfitRmb').innerText = `¥${totalProfitRmb.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('kpiNetProfitUsd').innerText = `$${totalProfitUsd.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+    }
+
+    // ---------------------------------------------------------------------------
+    // ORDERS TABLE
+    // ---------------------------------------------------------------------------
+    function renderOrdersTable() {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      const tbody = document.getElementById('ordersTableBody');
+      const noMsg = document.getElementById('noOrdersMessage');
+      tbody.innerHTML = '';
+
+      if (!cust || !cust.orders || cust.orders.length === 0) {
+        noMsg.classList.remove('hidden');
+        return;
+      }
+
+      const q = appState.search.toLowerCase().trim();
+      const filter = appState.filter;
+
+      const filtered = cust.orders.filter(o => {
+        const matchesSearch = !q || 
+          (o.po_number && o.po_number.toLowerCase().includes(q)) ||
+          (o.quote && o.quote.toLowerCase().includes(q)) ||
+          (o.invoice_no && o.invoice_no.toLowerCase().includes(q)) ||
+          (o.tracking_number && o.tracking_number.toLowerCase().includes(q)) ||
+          (o.status && o.status.toLowerCase().includes(q));
+
+        if (!matchesSearch) return false;
+
+        if (filter === 'unpaid') return o.status !== 'Paid' && !o.status.includes('Paid in Full');
+        if (filter === 'paid') return o.status === 'Paid' || o.status.includes('Paid');
+        if (filter === 'transit') return (o.delivery_status || '').toLowerCase().includes('transit');
+        if (filter === 'production') return (o.delivery_status || '').toLowerCase().includes('production');
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        noMsg.classList.remove('hidden');
+        return;
+      }
+      noMsg.classList.add('hidden');
+
+      filtered.forEach(o => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-50 transition border-b border-slate-100';
+
+        const isPaid = o.status === 'Paid' || o.status.includes('Paid in Full');
+        const badgeClass = isPaid ? 'badge-paid' : (o.status.includes('Advance') ? 'badge-partial' : 'badge-unpaid');
+
+        tr.innerHTML = `
+          <td class="px-3.5 py-3 font-bold text-slate-900">${o.po_number || 'NA'}</td>
+          <td class="px-3.5 py-3 text-slate-600">${o.quote || 'NA'}</td>
+          <td class="px-3.5 py-3 font-mono text-[11px] text-slate-700">${o.invoice_no || '-'}</td>
+          <td class="px-3.5 py-3 text-right font-medium text-slate-900">$${(o.incoming_usd || 0).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td class="px-3.5 py-3 text-right text-slate-600">¥${(o.incoming_rmb || 0).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td class="px-3.5 py-3 text-right text-slate-600">¥${(o.outgoing_rmb || 0).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td class="px-3.5 py-3">
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${badgeClass}">${o.status}</span>
+          </td>
+          <td class="px-3.5 py-3">
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-slate-100 text-slate-700">${o.delivery_status || 'Delivered'}</span>
+          </td>
+          <td class="px-3.5 py-3 text-slate-500 font-mono text-[11px]">
+            ${o.tracking_number ? `<span title="${o.tracking_number}">${o.tracking_number.split('\n')[0]}</span>` : '-'}
+          </td>
+          <td class="px-3.5 py-3 text-center whitespace-nowrap space-x-1">
+            <button class="edit-order-btn text-blue-600 hover:text-blue-800 p-1" data-id="${o.id}" title="Edit Order">
+              <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+            </button>
+            <button class="delete-order-btn text-red-500 hover:text-red-700 p-1" data-id="${o.id}" title="Delete Order">
+              <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+            </button>
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+
+      // Attach edit/delete handlers
+      tbody.querySelectorAll('.edit-order-btn').forEach(b => {
+        b.addEventListener('click', () => openEditOrderModal(b.getAttribute('data-id')));
+      });
+      tbody.querySelectorAll('.delete-order-btn').forEach(b => {
+        b.addEventListener('click', () => deleteOrder(b.getAttribute('data-id')));
+      });
+
+      lucide.createIcons();
+    }
+
+    // ---------------------------------------------------------------------------
+    // WIRES TABLE
+    // ---------------------------------------------------------------------------
+    function renderWiresTable() {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      const tbody = document.getElementById('wiresTableBody');
+      tbody.innerHTML = '';
+
+      if (!cust || !cust.wires || cust.wires.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" class="p-6 text-center text-slate-400">No wire transfers recorded for this customer.</td></tr>';
+        return;
+      }
+
+      cust.wires.forEach((w, idx) => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-50 border-b border-slate-100';
+        tr.innerHTML = `
+          <td class="px-4 py-3 font-medium text-slate-900">${w.date}</td>
+          <td class="px-4 py-3 text-right font-bold text-emerald-700">$${w.amount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td class="px-4 py-3 text-slate-700">${w.notes}</td>
+          <td class="px-4 py-3 text-center">
+            <button class="delete-wire-btn text-red-500 hover:text-red-700 p-1" data-index="${idx}">
+              <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      tbody.querySelectorAll('.delete-wire-btn').forEach(b => {
+        b.addEventListener('click', () => {
+          const idx = parseInt(b.getAttribute('data-index'));
+          if (confirm('Delete this wire transfer entry?')) {
+            cust.wires.splice(idx, 1);
+            saveLocal();
+            renderApp();
+          }
+        });
+      });
+
+      lucide.createIcons();
+    }
+
+    // ---------------------------------------------------------------------------
+    // STATEMENT OF ACCOUNT GENERATOR MODAL
+    // ---------------------------------------------------------------------------
+    function openStatementModal() {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      if (!cust) return;
+
+      const modal = document.getElementById('statementModal');
+      modal.classList.remove('hidden');
+
+      // Header Info
+      const todayStr = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' });
+      document.getElementById('stmtDateDisplay').innerText = todayStr;
+      document.getElementById('stmtCustomerName').innerText = cust.name;
+      document.getElementById('stmtCustomerAddress').innerText = cust.address || 'Customer Billing Address';
+      document.getElementById('stmtCustomerContact').innerText = cust.contact || 'Accounts Payable Team';
+
+      const openBody = document.getElementById('stmtOpenInvoicesBody');
+      const settledBody = document.getElementById('stmtSettledOrdersBody');
+      openBody.innerHTML = '';
+      settledBody.innerHTML = '';
+
+      let grossOpenTotal = 0;
+      let settledTotalVal = 0;
+      let settledPaidTotal = 0;
+
+      const orders = cust.orders || [];
+
+      // Open Orders
+      const openOrders = orders.filter(o => o.status !== 'Paid' && !o.status.includes('Paid in Full'));
+      const settledOrders = orders.filter(o => o.status === 'Paid' || o.status.includes('Paid in Full'));
+
+      openOrders.forEach(o => {
+        const val = o.incoming_usd || 0;
+        grossOpenTotal += val;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="px-3 py-2 font-bold text-slate-900">${o.po_number || 'NA'}</td>
+          <td class="px-3 py-2 font-mono text-[11px] text-slate-700">${o.invoice_no || 'Pending'}</td>
+          <td class="px-3 py-2 text-slate-500">${o.expected_shipping || '2026-08-15'}</td>
+          <td class="px-3 py-2 text-right font-medium">$${val.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td class="px-3 py-2 text-right text-slate-400">$0.00</td>
+          <td class="px-3 py-2 text-right font-bold text-slate-900">$${val.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+        `;
+        openBody.appendChild(tr);
+      });
+
+      if (openOrders.length === 0) {
+        openBody.innerHTML = '<tr><td colspan="6" class="px-3 py-4 text-center text-emerald-700 bg-emerald-50">No open invoices! All orders settled.</td></tr>';
+      }
+
+      // Settled Orders
+      settledOrders.forEach(o => {
+        const val = o.incoming_usd || 0;
+        settledTotalVal += val;
+        settledPaidTotal += val;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="px-3 py-2 font-semibold text-slate-900">${o.po_number || 'NA'}</td>
+          <td class="px-3 py-2 text-right">$${val.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td class="px-3 py-2 text-center"><span class="px-1.5 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold text-[10px]">Paid</span></td>
+          <td class="px-3 py-2 text-slate-600 text-[11px]">${o.status}</td>
+          <td class="px-3 py-2 text-right text-emerald-700 font-medium">$${val.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td class="px-3 py-2 text-right text-slate-400">$0.00</td>
+        `;
+        settledBody.appendChild(tr);
+      });
+
+      const creditBal = cust.credit_balance || 0;
+      const netPayable = Math.max(0, grossOpenTotal - creditBal);
+
+      document.getElementById('stmtGrossOpenTotal').innerText = `$${grossOpenTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('stmtCreditAppliedTotal').innerText = `$0.00`;
+      document.getElementById('stmtOpenBalanceSubtotal').innerText = `$${grossOpenTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('stmtAvailableCreditLess').innerText = `-$${creditBal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('stmtFinalNetPayable').innerText = `$${netPayable.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
+      document.getElementById('stmtSettledTotalVal').innerText = `$${settledTotalVal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('stmtSettledPaidTotal').innerText = `$${settledPaidTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
+      // KPIs
+      document.getElementById('stmtKpiInvoiced').innerText = `$${(grossOpenTotal + settledTotalVal).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('stmtKpiReceived').innerText = `$${settledPaidTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('stmtKpiCredit').innerText = `$${creditBal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+      document.getElementById('stmtKpiNetDue').innerText = `$${netPayable.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
+      lucide.createIcons();
+    }
+
+    // ---------------------------------------------------------------------------
+    // EXCEL (.XLSX) EXPORT (SheetJS)
+    // ---------------------------------------------------------------------------
+    function exportStatementToExcel() {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      if (!cust) return;
+
+      const wb = XLSX.utils.book_new();
+
+      // Sheet 1: Statement of Account
+      const statementRows = [
+        ["JIMEI MATERIALS CO., LTD.", "", "", "", "STATEMENT OF ACCOUNT"],
+        ["Precision Materials & Component Solutions", "", "", "", `Date: ${new Date().toLocaleDateString()}`],
+        [],
+        ["Customer:", cust.name, "", "Statement Period:", "Apr 01, 2026 – Present"],
+        ["Address:", cust.address || "", "", "Account Rep:", "Yingyi Fu (yfu@jimei-materials.com)"],
+        ["Attention:", cust.contact || "", "", "Currency:", "USD ($)"],
+        [],
+        ["1. CURRENT OPEN INVOICES"],
+        ["PO Number", "Invoice Number", "Exp. Date", "Invoice Amount ($)", "Credit Applied ($)", "Balance Due ($)"]
+      ];
+
+      const openOrders = (cust.orders || []).filter(o => o.status !== 'Paid' && !o.status.includes('Paid in Full'));
+      let grossOpen = 0;
+      openOrders.forEach(o => {
+        const amt = o.incoming_usd || 0;
+        grossOpen += amt;
+        statementRows.push([o.po_number, o.invoice_no, o.expected_shipping || '', amt, 0, amt]);
+      });
+
+      const credit = cust.credit_balance || 0;
+      const net = Math.max(0, grossOpen - credit);
+
+      statementRows.push(["Gross Open Total", "", "", grossOpen, 0, grossOpen]);
+      statementRows.push(["Less: Available Credit Balance on Account", "", "", "", "", -credit]);
+      statementRows.push(["NET AMOUNT PAYABLE BY CLIENT", "", "", "", "", net]);
+      statementRows.push([]);
+      statementRows.push(["2. SETTLED ORDERS & PAYMENT HISTORY"]);
+      statementRows.push(["PO Number", "Invoice Value ($)", "Status", "Payment Application Details", "Paid ($)", "Balance ($)"]);
+
+      const settledOrders = (cust.orders || []).filter(o => o.status === 'Paid' || o.status.includes('Paid in Full'));
+      let settledTotal = 0;
+      settledOrders.forEach(o => {
+        const amt = o.incoming_usd || 0;
+        settledTotal += amt;
+        statementRows.push([o.po_number, amt, "Paid in Full", o.status, amt, 0]);
+      });
+      statementRows.push(["Total Settled Orders", settledTotal, "", "", settledTotal, 0]);
+
+      const ws1 = XLSX.utils.aoa_to_sheet(statementRows);
+      XLSX.utils.book_append_sheet(wb, ws1, "Statement of Account");
+
+      // Sheet 2: All Orders Master
+      const allOrderRows = [
+        ["PO Number", "Quote #", "Invoice No", "Incoming ($)", "Incoming (RMB)", "Outgoing (RMB)", "Status", "Delivery Status", "Tracking #"]
+      ];
+      (cust.orders || []).forEach(o => {
+        allOrderRows.push([
+          o.po_number, o.quote, o.invoice_no, o.incoming_usd, o.incoming_rmb, o.outgoing_rmb, o.status, o.delivery_status, o.tracking_number
+        ]);
+      });
+      const ws2 = XLSX.utils.aoa_to_sheet(allOrderRows);
+      XLSX.utils.book_append_sheet(wb, ws2, "All Orders Master");
+
+      XLSX.writeFile(wb, `Statement_of_Account_${cust.name.replace(/\s+/g, '_')}.xlsx`);
+    }
+
+    // ---------------------------------------------------------------------------
+    // COPY EMAIL SUMMARY TEXT
+    // ---------------------------------------------------------------------------
+    function copyEmailText() {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      if (!cust) return;
+
+      const openOrders = (cust.orders || []).filter(o => o.status !== 'Paid' && !o.status.includes('Paid in Full'));
+      const grossOpen = openOrders.reduce((acc, o) => acc + (o.incoming_usd || 0), 0);
+      const credit = cust.credit_balance || 0;
+      const net = Math.max(0, grossOpen - credit);
+
+      let text = `Dear Julie,\n\nPlease find the breakdown and statement of your account:\n\n`;
+      text += `1. Open Invoices:\n`;
+      openOrders.forEach(o => {
+        text += `• PO ${o.po_number} (${o.invoice_no || 'Invoice Pending'}): $${o.incoming_usd.toFixed(2)}\n`;
+      });
+      text += `Gross Open Total: $${grossOpen.toFixed(2)}\n`;
+      text += `Less Available Credit Balance: -$${credit.toFixed(2)}\n`;
+      text += `Net Amount Payable: $${net.toFixed(2)}\n\n`;
+      text += `Best regards,\nYingyi Fu\nJimei Materials Co., Ltd.\nwww.jimei-materials.com`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Statement summary copied to clipboard! Ready to paste in email.');
+      });
+    }
+
+    // ---------------------------------------------------------------------------
+    // ORDER CRUD OPERATIONS
+    // ---------------------------------------------------------------------------
+    function openAddOrderModal() {
+      document.getElementById('orderModalTitle').innerText = 'Add New Purchase Order';
+      document.getElementById('orderForm').reset();
+      document.getElementById('orderEditId').value = '';
+      document.getElementById('orderModal').classList.remove('hidden');
+    }
+
+    function openEditOrderModal(orderId) {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      const ord = cust.orders.find(o => o.id === orderId);
+      if (!ord) return;
+
+      document.getElementById('orderModalTitle').innerText = 'Edit Purchase Order';
+      document.getElementById('orderEditId').value = ord.id;
+      document.getElementById('orderPoInput').value = ord.po_number || '';
+      document.getElementById('orderQuoteInput').value = ord.quote || '';
+      document.getElementById('orderUsdInput').value = ord.incoming_usd || '';
+      document.getElementById('orderRmbInput').value = ord.incoming_rmb || '';
+      document.getElementById('orderOutRmbInput').value = ord.outgoing_rmb || '';
+      document.getElementById('orderInvoiceInput').value = ord.invoice_no || '';
+      document.getElementById('orderSupplierInvInput').value = ord.supplier_invoice || '';
+      document.getElementById('orderPaymentStatusSelect').value = ord.status || 'Unpaid';
+      document.getElementById('orderDeliveryStatusSelect').value = ord.delivery_status || 'In Production';
+      document.getElementById('orderExpShipInput').value = ord.expected_shipping || '';
+      document.getElementById('orderActShipInput').value = ord.actual_shipping || '';
+      document.getElementById('orderTrackingInput').value = ord.tracking_number || '';
+
+      document.getElementById('orderModal').classList.remove('hidden');
+    }
+
+    function deleteOrder(orderId) {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      if (confirm('Are you sure you want to delete this order?')) {
+        cust.orders = cust.orders.filter(o => o.id !== orderId);
+        saveLocal();
+        renderApp();
+      }
+    }
+
+    // ---------------------------------------------------------------------------
+    // EVENT LISTENERS SETUP
+    // ---------------------------------------------------------------------------
+    function setupEventListeners() {
+      // Search and Filter
+      document.getElementById('orderSearchInput').addEventListener('input', (e) => {
+        appState.search = e.target.value;
+        renderOrdersTable();
+      });
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('active', 'bg-slate-800', 'text-white');
+            b.classList.add('text-slate-600');
+          });
+          btn.classList.add('active', 'bg-slate-800', 'text-white');
+          btn.classList.remove('text-slate-600');
+          appState.filter = btn.getAttribute('data-filter');
+          renderOrdersTable();
+        });
+      });
+
+      // View Tabs (Orders vs Wires)
+      document.getElementById('viewOrdersTabBtn').addEventListener('click', () => {
+        document.getElementById('ordersViewSection').classList.remove('hidden');
+        document.getElementById('wiresViewSection').classList.add('hidden');
+        document.getElementById('viewOrdersTabBtn').className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-brand-navy text-white transition flex items-center space-x-1.5';
+        document.getElementById('viewWiresTabBtn').className = 'px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:bg-slate-100 transition flex items-center space-x-1.5';
+      });
+
+      document.getElementById('viewWiresTabBtn').addEventListener('click', () => {
+        document.getElementById('wiresViewSection').classList.remove('hidden');
+        document.getElementById('ordersViewSection').classList.add('hidden');
+        document.getElementById('viewWiresTabBtn').className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-brand-navy text-white transition flex items-center space-x-1.5';
+        document.getElementById('viewOrdersTabBtn').className = 'px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:bg-slate-100 transition flex items-center space-x-1.5';
+      });
+
+      // Statement Modal
+      document.getElementById('headerGenerateStatementBtn').addEventListener('click', openStatementModal);
+      document.getElementById('closeStatementModalBtn').addEventListener('click', () => {
+        document.getElementById('statementModal').classList.add('hidden');
+      });
+      document.getElementById('printStatementBtn').addEventListener('click', () => window.print());
+      document.getElementById('exportExcelBtn').addEventListener('click', exportStatementToExcel);
+      document.getElementById('copyEmailSummaryBtn').addEventListener('click', copyEmailText);
+
+      // Order Modal Handlers
+      document.getElementById('addOrderBtn').addEventListener('click', openAddOrderModal);
+      document.getElementById('closeOrderModalBtn').addEventListener('click', () => document.getElementById('orderModal').classList.add('hidden'));
+      document.getElementById('cancelOrderModalBtn').addEventListener('click', () => document.getElementById('orderModal').classList.add('hidden'));
+
+      // Auto RMB calculation on USD input
+      document.getElementById('orderUsdInput').addEventListener('input', (e) => {
+        const val = parseFloat(e.target.value);
+        const rate = appState.data.settings.usd_to_rmb_rate || 6.83;
+        if (!isNaN(val)) {
+          document.getElementById('orderRmbInput').value = (val * rate).toFixed(2);
+        }
+      });
+
+      document.getElementById('orderForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const cust = appState.data.customers[appState.activeCustomerId];
+        const editId = document.getElementById('orderEditId').value;
+        const rate = appState.data.settings.usd_to_rmb_rate || 6.83;
+
+        const usd = parseFloat(document.getElementById('orderUsdInput').value) || 0;
+        const rmb = parseFloat(document.getElementById('orderRmbInput').value) || (usd * rate);
+        const outRmb = parseFloat(document.getElementById('orderOutRmbInput').value) || 0;
+
+        const newObj = {
+          id: editId || `ord_${Date.now()}`,
+          po_number: document.getElementById('orderPoInput').value.trim(),
+          quote: document.getElementById('orderQuoteInput').value.trim() || 'NA',
+          incoming_usd: usd,
+          incoming_rmb: rmb,
+          outgoing_rmb: outRmb,
+          invoice_no: document.getElementById('orderInvoiceInput').value.trim(),
+          supplier_invoice: document.getElementById('orderSupplierInvInput').value.trim(),
+          status: document.getElementById('orderPaymentStatusSelect').value,
+          delivery_status: document.getElementById('orderDeliveryStatusSelect').value,
+          expected_shipping: document.getElementById('orderExpShipInput').value,
+          actual_shipping: document.getElementById('orderActShipInput').value,
+          tracking_number: document.getElementById('orderTrackingInput').value.trim()
+        };
+
+        if (editId) {
+          const idx = cust.orders.findIndex(o => o.id === editId);
+          if (idx >= 0) cust.orders[idx] = newObj;
+        } else {
+          cust.orders.push(newObj);
+        }
+
+        saveLocal();
+        document.getElementById('orderModal').classList.add('hidden');
+        renderApp();
+      });
+
+      // Add Customer
+      document.getElementById('addCustomerBtn').addEventListener('click', () => {
+        const name = prompt('Enter new customer name:');
+        if (name && name.trim()) {
+          const id = name.trim().toLowerCase().replace(/\s+/g, '_');
+          if (appState.data.customers[id]) {
+            alert('Customer already exists!');
+            return;
+          }
+          appState.data.customers[id] = {
+            id: id,
+            name: name.trim(),
+            address: '',
+            contact: '',
+            credit_balance: 0.0,
+            orders: [],
+            wires: []
+          };
+          appState.activeCustomerId = id;
+          saveLocal();
+          renderApp();
+        }
+      });
+
+      // Wire Modal Handlers
+      document.getElementById('addWireBtn').addEventListener('click', () => {
+        document.getElementById('wireModal').classList.remove('hidden');
+      });
+      document.getElementById('closeWireModalBtn').addEventListener('click', () => document.getElementById('wireModal').classList.add('hidden'));
+      document.getElementById('cancelWireModalBtn').addEventListener('click', () => document.getElementById('wireModal').classList.add('hidden'));
+
+      document.getElementById('wireForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const cust = appState.data.customers[appState.activeCustomerId];
+        const date = document.getElementById('wireDateInput').value;
+        const amt = parseFloat(document.getElementById('wireAmountInput').value) || 0;
+        const notes = document.getElementById('wireNotesInput').value.trim();
+
+        if (!cust.wires) cust.wires = [];
+        cust.wires.push({
+          id: `w_${Date.now()}`,
+          date: date,
+          amount: amt,
+          notes: notes
+        });
+
+        saveLocal();
+        document.getElementById('wireModal').classList.add('hidden');
+        document.getElementById('wireForm').reset();
+        renderApp();
+      });
+
+      // Rate Editor Modal
+      document.getElementById('openRateModalBtn').addEventListener('click', () => document.getElementById('rateModal').classList.remove('hidden'));
+      document.getElementById('closeRateModalBtn').addEventListener('click', () => document.getElementById('rateModal').classList.add('hidden'));
+      document.getElementById('cancelRateModalBtn').addEventListener('click', () => document.getElementById('rateModal').classList.add('hidden'));
+
+      document.getElementById('rateForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const newRate = parseFloat(document.getElementById('rateInput').value);
+        const newComm = parseFloat(document.getElementById('commissionInput').value) / 100;
+        if (!isNaN(newRate)) appState.data.settings.usd_to_rmb_rate = newRate;
+        if (!isNaN(newComm)) appState.data.settings.commission_rate = newComm;
+        saveLocal();
+        document.getElementById('rateModal').classList.add('hidden');
+        renderApp();
+      });
+
+      // Download Encrypted data.enc
+      document.getElementById('downloadEncryptedBtn').addEventListener('click', async () => {
+        const pwd = appState.password || '#Himanshu21';
+        const encPayload = await encryptPayload(appState.data, pwd);
+        const blob = new Blob([JSON.stringify(encPayload, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'data.enc';
+        a.click();
+      });
+
+      // Export Plain JSON
+      document.getElementById('downloadPlainJsonBtn').addEventListener('click', () => {
+        const blob = new Blob([JSON.stringify(appState.data, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `jimei_materials_data_${new Date().toISOString().split('T')[0]}.json`;
+        a.click();
+      });
+
+      // Import File
+      document.getElementById('importDataBtn').addEventListener('click', () => document.getElementById('fileImportInput').click());
+      document.getElementById('importDataBtnAuth').addEventListener('click', () => document.getElementById('fileImportInput').click());
+
+      document.getElementById('fileImportInput').addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = async (evt) => {
+          try {
+            const parsed = JSON.parse(evt.target.result);
+            if (parsed.cipher && parsed.cipher.includes('AES')) {
+              const pwd = prompt('Enter decryption password for this file:');
+              if (!pwd) return;
+              const decrypted = await decryptPayload(parsed, pwd);
+              appState.data = decrypted;
+              appState.password = pwd;
+            } else if (parsed.customers) {
+              appState.data = parsed;
+            }
+            saveLocal();
+            document.getElementById('authScreen').classList.add('hidden');
+            document.getElementById('appContainer').classList.remove('hidden');
+            document.getElementById('appContainer').classList.add('flex');
+            renderApp();
+            alert('Data imported and loaded successfully!');
+          } catch(err) {
+            alert('Failed to load file: ' + err.message);
+          }
+        };
+        reader.readAsText(file);
+      });
+
+      // Direct GitHub Push (Optional)
+      document.getElementById('gitHubSyncBtn').addEventListener('click', async () => {
+        const token = prompt('Enter your GitHub Personal Access Token (repo scope):');
+        if (!token) return;
+        const repo = prompt('Enter your GitHub repo (e.g. username/jimei-materials):');
+        if (!repo) return;
+
+        try {
+          const pwd = appState.password || '#Himanshu21';
+          const encPayload = await encryptPayload(appState.data, pwd);
+          const contentBase64 = btoa(unescape(encodeURIComponent(JSON.stringify(encPayload, null, 2))));
+
+          // Fetch current file SHA if exists
+          let sha = null;
+          try {
+            const getRes = await fetch(`https://api.github.com/repos/${repo}/contents/data.enc`, {
+              headers: { 'Authorization': `token ${token}` }
+            });
+            if (getRes.ok) {
+              const fileData = await getRes.json();
+              sha = fileData.sha;
+            }
+          } catch(e) {}
+
+          const putRes = await fetch(`https://api.github.com/repos/${repo}/contents/data.enc`, {
+            method: 'PUT',
+            headers: {
+              'Authorization': `token ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: 'Update encrypted orders & statement data via Jimei Portal',
+              content: contentBase64,
+              sha: sha || undefined
+            })
+          });
+
+          if (putRes.ok) {
+            alert('Successfully committed and synchronized encrypted data.enc to GitHub repository!');
+          } else {
+            const errJson = await putRes.json();
+            alert('GitHub Sync failed: ' + (errJson.message || 'Unknown error'));
+          }
+        } catch(err) {
+          alert('Sync Error: ' + err.message);
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
