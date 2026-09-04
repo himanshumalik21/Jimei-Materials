@@ -160,8 +160,8 @@
             <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-cyan-400"></i>
             <span>1 USD = <strong class="text-white" id="headerUsdRate">6.83</strong> RMB</span>
             <span class="text-slate-500">•</span>
-            <span>Comm: <strong class="text-emerald-400" id="headerCommRate">5.0%</strong></span>
-            <button id="openRateModalBtn" class="hover:text-cyan-300 text-[10px] text-cyan-400 underline ml-1">Edit</button>
+            <span>Trading Margin: <strong class="text-emerald-400" id="headerCommRate">33.5%</strong></span>
+            <button id="openRateModalBtn" class="hover:text-cyan-300 text-[10px] text-cyan-400 underline ml-1">Edit Rate</button>
           </div>
 
           <!-- Currency Display Toggle -->
@@ -261,11 +261,11 @@
 
         <!-- KPI SUMMARY METRIC CARDS (5-CARD EXECUTIVE ROW) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          <!-- Total Invoiced -->
+          <!-- Total Incoming (Invoiced) -->
           <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
             <div class="flex items-center justify-between text-slate-500 mb-2">
-              <span class="text-xs font-bold uppercase tracking-wider">Total Invoiced</span>
-              <div class="p-2 rounded-xl bg-blue-50 text-blue-600"><i data-lucide="file-check" class="w-4 h-4"></i></div>
+              <span class="text-xs font-bold uppercase tracking-wider">1. Total Incoming</span>
+              <div class="p-2 rounded-xl bg-blue-50 text-blue-600"><i data-lucide="arrow-down-left" class="w-4 h-4"></i></div>
             </div>
             <div>
               <div class="text-2xl font-black text-slate-900" id="kpiTotalInvoiced">$0.00</div>
@@ -276,7 +276,7 @@
           <!-- Customer Payments Collected -->
           <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
             <div class="flex items-center justify-between text-slate-500 mb-2">
-              <span class="text-xs font-bold uppercase tracking-wider">Payments Collected</span>
+              <span class="text-xs font-bold uppercase tracking-wider">2. Cash Collected</span>
               <div class="p-2 rounded-xl bg-emerald-50 text-emerald-600"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div>
             </div>
             <div>
@@ -285,39 +285,39 @@
             </div>
           </div>
 
-          <!-- Factory Costs Settled -->
+          <!-- Factory Costs Sourcing (Outgoing) -->
           <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
             <div class="flex items-center justify-between text-slate-500 mb-2">
-              <span class="text-xs font-bold uppercase tracking-wider">Supplier Settled</span>
-              <div class="p-2 rounded-xl bg-amber-50 text-amber-600"><i data-lucide="badge-check" class="w-4 h-4"></i></div>
+              <span class="text-xs font-bold uppercase tracking-wider">3. Factory Outgoing</span>
+              <div class="p-2 rounded-xl bg-amber-50 text-amber-600"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></div>
             </div>
             <div>
-              <div class="text-2xl font-black text-slate-900" id="kpiSupplierSettled">¥0.00</div>
-              <div class="text-[11px] text-amber-700 font-semibold mt-1" id="kpiSupplierSettledPct">0% Settled</div>
+              <div class="text-2xl font-black text-slate-900" id="kpiSupplierCost">$0.00</div>
+              <div class="text-[11px] text-amber-700 font-semibold mt-1" id="kpiSupplierSettledPct">¥0.00</div>
             </div>
           </div>
 
-          <!-- Commission Earned (5%) -->
+          <!-- Commission Spread (Incoming - Outgoing) -->
           <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
             <div class="flex items-center justify-between text-slate-500 mb-2">
-              <span class="text-xs font-bold uppercase tracking-wider">Commission (5%)</span>
-              <div class="p-2 rounded-xl bg-cyan-50 text-cyan-600"><i data-lucide="coins" class="w-4 h-4"></i></div>
+              <span class="text-xs font-bold uppercase tracking-wider">4. Commission (In − Out)</span>
+              <div class="p-2 rounded-xl bg-cyan-50 text-cyan-600"><i data-lucide="trending-up" class="w-4 h-4"></i></div>
             </div>
             <div>
               <div class="text-2xl font-black text-cyan-600" id="kpiCommissionEarned">$0.00</div>
-              <div class="text-[11px] text-cyan-700 font-semibold mt-1" id="kpiCommissionEarnedRmb">¥0.00</div>
+              <div class="text-[11px] text-cyan-700 font-semibold mt-1" id="kpiProfitMargin">33.5% Margin (¥0.00)</div>
             </div>
           </div>
 
-          <!-- Total Net Trading Profit -->
+          <!-- Realized Cash Delta (Cash In - Cash Out) -->
           <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
             <div class="flex items-center justify-between text-slate-500 mb-2">
-              <span class="text-xs font-bold uppercase tracking-wider">Net Trading Profit</span>
-              <div class="p-2 rounded-xl bg-purple-50 text-purple-600"><i data-lucide="trending-up" class="w-4 h-4"></i></div>
+              <span class="text-xs font-bold uppercase tracking-wider">5. Realized Cash Spread</span>
+              <div class="p-2 rounded-xl bg-purple-50 text-purple-600"><i data-lucide="wallet" class="w-4 h-4"></i></div>
             </div>
             <div>
-              <div class="text-2xl font-black text-purple-600" id="kpiTotalProfit">$0.00</div>
-              <div class="text-[11px] text-purple-700 font-semibold mt-1" id="kpiProfitMargin">33.5% Margin (¥118,132)</div>
+              <div class="text-2xl font-black text-purple-600" id="kpiRealizedCashDelta">$0.00</div>
+              <div class="text-[11px] text-purple-700 font-semibold mt-1" id="kpiRealizedCashDeltaRmb">¥0.00 Liquid</div>
             </div>
           </div>
         </div>
@@ -977,44 +977,44 @@
           <div class="space-y-2">
             <div class="inline-flex items-center space-x-2 bg-emerald-500/20 px-3 py-1 rounded-full text-emerald-300 text-xs font-semibold border border-emerald-400/30">
               <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
-              <span>Financial Profit Engine & Commission Analysis</span>
+              <span>Trading Delta & Commission Spread Engine</span>
             </div>
-            <h2 class="text-2xl font-black tracking-tight">Trading Margins & Commission Revenue</h2>
+            <h2 class="text-2xl font-black tracking-tight">Trading Commission & Profit Delta</h2>
             <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
-              Transparent reconciliation of Customer Selling Price vs. Factory Cost, Price Markup Delta, and 5% Trading Commission.
+              Commission is calculated dynamically as the exact spread between Customer Quoted / Invoiced Price (Incoming) and Factory Purchase Cost (Outgoing).
             </p>
           </div>
           <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-center space-y-1">
-            <span class="text-[10px] text-slate-300 uppercase font-bold">Standard Commission</span>
-            <div class="text-2xl font-black text-emerald-400">5.0%</div>
-            <span class="text-[10px] text-cyan-300">Configurable in Rates</span>
+            <span class="text-[10px] text-slate-300 uppercase font-bold">Calculation Model</span>
+            <div class="text-xl font-black text-emerald-400">Incoming − Outgoing</div>
+            <span class="text-[10px] text-cyan-300">Spread / Delta Accounting</span>
           </div>
         </div>
 
         <!-- Financial Equation Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-slate-800">
           <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-1">
-            <span class="text-xs font-bold text-slate-400 uppercase">1. Invoiced Revenue</span>
+            <span class="text-xs font-bold text-slate-400 uppercase">1. Customer Incoming</span>
             <div class="text-2xl font-black text-slate-900" id="anTotalRevenue">$51,593.20</div>
-            <span class="text-[11px] text-slate-500">¥352,381.56 RMB</span>
+            <span class="text-[11px] text-slate-500" id="anTotalRevenueRmb">¥352,381.56 RMB</span>
           </div>
 
           <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-1">
-            <span class="text-xs font-bold text-slate-400 uppercase">2. Factory Sourcing Cost</span>
+            <span class="text-xs font-bold text-slate-400 uppercase">2. Factory Outgoing</span>
             <div class="text-2xl font-black text-amber-600" id="anTotalCost">¥234,250.00</div>
-            <span class="text-[11px] text-slate-500">$34,297.22 USD</span>
+            <span class="text-[11px] text-slate-500" id="anTotalCostUsd">$34,297.22 USD</span>
           </div>
 
           <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-1">
-            <span class="text-xs font-bold text-slate-400 uppercase">3. Commission (5%)</span>
-            <div class="text-2xl font-black text-cyan-600" id="anTotalComm">$2,579.66</div>
-            <span class="text-[11px] text-cyan-700 font-semibold">¥17,619.08 RMB</span>
+            <span class="text-xs font-bold text-slate-400 uppercase">3. Trading Commission (Delta)</span>
+            <div class="text-2xl font-black text-cyan-600" id="anTotalComm">$17,295.98</div>
+            <span class="text-[11px] text-cyan-700 font-semibold" id="anTotalCommRmb">33.5% Margin (¥118,131.56)</span>
           </div>
 
           <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-1">
-            <span class="text-xs font-bold text-slate-400 uppercase">4. Net Trading Profit</span>
-            <div class="text-2xl font-black text-emerald-600" id="anTotalNetProfit">$17,295.98</div>
-            <span class="text-[11px] text-emerald-700 font-semibold">33.5% Margin (¥118,131.56)</span>
+            <span class="text-xs font-bold text-slate-400 uppercase">4. Realized Cash Delta</span>
+            <div class="text-2xl font-black text-emerald-600" id="anTotalNetProfit">$11,886.73</div>
+            <span class="text-[11px] text-emerald-700 font-semibold" id="anRealizedCashMargin">27.3% Cash Margin (¥81,186.38)</span>
           </div>
         </div>
 
@@ -1563,30 +1563,37 @@
         });
       });
 
-      // Correct Financial Calculations
-      const totalRevenueRmb = totalInvoicedUsd * rate;
-      const netProfitRmb = totalRevenueRmb - totalFactoryCostRmb;
-      const netProfitUsd = netProfitRmb / rate;
-      const commEarnedUsd = totalInvoicedUsd * commRate;
-      const commEarnedRmb = commEarnedUsd * rate;
-      const marginPct = totalRevenueRmb > 0 ? ((netProfitRmb / totalRevenueRmb) * 100).toFixed(1) : '0.0';
+      // Correct Financial Calculations based on Incoming - Outgoing
+      const totalIncomingUsd = totalInvoicedUsd;
+      const totalIncomingRmb = totalIncomingUsd * rate;
+      const totalFactoryCostUsd = totalFactoryCostRmb / rate;
+      const commissionDeltaRmb = totalIncomingRmb - totalFactoryCostRmb;
+      const commissionDeltaUsd = commissionDeltaRmb / rate;
+      
+      const realizedCashDeltaUsd = totalPaidUsd - (totalSettledRmb / rate);
+      const realizedCashDeltaRmb = realizedCashDeltaUsd * rate;
+      
+      const marginPct = totalIncomingRmb > 0 ? ((commissionDeltaRmb / totalIncomingRmb) * 100).toFixed(1) : '0.0';
+      const realizedCashMarginPct = totalPaidUsd > 0 ? ((realizedCashDeltaUsd / totalPaidUsd) * 100).toFixed(1) : '0.0';
       const settledPct = totalFactoryCostRmb > 0 ? ((totalSettledRmb / totalFactoryCostRmb) * 100).toFixed(1) : '0.0';
       const pendingSettlementRmb = Math.max(0, totalFactoryCostRmb - totalSettledRmb);
 
-      document.getElementById('kpiTotalInvoiced').innerText = fmt(totalInvoicedUsd);
-      document.getElementById('kpiTotalInvoicedRmb').innerText = '¥' + totalRevenueRmb.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('headerCommRate').innerText = `${marginPct}%`;
+
+      document.getElementById('kpiTotalInvoiced').innerText = fmt(totalIncomingUsd);
+      document.getElementById('kpiTotalInvoicedRmb').innerText = '¥' + totalIncomingRmb.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' (Customer Invoiced)';
 
       document.getElementById('kpiTotalPaid').innerText = fmt(totalPaidUsd);
-      document.getElementById('kpiTotalPaidRmb').innerText = '¥' + (totalPaidUsd * rate).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('kpiTotalPaidRmb').innerText = '¥' + (totalPaidUsd * rate).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' (Received)';
 
-      document.getElementById('kpiSupplierSettled').innerText = '¥' + totalSettledRmb.toLocaleString('en-US', { maximumFractionDigits: 0 });
-      document.getElementById('kpiSupplierSettledPct').innerText = `${settledPct}% Settled (Pending: ¥${pendingSettlementRmb.toLocaleString('en-US', { maximumFractionDigits: 0 })})`;
+      document.getElementById('kpiSupplierCost').innerText = fmt(totalFactoryCostUsd);
+      document.getElementById('kpiSupplierSettledPct').innerText = `¥${totalFactoryCostRmb.toLocaleString('en-US', { maximumFractionDigits: 0 })} (${settledPct}% Settled)`;
 
-      document.getElementById('kpiCommissionEarned').innerText = fmt(commEarnedUsd);
-      document.getElementById('kpiCommissionEarnedRmb').innerText = '¥' + commEarnedRmb.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('kpiCommissionEarned').innerText = fmt(commissionDeltaUsd);
+      document.getElementById('kpiProfitMargin').innerText = `${marginPct}% Margin (¥${commissionDeltaRmb.toLocaleString('en-US', { maximumFractionDigits: 0 })})`;
 
-      document.getElementById('kpiTotalProfit').innerText = fmt(netProfitUsd);
-      document.getElementById('kpiProfitMargin').innerText = `${marginPct}% Margin (¥${netProfitRmb.toLocaleString('en-US', { maximumFractionDigits: 0 })})`;
+      document.getElementById('kpiRealizedCashDelta').innerText = fmt(realizedCashDeltaUsd);
+      document.getElementById('kpiRealizedCashDeltaRmb').innerText = `¥${realizedCashDeltaRmb.toLocaleString('en-US', { maximumFractionDigits: 0 })} (${realizedCashMarginPct}% Cash Spread)`;
 
       // Factory Settlement Status in Dashboard
       document.getElementById('dashTotalFactoryCostRmb').innerText = '¥' + totalFactoryCostRmb.toLocaleString('en-US', { minimumFractionDigits: 2 });
@@ -2167,42 +2174,57 @@
     function renderMarginAnalytics() {
       const customers = appState.data.customers || {};
       const rate = parseFloat(appState.data.settings?.usd_to_rmb_rate) || 6.83;
-      const commRate = parseFloat(appState.data.settings?.commission_rate) || 0.05;
 
       let totalRevUsd = 0;
       let totalCostRmb = 0;
+      let totalPaidUsd = 0;
+      let totalSettledRmb = 0;
 
       Object.values(customers).forEach(cust => {
         (cust.orders || []).forEach(o => {
           totalRevUsd += parseFloat(o.total_invoiced) || 0;
           totalCostRmb += parseFloat(o.supplier_cost_rmb) || 0;
+          totalPaidUsd += parseFloat(o.paid_amount) || 0;
+          totalSettledRmb += parseFloat(o.supplier_settled_amount_rmb) || 0;
         });
       });
 
       const totalRevRmb = totalRevUsd * rate;
       const totalCostUsd = totalCostRmb / rate;
-      const netProfitRmb = totalRevRmb - totalCostRmb;
-      const netProfitUsd = netProfitRmb / rate;
-      const commUsd = totalRevUsd * commRate;
-      const commRmb = commUsd * rate;
-      const markupDeltaUsd = netProfitUsd - commUsd;
-      const marginPct = totalRevRmb > 0 ? ((netProfitRmb / totalRevRmb) * 100).toFixed(1) : '0.0';
+      const commissionDeltaRmb = totalRevRmb - totalCostRmb;
+      const commissionDeltaUsd = commissionDeltaRmb / rate;
+      const marginPct = totalRevRmb > 0 ? ((commissionDeltaRmb / totalRevRmb) * 100).toFixed(1) : '0.0';
+
+      const realizedCashDeltaUsd = totalPaidUsd - (totalSettledRmb / rate);
+      const realizedCashDeltaRmb = realizedCashDeltaUsd * rate;
+      const realizedCashMarginPct = totalPaidUsd > 0 ? ((realizedCashDeltaUsd / totalPaidUsd) * 100).toFixed(1) : '0.0';
 
       document.getElementById('anTotalRevenue').innerText = fmt(totalRevUsd);
+      document.getElementById('anTotalRevenueRmb').innerText = '¥' + totalRevRmb.toLocaleString('en-US', { minimumFractionDigits: 2 }) + ' RMB';
+
       document.getElementById('anTotalCost').innerText = '¥' + totalCostRmb.toLocaleString('en-US', { minimumFractionDigits: 2 });
-      document.getElementById('anTotalComm').innerText = fmt(commUsd);
-      document.getElementById('anTotalNetProfit').innerText = fmt(netProfitUsd);
+      document.getElementById('anTotalCostUsd').innerText = '$' + totalCostUsd.toLocaleString('en-US', { minimumFractionDigits: 2 }) + ' USD';
+
+      document.getElementById('anTotalComm').innerText = fmt(commissionDeltaUsd);
+      document.getElementById('anTotalCommRmb').innerText = `${marginPct}% Margin (¥${commissionDeltaRmb.toLocaleString('en-US', { minimumFractionDigits: 2 })})`;
+
+      document.getElementById('anTotalNetProfit').innerText = fmt(realizedCashDeltaUsd);
+      document.getElementById('anRealizedCashMargin').innerText = `${realizedCashMarginPct}% Cash Margin (¥${realizedCashDeltaRmb.toLocaleString('en-US', { minimumFractionDigits: 2 })})`;
 
       const grid = document.getElementById('marginAnalyticsCardsGrid');
       grid.innerHTML = Object.entries(customers).map(([cId, cust]) => {
         const orders = cust.orders || [];
         const invUsd = orders.reduce((s, o) => s + (parseFloat(o.total_invoiced) || 0), 0);
         const costRmb = orders.reduce((s, o) => s + (parseFloat(o.supplier_cost_rmb) || 0), 0);
+        const paidUsd = orders.reduce((s, o) => s + (parseFloat(o.paid_amount) || 0), 0);
+        const settledRmb = orders.reduce((s, o) => s + (parseFloat(o.supplier_settled_amount_rmb) || 0), 0);
+
         const revRmb = invUsd * rate;
-        const profitRmb = revRmb - costRmb;
-        const profitUsd = profitRmb / rate;
-        const custCommUsd = invUsd * commRate;
-        const custMarginPct = revRmb > 0 ? ((profitRmb / revRmb) * 100).toFixed(1) : '0.0';
+        const commDeltaRmb = revRmb - costRmb;
+        const commDeltaUsd = commDeltaRmb / rate;
+        const custMarginPct = revRmb > 0 ? ((commDeltaRmb / revRmb) * 100).toFixed(1) : '0.0';
+
+        const cashDeltaUsd = paidUsd - (settledRmb / rate);
 
         return `
           <div class="bg-slate-50 p-5 rounded-3xl border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
@@ -2212,20 +2234,20 @@
             </div>
             <div class="space-y-2 text-xs bg-white p-3.5 rounded-2xl border border-slate-100">
               <div class="flex justify-between text-slate-500">
-                <span>Revenue (USD):</span>
+                <span>Customer Incoming:</span>
                 <strong class="text-slate-900 font-bold">${fmt(invUsd)}</strong>
               </div>
               <div class="flex justify-between text-slate-500">
-                <span>Factory Cost (RMB):</span>
+                <span>Factory Outgoing:</span>
                 <strong class="text-amber-700 font-mono">¥${costRmb.toLocaleString()}</strong>
               </div>
-              <div class="flex justify-between text-slate-500">
-                <span>5% Commission:</span>
-                <strong class="text-cyan-700 font-mono">${fmt(custCommUsd)}</strong>
+              <div class="flex justify-between text-emerald-700 pt-2 border-t border-slate-100 font-bold">
+                <span>Trading Delta (Spread):</span>
+                <span class="font-mono">${fmt(commDeltaUsd)}</span>
               </div>
-              <div class="flex justify-between text-purple-700 pt-2 border-t border-slate-100 font-bold">
-                <span>Net Margin (USD):</span>
-                <span>${fmt(profitUsd)}</span>
+              <div class="flex justify-between text-purple-700 text-[11px] font-semibold">
+                <span>Realized Cash Delta:</span>
+                <span class="font-mono">${fmt(cashDeltaUsd)}</span>
               </div>
             </div>
           </div>
