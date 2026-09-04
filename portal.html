@@ -36,11 +36,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     body { font-family: 'Inter', sans-serif; }
     
-    /* Print Styles for Statement of Account */
+    /* Print Styles */
     @media print {
       body * { visibility: hidden; }
-      #statementPrintArea, #statementPrintArea * { visibility: visible; }
-      #statementPrintArea {
+      .printable-active, .printable-active * { visibility: visible; }
+      .printable-active {
         position: absolute;
         left: 0;
         top: 0;
@@ -140,6 +140,12 @@
             <button id="openRateModalBtn" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs px-2.5 py-1.5 rounded-lg flex items-center space-x-1.5 transition">
               <i data-lucide="dollar-sign" class="w-3.5 h-3.5 text-yellow-400"></i>
               <span>1 USD = <strong id="headerRateDisplay" class="text-yellow-400">6.83</strong> RMB</span>
+            </button>
+
+            <!-- Proforma Quote Generator Button -->
+            <button id="headerNewQuoteBtn" class="bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow flex items-center space-x-1.5 transition">
+              <i data-lucide="file-plus" class="w-3.5 h-3.5"></i>
+              <span class="hidden sm:inline">New Proforma Quote</span>
             </button>
 
             <!-- Statement Generator Button -->
@@ -370,7 +376,170 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- 3. MODAL: STATEMENT OF ACCOUNT GENERATOR & EXPORTER -->
+  <!-- 3. MODAL: PROFORMA INVOICE / QUOTE GENERATOR -->
+  <!-- ========================================================================= -->
+  <div id="quoteModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-5xl w-full max-h-[95vh] flex flex-col border border-slate-200 my-auto">
+      
+      <!-- Modal Header -->
+      <div class="p-4 bg-brand-navy text-white rounded-t-2xl flex items-center justify-between no-print">
+        <div class="flex items-center space-x-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-amber-400"></i>
+          <div>
+            <h3 class="text-sm font-bold">Proforma Invoice & Quotation Generator</h3>
+            <p class="text-[11px] text-slate-300">Generate & Export Client Quotes (.xlsx / PDF)</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-2">
+          <button id="saveQuoteToOrdersBtn" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center space-x-1.5 shadow transition">
+            <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
+            <span>Add to Orders Tracker</span>
+          </button>
+          <button id="exportQuoteExcelBtn" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center space-x-1.5 shadow transition">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>Export .xlsx</span>
+          </button>
+          <button id="printQuoteBtn" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center space-x-1.5 shadow transition">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print / PDF</span>
+          </button>
+          <button id="closeQuoteModalBtn" class="text-slate-300 hover:text-white p-1 rounded-lg">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scrollable Form & Preview Area -->
+      <div class="p-6 overflow-y-auto flex-1 bg-slate-50 space-y-6">
+        
+        <!-- Controls & Meta Config (No-Print) -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-4 no-print">
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 text-xs">
+            
+            <!-- Unique Random Invoice Generator -->
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Invoice Number (Auto Unique)</label>
+              <div class="flex items-center space-x-1.5">
+                <input type="text" id="quoteInvNumberInput" class="w-full p-2 border border-slate-300 rounded-lg font-mono font-bold text-amber-700 bg-amber-50/50" />
+                <button type="button" id="regenerateInvNumberBtn" title="Generate New Unique Number" class="p-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-slate-700 border border-slate-300">
+                  <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Invoice Date</label>
+              <input type="date" id="quoteDateInput" class="w-full p-2 border border-slate-300 rounded-lg" />
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Customer P.O. #</label>
+              <input type="text" id="quotePoNumberInput" value="NA" class="w-full p-2 border border-slate-300 rounded-lg" />
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Payment Terms</label>
+              <input type="text" id="quoteTermsInput" value="50% Deposit, 50% Before Shipment" class="w-full p-2 border border-slate-300 rounded-lg" />
+            </div>
+
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-2 border-t border-slate-100">
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Bill To & Contact</label>
+              <textarea id="quoteBillToInput" rows="3" class="w-full p-2 border border-slate-300 rounded-lg text-[11px]"></textarea>
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Ship To & Contact</label>
+              <textarea id="quoteShipToInput" rows="3" class="w-full p-2 border border-slate-300 rounded-lg text-[11px]"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Printable Document Area -->
+        <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-md text-slate-800" id="quotePrintArea">
+          
+          <!-- Document Header -->
+          <div class="flex justify-between items-start border-b-2 border-slate-800 pb-4 mb-6">
+            <div>
+              <h1 class="text-xl font-black text-brand-navy tracking-tight">JIMEI MATERIALS CO., LTD.</h1>
+              <p class="text-xs text-slate-600">No. 10 Meiting Road, Industrial park, Duanzhou District</p>
+              <p class="text-xs text-slate-600">Zhaoqing Guangdong China 526020</p>
+              <p class="text-[11px] text-slate-500 mt-1">Website: www.jimei-materials.com | Email: yfu@jimei-materials.com</p>
+            </div>
+            <div class="text-right">
+              <h2 class="text-lg font-black text-brand-navy uppercase tracking-wider">PROFORMA INVOICE</h2>
+              <p class="text-sm font-bold font-mono text-amber-700 mt-1" id="docInvoiceNoDisplay">Invoice# PINV-00000000</p>
+              <p class="text-xs text-slate-600 mt-1">Date: <span id="docInvoiceDateDisplay">2026-09-04</span></p>
+              <p class="text-xs text-slate-600">P.O.#: <span id="docPoDisplay">NA</span></p>
+              <p class="text-xs text-slate-600">Terms: <span id="docTermsDisplay">50% Deposit, 50% Before Shipment</span></p>
+            </div>
+          </div>
+
+          <!-- Bill To & Ship To Grid -->
+          <div class="grid grid-cols-2 gap-6 mb-6 text-xs bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <div>
+              <span class="font-bold text-slate-900 block mb-1 text-[11px] uppercase tracking-wider text-brand-navy">BILL TO:</span>
+              <p class="text-slate-700 whitespace-pre-line text-[11px]" id="docBillToDisplay"></p>
+            </div>
+            <div>
+              <span class="font-bold text-slate-900 block mb-1 text-[11px] uppercase tracking-wider text-brand-navy">SHIP TO:</span>
+              <p class="text-slate-700 whitespace-pre-line text-[11px]" id="docShipToDisplay"></p>
+            </div>
+          </div>
+
+          <!-- Line Items Table -->
+          <div class="mb-6">
+            <div class="flex justify-between items-center mb-2 no-print">
+              <span class="text-xs font-bold text-brand-navy uppercase">Quotation Items</span>
+              <button type="button" id="addQuoteItemBtn" class="text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 font-semibold px-2.5 py-1 rounded-lg border border-blue-200 flex items-center space-x-1">
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                <span>Add Item Line</span>
+              </button>
+            </div>
+
+            <table class="min-w-full divide-y divide-slate-200 text-xs border border-slate-200 rounded-lg overflow-hidden">
+              <thead class="bg-brand-navy text-white font-semibold">
+                <tr>
+                  <th class="px-2.5 py-2.5 text-center w-8">#</th>
+                  <th class="px-3 py-2.5 text-left">Item & Technical Description</th>
+                  <th class="px-3 py-2.5 text-right w-28">Sample Unit Price<br><span class="text-[10px] font-normal" id="tier1HeaderLabel">(10 - 300 pcs)</span></th>
+                  <th class="px-3 py-2.5 text-right w-28">Mass Production<br><span class="text-[10px] font-normal" id="tier2HeaderLabel">(600 - 1K pcs)</span></th>
+                  <th class="px-3 py-2.5 text-right w-28">Volume Tier<br><span class="text-[10px] font-normal" id="tier3HeaderLabel">(1K - 10K pcs)</span></th>
+                  <th class="px-2 py-2.5 text-center w-10 no-print"></th>
+                </tr>
+              </thead>
+              <tbody id="quoteItemsTableBody" class="divide-y divide-slate-100">
+                <!-- Dynamically populated items -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Terms & Notes -->
+          <div class="border-t border-slate-200 pt-4 text-[11px] text-slate-600 space-y-2">
+            <div>
+              <span class="font-bold text-slate-900 block text-[11px] uppercase tracking-wider mb-1">Terms & Conditions</span>
+              <ul class="list-disc list-inside space-y-0.5 text-slate-700 text-[11px]">
+                <li>All prices in RMB (or USD as noted)</li>
+                <li>Price term: EXW, Shenzhen</li>
+                <li>Production Cycle: 2 weeks after 50% pre-payment and DFM (Design for Manufacturing) approval</li>
+                <li>Modifications to specifications, quantities, or design after order confirmation may affect price and production time.</li>
+                <li>Does not include freight, customs duties and taxes in the destination country.</li>
+              </ul>
+            </div>
+            <p class="text-brand-navy font-bold text-xs pt-2">Thanks for your business.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 4. MODAL: STATEMENT OF ACCOUNT GENERATOR & EXPORTER -->
   <!-- ========================================================================= -->
   <div id="statementModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
     <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col border border-slate-200 my-auto">
@@ -543,7 +712,7 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- 4. MODAL: ADD / EDIT ORDER -->
+  <!-- 5. MODAL: ADD / EDIT ORDER -->
   <!-- ========================================================================= -->
   <div id="orderModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
     <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full p-6 border border-slate-200">
@@ -649,7 +818,7 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- 5. MODAL: ADD WIRE PAYMENT -->
+  <!-- 6. MODAL: ADD WIRE PAYMENT -->
   <!-- ========================================================================= -->
   <div id="wireModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-200">
@@ -688,7 +857,7 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- 6. MODAL: RATE & SETTINGS -->
+  <!-- 7. MODAL: RATE & SETTINGS -->
   <!-- ========================================================================= -->
   <div id="rateModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 border border-slate-200">
@@ -724,7 +893,7 @@
   <input type="file" id="fileImportInput" class="hidden" accept=".enc,.json" />
 
   <!-- ========================================================================= -->
-  <!-- 7. JAVASCRIPT CORE APPLICATION ENGINE -->
+  <!-- 8. JAVASCRIPT CORE APPLICATION ENGINE -->
   <!-- ========================================================================= -->
   <script>
     // Master State
@@ -733,8 +902,58 @@
       activeCustomerId: 'sheetak',
       filter: 'all',
       search: '',
-      data: null
+      data: null,
+      // Current Quote Builder State
+      quote: {
+        invNumber: '',
+        date: '',
+        poNumber: 'NA',
+        terms: '50% Deposit, 50% Before Shipment',
+        billTo: '',
+        shipTo: '',
+        items: []
+      }
     };
+
+    // Historical invoice numbers set to prevent any collisions/reuse
+    const HISTORICAL_INVOICE_NUMBERS = new Set([
+      'PINV-159483726', 'PINV-20763458', 'PINV-27364581', 'PINV-307418952', 'PINV-34019872', 
+      'PINV-35821046', 'PINV-50718392', 'PINV-53901827', 'PINV-62957013', 'PINV-63825109', 
+      'PINV-742618305', 'PINV-74615328', 'PINV-826374195', 'PINV-91843072', 'PINV-983451267',
+      'INV-13789245', 'INV-159483726', 'INV-20260821', 'INV-20260923', 'INV-20763458', 
+      'INV-23547896', 'INV-41567289', 'INV-42018763', 'INV-45826107', 'INV-48201736', 
+      'INV-52641907', 'INV-537924816', 'INV-53901827', 'INV-58421736', 'INV-67123048', 
+      'INV-68123490', 'INV-71946328', 'INV-79134826', 'INV-80413269', 'INV-95037241', 'INV-98504721'
+    ]);
+
+    // ---------------------------------------------------------------------------
+    // UNIQUE INVOICE NUMBER GENERATOR (Never reuses previous numbers)
+    // ---------------------------------------------------------------------------
+    function generateUniqueInvoiceNumber(prefix = 'PINV') {
+      const usedNumbers = new Set(HISTORICAL_INVOICE_NUMBERS);
+      
+      // Collect all numbers from database
+      if (appState.data && appState.data.customers) {
+        Object.values(appState.data.customers).forEach(c => {
+          (c.orders || []).forEach(o => {
+            if (o.quote && o.quote !== 'NA') usedNumbers.add(o.quote.trim());
+            if (o.invoice_no && o.invoice_no !== 'NA') usedNumbers.add(o.invoice_no.trim());
+          });
+        });
+      }
+
+      let candidate = '';
+      let attempts = 0;
+      do {
+        // Generate random 8-digit number (e.g. 35821046)
+        const randNum = Math.floor(10000000 + Math.random() * 90000000);
+        candidate = `${prefix}-${randNum}`;
+        attempts++;
+      } while (usedNumbers.has(candidate) && attempts < 1000);
+
+      usedNumbers.add(candidate);
+      return candidate;
+    }
 
     // ---------------------------------------------------------------------------
     // CRYPTO ENGINE: PBKDF2 + AES-256-GCM (Web Crypto API)
@@ -821,6 +1040,7 @@
       // Auto-fill today's date on modal inputs
       const today = new Date().toISOString().split('T')[0];
       document.getElementById('wireDateInput').value = today;
+      document.getElementById('quoteDateInput').value = today;
 
       // Handle Login
       document.getElementById('loginForm').addEventListener('submit', async (e) => {
@@ -1146,6 +1366,226 @@
     }
 
     // ---------------------------------------------------------------------------
+    // PROFORMA INVOICE / QUOTE GENERATOR MODAL & LOGIC
+    // ---------------------------------------------------------------------------
+    function openQuoteModal() {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      if (!cust) return;
+
+      const modal = document.getElementById('quoteModal');
+      modal.classList.remove('hidden');
+
+      // Generate unique PINV Number (guaranteed non-reused)
+      const invNum = generateUniqueInvoiceNumber('PINV');
+      document.getElementById('quoteInvNumberInput').value = invNum;
+
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('quoteDateInput').value = today;
+
+      // Default Contacts based on Customer
+      let defaultBillTo = `Mr. Theodosios (Theo) Syrpis\n4020 South Industrial Drive, Ste. 100\nAustin Texas\nU.S.A 78744\nMobile: (512) 577-5507\nEmail: tsyrpis@sheetak.com`;
+      if (cust.id !== 'sheetak') {
+        defaultBillTo = `${cust.contact || cust.name}\n${cust.address || 'Address'}\nEmail: ${cust.email || 'contact@client.com'}`;
+      }
+      document.getElementById('quoteBillToInput').value = defaultBillTo;
+      document.getElementById('quoteShipToInput').value = defaultBillTo;
+
+      // Initialize default items if none
+      appState.quote.items = [
+        {
+          partNo: '030-000118-001XA - 65*53/2',
+          desc: 'Alumina: 0.76 mm ± 0.03 mm\nCopper thickness: 70 ± 15 µm\nNickel thickness: 3–6 µm\nGold thickness: 0.05 µm (single-sided)',
+          p1: 315.00,
+          p2: 288.75,
+          p3: 273.00
+        },
+        {
+          partNo: '030-000119-001XA - 60*53/2',
+          desc: 'Alumina: 0.76 mm ± 0.03 mm\nCopper thickness: 70 ± 15 µm\nNickel thickness: 3–6 µm\nGold thickness: 0.05 µm (single-sided)',
+          p1: 315.00,
+          p2: 288.75,
+          p3: 273.00
+        }
+      ];
+
+      updateQuotePreview();
+      lucide.createIcons();
+    }
+
+    function updateQuotePreview() {
+      const invNum = document.getElementById('quoteInvNumberInput').value.trim();
+      const date = document.getElementById('quoteDateInput').value;
+      const po = document.getElementById('quotePoNumberInput').value.trim() || 'NA';
+      const terms = document.getElementById('quoteTermsInput').value.trim();
+      const billTo = document.getElementById('quoteBillToInput').value.trim();
+      const shipTo = document.getElementById('quoteShipToInput').value.trim();
+
+      document.getElementById('docInvoiceNoDisplay').innerText = `Invoice# ${invNum}`;
+      document.getElementById('docInvoiceDateDisplay').innerText = date;
+      document.getElementById('docPoDisplay').innerText = po;
+      document.getElementById('docTermsDisplay').innerText = terms;
+      document.getElementById('docBillToDisplay').innerText = billTo;
+      document.getElementById('docShipToDisplay').innerText = shipTo;
+
+      renderQuoteItemsTable();
+    }
+
+    function renderQuoteItemsTable() {
+      const tbody = document.getElementById('quoteItemsTableBody');
+      tbody.innerHTML = '';
+
+      appState.quote.items.forEach((item, idx) => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-50 border-b border-slate-100';
+        tr.innerHTML = `
+          <td class="px-2.5 py-3 text-center font-bold text-slate-500 align-top">${idx + 1}</td>
+          <td class="px-3 py-3 align-top">
+            <div class="font-bold text-slate-900">${item.partNo}</div>
+            <div class="text-[11px] text-slate-600 whitespace-pre-line mt-0.5">${item.desc}</div>
+          </td>
+          <td class="px-3 py-3 text-right font-bold text-slate-900 align-top">
+            ¥${item.p1 ? item.p1.toFixed(2) : '-'}
+          </td>
+          <td class="px-3 py-3 text-right font-bold text-slate-900 align-top">
+            ¥${item.p2 ? item.p2.toFixed(2) : '-'}
+          </td>
+          <td class="px-3 py-3 text-right font-bold text-slate-900 align-top">
+            ¥${item.p3 ? item.p3.toFixed(2) : '-'}
+          </td>
+          <td class="px-2 py-3 text-center align-top no-print">
+            <button class="delete-quote-item-btn text-red-500 hover:text-red-700 p-1" data-idx="${idx}">
+              <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      tbody.querySelectorAll('.delete-quote-item-btn').forEach(b => {
+        b.addEventListener('click', () => {
+          const idx = parseInt(b.getAttribute('data-idx'));
+          appState.quote.items.splice(idx, 1);
+          renderQuoteItemsTable();
+        });
+      });
+
+      lucide.createIcons();
+    }
+
+    function addQuoteItemPrompt() {
+      const part = prompt('Enter Part # & Title (e.g. 030-000085-000XA FIREFLY BASE SUBSTRATE):');
+      if (!part) return;
+      const desc = prompt('Enter Technical Specifications (e.g. AlN Ceramic 2.0mm, Cu: 35um, Ni: 3-6um, Au: 0.05um):') || '';
+      const p1 = parseFloat(prompt('Enter Sample Price (RMB):', '210.00')) || 0;
+      const p2 = parseFloat(prompt('Enter Tier 2 Mass Production Price (RMB):', '105.00')) || 0;
+      const p3 = parseFloat(prompt('Enter Tier 3 Volume Price (RMB):', '100.00')) || 0;
+
+      appState.quote.items.push({
+        partNo: part,
+        desc: desc,
+        p1: p1,
+        p2: p2,
+        p3: p3
+      });
+      renderQuoteItemsTable();
+    }
+
+    function exportQuoteToExcel() {
+      const invNum = document.getElementById('quoteInvNumberInput').value.trim();
+      const date = document.getElementById('quoteDateInput').value;
+      const po = document.getElementById('quotePoNumberInput').value.trim();
+      const terms = document.getElementById('quoteTermsInput').value.trim();
+      const billTo = document.getElementById('quoteBillToInput').value.trim();
+      const shipTo = document.getElementById('quoteShipToInput').value.trim();
+
+      const wb = XLSX.utils.book_new();
+
+      const rows = [
+        ["", "", "", "PROFORMA INVOICE"],
+        ["Jimei Materials Co., Ltd."],
+        ["No. 10 Meiting Road"],
+        ["Industrial park, Duanzhou District"],
+        ["Zhaoqing Guangdong China 526020", "", "", "", "", "", `Invoice# ${invNum}`],
+        ["Invoice Date:", "", "", date],
+        ["Terms:", "", "", terms],
+        ["P.O.#:", "", "", po],
+        ["Bill To", "", "", "", "", "Ship To"],
+        [billTo, "", "", "", "", shipTo],
+        [],
+        ["#", "Item & Description", "", "", "Sample unit price (RMB/item)", "Mass production unit price (RMB/PCS)", "Volume unit price (RMB/PCS)"],
+        ["", "", "", "", "10 - 300 pcs", "600 - 1K pcs", "1K - 10K pcs"]
+      ];
+
+      appState.quote.items.forEach((item, idx) => {
+        rows.push([
+          idx + 1,
+          `${item.partNo}\n${item.desc}`,
+          "",
+          "",
+          item.p1,
+          item.p2,
+          item.p3
+        ]);
+      });
+
+      rows.push([]);
+      rows.push(["Terms & Conditions"]);
+      rows.push(["- All prices in RMB"]);
+      rows.push(["- Price term: EXW, Shenzhen"]);
+      rows.push(["- Production Cycle: 2 weeks after 50% pre-payment and DFM approval"]);
+      rows.push(["- Modifications to specifications, quantities, or design after order confirmation may affect price and production time."]);
+      rows.push(["- Does not include freight, customs duties and taxes in the destination country"]);
+      rows.push([]);
+      rows.push(["Thanks for your business."]);
+
+      const ws = XLSX.utils.aoa_to_sheet(rows);
+      XLSX.utils.book_append_sheet(wb, ws, invNum);
+
+      XLSX.writeFile(wb, `${invNum}.xlsx`);
+    }
+
+    function saveQuoteToOrdersTracker() {
+      const cust = appState.data.customers[appState.activeCustomerId];
+      if (!cust) return;
+
+      const invNum = document.getElementById('quoteInvNumberInput').value.trim();
+      const po = document.getElementById('quotePoNumberInput').value.trim() || 'NA';
+      const date = document.getElementById('quoteDateInput').value;
+
+      // Calculate estimate from items
+      let totalEstRmb = 0;
+      appState.quote.items.forEach(it => {
+        totalEstRmb += (it.p1 || 0);
+      });
+      const rate = appState.data.settings.usd_to_rmb_rate || 6.83;
+      const totalEstUsd = totalEstRmb / rate;
+
+      const newOrder = {
+        id: `ord_${Date.now()}`,
+        po_number: po,
+        quote: invNum,
+        incoming_usd: parseFloat(totalEstUsd.toFixed(2)),
+        incoming_rmb: parseFloat(totalEstRmb.toFixed(2)),
+        outgoing_rmb: parseFloat((totalEstRmb * 0.7).toFixed(2)),
+        invoice_no: 'Pending',
+        supplier_invoice: '',
+        status: 'Unpaid',
+        delivery_status: 'In Production',
+        expected_shipping: date,
+        actual_shipping: '',
+        tracking_number: ''
+      };
+
+      if (!cust.orders) cust.orders = [];
+      cust.orders.push(newOrder);
+      saveLocal();
+      renderApp();
+
+      alert(`Quote ${invNum} has been added to ${cust.name}'s order tracker!`);
+      document.getElementById('quoteModal').classList.add('hidden');
+    }
+
+    // ---------------------------------------------------------------------------
     // STATEMENT OF ACCOUNT GENERATOR MODAL
     // ---------------------------------------------------------------------------
     function openStatementModal() {
@@ -1237,7 +1677,7 @@
     }
 
     // ---------------------------------------------------------------------------
-    // EXCEL (.XLSX) EXPORT (SheetJS)
+    // EXCEL (.XLSX) STATEMENT EXPORT
     // ---------------------------------------------------------------------------
     function exportStatementToExcel() {
       const cust = appState.data.customers[appState.activeCustomerId];
@@ -1410,12 +1850,39 @@
         document.getElementById('viewOrdersTabBtn').className = 'px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:bg-slate-100 transition flex items-center space-x-1.5';
       });
 
-      // Statement Modal
+      // Quote Modal Handlers
+      document.getElementById('headerNewQuoteBtn').addEventListener('click', openQuoteModal);
+      document.getElementById('closeQuoteModalBtn').addEventListener('click', () => {
+        document.getElementById('quoteModal').classList.add('hidden');
+      });
+      document.getElementById('regenerateInvNumberBtn').addEventListener('click', () => {
+        document.getElementById('quoteInvNumberInput').value = generateUniqueInvoiceNumber('PINV');
+        updateQuotePreview();
+      });
+
+      ['quoteInvNumberInput', 'quoteDateInput', 'quotePoNumberInput', 'quoteTermsInput', 'quoteBillToInput', 'quoteShipToInput'].forEach(id => {
+        document.getElementById(id).addEventListener('input', updateQuotePreview);
+      });
+
+      document.getElementById('addQuoteItemBtn').addEventListener('click', addQuoteItemPrompt);
+      document.getElementById('exportQuoteExcelBtn').addEventListener('click', exportQuoteToExcel);
+      document.getElementById('printQuoteBtn').addEventListener('click', () => {
+        document.getElementById('quotePrintArea').classList.add('printable-active');
+        document.getElementById('statementPrintArea').classList.remove('printable-active');
+        window.print();
+      });
+      document.getElementById('saveQuoteToOrdersBtn').addEventListener('click', saveQuoteToOrdersTracker);
+
+      // Statement Modal Handlers
       document.getElementById('headerGenerateStatementBtn').addEventListener('click', openStatementModal);
       document.getElementById('closeStatementModalBtn').addEventListener('click', () => {
         document.getElementById('statementModal').classList.add('hidden');
       });
-      document.getElementById('printStatementBtn').addEventListener('click', () => window.print());
+      document.getElementById('printStatementBtn').addEventListener('click', () => {
+        document.getElementById('statementPrintArea').classList.add('printable-active');
+        document.getElementById('quotePrintArea').classList.remove('printable-active');
+        window.print();
+      });
       document.getElementById('exportExcelBtn').addEventListener('click', exportStatementToExcel);
       document.getElementById('copyEmailSummaryBtn').addEventListener('click', copyEmailText);
 
