@@ -439,11 +439,11 @@
             <div class="flex flex-wrap items-center gap-2">
               <button id="openAddOrderModalBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 shadow-sm">
                 <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
-                <span>+ Add Purchase Order</span>
+                <span>+ New Proforma / Invoice</span>
               </button>
               <button onclick="switchTab('documents')" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 shadow-sm">
-                <i data-lucide="file-plus" class="w-3.5 h-3.5"></i>
-                <span>Create Proforma Quote</span>
+                <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                <span>5-in-1 Document Suite</span>
               </button>
             </div>
           </div>
@@ -968,89 +968,274 @@
     <!-- HIDDEN FILE INPUT FOR IMPORT -->
     <input type="file" id="fileImportInput" class="hidden" accept=".json,.enc" />
 
-    <!-- MODAL: ADD PURCHASE ORDER -->
-    <div id="addOrderModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl border border-slate-100 space-y-5">
-        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
-          <div class="flex items-center space-x-2">
-            <i data-lucide="plus-circle" class="w-5 h-5 text-emerald-600"></i>
-            <h3 class="font-bold text-slate-900 text-base">Add Purchase Order</h3>
+    <!-- MODAL: MASTER PROFORMA INVOICE & INVOICE VERIFIER / EDITOR -->
+    <div id="masterInvoiceModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+      <div class="bg-white rounded-3xl max-w-4xl w-full shadow-2xl border border-slate-100 flex flex-col max-h-[92vh] overflow-hidden my-auto">
+        
+        <!-- Modal Header -->
+        <div class="px-6 py-4 bg-gradient-to-r from-brand-navy to-slate-900 text-white flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-xl bg-blue-600/50 flex items-center justify-center font-bold text-white border border-blue-400/30">
+              <i data-lucide="file-text" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 id="masterModalHeaderTitle" class="font-extrabold text-base tracking-tight">Invoice & Proforma Master Editor & Verifier</h3>
+              <p class="text-[11px] text-slate-300">Verify specifications, pricing, proforma conversions, factory contracts & settlements</p>
+            </div>
           </div>
-          <button type="button" id="closeAddOrderModalBtn" class="text-slate-400 hover:text-slate-600"><i data-lucide="x" class="w-4 h-4"></i></button>
+          <button type="button" id="closeMasterInvoiceModalBtn" class="text-slate-300 hover:text-white p-1 rounded-lg hover:bg-white/10 transition">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
         </div>
 
-        <form id="addOrderForm" class="space-y-3 text-xs">
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Customer Account</label>
-              <select id="modalOrderCustSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-medium outline-none" required></select>
+        <!-- Conversion Alert Banner (visible for Proforma Invoices) -->
+        <div id="masterPinvConversionBanner" class="hidden bg-amber-50 border-b border-amber-200 px-6 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-amber-900">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600 flex-shrink-0"></i>
+            <span><strong>Proforma Quote Stage:</strong> This record is currently a quotation/proforma invoice. Convert it to promote it into an active commercial invoice.</span>
+          </div>
+          <button type="button" id="masterModalConvertToInvBtn" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-sm transition flex items-center space-x-1.5 whitespace-nowrap text-xs">
+            <i data-lucide="arrow-right-circle" class="w-3.5 h-3.5"></i>
+            <span>Convert to Final Invoice</span>
+          </button>
+        </div>
+
+        <!-- Modal Scrollable Body Form -->
+        <form id="masterInvoiceForm" class="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar text-xs">
+          
+          <!-- SECTION 1: HEADER & DOCUMENT IDENTIFICATION -->
+          <div class="space-y-3">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-500 border-b border-slate-100 pb-1.5 flex items-center space-x-1.5">
+              <i data-lucide="hash" class="w-3.5 h-3.5 text-blue-600"></i>
+              <span>1. Document Identification & Buyer Info</span>
+            </h4>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Customer / Client Account</label>
+                <select id="masterInvCustSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-semibold outline-none" required></select>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Document Lifecycle Stage</label>
+                <select id="masterInvStageSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-bold text-blue-700 outline-none">
+                  <option value="cinv">Commercial Invoice (Active Contract)</option>
+                  <option value="pinv">Proforma Invoice (Quotation / Deposit Stage)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Customer PO / Reference #</label>
+                <input type="text" id="masterInvPoInput" placeholder="e.g. 260901-SA06P" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold text-slate-900" required />
+              </div>
             </div>
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Customer PO Number</label>
-              <input type="text" id="modalOrderPoInput" placeholder="e.g. 260901-SA06P" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold" required />
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Proforma Invoice # (PINV)</label>
+                <input type="text" id="masterInvPinvInput" placeholder="e.g. PINV-69234780" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-mono font-bold text-amber-800 bg-amber-50/50" />
+                <span class="text-[10px] text-slate-400">Tracked permanently side-by-side</span>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Final Invoice # (INV / CINV)</label>
+                <input type="text" id="masterInvInvInput" placeholder="e.g. INV-26498013 or 26498013" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-mono font-bold text-blue-800 bg-blue-50/50" />
+                <span class="text-[10px] text-slate-400">Official billing reference</span>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Document Issue Date</label>
+                <input type="date" id="masterInvDateInput" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-medium" />
+              </div>
             </div>
           </div>
 
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Part Description / Substrate Specs</label>
-            <input type="text" id="modalOrderDescInput" placeholder="e.g. AlN 0.76mm Metallized Ceramic Substrate" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none" required />
-          </div>
+          <!-- SECTION 2: MULTI-LINE ITEMIZED PRODUCTS -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-1.5">
+              <h4 class="font-bold text-xs uppercase tracking-wider text-slate-500 flex items-center space-x-1.5">
+                <i data-lucide="layers" class="w-3.5 h-3.5 text-blue-600"></i>
+                <span>2. Itemized Specifications & Pricing</span>
+              </h4>
+              <button type="button" id="masterInvAddItemBtn" class="px-2.5 py-1 bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 rounded-lg font-bold flex items-center space-x-1 text-[11px] transition">
+                <i data-lucide="plus" class="w-3 h-3"></i>
+                <span>+ Add Item Line</span>
+              </button>
+            </div>
 
-          <div class="grid grid-cols-3 gap-3">
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Quantity (pcs)</label>
-              <input type="number" id="modalOrderQtyInput" value="1000" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold" required />
-            </div>
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Unit Price ($)</label>
-              <input type="number" step="0.01" id="modalOrderUnitInput" value="4.50" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold" required />
-            </div>
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Total Invoiced ($)</label>
-              <input type="number" step="0.01" id="modalOrderTotalInput" value="4500.00" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold text-blue-700" required />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100">
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Factory Supplier</label>
-              <select id="modalOrderSupplierSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-medium outline-none">
-                <option value="SUP-001">Rachel / ZQJM-HX Factory</option>
-                <option value="SUP-002">HQ Precision Manufacturing Co.</option>
-                <option value="SUP-003">Mengzhichuan Technology</option>
-              </select>
-            </div>
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Factory Sourcing Cost (¥ RMB)</label>
-              <input type="number" step="1" id="modalOrderCostRmbInput" value="20000" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold text-amber-700" required />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Payment Status</label>
-              <select id="modalOrderPaymentSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-medium outline-none">
-                <option value="Open">Open / Unpaid</option>
-                <option value="50% Deposit">50% Deposit Paid</option>
-                <option value="Paid">Paid (100%)</option>
-              </select>
-            </div>
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Fulfillment Status</label>
-              <select id="modalOrderStatusSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-medium outline-none">
-                <option value="In Production">In Production</option>
-                <option value="DFM Approved">DFM Approved</option>
-                <option value="In Transit">In Transit / Shipped</option>
-                <option value="Delivered">Delivered</option>
-              </select>
+            <div class="border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                  <tr>
+                    <th class="py-2.5 px-3 w-12 text-center">#</th>
+                    <th class="py-2.5 px-3">Description & Substrate Specs</th>
+                    <th class="py-2.5 px-3 w-24 text-right">Qty (pcs)</th>
+                    <th class="py-2.5 px-3 w-28 text-right">Unit Price ($)</th>
+                    <th class="py-2.5 px-3 w-28 text-right">Total ($)</th>
+                    <th class="py-2.5 px-3 w-36">QC / Status</th>
+                    <th class="py-2.5 px-2 w-10 text-center"></th>
+                  </tr>
+                </thead>
+                <tbody id="masterInvItemsTableBody" class="divide-y divide-slate-100 bg-white">
+                  <!-- Injected dynamically -->
+                </tbody>
+                <tfoot class="bg-slate-50 font-bold border-t border-slate-200">
+                  <tr>
+                    <td colspan="2" class="py-2.5 px-3 text-right text-slate-600">Total Quantity & Subtotal:</td>
+                    <td class="py-2.5 px-3 text-right font-mono" id="masterInvTotalQtyDisplay">0 pcs</td>
+                    <td></td>
+                    <td class="py-2.5 px-3 text-right font-mono text-blue-700" id="masterInvSubtotalDisplay">$0.00</td>
+                    <td colspan="2"></td>
+                  </tr>
+                </tfoot>
+              </table>
             </div>
           </div>
 
-          <div class="flex space-x-2 pt-3 border-t border-slate-100">
-            <button type="submit" class="flex-1 py-2.5 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700 transition">Save Purchase Order</button>
-            <button type="button" id="cancelAddOrderModalBtn" class="flex-1 py-2.5 bg-slate-100 text-slate-700 font-bold rounded-xl hover:bg-slate-200 transition">Cancel</button>
+          <!-- SECTION 3: FINANCIAL RECONCILIATION & PAYMENT STATUS -->
+          <div class="space-y-3">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-500 border-b border-slate-100 pb-1.5 flex items-center space-x-1.5">
+              <i data-lucide="dollar-sign" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>3. Financial Reconciliation & Payment Tracking</span>
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Total Invoiced ($ USD)</label>
+                <input type="number" step="0.01" id="masterInvTotalInput" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold text-blue-700" required />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Amount Paid ($ USD)</label>
+                <input type="number" step="0.01" id="masterInvPaidInput" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold text-emerald-700" required />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Payment Status</label>
+                <select id="masterInvPaymentStatusSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-bold outline-none">
+                  <option value="Paid">Paid (100%)</option>
+                  <option value="50% Deposit">50% Deposit Paid</option>
+                  <option value="Open">Open / Unpaid</option>
+                  <option value="Unpaid (No Incoming)">Quote Only / Unpaid</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Payment Reference / Wire Ref</label>
+                <input type="text" id="masterInvPaymentRefInput" placeholder="e.g. WIRE-UPM-DEP01 + BAL01" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none" />
+              </div>
+            </div>
+
+            <!-- Quote Only / Non-Proceeding Exclusion Checkbox -->
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
+              <div class="flex items-center space-x-2.5">
+                <input type="checkbox" id="masterInvQuoteOnlyCheckbox" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500" />
+                <label for="masterInvQuoteOnlyCheckbox" class="font-bold text-slate-700 cursor-pointer">
+                  Retained Historical Quote Copy Only
+                  <span class="block text-[10px] text-slate-500 font-normal">Excludes this invoice from turnover, revenue, receivables, and factory sourcing cost totals (ideal for unproceeded RFQs/Proformas like Valeriot).</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 4: FACTORY SOURCING & SETTLEMENT LINK -->
+          <div class="space-y-3">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-500 border-b border-slate-100 pb-1.5 flex items-center space-x-1.5">
+              <i data-lucide="factory" class="w-3.5 h-3.5 text-amber-600"></i>
+              <span>4. Factory Sourcing & Supplier Settlement</span>
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Factory Partner</label>
+                <select id="masterInvSupplierSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-medium outline-none">
+                  <option value="SUP-001">Rachel / ZQJM-HX Factory</option>
+                  <option value="SUP-002">HQ Precision Manufacturing Co.</option>
+                  <option value="SUP-003">Mengzhichuan Technology</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Factory Contract / Sourcing Ref</label>
+                <input type="text" id="masterInvFactoryContractInput" placeholder="e.g. HQ-JM-20260804001" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-mono font-bold" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Factory Sourcing Cost (¥ RMB)</label>
+                <input type="number" step="1" id="masterInvCostRmbInput" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold font-mono text-amber-700" required />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Factory Settlement Status</label>
+                <select id="masterInvSettlementStatusSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-bold outline-none">
+                  <option value="Fully Settled">Fully Settled (100%)</option>
+                  <option value="50% Deposit Settled">50% Deposit Settled</option>
+                  <option value="Unpaid">Unpaid</option>
+                  <option value="No Outgoing">No Outgoing</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Factory Amount Settled (¥ RMB)</label>
+                <input type="number" step="1" id="masterInvSettledRmbInput" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-bold font-mono text-emerald-700" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Settlement Wire Ref / Date</label>
+                <input type="text" id="masterInvSettlementRefInput" placeholder="e.g. HQ-JM-20260804001 Wire (2026-08-10)" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none" />
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 5: LOGISTICS & DOCUMENT SUITE REFERENCES -->
+          <div class="space-y-3">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-500 border-b border-slate-100 pb-1.5 flex items-center space-x-1.5">
+              <i data-lucide="truck" class="w-3.5 h-3.5 text-purple-600"></i>
+              <span>5. Logistics, Fulfillment & Document References</span>
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Order Fulfillment Status</label>
+                <select id="masterInvOrderStatusSelect" class="w-full px-3 py-2 border border-slate-300 rounded-xl bg-white font-bold outline-none">
+                  <option value="In Production">In Production</option>
+                  <option value="In Production (QC Re-make)">In Production (QC Re-make)</option>
+                  <option value="Ready for Delivery (QC Passed)">Ready for Delivery (QC Passed)</option>
+                  <option value="DFM Approved">DFM Approved</option>
+                  <option value="In Transit / Shipped">In Transit / Shipped</option>
+                  <option value="Delivered">Delivered & Settled</option>
+                  <option value="Quoted Only (Not Proceeded)">Quoted Only (Not Proceeded)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Shipping Commercial Invoice #</label>
+                <input type="text" id="masterInvShippingCinvInput" placeholder="e.g. 51286734" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-mono font-bold" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Packing List Reference</label>
+                <input type="text" id="masterInvPackingListInput" placeholder="e.g. Packing List - 51286734.pdf" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-medium" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Delivery / Freight Terms</label>
+                <input type="text" id="masterInvTermsInput" placeholder="e.g. EXW / Customer Freight Forwarder" class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-medium" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Shipping & QC Operational Notes</label>
+              <textarea id="masterInvNotesInput" rows="2" placeholder="e.g. Items 1 & 3 ready for delivery. Item 2 in re-production. Will ship together." class="w-full px-3 py-2 border border-slate-300 rounded-xl outline-none font-medium resize-none"></textarea>
+            </div>
+          </div>
+
+          <!-- Bottom Action Buttons in Form -->
+          <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <button type="button" id="masterModalBottomConvertBtn" class="w-full sm:w-auto px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-sm transition flex items-center justify-center space-x-1.5 text-xs">
+              <i data-lucide="arrow-right-circle" class="w-4 h-4"></i>
+              <span>Move Proforma to Final Invoice ➔</span>
+            </button>
+            <div class="flex items-center space-x-2 w-full sm:w-auto justify-end">
+              <button type="button" id="cancelMasterInvoiceModalBtn" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition text-xs">
+                Cancel
+              </button>
+              <button type="submit" class="px-6 py-2.5 bg-brand-navy hover:bg-brand-navyMed text-white font-bold rounded-xl shadow-md transition flex items-center justify-center space-x-1.5 text-xs">
+                <i data-lucide="save" class="w-4 h-4"></i>
+                <span>Save & Update Full Invoice</span>
+              </button>
+            </div>
           </div>
         </form>
+
       </div>
     </div>
 
@@ -1535,13 +1720,21 @@
         renderCustomerCards(e.target.value.toLowerCase());
       });
 
-      // Add Purchase Order Modal Bindings
-      document.getElementById('openAddOrderModalBtn').addEventListener('click', openAddOrderModal);
-      document.getElementById('closeAddOrderModalBtn').addEventListener('click', () => document.getElementById('addOrderModal').classList.add('hidden'));
-      document.getElementById('cancelAddOrderModalBtn').addEventListener('click', () => document.getElementById('addOrderModal').classList.add('hidden'));
-      document.getElementById('addOrderForm').addEventListener('submit', handleAddOrderSubmit);
-      document.getElementById('modalOrderQtyInput').addEventListener('input', updateOrderModalTotal);
-      document.getElementById('modalOrderUnitInput').addEventListener('input', updateOrderModalTotal);
+      // Master Proforma Invoice & Invoice Modal Bindings
+      document.getElementById('openAddOrderModalBtn').addEventListener('click', () => openMasterInvoiceEditor(appState.activeCustomerId, -1));
+      document.getElementById('closeMasterInvoiceModalBtn').addEventListener('click', () => document.getElementById('masterInvoiceModal').classList.add('hidden'));
+      document.getElementById('cancelMasterInvoiceModalBtn').addEventListener('click', () => document.getElementById('masterInvoiceModal').classList.add('hidden'));
+      document.getElementById('masterInvoiceForm').addEventListener('submit', handleMasterInvoiceSubmit);
+      document.getElementById('masterInvAddItemBtn').addEventListener('click', addMasterInvItem);
+      document.getElementById('masterModalConvertToInvBtn').addEventListener('click', () => convertPinvInModal());
+      document.getElementById('masterModalBottomConvertBtn').addEventListener('click', () => convertPinvInModal());
+      document.getElementById('masterInvQuoteOnlyCheckbox').addEventListener('change', (e) => {
+        if (e.target.checked) {
+          document.getElementById('masterInvPaymentStatusSelect').value = 'Unpaid (No Incoming)';
+          document.getElementById('masterInvSettlementStatusSelect').value = 'No Outgoing';
+          document.getElementById('masterInvOrderStatusSelect').value = 'Quoted Only (Not Proceeded)';
+        }
+      });
 
       // Add Customer Modal Bindings
       document.getElementById('openAddCustomerModalBtn').addEventListener('click', () => document.getElementById('addCustomerModal').classList.remove('hidden'));
@@ -1839,11 +2032,22 @@
           ? `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">Retained Copy (Not Proceeded)</span>` 
           : `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${o.order_status === 'Delivered' ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-slate-100 text-slate-700'}">${o.order_status || 'In Production'}</span>`;
 
+        const isProforma = isQuote || (o.pinv_number && (!o.inv_number || o.inv_number === 'None (Quote Record)')) || (o.po_number || '').startsWith('PINV');
+
         return `
           <tr class="hover:bg-slate-50 transition ${isQuote ? 'bg-slate-50/60' : ''}">
-            <td class="py-3 px-3 font-mono font-bold ${isQuote ? 'text-slate-500' : 'text-blue-700'}">${o.po_number}</td>
-            <td class="py-3 px-3 font-mono text-slate-600">${o.inv_number || o.pinv_number || 'N/A'}</td>
-            <td class="py-3 px-3 text-slate-700 font-medium max-w-xs truncate" title="${o.description}">${o.description}</td>
+            <td class="py-3 px-3">
+              <div class="font-mono font-bold ${isQuote ? 'text-slate-500' : 'text-blue-700'}">${o.po_number || 'N/A'}</div>
+              ${o.pinv_number ? `<div class="text-[10px] text-amber-700 font-mono font-semibold" title="Proforma Invoice Number">PINV: ${o.pinv_number}</div>` : ''}
+              ${(o.inv_number && o.inv_number !== 'None (Quote Record)') ? `<div class="text-[10px] text-blue-600 font-mono font-semibold" title="Final Commercial Invoice Number">INV: ${o.inv_number}</div>` : ''}
+            </td>
+            <td class="py-3 px-3 font-mono text-slate-600">
+              ${o.inv_number && o.inv_number !== 'None (Quote Record)' ? `<span class="font-bold text-slate-800">${o.inv_number}</span>` : `<span class="text-amber-700 font-medium">${o.pinv_number || 'Proforma'}</span>`}
+            </td>
+            <td class="py-3 px-3 text-slate-700 font-medium max-w-xs" title="${o.description}">
+              <div class="truncate font-semibold text-slate-800">${o.description}</div>
+              ${(o.items_detail && o.items_detail.length > 1) ? `<div class="text-[10px] text-slate-400 font-normal">${o.items_detail.length} itemized lines</div>` : ''}
+            </td>
             <td class="py-3 px-3 text-right font-semibold">${(o.quantity || 0).toLocaleString()}</td>
             <td class="py-3 px-3 text-right font-semibold">${fmtRaw(o.unit_price)}</td>
             <td class="py-3 px-3 text-right font-bold text-slate-900">${displayInvoiced}</td>
@@ -1851,9 +2055,10 @@
             <td class="py-3 px-3 text-right font-bold text-emerald-600">${displayDelta}</td>
             <td class="py-3 px-3 text-center">${paymentBadge}</td>
             <td class="py-3 px-3 text-center">${orderBadge}</td>
-            <td class="py-3 px-3 text-center whitespace-nowrap">
-              <button onclick="editCustomerOrder('${appState.activeCustomerId}', ${idx})" class="text-blue-600 hover:text-blue-800 font-bold mr-2">Edit</button>
-              <button onclick="deleteCustomerOrder('${appState.activeCustomerId}', ${idx})" class="text-red-500 hover:text-red-700 font-bold">Delete</button>
+            <td class="py-3 px-3 text-center whitespace-nowrap space-x-1">
+              <button onclick="openMasterInvoiceEditor('${appState.activeCustomerId}', ${idx})" class="text-blue-600 hover:text-blue-800 font-bold px-2 py-1 bg-blue-50 hover:bg-blue-100 rounded-lg transition text-[11px]" title="Verify and edit all invoice details">Edit / Verify</button>
+              ${isProforma ? `<button onclick="convertPinvToInvoice('${appState.activeCustomerId}', ${idx})" class="text-emerald-700 hover:text-emerald-900 font-bold px-2 py-1 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition text-[11px]" title="Copy info and move to Final Invoice stage">Move to INV ➔</button>` : ''}
+              <button onclick="deleteCustomerOrder('${appState.activeCustomerId}', ${idx})" class="text-red-500 hover:text-red-700 font-bold px-1.5 py-1 text-[11px]">Delete</button>
             </td>
           </tr>
         `;
@@ -2904,60 +3109,340 @@
       XLSX.writeFile(wb, `${docNo}.xlsx`);
     }
 
-    // --- 10. Interactive Order & Customer Actions ---
-    function openAddOrderModal() {
-      const select = document.getElementById('modalOrderCustSelect');
+    // --- 10. Master Proforma Invoice & Invoice Verification & Editing ---
+    function openMasterInvoiceEditor(cId, idx) {
+      const targetCustId = cId || appState.activeCustomerId || Object.keys(appState.data.customers || {})[0] || 'sheetak';
       const customers = appState.data.customers || {};
-      select.innerHTML = Object.entries(customers).map(([cId, c]) => `
-        <option value="${cId}" ${cId === appState.activeCustomerId ? 'selected' : ''}>${c.name}</option>
+      
+      const custSelect = document.getElementById('masterInvCustSelect');
+      custSelect.innerHTML = Object.entries(customers).map(([id, c]) => `
+        <option value="${id}" ${id === targetCustId ? 'selected' : ''}>${c.name} (${c.country})</option>
       `).join('');
 
-      document.getElementById('modalOrderPoInput').value = `PO-${Date.now().toString().slice(-6)}`;
-      document.getElementById('addOrderModal').classList.remove('hidden');
+      const order = (idx >= 0 && customers[targetCustId]?.orders) ? customers[targetCustId].orders[idx] : null;
+
+      if (!order) {
+        // Creation Mode
+        const newNo = Math.floor(10000000 + Math.random() * 90000000);
+        appState.editingMasterOrder = {
+          cId: targetCustId,
+          idx: -1,
+          isNew: true,
+          items: [
+            {
+              item_no: 1,
+              desc: 'High Thermal AlN Ceramic Substrate (0.76mm Metallized)',
+              qty: 1000,
+              unit_price: 4.50,
+              amount: 4500.00,
+              qc_status: 'Standard QC'
+            }
+          ]
+        };
+
+        document.getElementById('masterModalHeaderTitle').innerText = 'Create New Proforma / Final Invoice';
+        document.getElementById('masterInvStageSelect').value = 'cinv';
+        document.getElementById('masterInvPoInput').value = `PO-${Date.now().toString().slice(-6)}`;
+        document.getElementById('masterInvPinvInput').value = `PINV-${newNo}`;
+        document.getElementById('masterInvInvInput').value = `INV-${newNo}`;
+        document.getElementById('masterInvDateInput').value = new Date().toISOString().split('T')[0];
+        document.getElementById('masterInvTotalInput').value = '4500.00';
+        document.getElementById('masterInvPaidInput').value = '0.00';
+        document.getElementById('masterInvPaymentStatusSelect').value = 'Open';
+        document.getElementById('masterInvPaymentRefInput').value = '';
+        document.getElementById('masterInvQuoteOnlyCheckbox').checked = false;
+        document.getElementById('masterInvSupplierSelect').value = 'SUP-001';
+        document.getElementById('masterInvFactoryContractInput').value = `ZQJM-HX${Date.now().toString().slice(-6)}`;
+        document.getElementById('masterInvCostRmbInput').value = '20000';
+        document.getElementById('masterInvSettledRmbInput').value = '0';
+        document.getElementById('masterInvSettlementStatusSelect').value = 'Unpaid';
+        document.getElementById('masterInvSettlementRefInput').value = '';
+        document.getElementById('masterInvOrderStatusSelect').value = 'In Production';
+        document.getElementById('masterInvShippingCinvInput').value = '';
+        document.getElementById('masterInvPackingListInput').value = '';
+        document.getElementById('masterInvTermsInput').value = 'EXW / Customer Freight Forwarder';
+        document.getElementById('masterInvNotesInput').value = '';
+
+        document.getElementById('masterPinvConversionBanner').classList.add('hidden');
+        document.getElementById('masterModalBottomConvertBtn').classList.add('hidden');
+      } else {
+        // Edit / Verify Mode
+        appState.editingMasterOrder = {
+          cId: targetCustId,
+          idx: idx,
+          isNew: false,
+          items: []
+        };
+
+        if (order.items_detail && order.items_detail.length > 0) {
+          appState.editingMasterOrder.items = JSON.parse(JSON.stringify(order.items_detail));
+        } else {
+          appState.editingMasterOrder.items = [
+            {
+              item_no: 1,
+              desc: order.description || 'Custom Substrates',
+              qty: order.quantity || 1,
+              unit_price: order.unit_price || 0,
+              amount: parseFloat(order.total_invoiced) || parseFloat(order.quote_amount) || 0,
+              qc_status: order.order_status || 'In Production'
+            }
+          ];
+        }
+
+        const isProforma = !!order.is_quote_only || !order.inv_number || order.inv_number === 'None (Quote Record)' || (order.po_number || '').startsWith('PINV');
+
+        document.getElementById('masterModalHeaderTitle').innerText = isProforma 
+          ? `Verify & Edit Proforma Invoice (${order.pinv_number || order.po_number})`
+          : `Verify & Edit Final Invoice (${order.inv_number || order.po_number})`;
+
+        document.getElementById('masterInvStageSelect').value = isProforma ? 'pinv' : 'cinv';
+        document.getElementById('masterInvPoInput').value = order.po_number || '';
+        document.getElementById('masterInvPinvInput').value = order.pinv_number || (order.po_number.startsWith('PINV') ? order.po_number : '');
+        document.getElementById('masterInvInvInput').value = (order.inv_number && order.inv_number !== 'None (Quote Record)') ? order.inv_number : '';
+        document.getElementById('masterInvDateInput').value = order.date || '2026-08-01';
+        document.getElementById('masterInvTotalInput').value = order.is_quote_only ? (order.quote_amount || 0) : (order.total_invoiced || 0);
+        document.getElementById('masterInvPaidInput').value = order.paid_amount || 0;
+        document.getElementById('masterInvPaymentStatusSelect').value = order.payment_status || 'Open';
+        document.getElementById('masterInvPaymentRefInput').value = order.payment_ref || '';
+        document.getElementById('masterInvQuoteOnlyCheckbox').checked = !!order.is_quote_only;
+        document.getElementById('masterInvSupplierSelect').value = order.supplier_id || 'SUP-001';
+        document.getElementById('masterInvFactoryContractInput').value = order.factory_contract || '';
+        document.getElementById('masterInvCostRmbInput').value = order.supplier_cost_rmb || 0;
+        document.getElementById('masterInvSettledRmbInput').value = order.supplier_settled_amount_rmb || 0;
+        document.getElementById('masterInvSettlementStatusSelect').value = order.supplier_settlement_status || (order.payment_status === 'Paid' ? 'Fully Settled' : '50% Deposit Settled');
+        document.getElementById('masterInvSettlementRefInput').value = order.supplier_settlement_ref || '';
+        document.getElementById('masterInvOrderStatusSelect').value = order.order_status || 'In Production';
+        document.getElementById('masterInvShippingCinvInput').value = order.shipping_cinv || '';
+        document.getElementById('masterInvPackingListInput').value = order.packing_list || '';
+        document.getElementById('masterInvTermsInput').value = order.delivery_terms || 'EXW / Customer Freight Forwarder';
+        document.getElementById('masterInvNotesInput').value = order.notes || order.shipping_notes || '';
+
+        if (isProforma) {
+          document.getElementById('masterPinvConversionBanner').classList.remove('hidden');
+          document.getElementById('masterModalBottomConvertBtn').classList.remove('hidden');
+        } else {
+          document.getElementById('masterPinvConversionBanner').classList.add('hidden');
+          document.getElementById('masterModalBottomConvertBtn').classList.add('hidden');
+        }
+      }
+
+      renderMasterInvItems();
+      document.getElementById('masterInvoiceModal').classList.remove('hidden');
+      lucide.createIcons();
     }
 
-    function updateOrderModalTotal() {
-      const qty = parseFloat(document.getElementById('modalOrderQtyInput').value) || 0;
-      const unit = parseFloat(document.getElementById('modalOrderUnitInput').value) || 0;
-      document.getElementById('modalOrderTotalInput').value = (qty * unit).toFixed(2);
+    function renderMasterInvItems() {
+      const tbody = document.getElementById('masterInvItemsTableBody');
+      const items = appState.editingMasterOrder.items || [];
+
+      let totalQty = 0;
+      let subtotal = 0;
+
+      tbody.innerHTML = items.map((item, idx) => {
+        const qty = parseInt(item.qty) || 0;
+        const price = parseFloat(item.unit_price) || 0;
+        const lineTotal = (qty * price) || parseFloat(item.amount) || 0;
+
+        totalQty += qty;
+        subtotal += lineTotal;
+
+        return `
+          <tr class="hover:bg-slate-50 transition">
+            <td class="py-2.5 px-3 text-center font-mono font-bold text-slate-400">${idx + 1}</td>
+            <td class="py-2.5 px-3">
+              <input type="text" value="${item.desc || ''}" onchange="updateMasterInvItemField(${idx}, 'desc', this.value)" placeholder="Part specs / metallization" class="w-full px-2.5 py-1.5 border border-slate-200 rounded-lg outline-none font-medium focus:border-blue-500" required />
+            </td>
+            <td class="py-2.5 px-3">
+              <input type="number" value="${qty}" min="1" oninput="updateMasterInvItemField(${idx}, 'qty', this.value)" class="w-full px-2.5 py-1.5 border border-slate-200 rounded-lg outline-none font-bold text-right focus:border-blue-500" required />
+            </td>
+            <td class="py-2.5 px-3">
+              <input type="number" step="0.01" min="0" value="${price.toFixed(2)}" oninput="updateMasterInvItemField(${idx}, 'unit_price', this.value)" class="w-full px-2.5 py-1.5 border border-slate-200 rounded-lg outline-none font-bold text-right focus:border-blue-500" required />
+            </td>
+            <td class="py-2.5 px-3 text-right font-mono font-bold text-slate-800">
+              $${lineTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            </td>
+            <td class="py-2.5 px-3">
+              <input type="text" value="${item.qc_status || 'QC Passed'}" onchange="updateMasterInvItemField(${idx}, 'qc_status', this.value)" class="w-full px-2.5 py-1.5 border border-slate-200 rounded-lg outline-none text-[11px] font-medium" />
+            </td>
+            <td class="py-2.5 px-2 text-center">
+              ${items.length > 1 ? `
+                <button type="button" onclick="removeMasterInvItem(${idx})" class="text-slate-400 hover:text-red-600 p-1 rounded transition">
+                  <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                </button>
+              ` : ''}
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      document.getElementById('masterInvTotalQtyDisplay').innerText = `${totalQty.toLocaleString()} pcs`;
+      document.getElementById('masterInvSubtotalDisplay').innerText = `$${subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+      lucide.createIcons();
     }
 
-    function handleAddOrderSubmit(e) {
-      e.preventDefault();
-      const cId = document.getElementById('modalOrderCustSelect').value;
-      const po = document.getElementById('modalOrderPoInput').value.trim();
-      const desc = document.getElementById('modalOrderDescInput').value.trim();
-      const qty = parseInt(document.getElementById('modalOrderQtyInput').value) || 0;
-      const unit = parseFloat(document.getElementById('modalOrderUnitInput').value) || 0;
-      const total = parseFloat(document.getElementById('modalOrderTotalInput').value) || 0;
-      const suppId = document.getElementById('modalOrderSupplierSelect').value;
-      const costRmb = parseFloat(document.getElementById('modalOrderCostRmbInput').value) || 0;
-      const payStatus = document.getElementById('modalOrderPaymentSelect').value;
-      const ordStatus = document.getElementById('modalOrderStatusSelect').value;
+    function updateMasterInvItemField(idx, field, val) {
+      if (!appState.editingMasterOrder.items[idx]) return;
+      if (field === 'qty') {
+        appState.editingMasterOrder.items[idx].qty = parseInt(val) || 0;
+      } else if (field === 'unit_price') {
+        appState.editingMasterOrder.items[idx].unit_price = parseFloat(val) || 0;
+      } else {
+        appState.editingMasterOrder.items[idx][field] = val;
+      }
 
-      if (!appState.data.customers[cId].orders) appState.data.customers[cId].orders = [];
+      const q = appState.editingMasterOrder.items[idx].qty || 0;
+      const p = appState.editingMasterOrder.items[idx].unit_price || 0;
+      appState.editingMasterOrder.items[idx].amount = q * p;
 
-      appState.data.customers[cId].orders.unshift({
-        po_number: po,
-        inv_number: `INV-${Date.now().toString().slice(-6)}`,
-        description: desc,
-        quantity: qty,
-        unit_price: unit,
-        total_invoiced: total,
-        paid_amount: payStatus === 'Paid' ? total : (payStatus === '50% Deposit' ? total * 0.5 : 0),
-        supplier_id: suppId,
-        factory_contract: `ZQJM-HX${Date.now().toString().slice(-6)}`,
-        supplier_cost_rmb: costRmb,
-        supplier_settled_amount_rmb: payStatus === 'Paid' ? costRmb : 0,
-        supplier_settlement_status: payStatus === 'Paid' ? 'Fully Settled' : 'Unpaid',
-        payment_status: payStatus,
-        order_status: ordStatus
+      // Auto update total invoiced
+      const subtotal = appState.editingMasterOrder.items.reduce((s, it) => s + ((it.qty || 0) * (it.unit_price || 0)), 0);
+      document.getElementById('masterInvTotalInput').value = subtotal.toFixed(2);
+
+      renderMasterInvItems();
+    }
+
+    function addMasterInvItem() {
+      if (!appState.editingMasterOrder.items) appState.editingMasterOrder.items = [];
+      appState.editingMasterOrder.items.push({
+        item_no: appState.editingMasterOrder.items.length + 1,
+        desc: 'Al2O3 / AlN Metallized Substrate Spec',
+        qty: 500,
+        unit_price: 5.00,
+        amount: 2500.00,
+        qc_status: 'Standard QC'
       });
+      const subtotal = appState.editingMasterOrder.items.reduce((s, it) => s + ((it.qty || 0) * (it.unit_price || 0)), 0);
+      document.getElementById('masterInvTotalInput').value = subtotal.toFixed(2);
+      renderMasterInvItems();
+    }
 
+    function removeMasterInvItem(idx) {
+      if (appState.editingMasterOrder.items.length <= 1) return;
+      appState.editingMasterOrder.items.splice(idx, 1);
+      const subtotal = appState.editingMasterOrder.items.reduce((s, it) => s + ((it.qty || 0) * (it.unit_price || 0)), 0);
+      document.getElementById('masterInvTotalInput').value = subtotal.toFixed(2);
+      renderMasterInvItems();
+    }
+
+    function convertPinvInModal() {
+      const pinv = document.getElementById('masterInvPinvInput').value.trim() || document.getElementById('masterInvPoInput').value.trim();
+      let inv = document.getElementById('masterInvInvInput').value.trim();
+      if (!inv || inv === 'None (Quote Record)') {
+        inv = 'INV-' + (pinv ? pinv.replace('PINV-', '') : Date.now().toString().slice(-6));
+      }
+
+      document.getElementById('masterInvPinvInput').value = pinv;
+      document.getElementById('masterInvInvInput').value = inv;
+      document.getElementById('masterInvStageSelect').value = 'cinv';
+      document.getElementById('masterInvQuoteOnlyCheckbox').checked = false;
+      document.getElementById('masterInvOrderStatusSelect').value = 'In Production';
+      if (document.getElementById('masterInvPaymentStatusSelect').value.includes('Unpaid')) {
+        document.getElementById('masterInvPaymentStatusSelect').value = '50% Deposit';
+      }
+
+      document.getElementById('masterPinvConversionBanner').classList.add('hidden');
+      document.getElementById('masterModalBottomConvertBtn').classList.add('hidden');
+
+      alert(`Proforma Invoice ${pinv} successfully converted to Final Invoice ${inv}!
+
+All details, line items, and factory references copied. Review and click "Save & Update Full Invoice" to finalize.`);
+    }
+
+    function convertPinvToInvoice(cId, idx) {
+      openMasterInvoiceEditor(cId, idx);
+      convertPinvInModal();
+    }
+
+    function handleMasterInvoiceSubmit(e) {
+      e.preventDefault();
+      const targetCustId = document.getElementById('masterInvCustSelect').value;
+      const stage = document.getElementById('masterInvStageSelect').value;
+      const po = document.getElementById('masterInvPoInput').value.trim();
+      const pinv = document.getElementById('masterInvPinvInput').value.trim();
+      let inv = document.getElementById('masterInvInvInput').value.trim();
+      const date = document.getElementById('masterInvDateInput').value;
+      const totalInvoiced = parseFloat(document.getElementById('masterInvTotalInput').value) || 0;
+      const paidAmount = parseFloat(document.getElementById('masterInvPaidInput').value) || 0;
+      const paymentStatus = document.getElementById('masterInvPaymentStatusSelect').value;
+      const paymentRef = document.getElementById('masterInvPaymentRefInput').value.trim();
+      const isQuoteOnly = document.getElementById('masterInvQuoteOnlyCheckbox').checked;
+
+      const supplierId = document.getElementById('masterInvSupplierSelect').value;
+      const factoryContract = document.getElementById('masterInvFactoryContractInput').value.trim();
+      const costRmb = parseFloat(document.getElementById('masterInvCostRmbInput').value) || 0;
+      const settledRmb = parseFloat(document.getElementById('masterInvSettledRmbInput').value) || 0;
+      const settlementStatus = document.getElementById('masterInvSettlementStatusSelect').value;
+      const settlementRef = document.getElementById('masterInvSettlementRefInput').value.trim();
+
+      const orderStatus = document.getElementById('masterInvOrderStatusSelect').value;
+      const shippingCinv = document.getElementById('masterInvShippingCinvInput').value.trim();
+      const packingList = document.getElementById('masterInvPackingListInput').value.trim();
+      const terms = document.getElementById('masterInvTermsInput').value.trim();
+      const notes = document.getElementById('masterInvNotesInput').value.trim();
+
+      const items = appState.editingMasterOrder.items || [];
+      const totalQty = items.reduce((s, it) => s + (parseInt(it.qty) || 0), 0) || 1;
+      const primaryDesc = items.map(it => it.desc).filter(Boolean).join(', ') || 'Ceramic Substrate Order';
+      const avgUnitPrice = totalQty > 0 ? (totalInvoiced / totalQty) : 0;
+
+      const supplierName = supplierId === 'SUP-002' ? 'HQ Precision Manufacturing Co.' : (supplierId === 'SUP-003' ? 'Mengzhichuan Technology' : 'Rachel / ZQJM-HX Factory');
+
+      const updatedOrder = {
+        po_number: po || (pinv || inv),
+        pinv_number: pinv || (po.startsWith('PINV') ? po : ''),
+        inv_number: inv || (isQuoteOnly ? 'None (Quote Record)' : `INV-${Date.now().toString().slice(-6)}`),
+        description: primaryDesc,
+        items_detail: items,
+        quantity: totalQty,
+        unit_price: avgUnitPrice,
+        total_invoiced: isQuoteOnly ? 0 : totalInvoiced,
+        quote_amount: isQuoteOnly ? (totalInvoiced || 1650) : totalInvoiced,
+        paid_amount: paidAmount,
+        payment_status: paymentStatus,
+        payment_ref: paymentRef,
+        order_status: orderStatus,
+        supplier_id: supplierId,
+        supplier_name: supplierName,
+        factory_contract: factoryContract || `ZQJM-${Date.now().toString().slice(-6)}`,
+        supplier_cost_rmb: isQuoteOnly ? 0 : costRmb,
+        supplier_settled_amount_rmb: isQuoteOnly ? 0 : settledRmb,
+        supplier_settlement_status: settlementStatus,
+        supplier_settlement_ref: settlementRef,
+        shipping_cinv: shippingCinv,
+        packing_list: packingList,
+        delivery_terms: terms,
+        notes: notes,
+        shipping_notes: notes,
+        is_quote_only: isQuoteOnly,
+        date: date
+      };
+
+      if (!appState.data.customers[targetCustId]) {
+        alert('Selected customer account not found.');
+        return;
+      }
+      if (!appState.data.customers[targetCustId].orders) {
+        appState.data.customers[targetCustId].orders = [];
+      }
+
+      const editIdx = appState.editingMasterOrder.idx;
+      const oldCustId = appState.editingMasterOrder.cId;
+
+      if (editIdx >= 0 && oldCustId === targetCustId) {
+        appState.data.customers[targetCustId].orders[editIdx] = updatedOrder;
+      } else if (editIdx >= 0 && oldCustId !== targetCustId) {
+        appState.data.customers[oldCustId].orders.splice(editIdx, 1);
+        appState.data.customers[targetCustId].orders.unshift(updatedOrder);
+      } else {
+        appState.data.customers[targetCustId].orders.unshift(updatedOrder);
+      }
+
+      appState.activeCustomerId = targetCustId;
       saveLocal();
-      document.getElementById('addOrderModal').classList.add('hidden');
+      document.getElementById('masterInvoiceModal').classList.add('hidden');
       renderApp();
-      alert(`Purchase order ${po} added successfully!`);
+      alert(`Invoice record ${updatedOrder.po_number} verified and saved successfully!`);
     }
 
     function handleAddCustomerSubmit(e) {
@@ -3032,19 +3517,7 @@
     }
 
     function editCustomerOrder(cId, idx) {
-      const order = appState.data.customers[cId].orders[idx];
-      const newQty = prompt('Enter new quantity (pcs):', order.quantity);
-      if (newQty === null) return;
-      const newTotal = prompt('Enter new total invoiced ($):', order.total_invoiced);
-      if (newTotal === null) return;
-      const newCost = prompt('Enter new factory sourcing cost (¥ RMB):', order.supplier_cost_rmb);
-      if (newCost === null) return;
-
-      order.quantity = parseInt(newQty) || order.quantity;
-      order.total_invoiced = parseFloat(newTotal) || order.total_invoiced;
-      order.supplier_cost_rmb = parseFloat(newCost) || order.supplier_cost_rmb;
-      saveLocal();
-      renderApp();
+      openMasterInvoiceEditor(cId, idx);
     }
 
     function deleteCustomerOrder(cId, idx) {
