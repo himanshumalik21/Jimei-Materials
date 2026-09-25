@@ -1,0 +1,672 @@
+/* ==========================================================================
+   Jimei Materials — Industrial Technology & Semiconductor Packaging Theme
+   A restrained, high-precision aesthetic for advanced ceramic substrate manufacturing
+   ========================================================================== */
+
+:root {
+  --jm-navy: #0f2038;
+  --jm-navy-light: #183354;
+  --jm-navy-dark: #0a1526;
+  --jm-cyan: #0284c7;
+  --jm-cyan-light: #38bdf8;
+  --jm-cyan-dark: #0369a1;
+  --jm-amber: #ea580c;
+  --jm-amber-hover: #c2410c;
+  --jm-slate-900: #0f172a;
+  --jm-slate-800: #1e293b;
+  --jm-slate-700: #334155;
+  --jm-slate-600: #475569;
+  --jm-slate-500: #64748b;
+  --jm-slate-400: #94a3b8;
+  --jm-slate-300: #cbd5e1;
+  --jm-slate-200: #e2e8f0;
+  --jm-slate-100: #f1f5f9;
+  --jm-slate-50: #f8fafc;
+  --jm-border: #e2e8f0;
+  --jm-border-dark: #334155;
+  --jm-card-shadow: 0 4px 20px -2px rgba(15, 32, 56, 0.08);
+  --jm-card-hover-shadow: 0 12px 28px -4px rgba(15, 32, 56, 0.16);
+  --jm-hero-gradient: linear-gradient(135deg, #0a1526 0%, #0f2038 50%, #183354 100%);
+  --jm-tech-badge-bg: rgba(2, 132, 199, 0.08);
+  --jm-tech-badge-border: rgba(2, 132, 199, 0.25);
+  --jm-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Base refinement */
+body {
+  color: var(--jm-slate-700);
+  background-color: #ffffff;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display-5 {
+  color: var(--jm-navy);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Header & Navigation */
+.navbar-jm {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--jm-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  padding: 0.75rem 0;
+  transition: all 0.25s ease;
+}
+
+.navbar-jm .navbar-brand img {
+  height: 42px;
+  width: auto;
+}
+
+.navbar-jm .nav-link {
+  color: var(--jm-slate-700) !important;
+  font-weight: 600;
+  font-size: 0.935rem;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 4px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.navbar-jm .nav-link:hover,
+.navbar-jm .nav-link:focus,
+.navbar-jm .nav-link.active {
+  color: var(--jm-cyan-dark) !important;
+  background-color: var(--jm-slate-100);
+}
+
+.navbar-jm .dropdown-menu {
+  border: 1px solid var(--jm-border);
+  box-shadow: 0 10px 30px rgba(15, 32, 56, 0.12);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.navbar-jm .dropdown-item {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--jm-slate-700);
+  border-radius: 6px;
+  padding: 0.55rem 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.navbar-jm .dropdown-item:hover {
+  background-color: var(--jm-slate-100);
+  color: var(--jm-cyan-dark);
+}
+
+.navbar-jm .dropdown-item .badge-hero {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.45rem;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+/* Precision Topbar */
+.jm-topbar {
+  background: var(--jm-navy-dark);
+  color: var(--jm-slate-300);
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.35rem 0;
+}
+
+.jm-topbar a {
+  color: var(--jm-slate-300);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.jm-topbar a:hover {
+  color: #ffffff;
+}
+
+/* Hero Section */
+.jm-hero {
+  background: var(--jm-hero-gradient);
+  color: #ffffff;
+  padding: 5rem 0 4.5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.jm-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(2, 132, 199, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(2, 132, 199, 0.1) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.jm-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(2, 132, 199, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 9999px;
+  color: var(--jm-cyan-light);
+  font-size: 0.825rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.jm-hero h1 {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.jm-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.jm-hero-pill {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+}
+
+.jm-hero-pill.hero-pill-dpc {
+  background: rgba(2, 132, 199, 0.3);
+  border-color: var(--jm-cyan-light);
+  color: #ffffff;
+}
+
+.jm-hero p.lead {
+  color: #cbd5e1;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+/* Industrial Buttons */
+.btn-jm-primary {
+  background-color: var(--jm-amber);
+  border: 1px solid var(--jm-amber);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-jm-primary:hover,
+.btn-jm-primary:focus {
+  background-color: var(--jm-amber-hover);
+  border-color: var(--jm-amber-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.45);
+}
+
+.btn-jm-secondary {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-jm-secondary:hover,
+.btn-jm-secondary:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-jm-outline-dark {
+  background-color: transparent;
+  border: 1px solid var(--jm-border);
+  color: var(--jm-navy) !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-jm-outline-dark:hover {
+  background-color: var(--jm-slate-100);
+  border-color: var(--jm-slate-400);
+  color: var(--jm-navy-dark) !important;
+}
+
+/* Proof Banner / Trade Shows Strip */
+.jm-proof-strip {
+  background: var(--jm-slate-900);
+  border-bottom: 1px solid var(--jm-border-dark);
+  padding: 1rem 0;
+  color: var(--jm-slate-300);
+  font-size: 0.85rem;
+}
+
+.jm-proof-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+}
+
+.jm-proof-item i {
+  color: var(--jm-cyan-light);
+}
+
+/* Technical Cards */
+.jm-card {
+  background: #ffffff;
+  border: 1px solid var(--jm-border);
+  border-radius: 8px;
+  box-shadow: var(--jm-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.jm-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--jm-card-hover-shadow);
+  border-color: var(--jm-slate-300);
+}
+
+.jm-card-hero {
+  border: 2px solid var(--jm-cyan);
+  position: relative;
+}
+
+.jm-card-hero::after {
+  content: "CORE TECHNOLOGY";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--jm-cyan);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+}
+
+.jm-card-header {
+  padding: 1.5rem 1.5rem 0.75rem;
+}
+
+.jm-card-body {
+  padding: 0 1.5rem 1.5rem;
+  flex: 1 1 auto;
+}
+
+.jm-card-footer {
+  padding: 1rem 1.5rem;
+  background: var(--jm-slate-50);
+  border-top: 1px solid var(--jm-border);
+}
+
+/* Spec Badges */
+.jm-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: var(--jm-slate-100);
+  color: var(--jm-slate-700);
+  border: 1px solid var(--jm-border);
+}
+
+.jm-badge-cyan {
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--jm-cyan-dark);
+  border-color: rgba(2, 132, 199, 0.2);
+}
+
+.jm-badge-amber {
+  background: rgba(234, 88, 12, 0.1);
+  color: var(--jm-amber);
+  border-color: rgba(234, 88, 12, 0.2);
+}
+
+/* Technical Specification Table */
+.jm-spec-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--jm-border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.875rem;
+  background: #ffffff;
+}
+
+.jm-spec-table th {
+  background: var(--jm-slate-100);
+  color: var(--jm-navy);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.775rem;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--jm-border);
+}
+
+.jm-spec-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--jm-border);
+  color: var(--jm-slate-700);
+  vertical-align: top;
+}
+
+.jm-spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.jm-spec-table tr:hover td {
+  background-color: var(--jm-slate-50);
+}
+
+.jm-spec-table .col-hero {
+  background-color: #f0fdf4;
+  font-weight: 600;
+}
+
+.jm-spec-label {
+  font-weight: 600;
+  color: var(--jm-navy);
+}
+
+.jm-spec-value {
+  font-family: var(--jm-font-mono);
+  font-size: 0.85rem;
+}
+
+/* Comparison Matrix Specific */
+.jm-matrix-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--jm-border);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--jm-card-shadow);
+}
+
+.jm-matrix-table {
+  width: 100%;
+  min-width: 820px;
+  margin-bottom: 0;
+}
+
+.jm-matrix-table th {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 2px solid var(--jm-border);
+}
+
+.jm-matrix-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--jm-border);
+  font-size: 0.875rem;
+}
+
+.jm-matrix-table th.tech-col-dpc,
+.jm-matrix-table td.tech-col-dpc {
+  background-color: #f0f9ff;
+  border-left: 2px solid var(--jm-cyan);
+  border-right: 2px solid var(--jm-cyan);
+}
+
+.jm-matrix-table th.tech-col-dpc {
+  border-top: 4px solid var(--jm-cyan);
+}
+
+/* Process Timeline / Workflow */
+.jm-process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.jm-process-step {
+  background: #ffffff;
+  border: 1px solid var(--jm-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--jm-card-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.jm-process-img-wrap {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  background: var(--jm-slate-900);
+}
+
+.jm-process-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.jm-process-step:hover .jm-process-img-wrap img {
+  transform: scale(1.05);
+}
+
+.jm-process-num {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(15, 32, 56, 0.88);
+  color: var(--jm-cyan-light);
+  font-family: var(--jm-font-mono);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.jm-process-content {
+  padding: 1.25rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.jm-process-content h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.jm-process-content p {
+  font-size: 0.85rem;
+  color: var(--jm-slate-600);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* RFQ Form Styling */
+.jm-rfq-card {
+  background: #ffffff;
+  border: 1px solid var(--jm-border);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(15, 32, 56, 0.08);
+  padding: 2.25rem;
+}
+
+.jm-form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--jm-navy);
+  margin-bottom: 0.35rem;
+}
+
+.jm-form-label .req {
+  color: var(--jm-amber);
+}
+
+.jm-form-control,
+.jm-form-select {
+  border: 1px solid var(--jm-slate-300);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  padding: 0.65rem 0.85rem;
+  color: var(--jm-slate-800);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.jm-form-control:focus,
+.jm-form-select:focus {
+  border-color: var(--jm-cyan);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+  outline: none;
+}
+
+.jm-form-hint {
+  font-size: 0.775rem;
+  color: var(--jm-slate-500);
+  margin-top: 0.25rem;
+}
+
+.jm-drawing-box {
+  border: 2px dashed var(--jm-slate-300);
+  border-radius: 6px;
+  padding: 1.25rem;
+  background: var(--jm-slate-50);
+  text-align: center;
+}
+
+/* Industrial Footer */
+.jm-footer {
+  background: var(--jm-slate-900);
+  color: var(--jm-slate-400);
+  font-size: 0.875rem;
+  padding: 4.5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.jm-footer h5 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.jm-footer a {
+  color: var(--jm-slate-300);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.jm-footer a:hover {
+  color: #ffffff;
+}
+
+.jm-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jm-footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.jm-footer-contact-item {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  align-items: flex-start;
+}
+
+.jm-footer-contact-item i {
+  color: var(--jm-cyan-light);
+  margin-top: 0.25rem;
+}
+
+.jm-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2rem;
+  margin-top: 3.5rem;
+  font-size: 0.8rem;
+  color: var(--jm-slate-500);
+}
+
+/* Technical breadcrumb */
+.jm-breadcrumb {
+  background: transparent;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.jm-breadcrumb a {
+  color: var(--jm-slate-500);
+  text-decoration: none;
+}
+
+.jm-breadcrumb a:hover {
+  color: var(--jm-cyan-dark);
+}
+
+.jm-breadcrumb .active {
+  color: var(--jm-navy);
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .jm-hero {
+    padding: 3.5rem 0 3rem;
+  }
+  .navbar-jm .nav-link {
+    padding: 0.65rem 0.5rem !important;
+  }
+}

@@ -346,6 +346,7 @@
     })(window,document,'script','dataLayer','GT-WBKSVDXG');
     </script>
 
+    <link rel="stylesheet" href="css/industrial-theme.css">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -357,68 +358,37 @@
     <a href="#main-content" class="skip-to-content visually-hidden-focusable">Skip to main content</a>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-jm sticky-top">
         <div class="container">
             <a class="navbar-brand" href="./index.html" aria-label="Jimei Materials Home">
-                <img src="img/logo.webp" alt="Jimei Materials Logo" width="160" height="45" loading="eager">
+                <img src="img/logo.webp" onerror="this.src='img/logo.png'" alt="Jimei Materials Logo" width="160" height="42">
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" 
+                    aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarMain">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="./index.html" data-i18n="nav_home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" 
-                           aria-expanded="false" data-i18n="nav_products">Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./dpc-ceramic-substrate.html" data-i18n="nav_dpc">Direct Plated Copper (DPC)</a></li>
-                            <li><a class="dropdown-item" href="./dbc-ceramic-substrate.html" data-i18n="nav_dbc">Direct Bonded Copper (DBC)</a></li>
-                            <li><a class="dropdown-item" href="./bare-ceramic-substrates.html" data-i18n="nav_bare">Bare Ceramic Substrates</a></li>
+                        <a class="nav-link dropdown-toggle" href="#" id="techDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Technologies</a>
+                        <ul class="dropdown-menu" aria-labelledby="techDropdown">
+                            <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="./dpc-ceramic-substrate.html">Direct Plated Copper (DPC) <span class="badge-hero">Hero</span></a></li>
+                            <li><a class="dropdown-item" href="./dbc-ceramic-substrate.html">Direct Bonded Copper (DBC)</a></li>
+                            <li><a class="dropdown-item" href="./amb-ceramic-substrate.html">Active Metal Brazing (AMB)</a></li>
+                            <li><a class="dropdown-item" href="./htcc-ceramic-substrates.html">High-Temp Co-Fired (HTCC)</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="./products.html" data-i18n="nav_all_products">All Products</a></li>
+                            <li><a class="dropdown-item" href="./bare-ceramic-substrates.html">Bare Ceramic Substrates</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="./technical-resources.html" data-i18n="nav_resources">Resources</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./about.html" data-i18n="nav_about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contact.html" data-i18n="nav_contact">Contact</a></li>
-                    
-                    <!-- Language Switcher -->
-                    <li class="nav-item language-switcher ms-3">
-                        <button class="language-dropdown-btn" id="languageBtn" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-globe" aria-hidden="true"></i>
-                            <span id="currentLanguage">English</span>
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <ul class="language-dropdown" id="languageDropdown" role="menu" aria-labelledby="languageBtn">
-                            <li class="language-option active" data-lang="en" role="menuitem">
-                                <img src="https://flagcdn.com/w20/gb.png" class="language-flag" alt="English flag" width="20" height="15" loading="lazy">
-                                <span>English</span>
-                            </li>
-                            <li class="language-option" data-lang="zh" role="menuitem">
-                                <img src="https://flagcdn.com/w20/cn.png" class="language-flag" alt="Chinese flag" width="20" height="15" loading="lazy">
-                                <span>中文</span>
-                            </li>
-                            <li class="language-option" data-lang="ja" role="menuitem">
-                                <img src="https://flagcdn.com/w20/jp.png" class="language-flag" alt="Japanese flag" width="20" height="15" loading="lazy">
-                                <span>日本語</span>
-                            </li>
-                            <li class="language-option" data-lang="ko" role="menuitem">
-                                <img src="https://flagcdn.com/w20/kr.png" class="language-flag" alt="Korean flag" width="20" height="15" loading="lazy">
-                                <span>한국어</span>
-                            </li>
-                            <li class="language-option" data-lang="de" role="menuitem">
-                                <img src="https://flagcdn.com/w20/de.png" class="language-flag" alt="German flag" width="20" height="15" loading="lazy">
-                                <span>Deutsch</span>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="nav-item ms-3">
-                        <a class="btn btn-primary" href="./contact.html" data-i18n="nav_request_quote">Request Quote</a>
+                    <li class="nav-item"><a class="nav-link" href="./products.html">Products & Comparison</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./manufacturing.html">Manufacturing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./technical-resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-jm-primary btn-sm" href="./contact.html"><i class="fas fa-file-invoice me-1"></i> Request Quote</a>
                     </li>
                 </ul>
             </div>
@@ -1231,65 +1201,74 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-light mt-auto py-5 border-top" role="contentinfo">
+    <!-- Industrial Footer -->
+    <footer class="jm-footer">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4">
-                    <a href="./index.html" class="d-inline-block mb-3" aria-label="Jimei Materials Home">
-                        <picture>
-                            <source srcset="img/logo.webp" type="image/webp">
-                            <img src="img/logo.png" alt="Jimei Materials Logo" width="160" height="45" loading="lazy">
-                        </picture>
-                    </a>
-                    <p class="small" data-i18n="footer_description">Leading manufacturer of ceramic substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.</p>
-                    <div class="mt-3">
-                        <a href="https://www.linkedin.com/company/jimei-materials/" class="text-secondary me-3" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin fa-lg"></i>
-                        </a>
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/logo.webp" onerror="this.src='img/logo.png'" alt="Jimei Materials" width="160" height="42" class="mb-3 bg-white p-2 rounded">
+                    <p class="small text-slate-400 mb-3">
+                        Jimei Materials is a specialized manufacturer of advanced ceramic substrates and ceramic metallization solutions. We engineer precision DPC, DBC, AMB, and HTCC substrates for semiconductor packaging, power electronics, RF/microwave, and harsh-environment applications.
+                    </p>
+                    <div class="small text-slate-400">
+                        <i class="fas fa-certificate text-info me-1"></i> ISO 14001:2015 Environmental Management
                     </div>
                 </div>
-                
-                <div class="col-lg-2 col-6">
-                    <h3 class="fw-bold mb-3" data-i18n="footer_products">Products</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="./dpc-ceramic-substrate.html" class="text-decoration-none text-secondary" data-i18n="nav_dpc">DPC Substrates</a></li>
-                        <li class="mb-2"><a href="./dbc-ceramic-substrate.html" class="text-decoration-none text-secondary" data-i18n="nav_dbc">DBC Substrates</a></li>
-                        <li class="mb-2"><a href="./bare-ceramic-substrates.html" class="text-decoration-none text-secondary" data-i18n="nav_bare">Bare Ceramic</a></li>
-                        <li class="mb-2"><a href="./products.html" class="text-decoration-none text-secondary" data-i18n="nav_all_products">All Products</a></li>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Technologies</h5>
+                    <ul class="jm-footer-links">
+                        <li><a href="./dpc-ceramic-substrate.html">DPC Substrates (Hero)</a></li>
+                        <li><a href="./dbc-ceramic-substrate.html">DBC Substrates</a></li>
+                        <li><a href="./amb-ceramic-substrate.html">AMB Substrates</a></li>
+                        <li><a href="./htcc-ceramic-substrates.html">HTCC Packages</a></li>
+                        <li><a href="./bare-ceramic-substrates.html">Bare Ceramics</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg-2 col-6">
-                    <h3 class="fw-bold mb-3" data-i18n="footer_company">Company</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="./about.html" class="text-decoration-none text-secondary" data-i18n="nav_about">About Us</a></li>
-                        <li class="mb-2"><a href="./technical-resources.html" class="text-decoration-none text-secondary" data-i18n="nav_resources">Resources</a></li>
-                        <li class="mb-2"><a href="./contact.html" class="text-decoration-none text-secondary" data-i18n="nav_contact">Contact</a></li>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Manufacturing & QC</h5>
+                    <ul class="jm-footer-links">
+                        <li><a href="./manufacturing.html">Manufacturing Capabilities</a></li>
+                        <li><a href="./manufacturing.html#sputtering">Thin-Film Sputtering</a></li>
+                        <li><a href="./manufacturing.html#photolithography">Photolithography (20µm)</a></li>
+                        <li><a href="./manufacturing.html#testing">100% Electrical Testing</a></li>
+                        <li><a href="./products.html">Technology Comparison Matrix</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg-4">
-                    <h3 class="fw-bold mb-3" data-i18n="footer_contact">Contact Info</h3>
-                    <address class="list-unstyled mb-0">
-                        <li class="mb-2"><i class="fas fa-envelope me-2" aria-hidden="true"></i> sales@jimei-materials.com</li>
-                        <li class="mb-2"><i class="fas fa-phone me-2" aria-hidden="true"></i> +86-147-4537-3293</li>
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> <span data-i18n="footer_address">First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, China</span></li>
-                        <li class="mb-2"><i class="fas fa-clock me-2" aria-hidden="true"></i> <span data-i18n="footer_hours">Mon-Fri: 8:00 AM - 6:00 PM (GMT+8)</span></li>
-                        <li class="mb-2"><i class="fas fa-language me-2" aria-hidden="true"></i> <span data-i18n="footer_languages">Support: English, Chinese, Japanese, Korean, German</span></li>
-                    </address>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Direct Contact</h5>
+                    <div class="jm-footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div class="text-white small fw-bold">Sales & RFQ</div>
+                            <a href="mailto:sales@jimei-materials.com">sales@jimei-materials.com</a>
+                        </div>
+                    </div>
+                    <div class="jm-footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <div class="text-white small fw-bold">Direct Phone</div>
+                            <a href="tel:+8614745373293">+86-147-4537-3293</a>
+                        </div>
+                    </div>
+                    <div class="jm-footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="small">
+                            <span class="text-white fw-bold">Factory Address:</span><br>
+                            First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, 518104, China
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <hr class="my-4">
-            
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="small mb-0">Copyright &copy; <span id="currentYear"></span> Jimei Materials Co., Ltd. <span data-i18n="footer_rights">All rights reserved.</span></p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="./privacy-policy.html" class="text-decoration-none text-secondary small me-3" data-i18n="footer_privacy">Privacy Policy</a>
-                    <a href="./terms-of-service.html" class="text-decoration-none text-secondary small me-3" data-i18n="footer_terms">Terms of Service</a>
-                    <a href="./sitemap.html" class="text-decoration-none text-secondary small" data-i18n="footer_sitemap">Sitemap</a>
+
+            <div class="jm-footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+                <div>© 2026 Jimei Materials Co., Ltd. All Rights Reserved.</div>
+                <div class="d-flex gap-3">
+                    <a href="./privacy-policy.html">Privacy Policy</a>
+                    <a href="./terms-of-service.html">Terms of Service</a>
+                    <a href="./sitemap.html">Sitemap</a>
                 </div>
             </div>
         </div>

@@ -14,6 +14,8 @@ Disallow: /private/
 Disallow: /config/
 Disallow: /search/
 Disallow: /ajax/
+Disallow: /portal.html
+Disallow: /data.enc
 
 # Block parameter-based URLs that create duplicate content
 Disallow: /*?s=
