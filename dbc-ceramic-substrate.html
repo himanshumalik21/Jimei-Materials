@@ -33,6 +33,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
 
     <!-- CSS -->
+        <!-- Performance & Preconnect Hints -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.web3forms.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.min.css">
@@ -44,7 +48,7 @@
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": ["Organization", "Manufacturer"],
+                "@type": "Organization",
                 "@id": "https://www.jimei-materials.com/#organization",
                 "name": "Jimei Materials Co., Ltd.",
                 "url": "https://www.jimei-materials.com/",
@@ -216,7 +220,7 @@
                     </div>
                     <div class="col-lg-5 mt-4 mt-lg-0">
                         <div class="jm-card p-3 bg-white text-dark shadow-lg">
-                            <img src="img/MetalCeramics/DBC/DBC1.webp" class="img-fluid rounded mb-3" alt="DBC ceramic substrate for IGBT module" width="600" height="400">
+                            <img src="img/MetalCeramics/DBC/DBC1.webp" class="img-fluid rounded mb-3" alt="DBC ceramic substrate for IGBT module" width="600" height="400" loading="lazy">
                             <div class="p-2">
                                 <h6 class="fw-bold mb-1 text-primary"><i class="fas fa-bolt me-1"></i> Heavy Copper Ampacity on Ceramic</h6>
                                 <p class="small text-muted mb-2">Copper foil thicknesses of 0.2mm, 0.3mm, and 0.4mm provide sustained ampacity (&gt;50A–150A) with direct heat dissipation through the ceramic base.</p>
@@ -251,7 +255,7 @@
                     <div class="col-lg-6">
                         <div class="p-3 border rounded shadow-sm bg-light">
                             <h4 class="h5 fw-bold mb-3"><i class="fas fa-burn text-danger me-2"></i>DBC Eutectic Bonding Flow</h4>
-                            <img src="img/DBC-process-diagram.webp" class="img-fluid rounded mb-3 border bg-white" alt="DBC manufacturing process diagram" width="600" height="350">
+                            <img src="img/DBC-process-diagram.webp" class="img-fluid rounded mb-3 border bg-white" alt="DBC manufacturing process diagram" width="600" height="350" loading="lazy">
                             <div class="row g-2 text-center small">
                                 <div class="col-3 p-1 border rounded bg-white"><strong>1. Preparation</strong><br><span class="text-muted">Clean Ceramic & Cu</span></div>
                                 <div class="col-3 p-1 border rounded bg-white"><strong>2. Eutectic</strong><br><span class="text-muted">1065°C N2/O2</span></div>
@@ -392,13 +396,13 @@
                             <h4 class="h5 fw-bold mb-3">DBC Substrate Samples</h4>
                             <div class="row g-3">
                                 <div class="col-6">
-                                    <img src="img/MetalCeramics/DBC/DBC2.webp" class="img-fluid rounded border" alt="DBC substrate sample 2" width="300" height="200">
+                                    <img src="img/MetalCeramics/DBC/DBC2.webp" class="img-fluid rounded border" alt="DBC substrate sample 2" width="300" height="200" loading="lazy">
                                 </div>
                                 <div class="col-6">
-                                    <img src="img/MetalCeramics/DBC/DBC3.webp" class="img-fluid rounded border" alt="DBC substrate sample 3" width="300" height="200">
+                                    <img src="img/MetalCeramics/DBC/DBC3.webp" class="img-fluid rounded border" alt="DBC substrate sample 3" width="300" height="200" loading="lazy">
                                 </div>
                                 <div class="col-12 mt-2">
-                                    <img src="img/MetalCeramics/DBC/DBC4.webp" class="img-fluid rounded border" alt="DBC power module substrate" width="600" height="250">
+                                    <img src="img/MetalCeramics/DBC/DBC4.webp" class="img-fluid rounded border" alt="DBC power module substrate" width="600" height="250" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -471,7 +475,7 @@
 
                             <div id="rfqAlertContainer"></div>
 
-                            <form id="rfqForm" novalidate>
+                            <form id="rfqForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
                                 <input type="hidden" name="access_key" value="37a186c8-4229-4101-ae8e-a480e50b9942">
                                 <input type="hidden" name="subject" value="New DBC Ceramic Substrate RFQ — Jimei Materials">
                                 <input type="hidden" name="from_name" value="Jimei Materials Website RFQ">

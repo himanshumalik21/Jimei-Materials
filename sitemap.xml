@@ -3,7 +3,7 @@
 
 <!-- Homepage -->
 <url>
-<loc>https://jimei-materials.com/index.html</loc>
+<loc>https://www.jimei-materials.com/</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.00</priority>
@@ -11,7 +11,7 @@
 
 <!-- Products Hub & Comparison -->
 <url>
-<loc>https://jimei-materials.com/products.html</loc>
+<loc>https://www.jimei-materials.com/products.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.95</priority>
@@ -19,7 +19,7 @@
 
 <!-- Core / Hero Technology: DPC -->
 <url>
-<loc>https://jimei-materials.com/dpc-ceramic-substrate.html</loc>
+<loc>https://www.jimei-materials.com/dpc-ceramic-substrate.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.95</priority>
@@ -27,7 +27,7 @@
 
 <!-- Power Electronics: DBC -->
 <url>
-<loc>https://jimei-materials.com/dbc-ceramic-substrate.html</loc>
+<loc>https://www.jimei-materials.com/dbc-ceramic-substrate.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.90</priority>
@@ -36,7 +36,7 @@
 
 <!-- Multilayer Hermetic: HTCC -->
 <url>
-<loc>https://jimei-materials.com/htcc-ceramic-substrates.html</loc>
+<loc>https://www.jimei-materials.com/htcc-ceramic-substrates.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.90</priority>
@@ -44,7 +44,7 @@
 
 <!-- In-House Manufacturing Capabilities -->
 <url>
-<loc>https://jimei-materials.com/manufacturing.html</loc>
+<loc>https://www.jimei-materials.com/manufacturing.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.85</priority>
@@ -52,7 +52,7 @@
 
 <!-- Bare Ceramics -->
 <url>
-<loc>https://jimei-materials.com/bare-ceramic-substrates.html</loc>
+<loc>https://www.jimei-materials.com/bare-ceramic-substrates.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.80</priority>
@@ -60,28 +60,28 @@
 
 <!-- Informational / Educational Content -->
 <url>
-<loc>https://jimei-materials.com/understanding-dbc-substrates.html</loc>
+<loc>https://www.jimei-materials.com/understanding-dbc-substrates.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
-<loc>https://jimei-materials.com/dpc-technology-explained.html</loc>
+<loc>https://www.jimei-materials.com/dpc-technology-explained.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
-<loc>https://jimei-materials.com/ceramic-metallization-processes.html</loc>
+<loc>https://www.jimei-materials.com/ceramic-metallization-processes.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.80</priority>
 </url>
 
 <url>
-<loc>https://jimei-materials.com/bare-ceramic-substrates-explained.html</loc>
+<loc>https://www.jimei-materials.com/bare-ceramic-substrates-explained.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.80</priority>
@@ -89,14 +89,14 @@
 
 <!-- Technical Applications -->
 <url>
-<loc>https://jimei-materials.com/dpc-encapsulation-dam.html</loc>
+<loc>https://www.jimei-materials.com/dpc-encapsulation-dam.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.75</priority>
 </url>
 
 <url>
-<loc>https://jimei-materials.com/dpc-ceramic-metallization-tec-teg.html</loc>
+<loc>https://www.jimei-materials.com/dpc-ceramic-metallization-tec-teg.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.75</priority>
@@ -104,21 +104,21 @@
 
 <!-- Supporting Pages -->
 <url>
-<loc>https://jimei-materials.com/technical-resources.html</loc>
+<loc>https://www.jimei-materials.com/technical-resources.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.70</priority>
 </url>
 
 <url>
-<loc>https://jimei-materials.com/about.html</loc>
+<loc>https://www.jimei-materials.com/about.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.70</priority>
 </url>
 
 <url>
-<loc>https://jimei-materials.com/contact.html</loc>
+<loc>https://www.jimei-materials.com/contact.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.85</priority>
@@ -126,21 +126,21 @@
 
 <!-- Legal & Utility Pages -->
 <url>
-<loc>https://jimei-materials.com/privacy-policy.html</loc>
+<loc>https://www.jimei-materials.com/privacy-policy.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.30</priority>
 </url>
 
 <url>
-<loc>https://jimei-materials.com/terms-of-service.html</loc>
+<loc>https://www.jimei-materials.com/terms-of-service.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.30</priority>
 </url>
 
 <url>
-<loc>https://jimei-materials.com/sitemap.html</loc>
+<loc>https://www.jimei-materials.com/sitemap.html</loc>
 <lastmod>2026-09-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.40</priority>

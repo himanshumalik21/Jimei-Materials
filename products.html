@@ -26,6 +26,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
 
     <!-- CSS -->
+        <!-- Performance & Preconnect Hints -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.web3forms.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.min.css">
@@ -37,7 +41,7 @@
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": ["Organization", "Manufacturer"],
+                "@type": "Organization",
                 "@id": "https://www.jimei-materials.com/#organization",
                 "name": "Jimei Materials Co., Ltd.",
                 "url": "https://www.jimei-materials.com/",
@@ -188,7 +192,7 @@
                                 <p class="small text-muted mb-0">Direct Plated Copper on Al₂O₃ & AlN</p>
                             </div>
                             <div class="jm-card-body">
-                                <img src="img/MetalCeramics/DPC/DPC1.webp" class="img-fluid rounded mb-3 border" alt="DPC ceramic substrate" width="400" height="250">
+                                <img src="img/MetalCeramics/DPC/DPC1.webp" class="img-fluid rounded mb-3 border" alt="DPC ceramic substrate" width="400" height="250" loading="lazy">
                                 <p class="small text-secondary mb-3">
                                     Thin-film sputtering and 20µm photolithography for high-precision RF circuits, laser diode submounts, and thermoelectric cooling plates.
                                 </p>
@@ -213,7 +217,7 @@
                                 <p class="small text-muted mb-0">Direct Bonded Copper for IGBT Modules</p>
                             </div>
                             <div class="jm-card-body">
-                                <img src="img/MetalCeramics/DBC/DBC1.webp" class="img-fluid rounded mb-3 border" alt="DBC ceramic substrate" width="400" height="250">
+                                <img src="img/MetalCeramics/DBC/DBC1.webp" class="img-fluid rounded mb-3 border" alt="DBC ceramic substrate" width="400" height="250" loading="lazy">
                                 <p class="small text-secondary mb-3">
                                     High-temperature 1065°C eutectic bonding of heavy copper foil (0.2–0.5mm) for industrial power electronics, motor drives, and inverters.
                                 </p>
@@ -238,7 +242,7 @@
                                 <p class="small text-muted mb-0">High-Temperature Co-Fired Ceramic</p>
                             </div>
                             <div class="jm-card-body">
-                                <img src="img/HTCC/htcc1.webp" class="img-fluid rounded mb-3 border" alt="HTCC ceramic package" width="600" height="300" style="height: 200px; object-fit: cover;">
+                                <img src="img/HTCC/htcc1.webp" class="img-fluid rounded mb-3 border" alt="HTCC ceramic package" width="600" height="300" style="height: 200px; object-fit: cover;" loading="lazy">
                                 <p class="small text-secondary mb-3">
                                     Monolithic 3D ceramic packages co-fired at 1500°C–1600°C with tungsten/molybdenum vias, internal cavities, and hermetic seal rings for aerospace and defense.
                                 </p>
@@ -264,7 +268,7 @@
                                 <p class="small text-muted mb-0">Alumina, AlN, Si₃N₄, SiC, and Zirconia</p>
                             </div>
                             <div class="jm-card-body">
-                                <img src="img/BareCeramic/AlN/AlN1.webp" class="img-fluid rounded mb-3 border" alt="Bare ceramic substrate wafers" width="600" height="300" style="height: 200px; object-fit: cover;">
+                                <img src="img/BareCeramic/AlN/AlN1.webp" class="img-fluid rounded mb-3 border" alt="Bare ceramic substrate wafers" width="600" height="300" style="height: 200px; object-fit: cover;" loading="lazy">
                                 <p class="small text-secondary mb-3">
                                     High-purity bare technical ceramic plates supplied from certified manufacturing partners, featuring in-house custom laser cutting, micro-drilling, precision surface lapping, and 100% dimensional inspection.
                                 </p>

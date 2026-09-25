@@ -33,6 +33,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
 
     <!-- CSS -->
+        <!-- Performance & Preconnect Hints -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.web3forms.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.min.css">
@@ -44,7 +48,7 @@
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": ["Organization", "Manufacturer"],
+                "@type": "Organization",
                 "@id": "https://www.jimei-materials.com/#organization",
                 "name": "Jimei Materials Co., Ltd.",
                 "url": "https://www.jimei-materials.com/",
@@ -216,7 +220,7 @@
                     </div>
                     <div class="col-lg-5 mt-4 mt-lg-0">
                         <div class="jm-card p-3 bg-white text-dark shadow-lg">
-                            <img src="img/HTCC/htcc1.webp" class="img-fluid rounded mb-3" alt="HTCC multilayer hermetic ceramic package" width="600" height="400">
+                            <img src="img/HTCC/htcc1.webp" class="img-fluid rounded mb-3" alt="HTCC multilayer hermetic ceramic package" width="600" height="400" loading="lazy">
                             <div class="p-2">
                                 <h6 class="fw-bold mb-1 text-primary"><i class="fas fa-box-open me-1"></i> Multilayer 3D Cavity Structures</h6>
                                 <p class="small text-muted mb-2">Internal cavities, buried stripline RF circuits, sealed feedthroughs, and brazed Kovar rings for laser welding.</p>
@@ -252,7 +256,7 @@
                     <div class="col-lg-6">
                         <div class="p-3 border rounded shadow-sm bg-light">
                             <h4 class="h5 fw-bold mb-3"><i class="fas fa-microchip text-primary me-2"></i>HTCC Process Architecture</h4>
-                            <img src="img/HTCC/htcc-process-diagram.webp" class="img-fluid rounded mb-3 border bg-white" alt="HTCC manufacturing process diagram" width="600" height="350">
+                            <img src="img/HTCC/htcc-process-diagram.webp" class="img-fluid rounded mb-3 border bg-white" alt="HTCC manufacturing process diagram" width="600" height="350" loading="lazy">
                             <div class="row g-2 text-center small">
                                 <div class="col-3 p-1 border rounded bg-white"><strong>1. Tape Cast</strong><br><span class="text-muted">Green Sheets</span></div>
                                 <div class="col-3 p-1 border rounded bg-white"><strong>2. Print W/Mo</strong><br><span class="text-muted">Vias & Traces</span></div>
@@ -353,31 +357,31 @@
                 <div class="row g-4">
                     <div class="col-md-4 col-sm-6">
                         <div class="jm-card p-3">
-                            <img src="img/HTCC/htcc1.webp" class="img-fluid rounded mb-2 border" alt="HTCC multilayer hermetic package 1" width="400" height="300">
+                            <img src="img/HTCC/htcc1.webp" class="img-fluid rounded mb-2 border" alt="HTCC multilayer hermetic package 1" width="400" height="300" loading="lazy">
                             <div class="small fw-bold text-center">Multilayer Hermetic Shell with Brazed Seal Ring</div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="jm-card p-3">
-                            <img src="img/HTCC/htcc2.webp" class="img-fluid rounded mb-2 border" alt="HTCC multilayer hermetic package 2" width="400" height="300">
+                            <img src="img/HTCC/htcc2.webp" class="img-fluid rounded mb-2 border" alt="HTCC multilayer hermetic package 2" width="400" height="300" loading="lazy">
                             <div class="small fw-bold text-center">Multi-Tier Cavity Package for Sensor Dies</div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="jm-card p-3">
-                            <img src="img/HTCC/htcc3.webp" class="img-fluid rounded mb-2 border" alt="HTCC multilayer package 3" width="400" height="300">
+                            <img src="img/HTCC/htcc3.webp" class="img-fluid rounded mb-2 border" alt="HTCC multilayer package 3" width="400" height="300" loading="lazy">
                             <div class="small fw-bold text-center">RF Ceramic Package with Controlled Impedance</div>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <div class="jm-card p-3">
-                            <img src="img/HTCC/htcc4.webp" class="img-fluid rounded mb-2 border" alt="HTCC hermetic package 4" width="600" height="350">
+                            <img src="img/HTCC/htcc4.webp" class="img-fluid rounded mb-2 border" alt="HTCC hermetic package 4" width="600" height="350" loading="lazy">
                             <div class="small fw-bold text-center">Hermetic Feedthrough Header for Harsh Environment</div>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <div class="jm-card p-3">
-                            <img src="img/HTCC/htcc5.webp" class="img-fluid rounded mb-2 border" alt="HTCC package 5" width="600" height="350">
+                            <img src="img/HTCC/htcc5.webp" class="img-fluid rounded mb-2 border" alt="HTCC package 5" width="600" height="350" loading="lazy">
                             <div class="small fw-bold text-center">Brazed Pin Grid Array (CPGA) / Surface Mount</div>
                         </div>
                     </div>
@@ -399,7 +403,7 @@
 
                             <div id="rfqAlertContainer"></div>
 
-                            <form id="rfqForm" novalidate>
+                            <form id="rfqForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
                                 <input type="hidden" name="access_key" value="37a186c8-4229-4101-ae8e-a480e50b9942">
                                 <input type="hidden" name="subject" value="New HTCC Ceramic Package RFQ — Jimei Materials">
                                 <input type="hidden" name="from_name" value="Jimei Materials Website RFQ">

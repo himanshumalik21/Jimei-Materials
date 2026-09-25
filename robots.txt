@@ -96,4 +96,4 @@ Allow: /
 Crawl-delay: 2
 
 # Sitemap location - CRITICAL for indexing
-Sitemap: https://jimei-materials.com/sitemap.xml
+Sitemap: https://www.jimei-materials.com/sitemap.xml

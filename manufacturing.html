@@ -24,6 +24,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
 
     <!-- CSS -->
+        <!-- Performance & Preconnect Hints -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.web3forms.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.min.css">
@@ -35,7 +39,7 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": ["Organization", "Manufacturer"],
+          "@type": "Organization",
           "@id": "https://www.jimei-materials.com/#organization",
           "name": "Jimei Materials Co., Ltd.",
           "url": "https://www.jimei-materials.com/",
@@ -166,13 +170,13 @@
                     <div class="col-lg-5 mt-4 mt-lg-0">
                         <div class="row g-2">
                             <div class="col-6">
-                                <img src="img/Factory/factory3.webp" class="img-fluid rounded shadow-sm" alt="Jimei production floor machinery" width="300" height="200">
+                                <img src="img/Factory/factory3.webp" class="img-fluid rounded shadow-sm" alt="Jimei production floor machinery" width="300" height="200" loading="lazy">
                             </div>
                             <div class="col-6">
-                                <img src="img/Factory/factory5.webp" class="img-fluid rounded shadow-sm" alt="Cleanroom equipment Jimei Materials" width="300" height="200">
+                                <img src="img/Factory/factory5.webp" class="img-fluid rounded shadow-sm" alt="Cleanroom equipment Jimei Materials" width="300" height="200" loading="lazy">
                             </div>
                             <div class="col-12 mt-2">
-                                <img src="img/Factory/factory1.webp" class="img-fluid rounded shadow-sm" alt="Jimei manufacturing facility Shenzhen" width="600" height="300">
+                                <img src="img/Factory/factory1.webp" class="img-fluid rounded shadow-sm" alt="Jimei manufacturing facility Shenzhen" width="600" height="300" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -230,7 +234,7 @@
                     <div class="jm-process-step">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 01</span>
-                            <img src="img/ProductionFloor/Leveling_and_Polishing.png" alt="Ceramic substrate leveling and polishing" loading="lazy">
+                            <img src="img/ProductionFloor/Leveling_and_Polishing.png" alt="Ceramic substrate leveling and polishing" loading="lazy" width="562" height="563">
                         </div>
                         <div class="jm-process-content">
                             <h3>Substrate Lapping & Polishing</h3>
@@ -242,7 +246,7 @@
                     <div class="jm-process-step">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 02</span>
-                            <img src="img/ProductionFloor/LaserDrilling.png" alt="Precision laser micro-via drilling" loading="lazy">
+                            <img src="img/ProductionFloor/LaserDrilling.png" alt="Precision laser micro-via drilling" loading="lazy" width="564" height="564">
                         </div>
                         <div class="jm-process-content">
                             <h3>Laser Micro-Via Drilling</h3>
@@ -251,10 +255,10 @@
                     </div>
 
                     <!-- Step 3 -->
-                    <div class="jm-process-step">
+                    <div class="jm-process-step" id="sputtering">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 03</span>
-                            <img src="img/ProductionFloor/Sputtering.png" alt="Magnetron vacuum sputtering thin film seed layer" loading="lazy">
+                            <img src="img/ProductionFloor/Sputtering.png" alt="Magnetron vacuum sputtering thin film seed layer" loading="lazy" width="564" height="564">
                         </div>
                         <div class="jm-process-content">
                             <h3>Vacuum Sputtering (PVD)</h3>
@@ -263,10 +267,10 @@
                     </div>
 
                     <!-- Step 4 -->
-                    <div class="jm-process-step">
+                    <div class="jm-process-step" id="photolithography">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 04</span>
-                            <img src="img/ProductionFloor/Circuits.png" alt="Cleanroom photolithography 20um circuits" loading="lazy">
+                            <img src="img/ProductionFloor/Circuits.png" alt="Cleanroom photolithography 20um circuits" loading="lazy" width="564" height="564">
                         </div>
                         <div class="jm-process-content">
                             <h3>Cleanroom Photolithography</h3>
@@ -275,10 +279,10 @@
                     </div>
 
                     <!-- Step 5 -->
-                    <div class="jm-process-step">
+                    <div class="jm-process-step" id="plating">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 05</span>
-                            <img src="img/ProductionFloor/Plating.png" alt="Pattern electroplating copper" loading="lazy">
+                            <img src="img/ProductionFloor/Plating.png" alt="Pattern electroplating copper" loading="lazy" width="562" height="564">
                         </div>
                         <div class="jm-process-content">
                             <h3>Pattern Electroplating</h3>
@@ -290,7 +294,7 @@
                     <div class="jm-process-step">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 06</span>
-                            <img src="img/ProductionFloor/FilmRemovalEtching.png" alt="Photoresist stripping and differential etching" loading="lazy">
+                            <img src="img/ProductionFloor/FilmRemovalEtching.png" alt="Photoresist stripping and differential etching" loading="lazy" width="562" height="561">
                         </div>
                         <div class="jm-process-content">
                             <h3>Resist Strip & Differential Etch</h3>
@@ -302,7 +306,7 @@
                     <div class="jm-process-step">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 07</span>
-                            <img src="img/ProductionFloor/SurfaceTreatment.png" alt="Surface treatment ENIG and ENEPIG" loading="lazy">
+                            <img src="img/ProductionFloor/SurfaceTreatment.png" alt="Surface treatment ENIG and ENEPIG" loading="lazy" width="562" height="563">
                         </div>
                         <div class="jm-process-content">
                             <h3>Surface Finishing (ENIG / ENEPIG)</h3>
@@ -314,7 +318,7 @@
                     <div class="jm-process-step">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 08</span>
-                            <img src="img/ProductionFloor/LaserShape.png" alt="Precision laser contouring and profiling" loading="lazy">
+                            <img src="img/ProductionFloor/LaserShape.png" alt="Precision laser contouring and profiling" loading="lazy" width="562" height="565">
                         </div>
                         <div class="jm-process-content">
                             <h3>Laser Profiling & Singulation</h3>
@@ -323,10 +327,10 @@
                     </div>
 
                     <!-- Step 9 -->
-                    <div class="jm-process-step">
+                    <div class="jm-process-step" id="testing">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 09</span>
-                            <img src="img/ProductionFloor/E_Test.png" alt="100% electrical continuity and isolation testing" loading="lazy">
+                            <img src="img/ProductionFloor/E_Test.png" alt="100% electrical continuity and isolation testing" loading="lazy" width="562" height="562">
                         </div>
                         <div class="jm-process-content">
                             <h3>100% Electrical Testing (E-Test)</h3>
@@ -338,7 +342,7 @@
                     <div class="jm-process-step">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 10</span>
-                            <img src="img/ProductionFloor/FQC_and_FQA.png" alt="Final quality assurance and automated optical inspection" loading="lazy">
+                            <img src="img/ProductionFloor/FQC_and_FQA.png" alt="Final quality assurance and automated optical inspection" loading="lazy" width="561" height="562">
                         </div>
                         <div class="jm-process-content">
                             <h3>AOI & Final Quality Assurance</h3>
@@ -350,7 +354,7 @@
                     <div class="jm-process-step">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">STEP 11</span>
-                            <img src="img/ProductionFloor/Packing_and_shipping.png" alt="Cleanroom vacuum and nitrogen packaging" loading="lazy">
+                            <img src="img/ProductionFloor/Packing_and_shipping.png" alt="Cleanroom vacuum and nitrogen packaging" loading="lazy" width="560" height="560">
                         </div>
                         <div class="jm-process-content">
                             <h3>Cleanroom Vacuum Packaging</h3>
@@ -362,7 +366,7 @@
                     <div class="jm-process-step">
                         <div class="jm-process-img-wrap">
                             <span class="jm-process-num">FACILITY</span>
-                            <img src="img/Factory/factory4.webp" alt="Jimei engineering and production team" loading="lazy">
+                            <img src="img/Factory/factory4.webp" alt="Jimei engineering and production team" loading="lazy" width="3022" height="2863">
                         </div>
                         <div class="jm-process-content">
                             <h3>Engineering & DFM Support</h3>
@@ -428,7 +432,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="jm-card p-3 shadow-sm">
-                            <img src="img/ProductionFloor/FQC_and_FQA.png" class="img-fluid rounded mb-3" alt="Final Quality Control at Jimei Materials" width="600" height="400">
+                            <img src="img/ProductionFloor/FQC_and_FQA.png" class="img-fluid rounded mb-3" alt="Final Quality Control at Jimei Materials" width="600" height="400" loading="lazy">
                             <div class="p-2">
                                 <h6 class="fw-bold text-dark mb-1">Standard Deliverables with Every Order</h6>
                                 <p class="small text-muted mb-2">Customers receive a full Certificate of Conformance (CoC), dimensional inspection report, E-test log, and XRF plating thickness verification.</p>
