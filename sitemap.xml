@@ -33,13 +33,6 @@
 <priority>0.90</priority>
 </url>
 
-<!-- High Reliability: AMB -->
-<url>
-<loc>https://jimei-materials.com/amb-ceramic-substrate.html</loc>
-<lastmod>2026-09-24</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.90</priority>
-</url>
 
 <!-- Multilayer Hermetic: HTCC -->
 <url>
