@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "company": {
+    "name": "Jimei Materials Co., Ltd.",
+    "legalNameEn": "Zhaoqing Jimei Silk Screen Printing Co., Ltd.",
+    "establishedYear": 2016,
+    "positioning": "Advanced Ceramic Substrates & Ceramic Packaging Manufacturer",
+    "coreTechnologies": [
+      "DPC",
+      "DBC",
+      "HTCC"
+    ],
+    "trustStats": {
+      "skilledProfessionals": "250+",
+      "countriesServed": "30+",
+      "projectsCompleted": "5,000+",
+      "establishedStatement": "Established in 2016",
+      "automotivePartnerships": "Experience supporting Tier-1 automotive supply chains"
+    },
+    "certifications": [
+      "ISO 9001:2015 Quality Management System",
+      "ISO 14001:2015 Environmental Management System"
+    ],
+    "facilities": {
+      "manufacturing": "First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, Guangdong 518104, China",
+      "corporate": "No. 10 Meiting Road, Industrial Park, Duanzhou, Zhaoqing, Guangdong 526020, China"
+    },
+    "contact": {
+      "phone": "+86-758-287-1828",
+      "mobile": "+86-147-4537-3293",
+      "email": "sales@jimei-materials.com",
+      "web3formsKey": "37a186c8-4229-4101-ae8e-a480e50b9942"
+    }
+  },
+  "technologies": {
+    "dpc": {
+      "name": "Direct Plated Copper (DPC)",
+      "positioning": "Fine-feature and high-frequency ceramic substrates for semiconductor packaging, RF/microwave, photonics, and precision electronics.",
+      "leadTime": "Approximately 2 weeks (depending on design complexity, quantity, material and qualification requirements)",
+      "leadTimeSummary": "~2 weeks",
+      "minFeatureCapability": "20 μm",
+      "minViaCapability": "50 μm",
+      "rfOptimization": "RF Design & Performance Optimization up to 40 GHz (performance depends on substrate material, dielectric properties, geometry, circuit layout, metallization, and operating conditions)",
+      "standardSubstrates": [
+        "Alumina (Al₂O₃ 96% / 99.6%)",
+        "Aluminum Nitride (AlN ≥170 W/m·K)"
+      ],
+      "copperThickness": "10 μm – 150 μm (electrolytic copper plating)",
+      "surfaceFinishes": [
+        "ENIG (Electroless Ni / Immersion Au)",
+        "ENEPIG",
+        "Immersion Silver",
+        "Immersion Tin",
+        "Direct Bondable Gold"
+      ],
+      "primaryApplications": [
+        "Semiconductor & Optical Packaging",
+        "RF & Microwave Circuits (up to 40 GHz)",
+        "High-Power Laser Diodes & VCSELs",
+        "Thermoelectric Coolers & Generators (TEC/TEG)",
+        "Precision Sensor Modules & Photodetectors"
+      ]
+    },
+    "dbc": {
+      "name": "Direct Bonded Copper (DBC)",
+      "positioning": "High-current, high-power electronics and thermal-management ceramic substrates.",
+      "leadTime": "Approximately 2 weeks (depending on design complexity, quantity, material and qualification requirements)",
+      "leadTimeSummary": "~2 weeks",
+      "standardSubstrates": [
+        "Alumina (Al₂O₃ 96%)",
+        "Aluminum Nitride (AlN ≥170 W/m·K)",
+        "Silicon Nitride (Si₃N₄)"
+      ],
+      "copperThickness": "127 μm – 500 μm (direct bonded oxygen-containing copper foil)",
+      "primaryApplications": [
+        "IGBT & Power Semiconductor Modules",
+        "Silicon Carbide (SiC) & GaN Power Converters",
+        "Electric Vehicle (EV/HEV) Traction Inverters",
+        "Industrial Motor Drives & Power Distribution",
+        "Renewable Energy & Solar Inverters"
+      ]
+    },
+    "htcc": {
+      "name": "High-Temperature Co-Fired Ceramic (HTCC)",
+      "positioning": "Multilayer ceramic packaging and hermetic electronic enclosures co-fired at 1500°C–1600°C with refractory metals.",
+      "leadTime": "Approximately 6–8 weeks (depending on design complexity, layer count, tooling, and qualification requirements)",
+      "leadTimeSummary": "~6–8 weeks",
+      "sinteringTemperature": "1500°C – 1600°C (controlled reducing atmosphere co-firing)",
+      "metallization": "Refractory conductors (Tungsten W / Molybdenum Mo) with post-sinter nickel/gold electroplating",
+      "hermeticity": "Helium leak rate <1×10⁻⁸ atm·cc/s",
+      "features": [
+        "Monolithic multilayer ceramic construction",
+        "Internal signal and ground plane routing",
+        "Integrated cavities for die placement and optical components",
+        "Brazed seal rings, feedthroughs, and metal leads (Kovar, Cu-W)",
+        "High thermal and chemical stability in extreme environments"
+      ],
+      "primaryApplications": [
+        "Hermetic Packaging for Critical Electronics",
+        "RF & Microwave Packages",
+        "Sensors & MEMS Enclosures",
+        "Aerospace & High-Reliability Electronics",
+        "Optical Transceivers & TO-Header Replacements"
+      ]
+    },
+    "bareCeramics": {
+      "name": "Bare Ceramic Substrates",
+      "positioning": "Partner-sourced technical ceramic raw plates with in-house precision laser cutting, CNC diamond grinding, polishing, and ultrasonic cleaning.",
+      "capacity": "Capacity: up to 500,000 bare ceramic substrates per month",
+      "materials": [
+        "Alumina (Al₂O₃ 96% and 99.6%)",
+        "Aluminum Nitride (AlN, thermal conductivity ≥170 W/m·K)",
+        "Silicon Nitride (Si₃N₄, high fracture toughness and flexural strength)",
+        "Silicon Carbide (SiC, extreme hardness and thermal conductivity)",
+        "Zirconia (ZrO₂ / Y-TZP, high mechanical strength and wear resistance)"
+      ]
+    }
+  },
+  "prohibitedClaims": [
+    "Germany technical center",
+    "Japan technical center",
+    "USA technical center",
+    "5+ semiconductor companies",
+    "40+ layers",
+    "800°C continuous operation",
+    "MIL-STD-883",
+    "8+ years",
+    "50+ countries",
+    "1,500 projects",
+    "AMB / Active Metal Brazing"
+  ]
+}

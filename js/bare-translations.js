@@ -172,7 +172,7 @@
             "cta_tech_support": "Technical Consultation",
             "cta_tech_support_desc": "Expert material selection support",
             "cta_prototyping": "Rapid Prototyping",
-            "cta_prototyping_desc": "Custom designs in 2-3 weeks",
+            "cta_prototyping_desc": "Custom designs in ~2 weeks",
             "btn_contact_us": "Contact Us Today",
             "cta_phone": "+86-147-4537-3293",
             

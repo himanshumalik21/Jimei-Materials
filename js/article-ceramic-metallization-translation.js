@@ -72,8 +72,8 @@
             "article_subsection4_title": "4. Direct Plated Copper (DPC)",
             "article_subsection4_paragraph1": "Uses photolithography and electroplating to deposit copper patterns onto ceramic surfaces. DPC enables fine line resolution and multilayer structures, supporting advanced packaging for semiconductor devices and laser diodes.",
             
-            "article_subsection5_title": "5. Active Metal Brazing (AMB)",
-            "article_subsection5_paragraph1": "Employs active brazing alloys (e.g., Ag-Cu-Ti) to bond metal layers to ceramics at elevated temperatures. AMB is used for hermetic sealing and high-reliability applications where strong metal-ceramic adhesion is required.",
+            "article_subsection5_title": "5. Refractory Vacuum Brazing",
+            "article_subsection5_paragraph1": "Employs active brazing alloys (e.g., Ag-Cu-Ti) to bond metal layers to ceramics at elevated temperatures. Vacuum Brazing is used for hermetic sealing and high-reliability applications where strong metal-ceramic adhesion is required.",
             
             "article_section3_title": "Ceramic Metallization Process Steps",
             "process_step1_title": "Surface Preparation",
@@ -393,7 +393,7 @@
         "article_subsection4_title": "4. 直接鍍金銅（DPC）",
         "article_subsection4_paragraph1": "フォトリソグラフィと電気めっきを使用して、セラミック表面に銅パターンを堆積させます。DPCは微細線解像度と多層構造を可能にし、半導体デバイスやレーザーダイオードの先進的なパッケージングをサポートします。",
         
-        "article_subsection5_title": "5. 活性金属ろう付け（AMB）",
+        "article_subsection5_title": "5. 高真空ろう付け（Vacuum Brazing）",
         "article_subsection5_paragraph1": "活性ろう付け合金（例：Ag-Cu-Ti）を使用して、高温で金属層をセラミックに接合します。AMBは、強固な金属-セラミック密着性が要求される気密封止および高信頼性アプリケーションに使用されます。",
         
         "article_section3_title": "セラミックメタライゼーションの工程ステップ",
@@ -552,7 +552,7 @@
     "article_subsection4_title": "4. 직접 도금 동(DPC)",
     "article_subsection4_paragraph1": "포토리소그래피 및 전해 도금을 사용하여 세라믹 표면에 구리 패턴을 증착합니다. DPC는 미세 선 해상도 및 다층 구조를 가능하게 하여 반도체 장치 및 레이저 다이오드를 위한 고급 패키징을 지원합니다.",
     
-    "article_subsection5_title": "5. 능동 금속 브레이징(AMB)",
+    "article_subsection5_title": "5. 진공 브레이징(Vacuum Brazing)",
     "article_subsection5_paragraph1": "능동 브레이징 합금(예: Ag-Cu-Ti)을 사용하여 고온에서 금속층을 세라믹에 접합합니다. AMB는 강력한 금속-세라믹 접착이 요구되는 기밀 밀봉 및 고신뢰성 애플리케이션에 사용됩니다.",
     
     "article_section3_title": "세라믹 금속화 공정 단계",
@@ -711,8 +711,8 @@
     "article_subsection4_title": "4. Direct Plated Copper (DPC)",
     "article_subsection4_paragraph1": "Verwendet Fotolithografie und Galvanik, um Kupfermuster auf Keramikoberflächen abzuscheiden. DPC ermöglicht Feinleiterauflösung und Mehrschichtstrukturen und unterstützt fortschrittliches Packaging für Halbleiterbauteile und Laserdioden.",
     
-    "article_subsection5_title": "5. Active Metal Brazing (AMB)",
-    "article_subsection5_paragraph1": "Verwendet aktive Lötlegierungen (z.B. Ag-Cu-Ti), um Metallschichten bei erhöhten Temperaturen mit Keramiken zu verbinden. AMB wird für hermetische Versiegelung und Hochzuverlässigkeitsanwendungen eingesetzt, wo starke Metall-Keramik-Haftung erforderlich ist.",
+    "article_subsection5_title": "5. Refractory Vacuum Brazing",
+    "article_subsection5_paragraph1": "Verwendet aktive Lötlegierungen (z.B. Ag-Cu-Ti), um Metallschichten bei erhöhten Temperaturen mit Keramiken zu verbinden. Vacuum Brazing wird für hermetische Versiegelung und Hochzuverlässigkeitsanwendungen eingesetzt, wo starke Metall-Keramik-Haftung erforderlich ist.",
     
     "article_section3_title": "Keramikmetallisierungs-Prozessschritte",
     "process_step1_title": "Oberflächenvorbereitung",

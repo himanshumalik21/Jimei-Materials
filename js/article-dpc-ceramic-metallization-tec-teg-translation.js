@@ -62,7 +62,7 @@
             "article_section1_paragraph3": "To form the necessary electrical junctions that link the semiconductor pellets, the ceramic surface must be metallized. Our Direct Plated Copper (DPC) process provides the ideal solution for this challenge.",
             
             "article_section2_title": "Direct Plated Copper (DPC): The Superior Metallization Choice",
-            "article_section2_paragraph1": "While methods like Thick Film and Active Metal Brazing (AMB) exist, DPC offers a unique combination of precision, thermal performance, and mechanical reliability—critical factors for miniaturized, high-power-density TEC/TEG packaging.",
+            "article_section2_paragraph1": "While methods like Thick Film and Direct Bonded Copper (DBC) exist, DPC offers a unique combination of precision, thermal performance, and mechanical reliability—critical factors for miniaturized, high-power-density TEC/TEG packaging.",
             
             "article_subsection1_title": "1. Exceptional Thermal Conductivity",
             "article_subsection1_paragraph": "The overall thermal resistance (Rth) of a TEM is heavily influenced by its substrates. We primarily utilize Aluminum Nitride (AlN) or high-grade Alumina (Al₂O₃) ceramics, combined with the high conductivity of pure plated copper.",
@@ -353,7 +353,7 @@
         "article_section1_paragraph3": "半導体ペレットを接続する必要な電気的接点を形成するためには、セラミック表面を金属化する必要があります。当社の直接鍍金銅（DPC）プロセスは、この課題に対する理想的なソリューションを提供します。",
         
         "article_section2_title": "直接鍍金銅（DPC）: 優れた金属化の選択",
-        "article_section2_paragraph1": "厚膜や活性金属ろう付け（AMB）などの方法が存在しますが、DPCは精度、熱性能、機械的信頼性のユニークな組み合わせを提供します。これは、小型化され高電力密度のTEC/TEGパッケージングにとって重要な要素です。",
+        "article_section2_paragraph1": "厚膜や直接接合銅（DBC）などの方法が存在しますが、DPCは精度、熱性能、機械的信頼性のユニークな組み合わせを提供します。これは、小型化され高電力密度のTEC/TEGパッケージングにとって重要な要素です。",
         
         "article_subsection1_title": "1. 卓越した熱伝導性",
         "article_subsection1_paragraph": "TEM全体の熱抵抗（Rth）は、その基板に大きく影響されます。当社は主に窒化アルミニウム（AlN）または高品質アルミナ（Al₂O₃）セラミックを、純度の高いめっき銅の高熱伝導性と組み合わせて使用します。",
@@ -497,7 +497,7 @@
     "article_section1_paragraph3": "반도체 펠릿을 연결하는 필수 전기적 접합을 형성하기 위해 세라믹 표면은 금속화되어야 합니다. 당사의 직접 도금 동(DPC) 공정은 이 과제에 대한 이상적인 솔루션을 제공합니다.",
     
     "article_section2_title": "직접 도금 동(DPC): 우수한 금속화 선택",
-    "article_section2_paragraph1": "두꺼운 필름(Thick Film) 및 능동 금속 브레이징(AMB)과 같은 방법이 존재하지만, DPC는 소형화된 고출력 밀도 TEC/TEG 패키징에 중요한 정밀성, 열 성능 및 기계적 신뢰성의 독특한 조합을 제공합니다.",
+    "article_section2_paragraph1": "두꺼운 필름(Thick Film) 및 직접 구리 접합(DBC)과 같은 방법이 존재하지만, DPC는 소형화된 고출력 밀도 TEC/TEG 패키징에 중요한 정밀성, 열 성능 및 기계적 신뢰성의 독특한 조합을 제공합니다.",
     
     "article_subsection1_title": "1. 탁월한 열전도성",
     "article_subsection1_paragraph": "TEM의 전체 열저항(Rth)은 그 기판에 크게 영향을 받습니다. 당사는 주로 순수 도금된 구리의 높은 전도성과 결합된 질화알루미늄(AlN) 또는 고급 알루미나(Al₂O₃) 세라믹을 사용합니다.",
@@ -641,7 +641,7 @@
     "article_section1_paragraph3": "Um die notwendigen elektrischen Übergänge zu bilden, die die Halbleiter-Pellets verbinden, muss die Keramikoberfläche metallisiert werden. Unser Direct Plated Copper (DPC) Prozess bietet die ideale Lösung für diese Herausforderung.",
     
     "article_section2_title": "Direct Plated Copper (DPC): Die überlegene Metallisierungswahl",
-    "article_section2_paragraph1": "Während Methoden wie Dickschicht und Active Metal Brazing (AMB) existieren, bietet DPC eine einzigartige Kombination aus Präzision, thermischer Performance und mechanischer Zuverlässigkeit - kritische Faktoren für miniaturisiertes, hochleistungsdichtes TEC/TEG-Packaging.",
+    "article_section2_paragraph1": "Während Methoden wie Dickschicht und Direct Bonded Copper (DBC) existieren, bietet DPC eine einzigartige Kombination aus Präzision, thermischer Performance und mechanischer Zuverlässigkeit - kritische Faktoren für miniaturisiertes, hochleistungsdichtes TEC/TEG-Packaging.",
     
     "article_subsection1_title": "1. Außergewöhnliche Wärmeleitfähigkeit",
     "article_subsection1_paragraph": "Der Gesamtwärmewiderstand (Rth) eines TEM wird stark von seinen Substraten beeinflusst. Wir verwenden primär Aluminiumnitrid (AlN) oder hochwertige Aluminiumoxid (Al₂O₃) Keramiken, kombiniert mit der hohen Leitfähigkeit von reinem galvanisiertem Kupfer.",

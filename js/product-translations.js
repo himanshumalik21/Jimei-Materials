@@ -148,7 +148,7 @@
             "dpc_multilayer_note": "Double-sided with PTH vias",
             "dbc_multilayer": "1-2 layers (bonded) Two DBCs can be bonded",
             "dbc_multilayer_note": "Two DBCs can be bonded",
-            "htcc_multilayer": "2-50+ layers True 3D structures with cavities",
+            "htcc_multilayer": "Multilayer monolithic 3D structures with cavities",
             "htcc_multilayer_note": "True 3D structures with cavities",
 
             "feature_applications": "Primary Applications",
@@ -168,11 +168,11 @@
             "htcc_cost_note": "High NRE, economies of scale",
 
             "feature_lead_time": "Typical Lead Time (Production)",
-            "dpc_lead_time": "2-3 weeks Photomask required",
+            "dpc_lead_time": "~2 weeks Photomask required",
             "dpc_lead_time_note": "Photomask required",
-            "dbc_lead_time": "2-3 weeks Laser/etch tooling",
+            "dbc_lead_time": "~2 weeks Laser/etch tooling",
             "dbc_lead_time_note": "Laser/etch tooling",
-            "htcc_lead_time": "4-6 weeks Screen tooling + co-firing cycle",
+            "htcc_lead_time": "6-8 weeks Tooling + co-firing cycle",
             "htcc_lead_time_note": "Screen tooling + co-firing cycle",
 
             "feature_recommendation": "When to Choose This Technology",
@@ -260,7 +260,7 @@
             "products_cta_title": "Need Custom Ceramic Substrate Solutions?",
             "products_cta_description": "Our engineering team specializes in developing custom ceramic substrate solutions tailored to your specific requirements.",
             "cta_prototyping": "Rapid Prototyping",
-            "cta_prototyping_desc": "Custom designs in 2-3 weeks",
+            "cta_prototyping_desc": "Custom designs in ~2 weeks",
             "cta_technical_support": "Technical Support",
             "cta_technical_support_desc": "Engineering consultation available",
             "cta_phone": "+86-147-4537-3293"
@@ -406,7 +406,7 @@
             "dpc_multilayer_note": "双面带镀通孔",
             "dbc_multilayer": "1-2 层 (键合) 可键合两层 DBC",
             "dbc_multilayer_note": "可键合两层 DBC",
-            "htcc_multilayer": "2-50+ 层 可制作带腔体的真 3D 结构",
+            "htcc_multilayer": "多层一体化共烧 3D 腔体结构",
             "htcc_multilayer_note": "可制作带腔体的真 3D 结构",
 
             "feature_applications": "主要应用",
@@ -428,9 +428,9 @@
             "feature_lead_time": "典型交货期 (生产)",
             "dpc_lead_time": "2-3 周 需要光罩",
             "dpc_lead_time_note": "需要光罩",
-            "dbc_lead_time": "2-3 周 激光/蚀刻模具",
+            "dbc_lead_time": "约2周 激光/蚀刻模具",
             "dbc_lead_time_note": "激光/蚀刻模具",
-            "htcc_lead_time": "4-6 周 丝网模具 + 共烧周期",
+            "htcc_lead_time": "6-8周 模具 + 共烧周期",
             "htcc_lead_time_note": "丝网模具 + 共烧周期",
 
             "feature_recommendation": "何时选择该技术",
@@ -664,7 +664,7 @@
             "dpc_multilayer_note": "スルーホールビアによる両面実装",
             "dbc_multilayer": "1-2層（接合） 2つのDBCを接合可能",
             "dbc_multilayer_note": "2つのDBCを接合可能",
-            "htcc_multilayer": "2-50+層 キャビティ付き真の3D構造",
+            "htcc_multilayer": "キャビティ付き一体型3D多層構造",
             "htcc_multilayer_note": "キャビティ付き真の3D構造",
 
             "feature_applications": "主な用途",
@@ -686,9 +686,9 @@
             "feature_lead_time": "標準リードタイム（生産）",
             "dpc_lead_time": "2-3週間 フォトマスクが必要",
             "dpc_lead_time_note": "フォトマスクが必要",
-            "dbc_lead_time": "2-3週間 レーザー/エッチング治具",
+            "dbc_lead_time": "約2週間 レーザー/エッチング治具",
             "dbc_lead_time_note": "レーザー/エッチング治具",
-            "htcc_lead_time": "4-6週間 スクリーン治具＋共焼サイクル",
+            "htcc_lead_time": "6-8週間 治具＋共焼サイクル",
             "htcc_lead_time_note": "スクリーン治具＋共焼サイクル",
 
             "feature_recommendation": "この技術を選択する場合",
@@ -922,7 +922,7 @@
             "dpc_multilayer_note": "PTH 비아 양면",
             "dbc_multilayer": "1-2층 (접합) 두 DBC 접합 가능",
             "dbc_multilayer_note": "두 DBC 접합 가능",
-            "htcc_multilayer": "2-50+층 캐비티 포함 진정한 3D 구조",
+            "htcc_multilayer": "캐비티 포함 일체형 3D 다층 구조",
             "htcc_multilayer_note": "캐비티 포함 진정한 3D 구조",
 
             "feature_applications": "주요 응용 분야",
@@ -942,11 +942,11 @@
             "htcc_cost_note": "높은 NRE, 규모의 경제",
 
             "feature_lead_time": "표준 납기 (생산)",
-            "dpc_lead_time": "2-3주 포토마스크 필요",
+            "dpc_lead_time": "약 2주 포토마스크 필요",
             "dpc_lead_time_note": "포토마스크 필요",
-            "dbc_lead_time": "2-3주 레이저/에칭 공구",
+            "dbc_lead_time": "약 2주 레이저/에칭 공구",
             "dbc_lead_time_note": "레이저/에칭 공구",
-            "htcc_lead_time": "4-6주 스크린 공구 + 동시 소성 주기",
+            "htcc_lead_time": "6-8주 공구 + 동시 소성 주기",
             "htcc_lead_time_note": "스크린 공구 + 동시 소성 주기",
 
             "feature_recommendation": "해당 기술 선택 시기",
@@ -1200,11 +1200,11 @@
             "htcc_cost_note": "Hohe NRE, Skaleneffekte",
 
             "feature_lead_time": "Typische Lieferzeit (Produktion)",
-            "dpc_lead_time": "2-3 Wochen Fotomaske erforderlich",
+            "dpc_lead_time": "ca. 2 Wochen Fotomaske erforderlich",
             "dpc_lead_time_note": "Fotomaske erforderlich",
             "dbc_lead_time": "2-3 Wochen Laser-/Ätzwerkzeug",
             "dbc_lead_time_note": "Laser-/Ätzwerkzeug",
-            "htcc_lead_time": "4-6 Wochen Siebdruckwerkzeug + Ko-Sinter-Zyklus",
+            "htcc_lead_time": "6-8 Wochen Werkzeug + Ko-Sinter-Zyklus",
             "htcc_lead_time_note": "Siebdruckwerkzeug + Ko-Sinter-Zyklus",
 
             "feature_recommendation": "Wann diese Technologie wählen",

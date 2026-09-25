@@ -71,9 +71,9 @@
             "timeline_2022": "2022 - HTCC Development & 5G Applications",
             "timeline_2022_desc": "Commissioned our HTCC (High-Temperature Co-fired Ceramic) R&D line. Developed AlN HTCC for RF/microwave packaging and successfully qualified with two major telecom equipment manufacturers for 5G base station components.",
             "timeline_2024": "2024 - Advanced Materials & Global Engineering",
-            "timeline_2024_desc": "Launched volume production of Si₃N₄ substrates and multilayer HTCC packages. Established technical support centers in Germany, Japan, and the USA. Achieved 50μm via capability for advanced DPC photolithography.",
+            "timeline_2024_desc": "Launched volume production of Si₃N₄ substrates and multilayer HTCC packages. Expanded global engineering support for international semiconductor and RF clients. Achieved 50μm via capability for advanced DPC photolithography.",
             "timeline_2025": "2025 - Next-Generation Roadmap",
-            "timeline_2025_desc": "Currently developing ultra-thin DPC (<100μm total thickness) for medical implants and active metal brazing technology for complex 3D power modules. Expanding HTCC capacity for aerospace and industrial sensor applications.",
+            "timeline_2025_desc": "Currently developing ultra-thin DPC (<100μm total thickness) for medical implants and high-reliability metallization for complex 3D power modules. Expanding HTCC capacity for aerospace and industrial sensor applications.",
 
             // Global Presence Section
             "global_title": "Global Technology Partnerships",
@@ -82,7 +82,7 @@
             // Regional Technology Focus
             "region_na": "North America",
             "region_na_tech": "EV & Power Electronics",
-            "region_na_desc": "Supplying DBC substrates for SiC/GaN power modules to automotive Tier-1s, and DPC substrates for aerospace RF applications. Technical partnerships with 5+ semiconductor companies for advanced packaging solutions.",
+            "region_na_desc": "Supplying DBC substrates for SiC/GaN power modules to automotive Tier-1s, and DPC substrates for aerospace RF applications. Dedicated engineering collaboration for advanced semiconductor packaging solutions.",
             "region_eu": "Europe",
             "region_eu_tech": "Industrial & Automotive",
             "region_eu_desc": "Providing AlN DBC substrates for industrial motor drives and renewable energy converters. HTCC packages for automotive sensors and MEMS devices. Supporting German automotive OEMs with custom thermal management solutions.",
@@ -157,7 +157,7 @@
             "about_cta_title": "Partner With Us",
             "about_cta_description": "Join leading companies worldwide who trust Jimei Materials for their DBC, DPC, and HTCC ceramic substrate requirements in power electronics, RF, and hermetic packaging applications.",
             "cta_expertise": "Technical Expertise",
-            "cta_expertise_desc": "8+ years specialized experience",
+            "cta_expertise_desc": "Established in 2016",
             "cta_quality": "Quality Assurance",
             "cta_quality_desc": "ISO 14001:2015 certified processes",
             "cta_phone": "+86-147-4537-3293"
@@ -226,9 +226,9 @@
             "timeline_2022": "2022 - HTCC 研发与 5G 应用",
             "timeline_2022_desc": "HTCC（高温共烧陶瓷）研发线投入使用。开发了用于射频/微波封装的氮化铝 HTCC 技术，并成功通过两家主要电信设备制造商针对 5G 基站组件的认证。",
             "timeline_2024": "2024 - 先进材料与全球工程支持",
-            "timeline_2024_desc": "启动氮化硅基板和多层 HTCC 封装的大规模生产。在德国、日本和美国设立了技术支持中心。DPC 光刻技术实现了 50μm 通孔能力。",
+            "timeline_2024_desc": "启动氮化硅基板和多层 HTCC 封装的大规模生产。进一步拓展面向国际半导体与射频客户的全球工程支持能力。DPC 光刻技术实现了 50μm 通孔能力。",
             "timeline_2025": "2025 - 下一代技术路线图",
-            "timeline_2025_desc": "目前正在开发用于医疗植入的 ultra-thin DPC（总厚度<100μm）以及用于复杂 3D 功率模块的活性金属钎焊技术。正在扩大 HTCC 产能，以满足航空航天和工业传感器应用的需求。",
+            "timeline_2025_desc": "目前正在开发用于医疗植入的 ultra-thin DPC（总厚度<100μm）以及用于复杂 3D 功率模块的高可靠性金属化技术。正在扩大 HTCC 产能，以满足航空航天和工业传感器应用的需求。",
 
             // 全球布局板块
             "global_title": "全球技术合作伙伴",
@@ -237,7 +237,7 @@
             // 区域技术聚焦
             "region_na": "北美",
             "region_na_tech": "电动汽车与电力电子",
-            "region_na_desc": "为汽车 Tier-1 供应商提供用于碳化硅/氮化镓功率模块的 DBC 基板，并为航空航天射频应用提供 DPC 基板。与超过5家半导体公司建立技术合作，提供先进封装解决方案。",
+            "region_na_desc": "为汽车 Tier-1 供应商提供用于碳化硅/氮化镓功率模块的 DBC 基板，并为航空航天射频应用提供 DPC 基板。紧密配合先进半导体封装方案的工程设计与定制开发。",
             "region_eu": "欧洲",
             "region_eu_tech": "工业与汽车",
             "region_eu_desc": "为工业电机驱动和可再生能源变流器提供氮化铝 DBC 基板。为汽车传感器和 MEMS 器件提供 HTCC 封装。为德国汽车 OEM 提供定制热管理解决方案。",
@@ -312,7 +312,7 @@
             "about_cta_title": "与我们合作",
             "about_cta_description": "加入遍布全球的领先公司行列，他们在电力电子、射频及气密封装应用中，信赖集美材料满足其 DBC、DPC 和 HTCC 陶瓷基板需求。",
             "cta_expertise": "技术专长",
-            "cta_expertise_desc": "超过8年的专业经验",
+            "cta_expertise_desc": "始创于2016年",
             "cta_quality": "质量保证",
             "cta_quality_desc": "通过 ISO 14001:2015 认证的流程",
             "cta_phone": "+86-147-4537-3293"
@@ -381,9 +381,9 @@
             "timeline_2022": "2022年 - HTCC開発および5Gアプリケーション",
             "timeline_2022_desc": "HTCC（高温共焼セラミック）研究開発ラインを設置。RF/マイクロ波パッケージング向けAlN HTCCを開発し、5G基地局部品向けに主要通信機器メーカー2社に認定。",
             "timeline_2024": "2024年 - 先進材料およびグローバルエンジニアリング",
-            "timeline_2024_desc": "Si₃N₄基板および多層HTCCパッケージの量産を開始。ドイツ、日本、米国に技術サポートセンターを設立。先進DPCフォトリソグラフィ向けに50μmビア能力を確立。",
+            "timeline_2024_desc": "Si₃N₄基板および多層HTCCパッケージの量産を開始。国際的な半導体およびRF顧客向けのグローバルエンジニアリングサポートを強化。先進DPCフォトリソグラフィ向けに50μmビア能力を確立。",
             "timeline_2025": "2025年 - 次世代ロードマップ",
-            "timeline_2025_desc": "現在、医療用インプラント向け超薄型DPC（総厚<100μm）および複雑な3Dパワーモジュール向けアクティブメタルろう付け技術を開発中。航空宇宙および産業用センサーアプリケーション向けHTCC能力を拡大。",
+            "timeline_2025_desc": "現在、医療用インプラント向け超薄型DPC（総厚<100μm）および複雑な3Dパワーモジュール向け高信頼性メタライゼーション技術を開発中。航空宇宙および産業用センサーアプリケーション向けHTCC能力を拡大。",
 
             // Global Presence Section
             "global_title": "グローバル技術パートナーシップ",
@@ -392,7 +392,7 @@
             // Regional Technology Focus
             "region_na": "北米",
             "region_na_tech": "EVおよびパワーエレクトロニクス",
-            "region_na_desc": "自動車Tier-1向けSiC/GaNパワーモジュール用DBC基板、および航空宇宙RFアプリケーション向けDPC基板を供給。先進パッケージングソリューション向けに5社以上の半導体企業と技術提携。",
+            "region_na_desc": "自動車Tier-1向けSiC/GaNパワーモジュール用DBC基板、および航空宇宙RFアプリケーション向けDPC基板を供給。先進パッケージングソリューション向けの緊密なエンジニアリング協業を展開。",
             "region_eu": "欧州",
             "region_eu_tech": "産業および自動車",
             "region_eu_desc": "産業用モータードライブおよび再生可能エネルギーコンバーター向けAlN DBC基板を提供。自動車センサーおよびMEMSデバイス向けHTCCパッケージ。ドイツ自動車OEM向けカスタム熱管理ソリューションを支援。",
@@ -467,7 +467,7 @@
             "about_cta_title": "パートナーシップ",
             "about_cta_description": "パワーエレクトロニクス、RF、気密封装アプリケーションにおけるDBC、DPC、HTCCセラミック基板要件でJimei Materialsを信頼する、世界中の主要企業にご参加ください。",
             "cta_expertise": "技術専門性",
-            "cta_expertise_desc": "8年以上の専門的経験",
+            "cta_expertise_desc": "2016年設立",
             "cta_quality": "品質保証",
             "cta_quality_desc": "ISO 14001:2015認証プロセス",
             "cta_phone": "+86-147-4537-3293"
@@ -536,9 +536,9 @@
             "timeline_2022": "2022 - HTCC 개발 및 5G 응용",
             "timeline_2022_desc": "HTCC(고온 동시 소성 세라믹) 연구개발 라인 가동. RF/마이크로파 패키징용 AlN HTCC 개발 및 5G 기지국 부품에 대해 주요 통신 장비 제조사 2곳과 성공적으로 자격 인증 완료.",
             "timeline_2024": "2024 - 고급 재료 및 글로벌 엔지니어링",
-            "timeline_2024_desc": "Si₃N₄ 기판 및 다층 HTCC 패키지 양산 시작. 독일, 일본 및 미국에 기술 지원 센터 설립. 고급 DPC 포토리소그래피를 위한 50μm 비아 구현 능력 확보.",
+            "timeline_2024_desc": "Si₃N₄ 기판 및 다층 HTCC 패키지 양산 시작. 국제 반도체 및 RF 고객을 위한 글로벌 엔지니어링 지원 역량 강화. 고급 DPC 포토리소그래피를 위한 50μm 비아 구현 능력 확보.",
             "timeline_2025": "2025 - 차세대 기술 로드맵",
-            "timeline_2025_desc": "현재 의료용 임플란트를 위한 초박형 DPC(총 두께 <100μm) 및 복잡한 3D 파워 모듈을 위한 능동 금속 브레이징 기술 개발 중. 항공우주 및 산업용 센서 응용을 위한 HTCC 생산 능력 확장.",
+            "timeline_2025_desc": "현재 의료용 임플란트를 위한 초박형 DPC(총 두께 <100μm) 및 복잡한 3D 파워 모듈을 위한 고신뢰성 금속화 기술 개발 중. 항공우주 및 산업용 센서 응용을 위한 HTCC 생산 능력 확장.",
 
             // 글로벌 현황 섹션
             "global_title": "글로벌 기술 파트너십",
@@ -622,7 +622,7 @@
             "about_cta_title": "함께 성장해 나갑시다",
             "about_cta_description": "파워일렉트로닉스, RF 및 기밀 패키징 응용 분야에서 DBC, DPC, HTCC 세라믹 기판 요구사항을 위해 Jimei Materials를 신뢰하는 전 세계 선도 기업들과 함께 하세요.",
             "cta_expertise": "기술 전문성",
-            "cta_expertise_desc": "8년 이상의 특화된 경험",
+            "cta_expertise_desc": "2016년 설립",
             "cta_quality": "품질 보증",
             "cta_quality_desc": "ISO 14001:2015 인증 공정",
             "cta_phone": "+86-147-4537-3293"
@@ -691,7 +691,7 @@
             "timeline_2022": "2022 - HTCC-Entwicklung & 5G-Anwendungen",
             "timeline_2022_desc": "Inbetriebnahme unserer HTCC (High-Temperature Co-fired Ceramic)-F&E-Linie. Entwicklung von AlN-HTCC für HF-/Mikrowellengehäuse und erfolgreiche Qualifizierung bei zwei großen Telekommunikationsausrüstern für 5G-Basisstationskomponenten.",
             "timeline_2024": "2024 - Fortschrittliche Materialien & Globales Engineering",
-            "timeline_2024_desc": "Start der Serienproduktion von Si₃N₄-Substraten und mehrlagigen HTCC-Gehäusen. Einrichtung technischer Support-Zentren in Deutschland, Japan und den USA. Erreichung von 50 μm Durchkontaktierungsfähigkeit für fortschrittliche DPC-Fotolithografie.",
+            "timeline_2024_desc": "Start der Serienproduktion von Si₃N₄-Substraten und mehrlagigen HTCC-Gehäusen. Ausbau des weltweiten Engineering-Supports für internationale Halbleiter- und HF-Kunden. Erreichung von 50 μm Durchkontaktierungsfähigkeit für fortschrittliche DPC-Fotolithografie.",
             "timeline_2025": "2025 - Roadmap der nächsten Generation",
             "timeline_2025_desc": "Aktuelle Entwicklung von ultra-dünnen DPC-Substraten (<100 μm Gesamtdicke) für medizinische Implantate und Active-Metal-Brazing-Technologie für komplexe 3D-Leistungsmodule. Ausbau der HTCC-Kapazität für Luft- und Raumfahrt- sowie Industriesensoranwendungen.",
 
@@ -777,7 +777,7 @@
             "about_cta_title": "Werden Sie unser Partner",
             "about_cta_description": "Schließen Sie sich führenden Unternehmen weltweit an, die Jimei Materials für ihre DBC-, DPC- und HTCC-Keramiksubstrat-Anforderungen in Leistungselektronik, HF-Technik und hermetischen Gehäusen vertrauen.",
             "cta_expertise": "Technische Expertise",
-            "cta_expertise_desc": "8+ Jahre spezialisierte Erfahrung",
+            "cta_expertise_desc": "Gegründet im Jahr 2016",
             "cta_quality": "Qualitätssicherung",
             "cta_quality_desc": "ISO 14001:2015 zertifizierte Prozesse",
             "cta_phone": "+86-147-4537-3293"
