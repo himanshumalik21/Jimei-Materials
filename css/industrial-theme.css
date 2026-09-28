@@ -211,6 +211,15 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display
   color: #ffffff;
 }
 
+.jm-hero-pill.hero-pill-flagship {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.5) 0%, rgba(14, 165, 233, 0.35) 100%);
+  border: 1.5px solid #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+  font-size: 0.95rem;
+  padding: 0.4rem 0.9rem;
+}
+
 .jm-hero p.lead {
   color: #cbd5e1;
   font-size: 1.15rem;

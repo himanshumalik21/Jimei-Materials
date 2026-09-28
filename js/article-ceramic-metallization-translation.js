@@ -233,8 +233,8 @@
         "article_subsection4_title": "4. 直接镀铜",
         "article_subsection4_paragraph1": "利用光刻和电镀技术在陶瓷表面沉积铜图案。DPC技术可实现细线分辨率和多层结构，支持半导体器件和激光二极管的先进封装。",
             
-        "article_subsection5_title": "5. 活性金属钎焊",
-        "article_subsection5_paragraph1": "使用活性钎焊合金在高温下将金属层连接到陶瓷上。AMB用于气密密封和高可靠性应用，需要强大的金属-陶瓷结合力。",
+        "article_subsection5_title": "5. 难熔真空钎焊 (Vacuum Brazing)",
+        "article_subsection5_paragraph1": "使用高温真空钎焊合金在高温下将金属引线框架和金属盖板连接到陶瓷基板上。真空钎焊用于气密密封和高可靠性微电子封装应用，提供极高的机械结合力和耐温性。",
             
         "article_section3_title": "陶瓷金属化工艺流程步骤",
         "process_step1_title": "表面处理",
@@ -394,7 +394,7 @@
         "article_subsection4_paragraph1": "フォトリソグラフィと電気めっきを使用して、セラミック表面に銅パターンを堆積させます。DPCは微細線解像度と多層構造を可能にし、半導体デバイスやレーザーダイオードの先進的なパッケージングをサポートします。",
         
         "article_subsection5_title": "5. 高真空ろう付け（Vacuum Brazing）",
-        "article_subsection5_paragraph1": "活性ろう付け合金（例：Ag-Cu-Ti）を使用して、高温で金属層をセラミックに接合します。AMBは、強固な金属-セラミック密着性が要求される気密封止および高信頼性アプリケーションに使用されます。",
+        "article_subsection5_paragraph1": "高温真空ろう付け合金を使用して、高温で金属層やリードフレームをセラミックに接合します。真空ろう付けは、強固な金属-セラミック密着性が要求される気密封止および高信頼性マイクロエレクトロニクスパッケージングに使用されます。",
         
         "article_section3_title": "セラミックメタライゼーションの工程ステップ",
         "process_step1_title": "表面準備",
@@ -553,7 +553,7 @@
     "article_subsection4_paragraph1": "포토리소그래피 및 전해 도금을 사용하여 세라믹 표면에 구리 패턴을 증착합니다. DPC는 미세 선 해상도 및 다층 구조를 가능하게 하여 반도체 장치 및 레이저 다이오드를 위한 고급 패키징을 지원합니다.",
     
     "article_subsection5_title": "5. 진공 브레이징(Vacuum Brazing)",
-    "article_subsection5_paragraph1": "능동 브레이징 합금(예: Ag-Cu-Ti)을 사용하여 고온에서 금속층을 세라믹에 접합합니다. AMB는 강력한 금속-세라믹 접착이 요구되는 기밀 밀봉 및 고신뢰성 애플리케이션에 사용됩니다.",
+    "article_subsection5_paragraph1": "고온 진공 브레이징 합금을 사용하여 고온에서 금속층 및 리드프레임을 세라믹에 접합합니다. 진공 브레이징은 강력한 금속-세라믹 접착이 요구되는 기밀 밀봉 및 고신뢰성 마이크로일렉트로닉스 패키징에 사용됩니다.",
     
     "article_section3_title": "세라믹 금속화 공정 단계",
     "process_step1_title": "표면 준비",
