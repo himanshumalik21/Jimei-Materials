@@ -10,7 +10,7 @@
     const translations = {
         en: {
             // Meta & SEO
-            "tr_page_title": "Technical Resources & Industry Insights | JIMEI Ceramic Substrates",
+            "tr_page_title": "Technical Resources & Industry Insights | Jimei Materials",
             "tr_meta_description": "Technical documentation library for ceramic substrate engineering: DBC (Direct Bonded Copper), DPC (Direct Plated Copper), and HTCC (High-Temperature Co-fired Ceramic) design guidelines, application notes, and material selection tools for power electronics, RF, and thermal management systems.",
             "tr_meta_keywords": "ceramic substrate design guidelines, DBC technical data sheet, DPC application notes, HTCC design manual, thermal interface material selection, power module layout guide, RF substrate design rules, semiconductor packaging technical resources, AlN thermal properties, alumina dielectric constant, ceramic metallization specifications, multilayer ceramic fabrication, hermetic sealing standards, thermal management white papers, material compatibility guide, reliability testing methods, design for manufacturability, ceramic substrate CAD files, simulation models, failure analysis reports",
             "tr_og_title": "Ceramic Substrate Technical Resources | DBC, DPC, HTCC Design Guides | Jimei Materials",

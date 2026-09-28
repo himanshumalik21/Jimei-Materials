@@ -451,10 +451,20 @@
         <!-- Featured Articles -->
         <section class="featured-articles py-5" aria-labelledby="featured-articles-heading">
             <div class="container py-4">
-                <header class="text-center mb-5">
+                <header class="text-center mb-4">
                     <h2 id="featured-articles-heading" class="h1 fw-bold mb-3" data-i18n="featured_articles_title">Featured Articles</h2>
                     <p class="lead" data-i18n="featured_articles_description">In-depth technical insights and application guides</p>
                 </header>
+
+                <!-- Category Filter -->
+                <div class="category-filter mb-5" role="tablist" aria-label="Resource categories">
+                    <button class="category-btn active" data-category="all" role="tab" aria-selected="true">All Resources</button>
+                    <button class="category-btn" data-category="dpc" role="tab" aria-selected="false">DPC Technology</button>
+                    <button class="category-btn" data-category="dbc" role="tab" aria-selected="false">DBC Technology</button>
+                    <button class="category-btn" data-category="htcc" role="tab" aria-selected="false">HTCC Packaging</button>
+                    <button class="category-btn" data-category="design" role="tab" aria-selected="false">Design & Bare Ceramics</button>
+                    <button class="category-btn" data-category="application" role="tab" aria-selected="false">Application Notes</button>
+                </div>
                 
                 <!-- Articles Grid -->
                 <div class="row g-4" id="resourcesGrid" role="list">
@@ -564,6 +574,8 @@
                                 </div>
                             </div>
                         </article>
+                    </div>
+                    
                     <!-- Article 7 -->
                     <div class="col-lg-4 col-md-6" data-category="htcc" role="listitem">
                         <article class="resource-card h-100">
@@ -734,7 +746,7 @@
             </div>
 
             <div class="jm-footer-bottom d-flex flex-wrap justify-content-between align-items-center">
-                <div>© 2026 Jimei Materials Co., Ltd. All Rights Reserved.</div>
+                <div>© <span id="currentYear">2026</span> Jimei Materials Co., Ltd. All Rights Reserved.</div>
                 <div class="d-flex gap-3">
                     <a href="./privacy-policy.html">Privacy Policy</a>
                     <a href="./terms-of-service.html">Terms of Service</a>
