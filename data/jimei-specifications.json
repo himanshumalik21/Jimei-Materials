@@ -111,7 +111,7 @@
     },
     "dbc": {
       "name": "Direct Bonded Copper (DBC)",
-      "positioning": "High-current, high-power electronics and thermal-management ceramic substrates based exclusively on Al₂O₃ (Alumina).",
+      "positioning": "DBC = High-Current / Power Electronics Ceramic Substrate. Heavy copper foil (0.20 mm – 0.30 mm) eutectic-bonded to Al₂O₃ ceramic for high ampacity (>50A–150A+) and high-voltage dielectric isolation.",
       "leadTime": "Approximately 2 weeks (depending on design complexity, quantity, material and qualification requirements)",
       "leadTimeSummary": "~2 weeks",
       "standardSubstrates": [
@@ -135,11 +135,14 @@
       ],
       "copperThickness": "0.20 mm, 0.25 mm, 0.30 mm (direct bonded oxygen-containing copper foil)",
       "primaryApplications": [
-        "IGBT & Power Semiconductor Modules",
-        "Silicon Carbide (SiC) & GaN Power Converters",
-        "Electric Vehicle (EV/HEV) Traction Inverters",
-        "Industrial Motor Drives & Power Distribution",
-        "Renewable Energy & Solar Inverters"
+        "IGBT Power Modules (600V–1700V+ half-bridge & six-pack)",
+        "SiC Power Modules (high-frequency, high Tj ≥175°C)",
+        "EV Traction Inverters (400V/800V motor drives)",
+        "On-Board Chargers (OBC) & Automotive DC-DC Converters",
+        "Industrial Drives & Variable Frequency Drives (VFD)",
+        "Renewable Energy Inverters (Solar PV & Wind Converters)",
+        "Power Supplies & Telecom UPS Rectifiers",
+        "Welding Equipment & Induction Heating Power Stages"
       ]
     },
     "htcc": {
