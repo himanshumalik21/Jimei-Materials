@@ -43,7 +43,8 @@
       "rfOptimization": "RF Design & Performance Optimization up to 40 GHz (performance depends on substrate material, dielectric properties, geometry, circuit layout, metallization, and operating conditions)",
       "standardSubstrates": [
         "Alumina (Al₂O₃ 96% / 99.6%)",
-        "Aluminum Nitride (AlN ≥170 W/m·K)"
+        "Aluminum Nitride (AlN ≥170 W/m·K)",
+        "Silicon Nitride (Si₃N₄)"
       ],
       "copperThickness": "10 μm – 150 μm (electrolytic copper plating)",
       "surfaceFinishes": [
@@ -110,15 +111,29 @@
     },
     "dbc": {
       "name": "Direct Bonded Copper (DBC)",
-      "positioning": "High-current, high-power electronics and thermal-management ceramic substrates.",
+      "positioning": "High-current, high-power electronics and thermal-management ceramic substrates based exclusively on Al₂O₃ (Alumina).",
       "leadTime": "Approximately 2 weeks (depending on design complexity, quantity, material and qualification requirements)",
       "leadTimeSummary": "~2 weeks",
       "standardSubstrates": [
-        "Alumina (Al₂O₃ 96%)",
-        "Aluminum Nitride (AlN ≥170 W/m·K)",
-        "Silicon Nitride (Si₃N₄)"
+        "Alumina (Al₂O₃)"
       ],
-      "copperThickness": "127 μm – 500 μm (direct bonded oxygen-containing copper foil)",
+      "availableCeramicThicknesses": [
+        "0.25 mm",
+        "0.38 mm",
+        "0.50 mm",
+        "0.635 mm",
+        "1.00 mm"
+      ],
+      "availableCopperThicknesses": [
+        "0.20 mm",
+        "0.25 mm",
+        "0.30 mm"
+      ],
+      "surfaceFinishes": [
+        "OSP (Organic Solderability Preservative)",
+        "ENIG (Electroless Nickel Immersion Gold)"
+      ],
+      "copperThickness": "0.20 mm, 0.25 mm, 0.30 mm (direct bonded oxygen-containing copper foil)",
       "primaryApplications": [
         "IGBT & Power Semiconductor Modules",
         "Silicon Carbide (SiC) & GaN Power Converters",
