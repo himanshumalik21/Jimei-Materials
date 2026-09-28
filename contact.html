@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Contact & RFQ | Ceramic Substrate Engineering Inquiries | Jimei Materials</title>
 
-    <meta name="description" content="Request a quote or technical review for DPC, DBC, and HTCC ceramic substrates. In-house engineering team provides DFM feedback and firm quotes within 24 hours. Send CAD/Gerber drawings to sales@jimei-materials.com.">
+    <meta name="description" content="Request a quote or technical review for DPC, DBC, and HTCC ceramic substrates. In-house engineering team provides DFM feedback and technical DFM feedback and prompt quotations. Send CAD/Gerber drawings to sales@jimei-materials.com.">
     <meta name="keywords" content="request ceramic substrate quote, DPC RFQ, DBC substrate quote, HTCC package quotation, ceramic metallization manufacturer contact, Jimei Materials Shenzhen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -133,7 +133,7 @@
         <div class="container d-flex justify-content-between align-items-center">
             <div>
                 <span class="me-3"><i class="fas fa-check-circle text-info me-1"></i> ISO 14001:2015 Certified Ceramic Substrate Manufacturer</span>
-                <span><i class="fas fa-clock text-info me-1"></i> Rapid Engineering DFM Review & Quotes within 24 Hours</span>
+                <span><i class="fas fa-clock text-info me-1"></i> Direct Factory Engineering DFM Review & Prompt Quotations</span>
             </div>
             <div>
                 <a href="mailto:sales@jimei-materials.com" class="me-3"><i class="fas fa-envelope text-info me-1"></i> sales@jimei-materials.com</a>
@@ -173,7 +173,7 @@
                     <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link active" href="./contact.html">Contact</a></li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-jm-primary btn-sm" href="./contact.html"><i class="fas fa-file-invoice me-1"></i> Request Quote</a>
+                        <a class="btn btn-jm-primary btn-sm" href="./contact.html"><i class="fas fa-file-invoice me-1"></i> Request a Quote</a>
                     </li>
                 </ul>
             </div>
@@ -270,129 +270,159 @@
 
                             <div id="rfqAlertContainer"></div>
 
-                            <form id="rfqForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                            <form id="rfqForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" novalidate>
                                 <!-- Web3Forms Config -->
                                 <input type="hidden" name="access_key" value="37a186c8-4229-4101-ae8e-a480e50b9942">
-                                <input type="hidden" name="subject" value="New Engineering RFQ / Inquiry from Jimei Materials Website">
-                                <input type="hidden" name="from_name" value="Jimei Materials Website RFQ">
+                                <input type="hidden" name="subject" value="New Engineering RFQ / Inquiry — Jimei Materials">
+                                <input type="hidden" name="from_name" value="Jimei Materials RFQ Desk">
                                 <input type="checkbox" name="botcheck" style="display: none;">
 
                                 <div class="row g-3">
-                                    <!-- Contact Info -->
+                                    <!-- 1. Technology Selection (Required) -->
+                                    <div class="col-md-6">
+                                        <label class="jm-form-label">Technology <span class="req">*</span></label>
+                                        <select name="technology" class="form-select jm-form-select" required>
+                                            <option value="" disabled selected>Select Technology...</option>
+                                            <option value="DPC (Direct Plated Copper)">DPC (Direct Plated Copper)</option>
+                                            <option value="DBC (Direct Bonded Copper)">DBC (Direct Bonded Copper)</option>
+                                            <option value="HTCC (High-Temp Co-Fired)">HTCC (High-Temperature Co-Fired Ceramic)</option>
+                                            <option value="Bare Ceramic">Bare Ceramic Machining</option>
+                                            <option value="Not Sure">Not Sure (Need Engineering Recommendation)</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a technology or choose 'Not Sure'.</div>
+                                    </div>
+
+                                    <!-- 2. Application Selection (Required) -->
+                                    <div class="col-md-6">
+                                        <label class="jm-form-label">Application <span class="req">*</span></label>
+                                        <select name="application" class="form-select jm-form-select" required>
+                                            <option value="" disabled selected>Select Application...</option>
+                                            <option value="Semiconductor & Advanced Packaging">Semiconductor & Advanced Packaging</option>
+                                            <option value="Power Electronics / EV Inverter / OBC">Power Electronics / EV Inverter / OBC</option>
+                                            <option value="RF, Microwave & mmWave (5G/Radar)">RF, Microwave & mmWave (5G/Radar)</option>
+                                            <option value="Laser Diode Submount / Optical Transceiver">Laser Diode Submount / Optical Transceiver</option>
+                                            <option value="Thermoelectric Cooler / TEC / TEG">Thermoelectric Cooler (TEC / TEG)</option>
+                                            <option value="Sensor & Harsh-Environment Package">Sensor & Harsh-Environment Package</option>
+                                            <option value="Other Custom Application">Other Custom Application</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please specify your intended application.</div>
+                                    </div>
+
+                                    <!-- 3. Substrate Material -->
+                                    <div class="col-md-4">
+                                        <label class="jm-form-label">Material</label>
+                                        <select name="ceramic_material" class="form-select jm-form-select">
+                                            <option value="AlN (Aluminum Nitride ≥170 W/m·K)" selected>AlN (Aluminum Nitride ≥170 W/m·K)</option>
+                                            <option value="Al2O3 96% (Alumina)">Al₂O₃ 96% (Standard Alumina)</option>
+                                            <option value="Al2O3 99.6% (Thin-Film Grade)">Al₂O₃ 99.6% (Thin-Film Grade)</option>
+                                            <option value="Si3N4 (Silicon Nitride)">Si₃N₄ (Silicon Nitride)</option>
+                                            <option value="SiC (Silicon Carbide)">SiC (Silicon Carbide)</option>
+                                            <option value="Zirconia (ZrO2)">Zirconia (ZrO₂)</option>
+                                            <option value="Not Sure / Best Fit">Not Sure / Recommend Best Material</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- 4. Substrate Dimensions -->
+                                    <div class="col-md-4">
+                                        <label class="jm-form-label">Dimensions</label>
+                                        <input type="text" name="dimensions" class="form-control jm-form-control" placeholder="e.g. 50×50 mm, 0.38 mm thick">
+                                    </div>
+
+                                    <!-- 5. Metal / Copper Thickness -->
+                                    <div class="col-md-4">
+                                        <label class="jm-form-label">Copper Thickness</label>
+                                        <select name="copper_thickness" class="form-select jm-form-select">
+                                            <option value="35 µm (1.0 oz DPC)" selected>35 µm (1.0 oz DPC)</option>
+                                            <option value="18 µm (0.5 oz DPC)">18 µm (0.5 oz DPC)</option>
+                                            <option value="70 µm (2.0 oz DPC)">70 µm (2.0 oz DPC)</option>
+                                            <option value="105 µm (3.0 oz DPC)">105 µm (3.0 oz DPC)</option>
+                                            <option value="0.20 mm (DBC foil)">0.20 mm (DBC foil)</option>
+                                            <option value="0.25 mm (DBC foil)">0.25 mm (DBC foil)</option>
+                                            <option value="0.30 mm (DBC foil)">0.30 mm (DBC foil)</option>
+                                            <option value="0.40–0.50 mm (Heavy DBC)">0.40–0.50 mm (Heavy DBC)</option>
+                                            <option value="Not Sure / DFM Discretion">Not Sure / Recommend Optimal</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- 6. Quantity -->
+                                    <div class="col-md-4">
+                                        <label class="jm-form-label">Quantity <span class="req">*</span></label>
+                                        <select name="quantity" class="form-select jm-form-select" required>
+                                            <option value="5 – 25 pcs (Rapid Prototyping)" selected>5 – 25 pcs (Rapid Prototyping)</option>
+                                            <option value="25 – 100 pcs (Verification)">25 – 100 pcs (Verification)</option>
+                                            <option value="100 – 500 pcs (Pilot Run)">100 – 500 pcs (Pilot Run)</option>
+                                            <option value="500 – 2,000 pcs (Pre-series)">500 – 2,000 pcs (Pre-series)</option>
+                                            <option value="2,000+ pcs (Mass Production)">2,000+ pcs (Mass Production)</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- 7. Target Production Stage -->
+                                    <div class="col-md-4">
+                                        <label class="jm-form-label">Target Production Stage</label>
+                                        <select name="target_stage" class="form-select jm-form-select">
+                                            <option value="Concept / R&D">Concept / R&D</option>
+                                            <option value="Prototyping" selected>Prototyping</option>
+                                            <option value="Design Verification (DVT/PVT)">Design Verification (DVT/PVT)</option>
+                                            <option value="Mass Production Ramp">Mass Production Ramp</option>
+                                            <option value="Existing Supplier Replacement">Existing Supplier Replacement</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- 8. Required Delivery Date -->
+                                    <div class="col-md-4">
+                                        <label class="jm-form-label">Required Delivery Date</label>
+                                        <input type="text" name="delivery_date" class="form-control jm-form-control" placeholder="e.g. Within 3 weeks / Date">
+                                    </div>
+
+                                    <!-- 9. Technical Requirements -->
+                                    <div class="col-12">
+                                        <label class="jm-form-label">Technical Requirements <span class="req">*</span></label>
+                                        <textarea name="technical_specs" class="form-control jm-form-control" rows="3" placeholder="Specify line/space (e.g. 20µm), via requirements (PTH / solid filled), operating frequency, thermal targets, surface finish (ENIG/ENEPIG), or tolerances..." required></textarea>
+                                        <div class="invalid-feedback">Please describe your technical requirements or enter 'See attached drawing'.</div>
+                                    </div>
+
+                                    <!-- 10. Upload Drawing (Gerber, DXF, STEP, PDF) -->
+                                    <div class="col-12">
+                                        <label class="jm-form-label">Upload Drawing (Gerber / DXF / STEP / PDF)</label>
+                                        <input type="file" name="attachment" class="form-control jm-form-control" multiple accept=".zip,.rar,.7z,.pdf,.step,.stp,.dxf,.gerber,.gbr">
+                                        <div class="jm-form-hint">
+                                            <i class="fas fa-paperclip me-1 text-primary"></i> Accepted: <code>.zip, .rar, .7z, .pdf, .step, .dxf, .gerber</code> (Max 10MB). For larger packages or signed NDAs, email directly to <a href="mailto:sales@jimei-materials.com" class="fw-bold">sales@jimei-materials.com</a>.
+                                        </div>
+                                    </div>
+
+                                    <!-- 11. Contact Info & Business Email -->
                                     <div class="col-md-6">
                                         <label class="jm-form-label">Full Name <span class="req">*</span></label>
                                         <input type="text" name="name" class="form-control jm-form-control" placeholder="e.g. Dr. Arthur Pendelton" required>
                                         <div class="invalid-feedback">Please enter your name.</div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="jm-form-label">Work / Business Email <span class="req">*</span></label>
+                                        <label class="jm-form-label">Business Email <span class="req">*</span></label>
                                         <input type="email" name="email" class="form-control jm-form-control" placeholder="arthur@company.com" required>
                                         <div class="invalid-feedback">Please enter a valid business email.</div>
                                     </div>
-
-                                    <div class="col-md-6">
-                                        <label class="jm-form-label">Company / Institute <span class="req">*</span></label>
+                                    <div class="col-md-4">
+                                        <label class="jm-form-label">Company / Organization <span class="req">*</span></label>
                                         <input type="text" name="company" class="form-control jm-form-control" placeholder="Company Name" required>
-                                        <div class="invalid-feedback">Please specify your company.</div>
+                                        <div class="invalid-feedback">Please enter your company name.</div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <label class="jm-form-label">Country / Region <span class="req">*</span></label>
-                                        <input type="text" name="country" class="form-control jm-form-control" placeholder="e.g. United States, Germany, Japan" required>
+                                        <input type="text" name="country" class="form-control jm-form-control" placeholder="e.g. Germany, USA, Japan" required>
+                                        <div class="invalid-feedback">Please enter your country.</div>
                                     </div>
-
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <label class="jm-form-label">Phone / WhatsApp</label>
                                         <input type="text" name="phone" class="form-control jm-form-control" placeholder="+1 (555) 000-0000">
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="jm-form-label">Technology Category <span class="req">*</span></label>
-                                        <select name="technology" class="form-select jm-form-select" required>
-                                            <option value="DPC (Direct Plated Copper)" selected>Direct Plated Copper (DPC)</option>
-                                            <option value="DBC (Direct Bonded Copper)">Direct Bonded Copper (DBC) — High Power</option>
-                                            <option value="HTCC (High-Temp Co-Fired)">HTCC Ceramic Packaging — Hermetic Multilayer</option>
-                                            <option value="Bare Ceramic Substrates">Bare Ceramic Substrates (AlN / Al₂O₃ / Si₃N₄)</option>
-                                            <option value="Custom / Other">Custom / Engineering Consultation</option>
-                                        </select>
-                                    </div>
 
-                                    <!-- Technical Specs -->
-                                    <div class="col-md-4">
-                                        <label class="jm-form-label">Ceramic Material</label>
-                                        <select name="ceramic_material" class="form-select jm-form-select">
-                                            <option value="AlN (Aluminum Nitride 170-200 W/mK)" selected>Aluminum Nitride (AlN)</option>
-                                            <option value="Al2O3 96% (Alumina 24 W/mK)">Alumina (Al₂O₃ 96%)</option>
-                                            <option value="Al2O3 99.6% (Thin Film Grade)">Alumina (Al₂O₃ 99.6%)</option>
-                                            <option value="Si3N4 (Silicon Nitride)">Silicon Nitride (Si₃N₄)</option>
-                                            <option value="Zirconia (ZrO2)">Zirconia (ZrO₂)</option>
-                                            <option value="Silicon Carbide (SiC)">Silicon Carbide (SiC)</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label class="jm-form-label">Ceramic Thickness</label>
-                                        <select name="ceramic_thickness" class="form-select jm-form-select">
-                                            <option value="0.25 mm">0.25 mm</option>
-                                            <option value="0.38 mm">0.38 mm</option>
-                                            <option value="0.50 mm" selected>0.50 mm</option>
-                                            <option value="0.635 mm">0.635 mm</option>
-                                            <option value="1.0 mm">1.0 mm</option>
-                                            <option value="Custom Thickness">Custom / Other</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label class="jm-form-label">Metal / Copper Thickness</label>
-                                        <select name="copper_thickness" class="form-select jm-form-select">
-                                            <option value="18 µm (0.5 oz DPC)">18 µm (0.5 oz DPC)</option>
-                                            <option value="35 µm (1.0 oz DPC)" selected>35 µm (1.0 oz DPC)</option>
-                                            <option value="70 µm (2.0 oz DPC)">70 µm (2.0 oz DPC)</option>
-                                            <option value="100 µm (3.0 oz DPC)">100 µm (3.0 oz DPC)</option>
-                                            <option value="0.2 mm - 0.3 mm (DBC)">0.2 mm – 0.3 mm (DBC)</option>
-                                            <option value="0.4 mm - 0.5 mm (DBC)">0.4 mm – 0.5 mm (DBC)</option>
-                                            
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="jm-form-label">Required Surface Finish</label>
-                                        <select name="surface_finish" class="form-select jm-form-select">
-                                            <option value="ENIG (Electroless Ni / Immersion Au)" selected>ENIG (Electroless Ni / Immersion Au)</option>
-                                            <option value="ENEPIG (Wire Bondable Ni/Pd/Au)">ENEPIG (Wire Bondable Ni/Pd/Au)</option>
-                                            <option value="Bare Copper (OSP / Direct Solder)">Bare Copper (Direct Solder)</option>
-                                            <option value="Immersion Silver / Tin">Immersion Silver / Tin</option>
-                                            <option value="Electroplated Hard Gold">Electroplated Hard Gold</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="jm-form-label">Estimated Quantity & Phase</label>
-                                        <select name="quantity_phase" class="form-select jm-form-select">
-                                            <option value="Prototyping (5-25 pcs)" selected>Prototyping (5 – 25 pcs)</option>
-                                            <option value="Pilot / Pre-Production (50-200 pcs)">Pilot / Pre-Production (50 – 200 pcs)</option>
-                                            <option value="Mass Production (>1,000 pcs)">Mass Production (&gt;1,000 pcs)</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="jm-form-label">Technical Requirements & Specifications <span class="req">*</span></label>
-                                        <textarea name="message" class="form-control jm-form-control" rows="4" placeholder="Detail dimensions, minimum line/space, via requirements, thermal targets, or testing standards..." required></textarea>
-                                        <div class="invalid-feedback">Please provide your technical requirements.</div>
-                                    </div>
-
-                                    <!-- Drawing Submission Prompt -->
-                                    <div class="col-12">
-                                        <div class="jm-drawing-box">
-                                            <i class="fas fa-file-pdf text-danger fa-2x mb-2"></i>
-                                            <div class="fw-bold text-dark">Have an engineering drawing (Gerber, DXF, PDF, or STEP)?</div>
-                                            <p class="text-muted small mb-0">
-                                                To protect confidentiality, drawings can be emailed directly to <a href="mailto:sales@jimei-materials.com" class="fw-bold text-primary">sales@jimei-materials.com</a> alongside your RFQ reference. NDAs welcomed before file sharing.
-                                            </p>
-                                        </div>
-                                    </div>
-
+                                    <!-- Submission Button & Notice -->
                                     <div class="col-12 text-center mt-3">
                                         <button type="submit" class="btn btn-jm-primary btn-lg w-100 py-3">
                                             <i class="fas fa-paper-plane me-2"></i> Submit Engineering RFQ to sales@jimei-materials.com
                                         </button>
                                         <p class="text-muted small mt-2 mb-0">
-                                            We review all inquiries under strict commercial confidentiality and reply within 24 hours.
+                                            <i class="fas fa-lock me-1 text-success"></i> All submissions are strictly confidential. Our engineering team reviews specifications and responds as quickly as possible.
                                         </p>
                                     </div>
                                 </div>
