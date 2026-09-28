@@ -147,7 +147,7 @@
     },
     "htcc": {
       "name": "High-Temperature Co-Fired Ceramic (HTCC)",
-      "positioning": "Multilayer ceramic packaging and hermetic electronic enclosures co-fired at 1500°C–1600°C with refractory metals.",
+      "positioning": "HTCC = Multilayer + Hermetic + Harsh Environment. Monolithic multilayer ceramic packaging co-fired at 1500°C–1600°C with tungsten/molybdenum conductors, internal cavities, and hermetic seal rings (<1×10⁻⁸ atm·cc/s).",
       "leadTime": "Approximately 6–8 weeks (depending on design complexity, layer count, tooling, and qualification requirements)",
       "leadTimeSummary": "~6–8 weeks",
       "sinteringTemperature": "1500°C – 1600°C (controlled reducing atmosphere co-firing)",
@@ -161,11 +161,11 @@
         "High thermal and chemical stability in extreme environments"
       ],
       "primaryApplications": [
-        "Hermetic Packaging for Critical Electronics",
-        "RF & Microwave Packages",
-        "Sensors & MEMS Enclosures",
-        "Aerospace & High-Reliability Electronics",
-        "Optical Transceivers & TO-Header Replacements"
+        "Hermetic Packages & Microelectronic Enclosures",
+        "RF & Microwave Hermetic Packages (Buried Feedthroughs)",
+        "Sensor Packages & Optical MEMS Enclosures",
+        "High-Reliability & Harsh-Environment Electronics",
+        "Hermetic Feedthrough Headers & Custom 3D Substrates"
       ]
     },
     "bareCeramics": {
