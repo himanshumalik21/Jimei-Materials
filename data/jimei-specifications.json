@@ -59,7 +59,54 @@
         "High-Power Laser Diodes & VCSELs",
         "Thermoelectric Coolers & Generators (TEC/TEG)",
         "Precision Sensor Modules & Photodetectors"
-      ]
+      ],
+      "dfmDesignRules": {
+        "metalToEdgeDistance": {
+          "standardMinCapability": "100 µm (0.10 mm)",
+          "ultraCloseFabricationCapability": "60 µm (0.06 mm)",
+          "recommendedStableWindow": "0.10 mm – 0.30 mm"
+        },
+        "panelArraySpacing": {
+          "interUnitSpacing": "0.20 mm",
+          "productionFrameWasteMargin": "4.0 mm border frame"
+        },
+        "oneOzCopperCapability": {
+          "copperThickness": "1 oz (35 µm)",
+          "minLineWidthSpacing": "0.08 mm / 0.08 mm (80 µm / 80 µm)",
+          "lineWidthAccuracy": "0.02 mm (20 µm) with ±0.01 mm (±10 µm) tolerance",
+          "layerAlignmentPrecision": "15 µm cumulative error across 2/3/4 inch substrates"
+        },
+        "dualCopperThicknessCapability": {
+          "supported": true,
+          "description": "Capability to fabricate two different copper thicknesses on the same ceramic substrate (e.g. fine-pitch signal lines alongside thick power traces)"
+        },
+        "throughWaferVias": {
+          "platingMethod": "Simultaneous plating with circuit and top side copper",
+          "thicknessMeasurement": "Destructive micro-sectioning (metallographic cross-section) or 4-wire electrical current testing",
+          "currentCapacityRules": {
+            "dualViaOption": "Dual 1 oz (35 µm) Cu through-wafer vias connected in parallel provide ~2.4A current carrying capacity (recommended for up to 2A design)",
+            "singleViaOption": "Single through-wafer via carrying 2A+ requires 105 µm (3 oz) copper thickness"
+          },
+          "solidFilledViaGuidelines": {
+            "recommendedSubstrateThickness": "Below 0.40 mm (0.20 mm, 0.25 mm recommended, 0.38 mm supported). Substrate > 0.40 mm risks voids and blistering/bulging above 350°C",
+            "recommendedViaDiameter": "0.075 mm – 0.10 mm (75 µm – 100 µm)",
+            "minViaCopperThickness": "> 20 µm",
+            "minViaSpacing": "> 120 µm (for 0.20 mm vias: pitch > 400 µm, via-to-edge > 40 µm)",
+            "maxViasPerPad": "Maximum 2 vias on a single copper pad with minimum 0.15 mm (150 µm) distance between via hole edges"
+          }
+        },
+        "surfaceFinishes": {
+          "enig": {
+            "bathTemperature": "Approximately 85°C",
+            "processing": "Simultaneous double-sided plating (front and back)",
+            "sequence": "Electroless/electrolytic Ni plating followed by Au plating after complete Cu plating",
+            "processControl": "Nickel and Gold bath chemistry governed by Statistical Process Control (SPC)",
+            "thicknessInspection": "X-ray fluorescence (XRF) 5-point inspection method per panel",
+            "thicknessTolerance": "±1.5 to 2.0 µm"
+          },
+          "qualityDocumentation": "Comprehensive Shipment Inspection Test Report (COA) provided with shipments"
+        }
+      }
     },
     "dbc": {
       "name": "Direct Bonded Copper (DBC)",
