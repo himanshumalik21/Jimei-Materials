@@ -40,7 +40,7 @@
       "leadTimeSummary": "~2 weeks",
       "minFeatureCapability": "20 μm",
       "minViaCapability": "50 μm",
-      "rfOptimization": "RF Design & Performance Optimization up to 40 GHz (performance depends on substrate material, dielectric properties, geometry, circuit layout, metallization, and operating conditions)",
+      "rfOptimization": "RF Layout & Engineering Optimization Support up to 40 GHz (actual in-circuit RF performance depends on substrate material, dielectric loss tangent, circuit geometry, metallization, and package architecture)",
       "standardSubstrates": [
         "Alumina (Al₂O₃ 96% / 99.6%)",
         "Aluminum Nitride (AlN ≥170 W/m·K)",
@@ -56,7 +56,7 @@
       ],
       "primaryApplications": [
         "Semiconductor & Optical Packaging",
-        "RF & Microwave Circuits (up to 40 GHz)",
+        "RF & Microwave Circuits (with high-frequency layout support up to 40 GHz)",
         "High-Power Laser Diodes & VCSELs",
         "Thermoelectric Coolers & Generators (TEC/TEG)",
         "Precision Sensor Modules & Photodetectors"
