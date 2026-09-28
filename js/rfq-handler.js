@@ -1,45 +1,72 @@
 /**
- * Jimei Materials — Web3Forms RFQ & Contact Handler
+ * Jimei Materials — Web3Forms Lead Generation & RFQ Handler
  * Official Web3Forms asynchronous submission with client validation,
- * honeypot spam protection, UI feedback and data preservation.
+ * structured email formatting, source/UTM tracking, honeypot spam protection,
+ * and Google Analytics 4 conversion event logging.
  */
 
 window.JIMEI_CONFIG = window.JIMEI_CONFIG || {
-  // Web3Forms Access Key
   web3forms_access_key: "37a186c8-4229-4101-ae8e-a480e50b9942",
   recipient_email: "sales@jimei-materials.com"
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  // 1. Automatic UTM & Source Tracking on All Links and Forms
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmSource = urlParams.get("utm_source") || "";
+  const utmMedium = urlParams.get("utm_medium") || "";
+  const utmCampaign = urlParams.get("utm_campaign") || "";
+  const referrer = document.referrer || "direct";
+  const pagePath = window.location.pathname || "/";
+
+  // 2. Outbound Contact Engagement Tracking (Reduces False 100% Bounce Rates)
+  document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(link => {
+    link.addEventListener("click", function () {
+      if (typeof gtag === "function") {
+        gtag("event", "contact_click", {
+          event_category: "engagement",
+          event_label: this.getAttribute("href"),
+          source_page: pagePath
+        });
+      }
+    });
+  });
+
+  // 3. Form Setup & Handling
   const rfqForm = document.getElementById("rfqForm") || document.getElementById("form");
   if (!rfqForm) return;
 
-  const submitBtn = rfqForm.querySelector("button[type="submit"]");
+  const submitBtn = rfqForm.querySelector('button[type="submit"]');
   const alertContainer = document.getElementById("rfqAlertContainer") || createAlertContainer(rfqForm);
+  const pageLoadTime = Date.now();
 
   rfqForm.addEventListener("submit", async function (e) {
     e.preventDefault();
-
-    // Reset status
     hideAlert(alertContainer);
 
     // Validate required fields
     if (!rfqForm.checkValidity()) {
       e.stopPropagation();
       rfqForm.classList.add("was-validated");
-      showAlert(alertContainer, "danger", "Please fill in all required fields accurately before submitting.");
+      showAlert(alertContainer, "danger", "Please complete all required fields marked with an asterisk (*).");
       return;
     }
 
-    // Honeypot check (botcheck)
-    const botcheck = rfqForm.querySelector("input[name="botcheck"]");
+    // Bot defense 1: Honeypot check
+    const botcheck = rfqForm.querySelector('input[name="botcheck"]');
     if (botcheck && botcheck.checked) {
-      console.warn("Bot detected via honeypot.");
+      console.warn("Submission blocked by honeypot.");
       return;
     }
 
-    // Set Access Key from config if empty
-    let accessKeyInput = rfqForm.querySelector("input[name="access_key"]");
+    // Bot defense 2: Too rapid submission (<1.5 seconds)
+    if (Date.now() - pageLoadTime < 1500) {
+      console.warn("Submission blocked: submitted too quickly.");
+      return;
+    }
+
+    // Set Access Key
+    let accessKeyInput = rfqForm.querySelector('input[name="access_key"]');
     if (!accessKeyInput) {
       accessKeyInput = document.createElement("input");
       accessKeyInput.type = "hidden";
@@ -50,25 +77,82 @@ document.addEventListener("DOMContentLoaded", function () {
       accessKeyInput.value = window.JIMEI_CONFIG.web3forms_access_key;
     }
 
-    // Ensure recipient / subject are set
-    let subjectInput = rfqForm.querySelector("input[name="subject"]");
+    // Extract Form Values for Structured Lead Assembly
+    const name = (rfqForm.querySelector('[name="name"]') || {}).value || "";
+    const email = (rfqForm.querySelector('[name="email"]') || {}).value || "";
+    const company = (rfqForm.querySelector('[name="company"]') || {}).value || "";
+    const country = (rfqForm.querySelector('[name="country"]') || {}).value || "";
+    const phone = (rfqForm.querySelector('[name="phone"]') || {}).value || "";
+    const tech = (rfqForm.querySelector('[name="technology"]') || {}).value || "Ceramic Substrate";
+    const app = (rfqForm.querySelector('[name="application"]') || {}).value || "Not Specified";
+    const material = (rfqForm.querySelector('[name="ceramic_material"]') || {}).value || "Not Specified";
+    const cerThickness = (rfqForm.querySelector('[name="ceramic_thickness"]') || {}).value || "Not Specified";
+    const cuThickness = (rfqForm.querySelector('[name="copper_thickness"]') || {}).value || "Not Specified";
+    const dimensions = (rfqForm.querySelector('[name="dimensions"]') || {}).value || "Not Specified";
+    const quantity = (rfqForm.querySelector('[name="quantity"]') || rfqForm.querySelector('[name="quantity_phase"]') || {}).value || "Not Specified";
+    const stage = (rfqForm.querySelector('[name="target_stage"]') || {}).value || "Not Specified";
+    const delivery = (rfqForm.querySelector('[name="delivery_date"]') || {}).value || "Standard";
+    const specs = (rfqForm.querySelector('[name="message"]') || rfqForm.querySelector('[name="technical_specs"]') || {}).value || "";
+
+    // Compute Dynamic Structured Subject Line
+    const subjectPrefix = tech.includes("(") ? tech.split("(")[0].trim() : tech;
+    const computedSubject = `New ${subjectPrefix} RFQ: ${company || name || "Customer Inquiry"}`;
+    
+    let subjectInput = rfqForm.querySelector('input[name="subject"]');
     if (!subjectInput) {
       subjectInput = document.createElement("input");
       subjectInput.type = "hidden";
       subjectInput.name = "subject";
-      subjectInput.value = "New Engineering RFQ / Inquiry — Jimei Materials";
       rfqForm.appendChild(subjectInput);
     }
+    subjectInput.value = computedSubject;
 
-    // Disable button & show spinner
+    // Structured Lead Format for Jimei Sales Inbox
+    const structuredSummary = [
+      `New ${subjectPrefix} RFQ`,
+      `Customer: ${name}`,
+      `Company: ${company}`,
+      `Country: ${country}`,
+      `Email: ${email} | Phone: ${phone || 'N/A'}`,
+      `Technology: ${tech}`,
+      `Application: ${app}`,
+      `Material: ${material}`,
+      `Ceramic Thickness: ${cerThickness}`,
+      `Copper Thickness: ${cuThickness}`,
+      `Dimensions: ${dimensions}`,
+      `Quantity: ${quantity}`,
+      `Target Stage: ${stage}`,
+      `Required Delivery: ${delivery}`,
+      `Technical Requirements: ${specs}`,
+      `Source Page: ${pagePath}`,
+      `UTM: source=${utmSource || 'direct'}, medium=${utmMedium || 'none'}, campaign=${utmCampaign || 'none'}`,
+      `Referrer: ${referrer}`
+    ].join("\n");
+
+    // Append structured summary field
+    let summaryInput = rfqForm.querySelector('input[name="rfq_summary"]');
+    if (!summaryInput) {
+      summaryInput = document.createElement("input");
+      summaryInput.type = "hidden";
+      summaryInput.name = "rfq_summary";
+      rfqForm.appendChild(summaryInput);
+    }
+    summaryInput.value = structuredSummary;
+
+    // Append tracking fields
+    appendHiddenField(rfqForm, "source_page", pagePath);
+    appendHiddenField(rfqForm, "utm_source", utmSource);
+    appendHiddenField(rfqForm, "utm_medium", utmMedium);
+    appendHiddenField(rfqForm, "referrer", referrer);
+
+    // Disable button & trigger Loading State
     const originalBtnText = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = "<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Transmitting RFQ...";
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Transmitting RFQ to Engineering...';
 
     try {
       const formData = new FormData(rfqForm);
 
-      // Submit to Web3Forms endpoint
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData
@@ -77,38 +161,66 @@ document.addEventListener("DOMContentLoaded", function () {
       const result = await response.json();
 
       if (response.status === 200 && result.success) {
+        // Success State
         showAlert(
           alertContainer,
           "success",
-          "<strong>Inquiry Received Successfully!</strong> Thank you for contacting Jimei Materials. Our engineering and sales team will review your specifications and reply to your business email within 24 hours. For drawings, you may also email direct to sales@jimei-materials.com."
+          "<strong>Inquiry Received Successfully!</strong> Thank you for your inquiry. Our engineering team reviews submitted specifications and drawings and responds as quickly as possible. If you have confidential CAD files or drawings, you may also email them directly to <strong>sales@jimei-materials.com</strong>."
         );
         rfqForm.reset();
         rfqForm.classList.remove("was-validated");
+
+        // Fire GA4 Conversion Key Event
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", {
+            event_category: "RFQ",
+            event_label: subjectPrefix,
+            value: 1,
+            currency: "USD",
+            technology: tech,
+            source_page: pagePath
+          });
+          gtag("event", "rfq_submit", {
+            technology: tech,
+            source_page: pagePath
+          });
+        }
       } else {
-        // Handle mock or invalid access key gracefully in dev / demo
-        const msg = result.message || "Failed to submit inquiry.";
+        const msg = result.message || "Failed to transmit inquiry.";
         if (msg.toLowerCase().includes("access key") || msg.toLowerCase().includes("invalid")) {
           showAlert(
             alertContainer,
             "warning",
-            "<strong>Note:</strong> Web3Forms access key is currently in configuration mode. Your request details have been preserved. Please direct urgent inquiries to <strong>sales@jimei-materials.com</strong> or configure a valid Web3Forms key."
+            "<strong>Notice:</strong> Submission service is currently processing in standby mode. Your entered specifications have been preserved. Please email your details directly to <strong>sales@jimei-materials.com</strong> for immediate review."
           );
         } else {
-          showAlert(alertContainer, "danger", `<strong>Submission Error:</strong> ${msg}. Your entered information has been preserved.`);
+          showAlert(alertContainer, "danger", `<strong>Submission Error:</strong> ${msg}. Your entered parameters have been preserved.`);
         }
       }
     } catch (err) {
-      console.error("Submission failed:", err);
+      console.error("Submission error:", err);
       showAlert(
         alertContainer,
         "danger",
-        "<strong>Network Error:</strong> Unable to connect to the submission server. Your input has been saved. Please contact us directly at <strong>sales@jimei-materials.com</strong> or call <strong>+86-147-4537-3293</strong>."
+        "<strong>Network Communication Notice:</strong> Unable to connect to the form processor. Your specifications have been preserved. Please copy and email your request directly to <strong>sales@jimei-materials.com</strong> or call <strong>+86-147-4537-3293</strong>."
       );
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalBtnText;
     }
   });
+
+  function appendHiddenField(form, name, value) {
+    if (!value) return;
+    let input = form.querySelector(`input[name="${name}"]`);
+    if (!input) {
+      input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      form.appendChild(input);
+    }
+    input.value = value;
+  }
 
   function createAlertContainer(form) {
     const div = document.createElement("div");
