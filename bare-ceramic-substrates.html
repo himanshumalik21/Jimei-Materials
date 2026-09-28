@@ -263,67 +263,62 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Bare Ceramic Substrates",
-        "description": "High-performance bare ceramic substrates including Alumina (Al₂O₃), Aluminum Nitride (AlN), Silicon Nitride (Si₃N₄), Silicon Carbide (SiC), and Zirconia (ZrO₂) for demanding industrial applications.",
-        "brand": {
-            "@type": "Brand",
-            "name": "Jimei Materials"
-        },
-        "manufacturer": {
-            "@type": "Organization",
-            "name": "Jimei Materials Co., Ltd.",
-            "url": "https://www.jimei-materials.com"
-        },
-        "category": "Ceramic Substrates",
-        "material": ["Alumina (Al2O3)", "Aluminum Nitride (AlN)", "Silicon Nitride (Si3N4)", "Silicon Carbide (SiC)", "Zirconia (ZrO2)"],
-        "url": "https://www.jimei-materials.com/bare-ceramic-substrates.html",
-        "image": [
-            "https://www.jimei-materials.com/img/BareCeramic/Alumina/Alumina1.webp",
-            "https://www.jimei-materials.com/img/BareCeramic/AlN/AlN1.webp",
-            "https://www.jimei-materials.com/img/BareCeramic/SN/SN1.webp"
-        ],
-        "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "priceCurrency": "USD",
-            "priceSpecification": {
-                "@type": "UnitPriceSpecification",
-                "priceCurrency": "USD"
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://www.jimei-materials.com/#organization",
+                "name": "Jimei Materials Co., Ltd.",
+                "url": "https://www.jimei-materials.com/",
+                "logo": "https://www.jimei-materials.com/img/logo.webp",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+86-147-4537-3293",
+                    "contactType": "sales",
+                    "email": "sales@jimei-materials.com"
+                }
+            },
+            {
+                "@type": "Service",
+                "@id": "https://www.jimei-materials.com/bare-ceramic-substrates.html#service",
+                "name": "Bare Ceramic Substrates Custom Machining & Finishing Service",
+                "serviceType": "Precision Ceramic Laser Cutting, Lapping & Polishing",
+                "description": "High-performance bare ceramic substrates including Alumina (Al2O3), Aluminum Nitride (AlN), Silicon Nitride (Si3N4), Silicon Carbide (SiC), and Zirconia (ZrO2) with custom thickness, precision laser cutting, and surface polishing.",
+                "provider": {
+                    "@id": "https://www.jimei-materials.com/#organization"
+                },
+                "category": "Electronic Components/Ceramic Substrates",
+                "areaServed": "Worldwide",
+                "url": "https://www.jimei-materials.com/bare-ceramic-substrates.html",
+                "image": [
+                    "https://www.jimei-materials.com/img/BareCeramic/Alumina/Alumina1.webp",
+                    "https://www.jimei-materials.com/img/BareCeramic/AlN/AlN1.webp",
+                    "https://www.jimei-materials.com/img/BareCeramic/SN/SN1.webp"
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.jimei-materials.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Technologies",
+                        "item": "https://www.jimei-materials.com/products.html"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Bare Ceramic Substrates",
+                        "item": "https://www.jimei-materials.com/bare-ceramic-substrates.html"
+                    }
+                ]
             }
-        },
-        "additionalProperty": [
-            {
-                "@type": "PropertyValue",
-                "name": "Ceramic Materials",
-                "value": "Alumina (Al2O3), Aluminum Nitride (AlN), Silicon Nitride (Si3N4), Silicon Carbide (SiC), Zirconia (ZrO2)"
-            },
-            {
-                "@type": "PropertyValue",
-                "name": "Thickness Range",
-                "value": "0.10mm to 20mm"
-            },
-            {
-                "@type": "PropertyValue",
-                "name": "Purity Grades",
-                "value": "95%, 98%, 99%, 99.5%, 99.8%"
-            },
-            {
-                "@type": "PropertyValue",
-                "name": "Thermal Conductivity Range",
-                "value": "2 to 200 W/m·K"
-            },
-            {
-                "@type": "PropertyValue",
-                "name": "Minimum Order Quantity",
-                "value": "100 pieces"
-            }
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "ratingCount": "38"
-        }
+        ]
     }
     </script>
     
