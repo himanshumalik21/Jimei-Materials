@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Understanding HTCC Ceramic Packaging: Multilayer Design, Manufacturing & Applications | Jimei Materials</title>
+
+    <!-- Critical Meta Tags for SEO -->
+    <meta name="description" content="Comprehensive technical guide to High-Temperature Co-Fired Ceramic (HTCC) packaging. Explore multilayer tape casting, tungsten refractory metallization, 1500°C co-firing, hermetic brazing, and DFM guidelines.">
+    <meta name="keywords" content="HTCC ceramic packaging, high temperature co-fired ceramic, multilayer ceramic substrate, hermetic ceramic package, tungsten metallization, ceramic co-firing 1500C, hermetic seal ring brazing, helium leak rate, aerospace microelectronics packaging">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Jimei Materials">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.jimei-materials.com/understanding-htcc-ceramic-packaging.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.jimei-materials.com/understanding-htcc-ceramic-packaging.html">
+    <meta property="og:title" content="Understanding HTCC Ceramic Packaging: Technical Guide | Jimei Materials">
+    <meta property="og:description" content="Comprehensive engineering guide to High-Temperature Co-Fired Ceramic (HTCC) packaging for aerospace, RF/microwave, and harsh-environment electronics.">
+    <meta property="og:image" content="https://www.jimei-materials.com/img/HTCC/htcc1.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2024-02-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-02-15T00:00:00+00:00">
+    <meta property="article:author" content="Jimei Materials Engineering Team">
+    <meta property="article:section" content="HTCC Technology">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jimei-materials.com/understanding-htcc-ceramic-packaging.html">
+    <meta name="twitter:title" content="Understanding HTCC Ceramic Packaging: Technical Guide | Jimei Materials">
+    <meta name="twitter:description" content="Comprehensive engineering guide to High-Temperature Co-Fired Ceramic (HTCC) packaging for aerospace, RF/microwave, and harsh-environment electronics.">
+    <meta name="twitter:image" content="https://www.jimei-materials.com/img/HTCC/htcc1.webp">
+    
+    <!-- Performance & Preconnect Hints -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.web3forms.com">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="img/logo.webp" as="image" type="image/webp">
+    <link rel="preload" href="img/HTCC/htcc1.webp" as="image" type="image/webp">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+          crossorigin="anonymous">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Custom Theme CSS -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/industrial-theme.css">
+
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --primary: #28495a;
+            --secondary: #1a6b8a;
+            --accent: #28495a;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+
+        img { 
+            max-width: 100%; 
+            height: auto; 
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 120px 0 60px;
+            margin-top: 70px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0V100H1000V0C800,50 600,75 400,50S200,25 0,0Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        .page-header h1 {
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .breadcrumb {
+            background: transparent;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .breadcrumb-item a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb-item a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-item.active {
+            color: white;
+            font-weight: 500;
+        }
+        
+        .breadcrumb-item + .breadcrumb-item::before {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .article-content {
+            line-height: 1.75;
+            font-size: 1.1rem;
+            color: #334155;
+        }
+        
+        .article-content h2 {
+            color: var(--primary);
+            margin-top: 2.75rem;
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+            font-size: 1.75rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        
+        .article-content h3 {
+            color: var(--secondary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.35rem;
+        }
+        
+        .article-content ul, .article-content ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.75rem;
+        }
+
+        .process-flow-step {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid var(--secondary);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .process-flow-step:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .step-num-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--secondary);
+            color: #fff;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-right: 0.75rem;
+        }
+
+        .feature-highlight {
+            background: linear-gradient(135deg, rgba(40, 73, 90, 0.05) 0%, rgba(26, 107, 138, 0.05) 100%);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 10px 10px 0;
+            padding: 1.75rem;
+            margin: 2rem 0;
+        }
+
+        .tech-table th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            padding: 0.85rem;
+            vertical-align: middle;
+        }
+
+        .tech-table td {
+            padding: 0.85rem;
+            vertical-align: middle;
+        }
+
+        .tech-table tbody tr:nth-child(even) {
+            background-color: rgba(40, 73, 90, 0.03);
+        }
+
+        .infographic-wrapper {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .infographic-caption {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 100px 0 40px;
+                margin-top: 60px;
+            }
+            .article-content {
+                font-size: 1rem;
+            }
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+            .tech-table {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <meta name="theme-color" content="#28495a">
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://www.jimei-materials.com/#organization",
+                "name": "Jimei Materials Co., Ltd.",
+                "url": "https://www.jimei-materials.com/",
+                "logo": "https://www.jimei-materials.com/img/logo.webp",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+86-147-4537-3293",
+                    "contactType": "sales",
+                    "email": "sales@jimei-materials.com"
+                }
+            },
+            {
+                "@type": "TechArticle",
+                "@id": "https://www.jimei-materials.com/understanding-htcc-ceramic-packaging.html#article",
+                "isPartOf": {
+                    "@type": "WebPage",
+                    "@id": "https://www.jimei-materials.com/understanding-htcc-ceramic-packaging.html"
+                },
+                "headline": "Understanding HTCC Ceramic Packaging: Multilayer Design, Manufacturing & Applications",
+                "description": "Comprehensive engineering guide to High-Temperature Co-Fired Ceramic (HTCC) packaging. Explore multilayer tape casting, tungsten refractory metallization, 1500°C co-firing, hermetic brazing, and DFM guidelines.",
+                "image": [
+                    "https://www.jimei-materials.com/img/HTCC/htcc1.webp",
+                    "https://www.jimei-materials.com/img/HTCC/htcc-process-diagram.webp"
+                ],
+                "author": {
+                    "@type": "Organization",
+                    "name": "Jimei Materials Engineering Team",
+                    "url": "https://www.jimei-materials.com/"
+                },
+                "publisher": {
+                    "@id": "https://www.jimei-materials.com/#organization"
+                },
+                "datePublished": "2024-02-15T00:00:00+00:00",
+                "dateModified": "2024-02-15T00:00:00+00:00",
+                "articleSection": "HTCC Technology",
+                "keywords": "HTCC ceramic packaging, high temperature co-fired ceramic, multilayer ceramic substrate, hermetic packaging, tungsten metallization, co-firing 1500C",
+                "inLanguage": "en-US",
+                "timeRequired": "PT12M"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.jimei-materials.com/understanding-htcc-ceramic-packaging.html#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.jimei-materials.com/index.html"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Technical Resources",
+                        "item": "https://www.jimei-materials.com/technical-resources.html"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Understanding HTCC Ceramic Packaging",
+                        "item": "https://www.jimei-materials.com/understanding-htcc-ceramic-packaging.html"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF30RCX51H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MF30RCX51H', {
+            'page_title': 'Understanding HTCC Ceramic Packaging',
+            'page_location': window.location.href,
+            'page_path': '/understanding-htcc-ceramic-packaging.html'
+        });
+    </script>
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <!-- Topbar -->
+    <div class="jm-topbar py-1 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <span class="me-3"><i class="fas fa-check-circle text-info me-1"></i> ISO 14001:2015 & ISO 9001:2015 Certified Ceramic Substrate Manufacturer</span>
+                <span><i class="fas fa-microchip text-info me-1"></i> Engineering Deep Dive: HTCC Packaging</span>
+            </div>
+            <div>
+                <a href="mailto:sales@jimei-materials.com" class="me-3"><i class="fas fa-envelope text-info me-1"></i> sales@jimei-materials.com</a>
+                <a href="tel:+8614745373293"><i class="fas fa-phone-alt text-info me-1"></i> +86-147-4537-3293</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-jm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html" aria-label="Jimei Materials Home">
+                <img src="img/logo.webp" onerror="this.onerror=null; this.src='img/jimei-logo.png';" alt="Jimei Materials Logo" width="107" height="52" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" 
+                    aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="techDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Technologies</a>
+                        <ul class="dropdown-menu" aria-labelledby="techDropdown">
+                            <li><a class="dropdown-item" href="./dpc-ceramic-substrate.html">Direct Plated Copper (DPC)</a></li>
+                            <li><a class="dropdown-item" href="./dbc-ceramic-substrate.html">Direct Bonded Copper (DBC)</a></li>
+                            <li><a class="dropdown-item active" href="./htcc-ceramic-substrates.html">High-Temp Co-Fired (HTCC)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./bare-ceramic-substrates.html">Bare Ceramic Substrates</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./products.html">Products & Comparison</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./manufacturing.html">Manufacturing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./technical-resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-jm-primary btn-sm" href="./contact.html"><i class="fas fa-file-invoice me-1"></i> Request Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-shrink-0" id="main-content">
+        
+        <!-- Page Header -->
+        <header class="page-header" role="banner">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="./technical-resources.html">Technical Resources</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">HTCC Packaging Guide</li>
+                    </ol>
+                </nav>
+                <h1>Understanding HTCC Ceramic Packaging: Multilayer Design, Manufacturing & Applications</h1>
+                <div class="article-meta mt-4 text-white">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <p class="lead mb-2">A technical deep dive into High-Temperature Co-Fired Ceramic (HTCC) technology: monolithic sintering, refractory tungsten metallization, hermetic sealing, and DFM best practices.</p>
+                        </div>
+                        <div class="col-md-4 text-md-end">
+                            <div class="small text-white-50">
+                                <span>Published: <time datetime="2024-02-15">February 15, 2024</time></span><br>
+                                <span>Read time: 12 minutes | Technical Guide</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Body -->
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <article class="article-content">
+
+                        <!-- Lead Summary Box -->
+                        <div class="feature-highlight">
+                            <h3 class="h5 fw-bold mb-2 text-primary"><i class="fas fa-shield-alt me-2"></i> Executive Summary: The Pinnacle of Hermetic Microelectronic Packaging</h3>
+                            <p class="mb-0">
+                                High-Temperature Co-Fired Ceramic (HTCC) represents the premier manufacturing methodology for monolithic, hermetic, multilayer microelectronic packages. By co-sintering high-purity alumina (Al₂O₃) or aluminum nitride (AlN) green tapes together with refractory metals (Tungsten [W] or Molybdenum [Mo]) at temperatures exceeding <strong>1500°C to 1600°C</strong> in a controlled reducing atmosphere, HTCC produces single-body ceramic structures with integrated internal signal routing, power planes, and internal hermetic cavities. With proven hermetic leak rates below <strong>1×10⁻⁸ atm·cc/s</strong> (per MIL-STD-883 Method 1014), HTCC packages provide unmatched environmental isolation and long-term mechanical integrity in aerospace, defense, RF/microwave, and deep-well exploration systems.
+                            </p>
+                        </div>
+
+                        <h2>1. What is HTCC Technology and Why is it Essential?</h2>
+                        <p>
+                            In modern high-reliability electronics, conventional organic substrates (such as FR-4, BT-epoxy, or polyimide) rapidly degrade when subjected to extreme operating temperatures, continuous mechanical vibration, moisture ingress, or corrosive atmospheres. Even low-temperature co-fired ceramics (LTCC) or surface-metallized ceramic substrates (like DBC or DPC) face structural limits when required to form complex three-dimensional hermetic cavities with brazed metal leadframes and glass-to-metal seals.
+                        </p>
+                        <p>
+                            HTCC solves this design challenge by creating a monolithic ceramic block where conductive traces, ground planes, vertical interconnect access (vias), and multi-tier wire-bonding shelves are fused together into an impervious inorganic ceramic structure. Because the coefficient of thermal expansion (CTE) of high-purity alumina (6.5–7.2 × 10⁻⁶/K) closely matches that of critical semiconductor dice (GaAs, InP, GaN, and Si) and brazable lead alloys (such as Kovar at 5.5 × 10⁻⁶/K), HTCC packaging drastically minimizes thermomechanical shear stress across extreme thermal cycles.
+                        </p>
+
+                        <!-- Infographic / Visual Diagram -->
+                        <div class="infographic-wrapper my-5">
+                            <h3 class="h5 fw-bold text-primary mb-3"><i class="fas fa-project-diagram me-2"></i> HTCC Multilayer Ceramic Manufacturing Flow</h3>
+                            <img src="img/HTCC/htcc-process-diagram.webp" class="img-fluid rounded" alt="HTCC Multilayer Ceramic Packaging Manufacturing Process Diagram" width="900" height="506" loading="lazy">
+                            <div class="infographic-caption">
+                                Figure 1: Comprehensive manufacturing workflow of High-Temperature Co-Fired Ceramic (HTCC) multilayer packaging from raw slurry preparation to high-temperature brazing and hermeticity verification.
+                            </div>
+                        </div>
+
+                        <h2>2. Detailed Step-by-Step HTCC Manufacturing Process</h2>
+                        <p>
+                            Fabricating precision HTCC packages requires rigorous cleanroom control, specialized refractory paste formulations, and precise thermal profile engineering to accommodate ceramic firing shrinkage. The manufacturing flow consists of eight key stages:
+                        </p>
+
+                        <div class="process-flow-step">
+                            <h4 class="h6 fw-bold mb-2 text-primary">
+                                <span class="step-num-badge">1</span> Slurry Preparation & Doctor-Blade Tape Casting
+                            </h4>
+                            <p class="mb-0 text-muted">
+                                Sub-micron ceramic powders (typically 90%–96% Al₂O₃ or AlN) are blended with organic binders, plasticizers, dispersants, and solvents in high-energy ball mills. The homogenized slurry is cast onto a carrier film using a high-precision doctor-blade casting machine, yielding uniform "green" (unfired) ceramic tapes with tightly controlled thicknesses ranging from 50 µm to 250 µm.
+                            </p>
+                        </div>
+
+                        <div class="process-flow-step">
+                            <h4 class="h6 fw-bold mb-2 text-primary">
+                                <span class="step-num-badge">2</span> Precision Laser / CNC Mechanical Via Punching
+                            </h4>
+                            <p class="mb-0 text-muted">
+                                Individual green tape sheets are blanked and registered. High-speed CNC mechanical punch tooling or UV laser micromachining systems punch vertical via interconnects (typically 100 µm to 200 µm diameter) and internal component cavities across each tape layer based on CAD layout files.
+                            </p>
+                        </div>
+
+                        <div class="process-flow-step">
+                            <h4 class="h6 fw-bold mb-2 text-primary">
+                                <span class="step-num-badge">3</span> Via Filling & Refractory Conductor Screen Printing
+                            </h4>
+                            <p class="mb-0 text-muted">
+                                Via holes are filled with thick-film refractory metal paste (primarily Tungsten [W] or Molybdenum [Mo]) using high-pressure stencil printers. Circuit patterns, ground shields, and wire-bond pads are subsequently screen printed on each layer using precision stainless steel mesh screens with emulsion thicknesses calibrated to achieve uniform post-sinter conductor thickness.
+                            </p>
+                        </div>
+
+                        <div class="process-flow-step">
+                            <h4 class="h6 fw-bold mb-2 text-primary">
+                                <span class="step-num-badge">4</span> Collation, Cavity Routing & Warm Isostatic Lamination (WIP)
+                            </h4>
+                            <p class="mb-0 text-muted">
+                                Printed green sheets are stacked and aligned with optical precision pinning. The assembled stack is placed in vacuum-sealed packaging and subjected to Warm Isostatic Pressing (WIP) at 60°C–80°C under hydrostatic pressures of 15–25 MPa, fusing the individual tape layers into a void-free, monolithic green block.
+                            </p>
+                        </div>
+
+                        <div class="process-flow-step">
+                            <h4 class="h6 fw-bold mb-2 text-primary">
+                                <span class="step-num-badge">5</span> High-Temperature Co-Firing at 1500°C–1600°C
+                            </h4>
+                            <p class="mb-0 text-muted">
+                                The laminated blocks undergo a two-phase sintering profile in continuous atmosphere-controlled tunnel kilns. First, organic binders are completely pyrolyzed in the burnout zone (300°C–600°C). Then, the substrate enters the peak co-firing zone at <strong>1500°C–1600°C</strong> under a humidified reducing atmosphere of Hydrogen and Nitrogen (H₂/N₂). This prevents refractory tungsten oxidation while densifying the ceramic matrix into a hermetic, monolithic body with an isotropic shrinkage of 14%–18%.
+                            </p>
+                        </div>
+
+                        <div class="process-flow-step">
+                            <h4 class="h6 fw-bold mb-2 text-primary">
+                                <span class="step-num-badge">6</span> Post-Sinter Metallization & Surface Finishing (Ni/Au)
+                            </h4>
+                            <p class="mb-0 text-muted">
+                                Refractory tungsten exposed on outer surfaces cannot be directly soldered or wire-bonded. The fired ceramic blocks undergo chemical surface activation followed by electroplated Nickel (1.5–5.0 µm) and electrolytic or immersion Gold (0.5–2.5 µm). This provides low contact resistance, excellent Au/Al wire bondability, and long-term oxidation resistance.
+                            </p>
+                        </div>
+
+                        <div class="process-flow-step">
+                            <h4 class="h6 fw-bold mb-2 text-primary">
+                                <span class="step-num-badge">7</span> High-Temperature Brazing of Kovar Leadframes & Seal Rings
+                            </h4>
+                            <p class="mb-0 text-muted">
+                                For packages requiring external electrical leads, pin grid arrays (PGA), or hermetic seam-weldable lids, metal leadframes and Kovar (ASTM F15) seal rings are brazed onto the ceramic body at ~800°C using Silver-Copper (Ag-Cu 72/28) eutectic alloy in a conveyor brazing furnace.
+                            </p>
+                        </div>
+
+                        <div class="process-flow-step">
+                            <h4 class="h6 fw-bold mb-2 text-primary">
+                                <span class="step-num-badge">8</span> 100% Hermeticity & Electrical Testing
+                            </h4>
+                            <p class="mb-0 text-muted">
+                                Finished packages undergo 100% netlist continuity testing, high-voltage dielectric breakdown testing, and helium mass spectrometer gross/fine leak detection. Compliance with <strong>Helium leak rate &lt;1×10⁻⁸ atm·cc/s</strong> (per MIL-STD-883 Method 1014) confirms complete hermetic integrity.
+                            </p>
+                        </div>
+
+                        <h2>3. HTCC vs. LTCC vs. DPC vs. DBC: Comprehensive Technology Comparison</h2>
+                        <p>
+                            Selecting the proper ceramic technology requires balancing thermal dissipation, electrical conductivity, circuit density, and environmental hermeticity. The following engineering comparison outlines where HTCC excels relative to alternative metallization and co-fired platforms:
+                        </p>
+
+                        <div class="table-responsive my-4">
+                            <table class="table table-bordered tech-table" role="table" aria-label="Ceramic Substrate Technology Comparison">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Parameter</th>
+                                        <th scope="col">HTCC (Al₂O₃)</th>
+                                        <th scope="col">HTCC (AlN)</th>
+                                        <th scope="col">LTCC</th>
+                                        <th scope="col">DPC</th>
+                                        <th scope="col">DBC</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Sintering Temperature</th>
+                                        <td>1500°C – 1600°C</td>
+                                        <td>1800°C – 1900°C</td>
+                                        <td>850°C – 900°C</td>
+                                        <td>Substrate pre-fired; room temp deposition</td>
+                                        <td>1065°C – 1083°C (eutectic bond)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Conductor Metallurgy</th>
+                                        <td>Tungsten (W), Molybdenum (Mo)</td>
+                                        <td>Tungsten (W)</td>
+                                        <td>Silver (Ag), Gold (Au), Cu</td>
+                                        <td>Electroplated Copper (Cu) + Ni/Au</td>
+                                        <td>Oxygen-Free Copper Foil (OFC)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Conductor Sheet Resistance</th>
+                                        <td>~8 – 15 mΩ/□</td>
+                                        <td>~8 – 15 mΩ/□</td>
+                                        <td>~2 – 4 mΩ/□ (low loss)</td>
+                                        <td>&lt;1.5 mΩ/□ (ultra-low loss)</td>
+                                        <td>&lt;0.5 mΩ/□ (heavy current)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Thermal Conductivity (W/m·K)</th>
+                                        <td>18 – 25</td>
+                                        <td>150 – 180</td>
+                                        <td>2 – 4</td>
+                                        <td>24 – 170 (matrix dependent)</td>
+                                        <td>24 (Al₂O₃ base)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Hermetic Package Cavities</th>
+                                        <td><strong>Monolithic & Brazed Lids</strong></td>
+                                        <td><strong>Monolithic & Brazed Lids</strong></td>
+                                        <td>Monolithic (lower braze strength)</td>
+                                        <td>Surface Mount / Encapsulation Dam</td>
+                                        <td>Not applicable (Flat planar only)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Helium Hermeticity</th>
+                                        <td><strong>&lt;1×10⁻⁸ atm·cc/s</strong></td>
+                                        <td><strong>&lt;1×10⁻⁸ atm·cc/s</strong></td>
+                                        <td>&lt;1×10⁻⁷ atm·cc/s</td>
+                                        <td>Module level (gasket/resin)</td>
+                                        <td>Module level (gasket/resin)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Dielectric Constant (εr @ 1 MHz)</th>
+                                        <td>9.0 – 9.8</td>
+                                        <td>8.5 – 9.0</td>
+                                        <td>5.5 – 7.8</td>
+                                        <td>9.6 – 9.9</td>
+                                        <td>9.6</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Standard Lead Time</th>
+                                        <td>6 – 8 weeks</td>
+                                        <td>8 – 10 weeks</td>
+                                        <td>4 – 6 weeks</td>
+                                        <td>~2 weeks</td>
+                                        <td>~2 weeks</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Primary Engineering Use</th>
+                                        <td>Aerospace, defense, RF hermetic packages</td>
+                                        <td>High-power radar & laser hermetic modules</td>
+                                        <td>RF filters, low-loss passive integration</td>
+                                        <td>Optoelectronic submounts, high-frequency circuits</td>
+                                        <td>Automotive traction, high-power IGBT inverters</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2>4. Critical DFM Guidelines for HTCC Substrate & Package Designers</h2>
+                        <p>
+                            Designing an HTCC package requires accounting for co-firing shrinkage, layer registration, via aspect ratios, and brazing alloy run-out margins. To ensure high yields and rapid turnaround, adhere to the following Design for Manufacturability (DFM) rules:
+                        </p>
+
+                        <div class="row g-4 my-3">
+                            <div class="col-md-6">
+                                <div class="card h-100 border-0 shadow-sm p-3">
+                                    <div class="card-body">
+                                        <h4 class="h6 fw-bold text-primary"><i class="fas fa-ruler-combined me-2"></i> Trace Geometries & Spacing</h4>
+                                        <ul class="small mb-0">
+                                            <li><strong>Standard Minimum Trace Width:</strong> 125 µm (0.125 mm)</li>
+                                            <li><strong>Advanced Minimum Trace Width:</strong> 100 µm (0.100 mm)</li>
+                                            <li><strong>Minimum Line-to-Line Spacing:</strong> 125 µm standard (100 µm advanced)</li>
+                                            <li><strong>Edge Exclusion Margin:</strong> Minimum 0.50 mm from outer substrate perimeter</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-0 shadow-sm p-3">
+                                    <div class="card-body">
+                                        <h4 class="h6 fw-bold text-primary"><i class="fas fa-circle-notch me-2"></i> Via Interconnect Rules</h4>
+                                        <ul class="small mb-0">
+                                            <li><strong>Standard Via Diameter:</strong> 150 µm to 200 µm</li>
+                                            <li><strong>Via Aspect Ratio:</strong> Max 1:1 per single tape layer</li>
+                                            <li><strong>Via-to-Via Center Spacing:</strong> Minimum 3× via diameter</li>
+                                            <li><strong>Via Capture Pad Margin:</strong> ≥50 µm radial ring around via opening</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-0 shadow-sm p-3">
+                                    <div class="card-body">
+                                        <h4 class="h6 fw-bold text-primary"><i class="fas fa-layer-group me-2"></i> Cavity & Wire-Bond Shelf Rules</h4>
+                                        <ul class="small mb-0">
+                                            <li><strong>Wire-Bond Shelf Width:</strong> Minimum 0.75 mm (1.0 mm recommended)</li>
+                                            <li><strong>Cavity Corner Radius:</strong> Minimum 0.40 mm (sharp 90° corners induce stress cracking)</li>
+                                            <li><strong>Cavity Floor Flatness:</strong> &lt;25 µm over 10 mm length for eutectic die attach</li>
+                                            <li><strong>Step Height:</strong> Standard green tape increments (100 µm, 150 µm, 200 µm)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-0 shadow-sm p-3">
+                                    <div class="card-body">
+                                        <h4 class="h6 fw-bold text-primary"><i class="fas fa-burn me-2"></i> Brazing & Seal Ring Clearances</h4>
+                                        <ul class="small mb-0">
+                                            <li><strong>Braze Pad Metallization:</strong> Mo-Mn or Tungsten with 2.5 µm Ni + 0.5 µm Au</li>
+                                            <li><strong>Braze Solder Stop Margin:</strong> 0.20 mm non-metallized ceramic margin to prevent braze bridging</li>
+                                            <li><strong>Kovar Seal Ring Thickness:</strong> 0.50 mm to 1.00 mm for laser or parallel seam welding</li>
+                                            <li><strong>Leadframe Pitch:</strong> 1.27 mm or 2.54 mm standard PGA / DIP / Flatpack spacing</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>5. Primary Industrial Applications for HTCC Packaging</h2>
+                        <p>
+                            Due to its exceptional thermal stability, impervious hermetic seal, and multi-tier wire-bonding capabilities, HTCC packaging is the standard choice in demanding mission-critical sectors:
+                        </p>
+                        
+                        <div class="row g-4 my-3">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <img src="img/HTCC/htcc2.webp" class="card-img-top" alt="HTCC Aerospace & Defense Hermetic Package" width="300" height="200" loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="h6 fw-bold text-primary">Aerospace & Defense</h5>
+                                        <p class="small text-muted mb-0">
+                                            Hermetic transmit/receive (T/R) radar modules, phased array antenna feeds, electronic countermeasure (ECM) transceivers, and missile guidance computer housings.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <img src="img/HTCC/htcc3.webp" class="card-img-top" alt="HTCC Optical Butterfly Package" width="300" height="200" loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="h6 fw-bold text-primary">Optoelectronics & Lasers</h5>
+                                        <p class="small text-muted mb-0">
+                                            Standard 14-pin butterfly laser packages, high-speed optical transceivers, pump laser submodules, and hermetic photodiode receiver cans.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <img src="img/HTCC/htcc4.webp" class="card-img-top" alt="HTCC Harsh Environment Downhole Package" width="300" height="200" loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="h6 fw-bold text-primary">Harsh Environments</h5>
+                                        <p class="small text-muted mb-0">
+                                            Downhole oil and gas logging sensors, deep-sea exploration transducers, turbine pressure monitoring sensors, and high-temperature geothermal telemetry modules.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>6. Quality Control, Inspection & Hermeticity Standards</h2>
+                        <p>
+                            Every HTCC packaging lot manufactured at Jimei Materials adheres to strict quality assurance protocols governed by our ISO 9001:2015 and ISO 14001:2015 certified facilities:
+                        </p>
+                        <ul>
+                            <li><strong>Helium Mass Spectrometer Leak Detection:</strong> Both gross leak (fluorocarbon immersion) and fine leak (helium bombing) testing per MIL-STD-883 Test Method 1014 Condition A to guarantee leak rates &lt;1×10⁻⁸ atm·cc/s.</li>
+                            <li><strong>Acoustic Microscopy (C-SAM):</strong> Non-destructive ultrasonic inspection detecting internal layer delamination, voids, or micro-cracks in co-fired monolithic blocks.</li>
+                            <li><strong>XRF Surface Plating Verification:</strong> 5-point X-ray fluorescence measurement ensuring Nickel and Gold deposit thicknesses meet military and IPC-4552 wire bonding and solderability standards.</li>
+                            <li><strong>Lead Fatigue & Die Shear Testing:</strong> Mechanical destructive testing confirming braze adhesion strengths exceeding 20 kgf on brazed leadframes and seal rings.</li>
+                        </ul>
+
+                        <!-- Callout & Next Steps -->
+                        <div class="card bg-light border-primary border-2 p-4 my-5">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-8">
+                                        <h3 class="h4 fw-bold text-primary mb-2">Need Custom HTCC Multilayer Packaging?</h3>
+                                        <p class="text-muted mb-0">
+                                            Our engineering team provides comprehensive DFM reviews, cavity stacking optimization, and thermal modeling. Share your fabrication drawings (Gerber RS-274X, DXF, or STEP) for an engineering response within 24 hours.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                                        <a href="./contact.html" class="btn btn-jm-primary btn-lg">
+                                            <i class="fas fa-file-invoice me-2"></i> Request HTCC Quote
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Articles Navigation -->
+                        <div class="border-top pt-4 mt-5">
+                            <h4 class="h5 fw-bold text-primary mb-3">Explore Related Technical Guides</h4>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 bg-light p-3">
+                                        <h6 class="fw-bold mb-1"><a href="./htcc-ceramic-substrates.html" class="text-decoration-none text-dark">HTCC Product Capabilities</a></h6>
+                                        <p class="small text-muted mb-0">Review tolerances, lead times, and materials for Jimei's HTCC offerings.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 bg-light p-3">
+                                        <h6 class="fw-bold mb-1"><a href="./ceramic-metallization-processes.html" class="text-decoration-none text-dark">Ceramic Metallization Processes</a></h6>
+                                        <p class="small text-muted mb-0">Comparison of DPC, DBC, and refractory metallization mechanisms.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 bg-light p-3">
+                                        <h6 class="fw-bold mb-1"><a href="./understanding-dbc-substrates.html" class="text-decoration-none text-dark">Understanding DBC Substrates</a></h6>
+                                        <p class="small text-muted mb-0">Direct Bonded Copper technology for high-current power inverters.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Industrial Footer -->
+    <footer class="jm-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/logo.webp" onerror="this.onerror=null; this.src='img/jimei-logo.png';" alt="Jimei Materials" width="107" height="52" class="footer-logo mb-3 bg-white p-2 rounded">
+                    <p class="small text-slate-400 mb-3">
+                        Jimei Materials is a specialized manufacturer of advanced ceramic substrates and ceramic metallization solutions. We engineer precision DPC, DBC, and HTCC substrates for semiconductor packaging, power electronics, RF/microwave, and harsh-environment applications.
+                    </p>
+                    <div class="small text-slate-400">
+                        <i class="fas fa-certificate text-info me-1"></i> ISO 14001:2015 & ISO 9001:2015 Certified
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Technologies</h5>
+                    <ul class="jm-footer-links">
+                        <li><a href="./dpc-ceramic-substrate.html">DPC Substrates</a></li>
+                        <li><a href="./dbc-ceramic-substrate.html">DBC Substrates</a></li>
+                        <li><a href="./htcc-ceramic-substrates.html">HTCC Packages</a></li>
+                        <li><a href="./bare-ceramic-substrates.html">Bare Ceramics</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Manufacturing & QC</h5>
+                    <ul class="jm-footer-links">
+                        <li><a href="./manufacturing.html">Manufacturing Capabilities</a></li>
+                        <li><a href="./manufacturing.html#sputtering">Thin-Film Sputtering</a></li>
+                        <li><a href="./manufacturing.html#photolithography">Photolithography (20µm)</a></li>
+                        <li><a href="./manufacturing.html#testing">100% Electrical Testing</a></li>
+                        <li><a href="./products.html">Technology Comparison Matrix</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Direct Contact</h5>
+                    <div class="jm-footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div class="text-white small fw-bold">Sales & RFQ</div>
+                            <a href="mailto:sales@jimei-materials.com">sales@jimei-materials.com</a>
+                        </div>
+                    </div>
+                    <div class="jm-footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <div class="text-white small fw-bold">Direct Phone</div>
+                            <a href="tel:+8614745373293">+86-147-4537-3293</a>
+                        </div>
+                    </div>
+                    <div class="jm-footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="small">
+                            <span class="text-white fw-bold">Factory Address:</span><br>
+                            First Industrial Zone, Haosan Linpokeng, Xinqiao Street, Bao'an District, Shenzhen, 518104, China
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jm-footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+                <div>© 2026 Jimei Materials Co., Ltd. All Rights Reserved.</div>
+                <div class="d-flex gap-3">
+                    <a href="./privacy-policy.html">Privacy Policy</a>
+                    <a href="./terms-of-service.html">Terms of Service</a>
+                    <a href="./sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+            crossorigin="anonymous" defer></script>
+    <script src="js/main.min.js" defer></script>
+
+</body>
+</html>
