@@ -18,19 +18,19 @@
       "automotivePartnerships": "Experience supporting Tier-1 automotive supply chains"
     },
     "targetExportMarkets": [
-      { "country": "United States", "code": "US", "leadTimeAir": "3-5 business days", "hubs": "Silicon Valley, Austin, Dallas, Phoenix, Boston" },
-      { "country": "Japan", "code": "JP", "leadTimeAir": "2-4 business days", "hubs": "Tokyo, Osaka, Kyushu" },
-      { "country": "South Korea", "code": "KR", "leadTimeAir": "2-4 business days", "hubs": "Seoul, Pangyo, Gyeonggi-do" },
-      { "country": "Germany", "code": "DE", "leadTimeAir": "3-5 business days", "hubs": "Munich, Stuttgart, Dresden Silicon Saxony" },
-      { "country": "Canada", "code": "CA", "leadTimeAir": "3-5 business days", "hubs": "Ontario Tech Corridor, Vancouver" },
-      { "country": "Malaysia", "code": "MY", "leadTimeAir": "2-4 business days", "hubs": "Penang, Kulim Hi-Tech Park OSAT Hubs" },
-      { "country": "Vietnam", "code": "VN", "leadTimeAir": "2-4 business days", "hubs": "Bac Ninh, Hanoi, Saigon Hi-Tech Park" },
-      { "country": "Philippines", "code": "PH", "leadTimeAir": "2-4 business days", "hubs": "Cavite, Laguna, Clark Semiconductor Parks" },
-      { "country": "Spain", "code": "ES", "leadTimeAir": "3-5 business days", "hubs": "Barcelona, Madrid Power Electronics Corridors" }
+      { "country": "United States", "code": "US", "leadTimeAir": "3-5 business days (est. air courier transit, subject to customs)", "hubs": "Silicon Valley, Austin, Dallas, Phoenix, Boston" },
+      { "country": "Japan", "code": "JP", "leadTimeAir": "2-4 business days (est. air courier transit, subject to customs)", "hubs": "Tokyo, Osaka, Kyushu" },
+      { "country": "South Korea", "code": "KR", "leadTimeAir": "2-4 business days (est. air courier transit, subject to customs)", "hubs": "Seoul, Pangyo, Gyeonggi-do" },
+      { "country": "Germany", "code": "DE", "leadTimeAir": "3-5 business days (est. air courier transit, subject to customs)", "hubs": "Munich, Stuttgart, Dresden Silicon Saxony" },
+      { "country": "Canada", "code": "CA", "leadTimeAir": "3-5 business days (est. air courier transit, subject to customs)", "hubs": "Ontario Tech Corridor, Vancouver" },
+      { "country": "Malaysia", "code": "MY", "leadTimeAir": "2-4 business days (est. air courier transit, subject to customs)", "hubs": "Penang, Kulim Hi-Tech Park OSAT Hubs" },
+      { "country": "Vietnam", "code": "VN", "leadTimeAir": "2-4 business days (est. air courier transit, subject to customs)", "hubs": "Bac Ninh, Hanoi, Saigon Hi-Tech Park" },
+      { "country": "Philippines", "code": "PH", "leadTimeAir": "2-4 business days (est. air courier transit, subject to customs)", "hubs": "Cavite, Laguna, Clark Semiconductor Parks" },
+      { "country": "Spain", "code": "ES", "leadTimeAir": "3-5 business days (est. air courier transit, subject to customs)", "hubs": "Barcelona, Madrid Power Electronics Corridors" }
     ],
     "exportCompliance": {
       "packaging": "JEDEC J-STD-033 compliant vacuum-sealed moisture barrier ESD bags with desiccant & humidity indicator cards",
-      "incoterms": ["EXW", "FOB Shenzhen/Hong Kong", "CIF", "DAP", "DDP"],
+      "incoterms": ["EXW", "FOB Shenzhen/Hong Kong", "CIF", "DAP"],
       "documentation": "Lot Certificate of Analysis (COA), XRF plating thickness verification, 100% electrical test reports"
     },
     "certifications": [
