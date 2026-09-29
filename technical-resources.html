@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title data-i18n="tr_page_title">Technical Resources & Industry Insights | Jimei Materials</title>
+    <title>Ceramic Substrate Engineering Resource Center | Technical Guides | Jimei Materials</title>
 
     <!-- Critical Meta Tags for SEO -->
     <meta name="description" data-i18n="tr_meta_description" content="Technical documentation library for ceramic substrate engineering: DBC (Direct Bonded Copper), DPC (Direct Plated Copper), and HTCC (High-Temperature Co-fired Ceramic) design guidelines, application notes, and material selection tools for power electronics, RF, and thermal management systems.">
@@ -412,6 +412,19 @@
                         <a class="nav-link dropdown-toggle" href="#" id="techDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Technologies</a>
                         <ul class="dropdown-menu" aria-labelledby="techDropdown">
                             <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="./dpc-ceramic-substrate.html">Direct Plated Copper (DPC)</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="appDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Applications</a>
+                        <ul class="dropdown-menu" aria-labelledby="appDropdown">
+                            <li><a class="dropdown-item" href="./applications.html"><i class="fas fa-th-large me-2 text-primary"></i><strong>Applications Hub</strong><br><small class="text-muted">Overview & Matrix</small></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./semiconductor-advanced-packaging.html"><i class="fas fa-microchip me-2 text-primary"></i>Semiconductor Packaging</a></li>
+                            <li><a class="dropdown-item" href="./power-electronics-ceramic-substrates.html"><i class="fas fa-charging-station me-2 text-primary"></i>Power Electronics & EV</a></li>
+                            <li><a class="dropdown-item" href="./rf-microwave-ceramic-substrates.html"><i class="fas fa-broadcast-tower me-2 text-primary"></i>RF, Microwave & mmWave</a></li>
+                            <li><a class="dropdown-item" href="./optoelectronics-laser-submounts.html"><i class="fas fa-lightbulb me-2 text-primary"></i>Laser & Optical Submounts</a></li>
+                            <li><a class="dropdown-item" href="./thermoelectric-tec-ceramic-substrates.html"><i class="fas fa-snowflake me-2 text-primary"></i>Thermoelectric (TEC/TEG)</a></li>
+                            <li><a class="dropdown-item" href="./htcc-hermetic-packages.html"><i class="fas fa-shield-alt me-2 text-primary"></i>Hermetic Packages (HTCC)</a></li>
+                        </ul>
+                    </li>
                             <li><a class="dropdown-item" href="./dbc-ceramic-substrate.html">Direct Bonded Copper (DBC)</a></li>
                                                         <li><a class="dropdown-item" href="./htcc-ceramic-substrates.html">High-Temp Co-Fired (HTCC)</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -456,149 +469,198 @@
         </header>
 
         <!-- Featured Articles -->
+                <!-- Engineering Resource Center -->
         <section class="featured-articles py-5" aria-labelledby="featured-articles-heading">
             <div class="container py-4">
-                <header class="text-center mb-4">
-                    <h2 id="featured-articles-heading" class="h1 fw-bold mb-3" data-i18n="featured_articles_title">Featured Articles</h2>
-                    <p class="lead" data-i18n="featured_articles_description">In-depth technical insights and application guides</p>
+                <header class="text-center mb-5">
+                    <span class="badge bg-primary px-3 py-2 text-uppercase mb-2">Authoritative Knowledge Base</span>
+                    <h2 id="featured-articles-heading" class="h1 fw-bold mb-3">Engineering Resource Center</h2>
+                    <p class="lead text-muted max-w-700 mx-auto">
+                        Comprehensive technical documentation, design for manufacturability (DFM) guidelines, material comparison guides, and architectural white papers organized by technology platform.
+                    </p>
                 </header>
 
-                <!-- Category Filter -->
-                <div class="category-filter mb-5" role="tablist" aria-label="Resource categories">
-                    <button class="category-btn active" data-category="all" role="tab" aria-selected="true">All Resources</button>
-                    <button class="category-btn" data-category="dpc" role="tab" aria-selected="false">DPC Technology</button>
-                    <button class="category-btn" data-category="dbc" role="tab" aria-selected="false">DBC Technology</button>
-                    <button class="category-btn" data-category="htcc" role="tab" aria-selected="false">HTCC Packaging</button>
-                    <button class="category-btn" data-category="design" role="tab" aria-selected="false">Design & Bare Ceramics</button>
-                    <button class="category-btn" data-category="application" role="tab" aria-selected="false">Application Notes</button>
+                <!-- Section 1: DPC Technology -->
+                <div class="mb-5">
+                    <div class="d-flex align-items-center justify-content-between border-bottom pb-2 mb-4">
+                        <h3 class="h4 fw-bold text-primary mb-0"><i class="fas fa-microchip me-2"></i>1. Direct Plated Copper (DPC) Engineering Guides</h3>
+                        <a href="./dpc-ceramic-substrate.html" class="btn btn-outline-primary btn-sm">DPC Technology Profile &rarr;</a>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <article class="resource-card h-100">
+                                <div class="position-relative">
+                                    <img src="img/MetalCeramics/DPC/DPC4.webp" class="resource-img" alt="DPC Technology for Semiconductor Packaging" width="400" height="200" loading="lazy">
+                                    <span class="resource-badge">DPC Technology</span>
+                                </div>
+                                <div class="resource-content">
+                                    <h4 class="h5 fw-bold mb-2"><a href="./dpc-technology-explained.html" class="text-decoration-none text-dark">DPC Technology Explained</a></h4>
+                                    <p class="small text-muted mb-3">Comprehensive guide to thin-film vacuum sputtering, 20 µm cleanroom photolithography, and solid copper filled vias.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small"><i class="far fa-clock me-1"></i> 10 min read</span>
+                                        <a href="./dpc-technology-explained.html" class="btn btn-sm btn-primary">Read Guide</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="resource-card h-100">
+                                <div class="position-relative">
+                                    <img src="articles/encapsulation-dam.webp" class="resource-img" alt="DPC Encapsulation Dam Technology" width="400" height="200" loading="lazy">
+                                    <span class="resource-badge">Application Note</span>
+                                </div>
+                                <div class="resource-content">
+                                    <h4 class="h5 fw-bold mb-2"><a href="./dpc-encapsulation-dam.html" class="text-decoration-none text-dark">DPC Encapsulation Dam Advantages</a></h4>
+                                    <p class="small text-muted mb-3">How copper encapsulation dams contain liquid optical silicones and enhance mechanical robustness in LED & sensor packaging.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small"><i class="far fa-clock me-1"></i> 7 min read</span>
+                                        <a href="./dpc-encapsulation-dam.html" class="btn btn-sm btn-primary">Read Guide</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="resource-card h-100">
+                                <div class="position-relative">
+                                    <img src="img/MetalCeramics/DPC/DPC1.webp" class="resource-img" alt="Thermoelectric Cooler Metallization" width="400" height="200" loading="lazy">
+                                    <span class="resource-badge">Application Note</span>
+                                </div>
+                                <div class="resource-content">
+                                    <h4 class="h5 fw-bold mb-2"><a href="./dpc-ceramic-metallization-tec-teg.html" class="text-decoration-none text-dark">Thermoelectric (TEC/TEG) Metallization</a></h4>
+                                    <p class="small text-muted mb-3">Design rules for dense P/N bismuth telluride pellet bonding, high bond strength (&gt;30 N/cm), and lapped flatness control.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small"><i class="far fa-clock me-1"></i> 9 min read</span>
+                                        <a href="./dpc-ceramic-metallization-tec-teg.html" class="btn btn-sm btn-primary">Read Guide</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Articles Grid -->
-                <div class="row g-4" id="resourcesGrid" role="list">
-                    <!-- Article 1 -->
-                    <div class="col-lg-4 col-md-6" data-category="dbc" role="listitem">
-                        <article class="resource-card h-100">
-                            <div class="position-relative">
-                                <img src="img/MetalCeramics/DBC/DBC3.webp" class="resource-img" alt="DBC Substrate Applications in Power Electronics" width="400" height="200" loading="lazy" decoding="async">
-                                <span class="resource-badge" data-i18n="badge_dbc_technology">DBC Technology</span>
-                            </div>
-                            <div class="resource-content">
-                                <h3 class="h5 fw-bold mb-2" data-i18n="article1_title">Understanding DBC Substrates</h3>
-                                <p class="small text-muted mb-3" data-i18n="article1_description">Explore the advantages and applications of Direct Bonded Copper substrates in power electronics and thermal management.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted small" data-i18n="article1_read_time"><i class="far fa-clock me-1" aria-hidden="true"></i> 8 min read</span>
-                                    <a href="./understanding-dbc-substrates.html" class="btn btn-sm btn-primary" data-i18n="btn_read_article">Read Article</a>
-                                </div>
-                            </div>
-                        </article>
+
+                <!-- Section 2: DBC Technology -->
+                <div class="mb-5">
+                    <div class="d-flex align-items-center justify-content-between border-bottom pb-2 mb-4">
+                        <h3 class="h4 fw-bold text-warning mb-0"><i class="fas fa-charging-station me-2"></i>2. Direct Bonded Copper (DBC) Power Electronics Guides</h3>
+                        <a href="./dbc-ceramic-substrate.html" class="btn btn-outline-warning text-dark btn-sm">DBC Technology Profile &rarr;</a>
                     </div>
-                    
-                    <!-- Article 2 -->
-                    <div class="col-lg-4 col-md-6" data-category="dpc" role="listitem">
-                        <article class="resource-card h-100">
-                            <div class="position-relative">
-                                <img src="img/MetalCeramics/DPC/DPC4.webp" class="resource-img" alt="DPC Technology for Semiconductor Packaging" width="400" height="200" loading="lazy" decoding="async">
-                                <span class="resource-badge" data-i18n="badge_dpc_technology">DPC Technology</span>
-                            </div>
-                            <div class="resource-content">
-                                <h3 class="h5 fw-bold mb-2" data-i18n="article2_title">DPC Technology Explained</h3>
-                                <p class="small text-muted mb-3" data-i18n="article2_description">Learn how Direct Plated Copper technology is revolutionizing advanced packaging for semiconductors and optoelectronics.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted small" data-i18n="article2_read_time"><i class="far fa-clock me-1" aria-hidden="true"></i> 10 min read</span>
-                                    <a href="./dpc-technology-explained.html" class="btn btn-sm btn-primary" data-i18n="btn_read_article">Read Article</a>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <article class="resource-card h-100">
+                                <div class="position-relative">
+                                    <img src="img/MetalCeramics/DBC/DBC3.webp" class="resource-img" alt="DBC Substrate Applications in Power Electronics" width="400" height="200" loading="lazy">
+                                    <span class="resource-badge bg-warning text-dark">DBC Technology</span>
                                 </div>
-                            </div>
-                        </article>
+                                <div class="resource-content">
+                                    <h4 class="h5 fw-bold mb-2"><a href="./understanding-dbc-substrates.html" class="text-decoration-none text-dark">Understanding DBC Substrates: Fundamentals & Design</a></h4>
+                                    <p class="small text-muted mb-3">In-depth technical analysis of 1065°C eutectic copper bonding, thermal impedance modeling, heavy copper foil selection (0.20–0.50 mm), and thermal cycling stress relief.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small"><i class="far fa-clock me-1"></i> 8 min read</span>
+                                        <a href="./understanding-dbc-substrates.html" class="btn btn-sm btn-primary">Read Guide</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-6">
+                            <article class="resource-card h-100">
+                                <div class="position-relative">
+                                    <img src="img/Factory/factory3.webp" class="resource-img" alt="EV Inverter Ceramic Substrates" width="400" height="200" loading="lazy">
+                                    <span class="resource-badge bg-warning text-dark">Application Architecture</span>
+                                </div>
+                                <div class="resource-content">
+                                    <h4 class="h5 fw-bold mb-2"><a href="./power-electronics-ceramic-substrates.html" class="text-decoration-none text-dark">Power Electronics & EV Inverters Pillar Guide</a></h4>
+                                    <p class="small text-muted mb-3">Engineering design guide for 800V SiC/GaN traction inverters, partial discharge resistance, high surge current capacity (&gt;500A), and isolation voltages &gt;5 kV.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small"><i class="far fa-clock me-1"></i> 11 min read</span>
+                                        <a href="./power-electronics-ceramic-substrates.html" class="btn btn-sm btn-primary">Read Guide</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                    
-                    <!-- Article 3 -->
-                    <div class="col-lg-4 col-md-6" data-category="design" role="listitem">
-                        <article class="resource-card h-100">
-                            <div class="position-relative">
-                                <img src="img/BareCeramic/Alumina/Alumina4.webp" class="resource-img" alt="Bare Ceramic Substrates for Laser Diodes" width="400" height="200" loading="lazy" decoding="async">
-                                <span class="resource-badge" data-i18n="badge_design_guide">Design Guide</span>
-                            </div>
-                            <div class="resource-content">
-                                <h3 class="h5 fw-bold mb-2" data-i18n="article3_title">Bare Ceramic Substrates: Applications</h3>
-                                <p class="small text-muted mb-3" data-i18n="article3_description">Discover the versatility of bare ceramic substrates in laser diodes, IGBT modules, and thermoelectric coolers.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted small" data-i18n="article3_read_time"><i class="far fa-clock me-1" aria-hidden="true"></i> 6 min read</span>
-                                    <a href="./bare-ceramic-substrates-explained.html" class="btn btn-sm btn-primary" data-i18n="btn_read_article">Read Article</a>
-                                </div>
-                            </div>
-                        </article>
+                </div>
+
+                <!-- Section 3: HTCC Technology -->
+                <div class="mb-5">
+                    <div class="d-flex align-items-center justify-content-between border-bottom pb-2 mb-4">
+                        <h3 class="h4 fw-bold text-info mb-0"><i class="fas fa-layer-group me-2"></i>3. High-Temperature Co-Fired Ceramic (HTCC) Guides</h3>
+                        <a href="./htcc-ceramic-substrates.html" class="btn btn-outline-info text-dark btn-sm">HTCC Technology Profile &rarr;</a>
                     </div>
-                    
-                    <!-- Article 4 -->
-                    <div class="col-lg-4 col-md-6" data-category="design" role="listitem">
-                        <article class="resource-card h-100">
-                            <div class="position-relative">
-                                <img src="img/FeaturedProducts/FeaturedProducts3.webp" class="resource-img" alt="Ceramic Metallization Process Diagram" width="400" height="200" loading="lazy" decoding="async">
-                                <span class="resource-badge" data-i18n="badge_design_guide">Design Guide</span>
-                            </div>
-                            <div class="resource-content">
-                                <h3 class="h5 fw-bold mb-2" data-i18n="article4_title">Ceramic Metallization Processes</h3>
-                                <p class="small text-muted mb-3" data-i18n="article4_description">A technical overview of metallization methods for ceramics, including process steps and reliability considerations.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted small" data-i18n="article4_read_time"><i class="far fa-clock me-1" aria-hidden="true"></i> 12 min read</span>
-                                    <a href="./ceramic-metallization-processes.html" class="btn btn-sm btn-primary" data-i18n="btn_read_article">Read Article</a>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <article class="resource-card h-100">
+                                <div class="position-relative">
+                                    <img src="img/HTCC/htcc1.webp" class="resource-img" alt="HTCC Multilayer Packaging Technology" width="400" height="200" loading="lazy">
+                                    <span class="resource-badge bg-info text-dark">HTCC Technology</span>
                                 </div>
-                            </div>
-                        </article>
+                                <div class="resource-content">
+                                    <h4 class="h5 fw-bold mb-2"><a href="./understanding-htcc-ceramic-packaging.html" class="text-decoration-none text-dark">Understanding HTCC Ceramic Packaging</a></h4>
+                                    <p class="small text-muted mb-3">Monolithic green tape co-firing at 1500°C–1600°C, refractory tungsten/molybdenum paste metallization, internal ground planes, and helium leak rate &lt;1×10⁻⁸ atm·cc/s.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small"><i class="far fa-clock me-1"></i> 12 min read</span>
+                                        <a href="./understanding-htcc-ceramic-packaging.html" class="btn btn-sm btn-primary">Read Guide</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-6">
+                            <article class="resource-card h-100">
+                                <div class="position-relative">
+                                    <img src="img/Factory/factory4.webp" class="resource-img" alt="Hermetic Ceramic Packages" width="400" height="200" loading="lazy">
+                                    <span class="resource-badge bg-info text-dark">Application Architecture</span>
+                                </div>
+                                <div class="resource-content">
+                                    <h4 class="h5 fw-bold mb-2"><a href="./htcc-hermetic-packages.html" class="text-decoration-none text-dark">HTCC Hermetic Packages & Harsh Environments</a></h4>
+                                    <p class="small text-muted mb-3">Architectural design guide for downhole drilling sensors, aerospace avionics, brazed Kovar seal rings (800°C–850°C), and stepped wire-bonding cavities.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small"><i class="far fa-clock me-1"></i> 10 min read</span>
+                                        <a href="./htcc-hermetic-packages.html" class="btn btn-sm btn-primary">Read Guide</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                    
-                    <!-- Article 5 -->
-                    <div class="col-lg-4 col-md-6" data-category="application" role="listitem">
-                        <article class="resource-card h-100">
-                            <div class="position-relative">
-                                <img src="articles/encapsulation-dam.webp" class="resource-img" alt="DPC Encapsulation Dam Technology" width="400" height="200" loading="lazy" decoding="async">
-                                <span class="resource-badge" data-i18n="badge_application_note">Application Note</span>
-                            </div>
-                            <div class="resource-content">
-                                <h3 class="h5 fw-bold mb-2" data-i18n="article5_title">DPC Encapsulation Dam Advantages</h3>
-                                <p class="small text-muted mb-3" data-i18n="article5_description">Discover how Direct Plated Copper (DPC) encapsulation dams enhance power module reliability and performance.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted small" data-i18n="article5_read_time"><i class="far fa-clock me-1" aria-hidden="true"></i> 7 min read</span>
-                                    <a href="./dpc-encapsulation-dam.html" class="btn btn-sm btn-primary" data-i18n="btn_read_article">Read Article</a>
-                                </div>
-                            </div>
-                        </article>
+                </div>
+
+                <!-- Section 4: Materials & Processing -->
+                <div>
+                    <div class="d-flex align-items-center justify-content-between border-bottom pb-2 mb-4">
+                        <h3 class="h4 fw-bold text-secondary mb-0"><i class="fas fa-gem me-2"></i>4. Ceramic Materials & Secondary Processing Guides</h3>
+                        <a href="./bare-ceramic-substrates.html" class="btn btn-outline-secondary btn-sm">Bare Ceramic Profile &rarr;</a>
                     </div>
-                    
-                    <!-- Article 6 -->
-                    <div class="col-lg-4 col-md-6" data-category="application" role="listitem">
-                        <article class="resource-card h-100">
-                            <div class="position-relative">
-                                <img src="img/MetalCeramics/DPC/DPC1.webp" class="resource-img" alt="High-Performance Thermoelectric Module" width="400" height="200" loading="lazy" decoding="async">
-                                <span class="resource-badge" data-i18n="badge_application_note">Application Note</span>
-                            </div>
-                            <div class="resource-content">
-                                <h3 class="h5 fw-bold mb-2" data-i18n="article6_title">High-Performance Thermoelectric Modules</h3>
-                                <p class="small text-muted mb-3" data-i18n="article6_description">Explore the design and applications of high-performance thermoelectric modules using advanced DPC substrates.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted small" data-i18n="article6_read_time"><i class="far fa-clock me-1" aria-hidden="true"></i> 9 min read</span>
-                                    <a href="./dpc-ceramic-metallization-tec-teg.html" class="btn btn-sm btn-primary" data-i18n="btn_read_article">Read Article</a>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <article class="resource-card h-100">
+                                <div class="position-relative">
+                                    <img src="img/BareCeramic/Alumina/Alumina4.webp" class="resource-img" alt="Bare Ceramic Substrates for Laser Diodes" width="400" height="200" loading="lazy">
+                                    <span class="resource-badge">Material Science</span>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    
-                    <!-- Article 7 -->
-                    <div class="col-lg-4 col-md-6" data-category="htcc" role="listitem">
-                        <article class="resource-card h-100">
-                            <div class="position-relative">
-                                <img src="img/HTCC/htcc1.webp" class="resource-img" alt="HTCC Multilayer Packaging Technology" width="400" height="200" loading="lazy" decoding="async">
-                                <span class="resource-badge">HTCC Packaging</span>
-                            </div>
-                            <div class="resource-content">
-                                <h3 class="h5 fw-bold mb-2">Understanding HTCC Ceramic Packaging</h3>
-                                <p class="small text-muted mb-3">Multilayer design, tungsten refractory metallization, 1500°C co-firing, hermetic brazing, and DFM rules.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted small"><i class="far fa-clock me-1" aria-hidden="true"></i> 12 min read</span>
-                                    <a href="./understanding-htcc-ceramic-packaging.html" class="btn btn-sm btn-primary">Read Article</a>
+                                <div class="resource-content">
+                                    <h4 class="h5 fw-bold mb-2"><a href="./bare-ceramic-substrates-explained.html" class="text-decoration-none text-dark">Bare Ceramic Substrates Explained</a></h4>
+                                    <p class="small text-muted mb-3">Comprehensive material comparison: 96% Al₂O₃ vs 99.6% Al₂O₃ vs AlN (≥170 W/m·K) vs Si₃N₄, laser contouring tolerances (±0.05 mm), and double-side polishing (Ra &lt; 0.05 µm).</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small"><i class="far fa-clock me-1"></i> 6 min read</span>
+                                        <a href="./bare-ceramic-substrates-explained.html" class="btn btn-sm btn-primary">Read Guide</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
+                        <div class="col-lg-6">
+                            <article class="resource-card h-100">
+                                <div class="position-relative">
+                                    <img src="img/FeaturedProducts/FeaturedProducts3.webp" class="resource-img" alt="Ceramic Metallization Process Diagram" width="400" height="200" loading="lazy">
+                                    <span class="resource-badge">Process Engineering</span>
+                                </div>
+                                <div class="resource-content">
+                                    <h4 class="h5 fw-bold mb-2"><a href="./ceramic-metallization-processes.html" class="text-decoration-none text-dark">Ceramic Metallization Processes Compared</a></h4>
+                                    <p class="small text-muted mb-3">Comparative analysis of Thin Film PVD, Thick Film screen printing, Direct Bonded Copper (DBC), and Direct Plated Copper (DPC) metallization mechanisms and adhesion physics.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small"><i class="far fa-clock me-1"></i> 12 min read</span>
+                                        <a href="./ceramic-metallization-processes.html" class="btn btn-sm btn-primary">Read Guide</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
