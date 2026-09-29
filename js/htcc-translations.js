@@ -25,7 +25,7 @@
 
             // Hero Section
             "htcc_main_title": "High-Temperature Co-fired Ceramic (HTCC) Packaging Solutions",
-            "htcc_subtitle": "Hermetic multilayer ceramic packages for extreme environment applications requiring superior reliability and thermal performance",
+            "htcc_subtitle": "Hermetic multilayer ceramic packages for extreme environment applications requiring enhanced reliability and thermal performance",
             "feature_hermetic": "Hermetic Sealing",
             "feature_extreme_temp": "High Temperature & Harsh Environments",
             "feature_multilayer": "Multilayer Integration",
@@ -34,7 +34,7 @@
             // Technology Overview
             "overview_title": "HTCC Technology Overview",
             "overview_description": "High-Temperature Co-fired Ceramic (HTCC) is an advanced ceramic packaging technology that involves co-firing alumina or aluminum nitride green tapes with refractory metal conductors (tungsten or molybdenum) at temperatures exceeding 1500°C. This process creates dense, monolithic multilayer structures with embedded conductors, cavities, and feedthroughs.",
-            "overview_description2": "The HTCC manufacturing process enables the creation of complex 3D structures with superior hermeticity, excellent thermal stability, and high mechanical strength. These packages are specifically engineered for applications requiring protection from extreme environments, including aerospace, medical implants, automotive sensors, and industrial controls.",
+            "overview_description2": "The HTCC manufacturing process enables the creation of complex 3D structures with enhanced hermeticity, excellent thermal stability, and high mechanical strength. These packages are specifically engineered for applications requiring protection from extreme environments, including aerospace, medical implants, automotive sensors, and industrial controls.",
             "process_highlight": "High-Temperature Processing:",
             "process_highlight_desc": "1500-1600°C sintering for maximum density and reliability",
             "layer_highlight": "Multilayer Integration:",
@@ -43,8 +43,8 @@
 
             // Key Features
             "features_title": "Key Features & Benefits",
-            "features_subtitle": "Superior performance characteristics for demanding applications",
-            "feature_hermeticity_title": "Exceptional Hermeticity",
+            "features_subtitle": "enhanced performance characteristics for demanding applications",
+            "feature_hermeticity_title": "high Hermeticity",
             "feature_hermeticity_desc": "Helium leak rate <1×10⁻⁸ atm·cc/s (Helium leak tested) for complete environmental protection of sensitive electronics.",
             "feature_temperature_title": "Extreme Temperature Stability",
             "feature_temperature_desc": "Excellent thermal and chemical stability under extreme environmental conditions.",

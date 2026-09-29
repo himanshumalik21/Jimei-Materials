@@ -70,22 +70,18 @@ User-agent: cohere-ai
 Allow: /
 Crawl-delay: 2
 
-# Search engine crawlers
+# Search engine crawlers (no crawl delays for main search engines)
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
-Crawl-delay: 1
 
 User-agent: DuckDuckBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Baiduspider
 Allow: /

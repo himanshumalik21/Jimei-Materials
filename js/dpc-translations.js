@@ -11,7 +11,7 @@
         en: {
             // Meta tags
             "dpc_page_title": "Direct Plated Copper (DPC) Ceramic Substrates | Jimei Materials",
-            "dpc_page_description": "High-precision Direct Plated Copper (DPC) ceramic substrates for RF/microwave, semiconductor packaging, and fine-pitch circuitry applications. Superior thermal management and electrical performance.",
+            "dpc_page_description": "High-precision Direct Plated Copper (DPC) ceramic substrates for RF/microwave, semiconductor packaging, and fine-pitch circuitry applications. enhanced thermal management and electrical performance.",
             "dpc_page_keywords": "DPC ceramic substrate, Direct Plated Copper, ceramic metallization, AlN substrate, alumina substrate, RF/microwave substrate, fine-pitch circuitry, semiconductor packaging, thermal management",
             "og_title": "DPC Ceramic Substrates | Direct Plated Copper Solutions | Jimei Materials",
             "og_description": "High-precision Direct Plated Copper (DPC) ceramic substrates for RF/microwave applications, semiconductor packaging, and fine-pitch circuitry.",
@@ -25,7 +25,7 @@
 
             // Hero Section
             "dpc_main_title": "Direct Plated Copper (DPC) Ceramic Substrates",
-            "dpc_subtitle": "High-precision metallization for superior thermal management and electrical performance in demanding applications",
+            "dpc_subtitle": "High-precision metallization for enhanced thermal management and electrical performance in demanding applications",
             "feature_fine_pitch": "Fine-pitch circuitry (20μm)",
             "feature_high_thermal": "High thermal conductivity",
             "feature_excellent_insulation": "Excellent electrical insulation",
@@ -34,16 +34,16 @@
             // Overview
             "overview_title": "DPC Technology Overview",
             "overview_description": "Direct Plated Copper (DPC) is an advanced metallization process where a thin copper layer is directly electroplated onto a ceramic substrate, such as alumina (Al₂O₃) or aluminum nitride (AlN). This technique enables the formation of precise, high-density circuit patterns with excellent adhesion and uniformity.",
-            "overview_description2": "DPC substrates offer superior thermal conductivity, high electrical insulation, and outstanding reliability, making them ideal for demanding applications in power electronics, semiconductor laser heat sinks, thermoelectric coolers, and high-frequency devices. The DPC process allows for flexible design, fine line widths, and multilayer structures, supporting the miniaturization and enhanced performance of modern electronic modules.",
+            "overview_description2": "DPC substrates offer enhanced thermal conductivity, high electrical insulation, and outstanding reliability, making them ideal for demanding applications in power electronics, semiconductor laser heat sinks, thermoelectric coolers, and high-frequency devices. The DPC process allows for flexible design, fine line widths, and multilayer structures, supporting the miniaturization and enhanced performance of modern electronic modules.",
             "tech_high_density": "High-Density Circuits",
             "tech_up_to": "Up to 20μm line width",
 
             // Features
             "features_title": "Key Features & Benefits",
-            "features_subtitle": "Advanced DPC technology delivering exceptional performance",
+            "features_subtitle": "Advanced DPC technology delivering high performance",
             "feature_precision_title": "High Precision",
             "feature_precision_desc": "Fine-line circuitry with 20μm resolution and precise pattern control for complex designs.",
-            "feature_thermal_title": "Superior Thermal Management",
+            "feature_thermal_title": "enhanced Thermal Management",
             "feature_thermal_desc": "Excellent heat dissipation with thermal conductivity up to 200 W/mK (AlN).",
             "feature_electrical_title": "Electrical Performance",
             "feature_electrical_desc": "High dielectric strength (>10 kV/mm) and low signal loss for RF/microwave applications.",

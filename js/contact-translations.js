@@ -47,7 +47,7 @@
             
             // Contact Form Section
             "contact_form_title": "Send Us a Message",
-            "contact_form_description": "Complete the form below and our team will respond within 24 hours with a personalized quote and technical consultation.",
+            "contact_form_description": "Complete the form below and our team will respond promptly with an engineering quote and technical consultation.",
             "form_label_first_name": "First Name *",
             "form_error_first_name": "Please enter your first name.",
             "form_label_last_name": "Last Name *",
@@ -69,7 +69,7 @@
             "form_label_company": "Company/Organization",
             "form_label_newsletter": "Subscribe to our newsletter for industry insights and product updates",
             "btn_submit_form": "Submit Message",
-            "form_submission_note": "We'll respond within 24 hours. For urgent inquiries, please call us directly.",
+            "form_submission_note": "Our engineering team reviews submitted drawings and responds promptly. For urgent inquiries, please call us directly.",
             
             // CTA Section
             "contact_cta_title": "Need Urgent Technical Support?",
@@ -391,7 +391,7 @@
             
             // Contact Form Section
             "contact_form_title": "Senden Sie uns eine Nachricht",
-            "contact_form_description": "Füllen Sie das untenstehende Formular aus und unser Team antwortet innerhalb von 24 Stunden mit einem individuellen Angebot und technischer Beratung.",
+            "contact_form_description": "Füllen Sie das untenstehende Formular aus und unser Team antwortet zeitnah mit einem individuellen Angebot und technischer Beratung.",
             "form_label_first_name": "Vorname *",
             "form_error_first_name": "Bitte geben Sie Ihren Vornamen ein.",
             "form_label_last_name": "Nachname *",
@@ -413,7 +413,7 @@
             "form_label_company": "Firma/Organisation",
             "form_label_newsletter": "Abonnieren Sie unseren Newsletter für Brancheneinblicke und Produkt-Updates",
             "btn_submit_form": "Nachricht senden",
-            "form_submission_note": "Wir antworten innerhalb von 24 Stunden. Bei dringenden Anfragen rufen Sie uns bitte direkt an.",
+            "form_submission_note": "Unser Ingenieurteam prüft Ihre Spezifikationen und antwortet zeitnah. Bei dringenden Anfragen rufen Sie uns bitte direkt an.",
             
             // CTA Section
             "contact_cta_title": "Benötigen Sie dringenden technischen Support?",

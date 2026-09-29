@@ -42,12 +42,26 @@
 <priority>0.90</priority>
 </url>
 
-<!-- In-House Manufacturing Capabilities -->
+<!-- Process -> Capability -> Quality Industrial Hierarchy -->
 <url>
 <loc>https://jimei-materials.com/manufacturing.html</loc>
-<lastmod>2026-09-24</lastmod>
+<lastmod>2026-09-29</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.85</priority>
+<priority>0.90</priority>
+</url>
+
+<url>
+<loc>https://jimei-materials.com/capabilities.html</loc>
+<lastmod>2026-09-29</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.90</priority>
+</url>
+
+<url>
+<loc>https://jimei-materials.com/quality.html</loc>
+<lastmod>2026-09-29</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.90</priority>
 </url>
 
 <!-- Bare Ceramics -->

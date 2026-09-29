@@ -38,15 +38,15 @@
             
             // Hero Section
             "bare_main_title": "Bare Ceramic Substrates",
-            "bare_subtitle": "Premium ceramic substrates for demanding high-temperature applications requiring exceptional thermal, electrical, and mechanical performance",
+            "bare_subtitle": "Premium ceramic substrates for demanding high-temperature applications requiring high thermal, electrical, and mechanical performance",
             "feature_high_temp": "High-temperature resistance",
             "feature_excellent_thermal": "Excellent thermal management",
-            "feature_superior_electrical": "Superior electrical insulation",
-            "feature_mechanical_strength": "Exceptional mechanical strength",
+            "feature_superior_electrical": "enhanced electrical insulation",
+            "feature_mechanical_strength": "high mechanical strength",
             
             // Technology Overview
             "overview_title": "Bare Ceramic Technology",
-            "overview_description": "Bare ceramic substrates are uncoated, pure ceramic materials that provide exceptional thermal, electrical, and mechanical properties for demanding applications. These substrates are manufactured through advanced processes including dry pressing, isostatic pressing, hot pressing, and sintering to achieve precise dimensional tolerances and superior material properties.",
+            "overview_description": "Bare ceramic substrates are uncoated, pure ceramic materials that provide high thermal, electrical, and mechanical properties for demanding applications. These substrates are manufactured through advanced processes including dry pressing, isostatic pressing, hot pressing, and sintering to achieve precise dimensional tolerances and enhanced material properties.",
             "overview_description2": "Available in multiple material grades including Alumina (Al₂O₃), Aluminum Nitride (AlN), Silicon Nitride (Si₃N₄), Silicon Carbide (SiC), and Zirconia (ZrO₂), our bare ceramic substrates offer tailored solutions for semiconductor equipment, power electronics, automotive systems, and industrial applications where standard materials cannot meet performance requirements.",
             
             // Materials Section
@@ -93,7 +93,7 @@
             
             // Silicon Nitride
             "material_si3n4_title": "Silicon Nitride (Si₃N₄)",
-            "material_si3n4_subtitle": "Exceptional fracture toughness and thermal shock resistance",
+            "material_si3n4_subtitle": "high fracture toughness and thermal shock resistance",
             "feature_fracture_tough": "High fracture toughness",
             "feature_thermal_shock": "Thermal shock resistant",
             "feature_wear_resistant": "Wear resistant",
@@ -177,7 +177,7 @@
             "cta_phone": "+86-147-4537-3293",
             
             // Footer
-            "footer_description": "Leading manufacturer of ceramic substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "manufacturer of ceramic substrates for power electronics and thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",

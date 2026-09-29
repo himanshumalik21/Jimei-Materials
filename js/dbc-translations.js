@@ -12,12 +12,12 @@
 
             // Meta tags
             "dbc_page_title": "Direct Bonded Copper (DBC) Ceramic Substrates | Jimei Materials",
-            "dbc_page_description": "High-power Direct Bonded Copper (DBC) ceramic substrates for IGBT modules, EV power systems, and industrial drives requiring superior heat dissipation and electrical isolation.",
+            "dbc_page_description": "High-power Direct Bonded Copper (DBC) ceramic substrates for IGBT modules, EV power systems, and industrial drives requiring enhanced heat dissipation and electrical isolation.",
             "dbc_page_keywords": "DBC ceramic substrate, Direct Bonded Copper, IGBT substrate, power electronics, thermal management, aluminum nitride, alumina, high power, automotive electronics, EV power modules",
             "og_title": "DBC Ceramic Substrates | Direct Bonded Copper Solutions | Jimei Materials",
-            "og_description": "High-power Direct Bonded Copper (DBC) ceramic substrates for IGBT modules, EV power systems, and industrial drives requiring superior heat dissipation.",
+            "og_description": "High-power Direct Bonded Copper (DBC) ceramic substrates for IGBT modules, EV power systems, and industrial drives requiring enhanced heat dissipation.",
             "twitter_title": "DBC Ceramic Substrates | Direct Bonded Copper Solutions | Jimei Materials",
-            "twitter_description": "High-power Direct Bonded Copper (DBC) ceramic substrates for IGBT modules, EV power systems, and industrial drives requiring superior heat dissipation.",
+            "twitter_description": "High-power Direct Bonded Copper (DBC) ceramic substrates for IGBT modules, EV power systems, and industrial drives requiring enhanced heat dissipation.",
 
             // Breadcrumbs
             "breadcrumb_home": "Home",
@@ -26,7 +26,7 @@
 
             // Hero Section
             "dbc_main_title": "Direct Bonded Copper (DBC) Ceramic Substrates",
-            "dbc_subtitle": "High-power ceramic substrates for superior thermal management and electrical isolation in demanding power electronics",
+            "dbc_subtitle": "High-power ceramic substrates for enhanced thermal management and electrical isolation in demanding power electronics",
             "feature_high_power": "High power handling capacity",
             "feature_excellent_thermal": "Excellent thermal conductivity",
             "feature_strong_bond": "Strong copper-ceramic bond",
@@ -42,7 +42,7 @@
             // Features
             "features_title": "Key Features & Benefits",
             "features_subtitle": "Advanced DBC technology for demanding power applications",
-            "feature_thermal_title": "Superior Thermal Management",
+            "feature_thermal_title": "enhanced Thermal Management",
             "feature_thermal_desc": "Excellent heat dissipation with thermal conductivity up to 200 W/mK (AlN).",
             "feature_power_title": "High Power Handling",
             "feature_power_desc": "Thick copper layers (up to 500μm) for high current carrying capacity.",

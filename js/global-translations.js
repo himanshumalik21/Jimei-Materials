@@ -21,7 +21,7 @@ en: {
     "nav_request_quote": "Request Quote",
             
     // Footer
-    "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+    "footer_description": "manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
     "footer_products": "Products",
     "footer_company": "Company",
     "footer_contact": "Contact Info",

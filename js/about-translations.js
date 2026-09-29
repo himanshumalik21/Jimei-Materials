@@ -11,12 +11,12 @@
         en: {
             // Meta & SEO
             "about_page_title": "About Jimei Materials | DBC, DPC & HTCC Ceramic Substrate Manufacturer",
-            "about_meta_description": "Jimei Materials: Leading manufacturer of advanced ceramic substrate solutions since 2016. We specialize in DBC (Direct Bonded Copper), DPC (Direct Plated Copper), and HTCC (High-Temperature Co-fired Ceramic) technologies for power electronics, EV, RF, and hermetic packaging applications. ISO 14001:2015 certified.",
+            "about_meta_description": "Jimei Materials: manufacturer of advanced ceramic substrate solutions since 2016. We specialize in DBC (Direct Bonded Copper), DPC (Direct Plated Copper), and HTCC (High-Temperature Co-fired Ceramic) technologies for power electronics, EV, RF, and hermetic packaging applications. ISO 14001:2015 certified.",
             "about_meta_keywords": "ceramic substrate manufacturer, DBC manufacturer, DPC manufacturer, HTCC manufacturer, High-Temperature Co-fired Ceramic, hermetic ceramic packaging, multilayer ceramic substrates, ceramic metallization company, thermal management solutions, power module substrates, semiconductor packaging manufacturer, AlN substrates, Al₂O₃ substrates",
             "about_og_title": "About Jimei Materials | DBC, DPC & HTCC Ceramic Substrate Solutions",
-            "about_og_description": "Leading manufacturer of advanced ceramic substrate solutions with ISO 14001:2015 certification. Specializing in DBC, DPC, and HTCC technologies for power electronics, thermal management, and hermetic packaging.",
+            "about_og_description": "manufacturer of advanced ceramic substrate solutions with ISO 14001:2015 certification. Specializing in DBC, DPC, and HTCC technologies for power electronics, thermal management, and hermetic packaging.",
             "about_twitter_title": "About Jimei Materials | DBC, DPC & HTCC Ceramic Substrate Solutions",
-            "about_twitter_description": "Leading manufacturer of advanced ceramic substrate solutions with ISO 14001:2015 certification. Specializing in DBC, DPC, and HTCC technologies for power electronics, thermal management, and hermetic packaging.",
+            "about_twitter_description": "manufacturer of advanced ceramic substrate solutions with ISO 14001:2015 certification. Specializing in DBC, DPC, and HTCC technologies for power electronics, thermal management, and hermetic packaging.",
 
             // Breadcrumbs
             "breadcrumb_home": "Home",
@@ -24,7 +24,7 @@
 
             // Page Header
             "about_main_title": "About Jimei Materials",
-            "about_subtitle": "Leading manufacturer of ceramic metallization substrates since 2016",
+            "about_subtitle": "manufacturer of ceramic metallization substrates since 2016",
 
             // Carousel Controls
             "carousel_prev": "Previous",
@@ -33,7 +33,7 @@
             // Company Overview Section
             "overview_title": "Our Mission",
             "overview_mission": "To advance thermal management technology through innovative ceramic substrate solutions that enable more efficient, reliable, and sustainable power electronics.",
-            "overview_description": "Founded in 2016, Jimei Materials has established itself as a leading manufacturer of advanced ceramic substrate solutions. We master three core technologies: Direct Bonded Copper (DBC) for superior thermal performance, Direct Plated Copper (DPC) for high-precision circuits, and High-Temperature Co-fired Ceramic (HTCC) for robust, multilayer hermetic packaging. Serving industries from electric vehicles and renewable energy to RF communications and semiconductor packaging, we provide the critical foundation for next-generation electronics requiring exceptional reliability, thermal management, and performance in harsh environments.",
+            "overview_description": "Founded in 2016, Jimei Materials has established itself as a manufacturer of advanced ceramic substrate solutions. We master three core technologies: Direct Bonded Copper (DBC) for enhanced thermal performance, Direct Plated Copper (DPC) for high-precision circuits, and High-Temperature Co-fired Ceramic (HTCC) for robust, multilayer hermetic packaging. Serving industries from electric vehicles and renewable energy to RF communications and semiconductor packaging, we provide the critical foundation for next-generation electronics requiring high reliability, thermal management, and performance in harsh environments.",
 
             // Buttons
             "btn_contact_us": "Contact Us",
@@ -54,11 +54,11 @@
             "expertise_title": "Technology Expertise",
             "expertise_description": "Specialized knowledge in ceramic metallization and thermal management",
             "expertise_dpc_title": "DPC Technology",
-            "expertise_dpc_desc": "Direct Plated Copper (DPC) utilizes precision electroplating and photolithography for fine-pitch circuits on ceramic. Optimized for RF/microwave applications, laser diodes, photonics, and precision sensors where exceptional planarity, high-frequency performance, and complex circuit patterns are critical for miniaturization and signal integrity.",
+            "expertise_dpc_desc": "Direct Plated Copper (DPC) utilizes precision electroplating and photolithography for fine-pitch circuits on ceramic. Optimized for RF/microwave applications, laser diodes, photonics, and precision sensors where high planarity, high-frequency performance, and complex circuit patterns are critical for miniaturization and signal integrity.",
             "expertise_dbc_title": "DBC Technology",
-            "expertise_dbc_desc": "Direct Bonded Copper (DBC) creates a strong, reliable metallization layer through high-temperature bonding. The preferred choice for power modules, EV traction inverters, and IGBT/wide bandgap semiconductor substrates due to its excellent thermal conductivity, high current-carrying capacity, and superior thermal cycling reliability for demanding power electronics applications.",
+            "expertise_dbc_desc": "Direct Bonded Copper (DBC) creates a strong, reliable metallization layer through high-temperature bonding. The preferred choice for power modules, EV traction inverters, and IGBT/wide bandgap semiconductor substrates due to its excellent thermal conductivity, high current-carrying capacity, and enhanced thermal cycling reliability for demanding power electronics applications.",
             "expertise_htcc_title": "HTCC Technology",
-            "expertise_htcc_desc": "High-Temperature Co-fired Ceramic (HTCC) involves sintering multilayer alumina or AlN green tapes with refractory metal (W, Mo) metallization at temperatures above 1500°C. This creates dense, hermetic packages and multilayer ceramic substrates ideal for aerospace electronics, MEMS packaging, RF cavities, and downhole sensors requiring exceptional high-temperature stability and mechanical robustness.",
+            "expertise_htcc_desc": "High-Temperature Co-fired Ceramic (HTCC) involves sintering multilayer alumina or AlN green tapes with refractory metal (W, Mo) metallization at temperatures above 1500°C. This creates dense, hermetic packages and multilayer ceramic substrates ideal for aerospace electronics, MEMS packaging, RF cavities, and downhole sensors requiring high high-temperature stability and mechanical robustness.",
 
             // Company Timeline Section
             "timeline_title": "Our Technology Journey",
@@ -143,7 +143,7 @@
             "faq_q2": "What ceramic substrate technologies and materials do you manufacture?",
             "faq_a2": "We are a full-spectrum ceramic substrate manufacturer. Our core technologies include Direct Bonded Copper (DBC), Direct Plated Copper (DPC), and High-Temperature Co-fired Ceramic (HTCC). We work with key materials like Aluminum Nitride (AlN), Alumina (Al₂O₃), and specialized tapes for HTCC. Copper thickness, metallization systems (copper, tungsten, gold), and layer counts are engineered to meet specific thermal, electrical, mechanical, and hermetic requirements for each application.",
             "faq_q3": "What is HTCC and what are its key applications?",
-            "faq_a3": "High-Temperature Co-fired Ceramic (HTCC) involves sintering alumina or aluminum nitride green tapes with refractory metal (e.g., Tungsten, Molybdenum) metallization at temperatures above 1500°C. This creates dense, multilayer, and hermetic structures. Key applications include: hermetic packages for ICs, MEMS, and sensors; RF/microwave components (cavities, filters); industrial and automotive sensor housings; and substrates for high-temperature electronics. Its primary advantages are exceptional mechanical robustness, excellent high-temperature stability, and reliable performance in harsh environments.",
+            "faq_a3": "High-Temperature Co-fired Ceramic (HTCC) involves sintering alumina or aluminum nitride green tapes with refractory metal (e.g., Tungsten, Molybdenum) metallization at temperatures above 1500°C. This creates dense, multilayer, and hermetic structures. Key applications include: hermetic packages for ICs, MEMS, and sensors; RF/microwave components (cavities, filters); industrial and automotive sensor housings; and substrates for high-temperature electronics. Its primary advantages are high mechanical robustness, excellent high-temperature stability, and reliable performance in harsh environments.",
             "faq_q4": "What is your manufacturing capacity and typical lead time?",
             "faq_a4": "With 250+ skilled professionals and advanced production lines, we support prototype to volume production for DBC, DPC, and HTCC substrates. Typical lead times depend on quantity and complexity — contact us for an ETA; expedited prototyping is available for engineering samples.",
             "faq_q5": "Do you offer custom designs, prototyping and engineering support?",

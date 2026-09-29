@@ -12,10 +12,10 @@
 
             //Meta & Structural Elements
             "article_page_title": "DPC Technology Explained: Revolutionizing Advanced Packaging | JIMEI Ceramic Substrates",
-            "article_meta_description": "Direct Plated Copper (DPC) technology is transforming advanced packaging for semiconductors and optoelectronics. Learn about precision copper patterning, superior adhesion, and thermal management advantages.",
+            "article_meta_description": "Direct Plated Copper (DPC) technology is transforming advanced packaging for semiconductors and optoelectronics. Learn about precision copper patterning, enhanced adhesion, and thermal management advantages.",
             "article_meta_keywords": "DPC technology, Direct Plated Copper, semiconductor packaging, optoelectronics, ceramic substrates, thermal management, copper patterning, advanced packaging solutions",
             "article_og_title": "DPC Technology Explained: Revolutionizing Advanced Packaging | Jimei Materials",
-            "article_og_description": "Direct Plated Copper (DPC) technology enables precise copper patterning for advanced semiconductor and optoelectronic packaging with superior thermal management.",
+            "article_og_description": "Direct Plated Copper (DPC) technology enables precise copper patterning for advanced semiconductor and optoelectronic packaging with enhanced thermal management.",
             "article_twitter_title": "DPC Technology Explained: Revolutionizing Advanced Packaging | Jimei Materials",
             "article_twitter_description": "Direct Plated Copper (DPC) technology enables precise copper patterning for advanced semiconductor and optoelectronic packaging.",
             "skip_to_content": "Skip to main content",
@@ -40,7 +40,7 @@
             
             // Article Title Section
             "article_title": "DPC Technology Explained: Revolutionizing Advanced Packaging",
-            "article_description": "Direct Plated Copper (DPC) technology enables precise copper patterning for advanced semiconductor and optoelectronic packaging with superior thermal management.",
+            "article_description": "Direct Plated Copper (DPC) technology enables precise copper patterning for advanced semiconductor and optoelectronic packaging with enhanced thermal management.",
             "article_published": "Published:",
             "article_read_time": "Read time:",
             
@@ -50,12 +50,12 @@
             "article_next": "Next",
             
             // Article Content
-            "article_intro_paragraph1": "Direct Plated Copper (DPC) technology is transforming the landscape of advanced packaging for semiconductors and optoelectronics. By enabling precise copper patterning directly onto ceramic substrates, DPC offers unmatched flexibility, performance, and reliability for next-generation electronic devices. This innovative approach bridges the gap between traditional PCB manufacturing and advanced ceramic substrate technologies.",
+            "article_intro_paragraph1": "Direct Plated Copper (DPC) technology is transforming the landscape of advanced packaging for semiconductors and optoelectronics. By enabling precise copper patterning directly onto ceramic substrates, DPC offers reliable flexibility, performance, and reliability for next-generation electronic devices. This innovative approach bridges the gap between traditional PCB manufacturing and advanced ceramic substrate technologies.",
   
   "article_image_caption": "DPC technology enables fine-pitch copper patterning on ceramic substrates for advanced packaging applications",
   
   "article_section1_title": "What is Direct Plated Copper (DPC)?",
-  "article_section1_paragraph1": "DPC is an advanced metallization process where copper is electroplated directly onto ceramic substrates such as alumina (Al₂O₃) or aluminum nitride (AlN). Unlike traditional thick film or DBC methods, DPC leverages photolithography and electroplating techniques to create precise copper patterns with exceptional dimensional accuracy. This process enables fine copper traces, high aspect ratios, and complex circuit designs, making it ideal for high-density and high-frequency applications.",
+  "article_section1_paragraph1": "DPC is an advanced metallization process where copper is electroplated directly onto ceramic substrates such as alumina (Al₂O₃) or aluminum nitride (AlN). Unlike traditional thick film or DBC methods, DPC leverages photolithography and electroplating techniques to create precise copper patterns with high dimensional accuracy. This process enables fine copper traces, high aspect ratios, and complex circuit designs, making it ideal for high-density and high-frequency applications.",
   
   "tech_comparison_title": "Key Differentiator",
   "tech_comparison_description": "DPC combines the precision of semiconductor photolithography with the thermal performance of ceramic substrates, offering a unique solution for advanced packaging challenges that traditional methods cannot address.",
@@ -63,7 +63,7 @@
   "article_section2_title": "Key Features and Advantages of DPC Technology",
   "feature1_title": "High Precision",
   "feature1_description": "Enables micro-patterning and fine pitch copper traces (down to 20μm line/space) for advanced circuit layouts and high-density interconnects.",
-  "feature2_title": "Superior Adhesion",
+  "feature2_title": "enhanced Adhesion",
   "feature2_description": "Electroplated copper forms a robust metallurgical bond with the ceramic, ensuring long-term reliability under thermal cycling and mechanical stress.",
   "feature3_title": "Thermal Management",
   "feature3_description": "Copper's high thermal conductivity (398 W/m·K) supports efficient heat dissipation in high-power devices, reducing thermal resistance and improving performance.",
@@ -109,7 +109,7 @@
   "table_row8_dbc": "High-power, high-current modules",
   
   "article_section4_title": "Applications of DPC Technology",
-  "article_section4_paragraph1": "DPC substrates are revolutionizing multiple industries by enabling advanced packaging solutions that traditional methods cannot provide. Their ability to support intricate designs, high thermal loads, and superior electrical performance makes them essential for modern electronics manufacturing.",
+  "article_section4_paragraph1": "DPC substrates are revolutionizing multiple industries by enabling advanced packaging solutions that traditional methods cannot provide. Their ability to support intricate designs, high thermal loads, and enhanced electrical performance makes them essential for modern electronics manufacturing.",
   
   "application1_title": "Semiconductor Packaging",
   "application1_description": "Advanced packaging for high-frequency ICs, RF modules, and MEMS devices requiring fine-pitch interconnects and thermal management.",
@@ -178,7 +178,7 @@
             "btn_contact_experts": "Contact DPC Experts",
 
             //Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",

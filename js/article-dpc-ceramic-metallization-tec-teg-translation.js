@@ -61,10 +61,10 @@
             "article_function3": "Thermal Conduction: Efficiently transferring heat from the cold side (TEC) or transferring heat across the module (TEG).",
             "article_section1_paragraph3": "To form the necessary electrical junctions that link the semiconductor pellets, the ceramic surface must be metallized. Our Direct Plated Copper (DPC) process provides the ideal solution for this challenge.",
             
-            "article_section2_title": "Direct Plated Copper (DPC): The Superior Metallization Choice",
+            "article_section2_title": "Direct Plated Copper (DPC): The enhanced Metallization Choice",
             "article_section2_paragraph1": "While methods like Thick Film and Direct Bonded Copper (DBC) exist, DPC offers a unique combination of precision, thermal performance, and mechanical reliability—critical factors for miniaturized, high-power-density TEC/TEG packaging.",
             
-            "article_subsection1_title": "1. Exceptional Thermal Conductivity",
+            "article_subsection1_title": "1. high Thermal Conductivity",
             "article_subsection1_paragraph": "The overall thermal resistance (Rth) of a TEM is heavily influenced by its substrates. We primarily utilize Aluminum Nitride (AlN) or high-grade Alumina (Al₂O₃) ceramics, combined with the high conductivity of pure plated copper.",
             "article_subsection1_paragraph2": "Ceramic Thermal Conductivity: Alumina (Al₂O₃) offers 25 to 35 W/m·K, while Aluminum Nitride (AlN) provides a superb thermal pathway, typically achieving 170 to 230 W/m·K.",
             "article_subsection1_paragraph3": "Benefit: The DPC process creates a thin, dense copper layer (up to 50μm thick) with minimal thermal barrier, ensuring rapid heat transfer. This significantly lowers the module's Rth, leading to a greater temperature differential (ΔTmax) for TECs or higher power output for TEGs.",
@@ -82,7 +82,7 @@
             "article_subsection3_paragraph2": "Benefit: By choosing ceramics like AlN (CTE ≈ 4.5 ppm/K), which closely matches the semiconductor material, and combining it with the high-adhesion DPC copper film, we dramatically reduce the shear stress at the solder joints during thermal cycling (e.g., from 0°C to 125°C). This translates directly into a significantly increased operating lifespan and reliability.",
             
             "article_subsection4_title": "4. High Circuit Density and Fine Resolution",
-            "article_subsection4_paragraph1": "DPC utilizes advanced photolithography, a method that is far superior to traditional Thick Film for high-resolution patterning.",
+            "article_subsection4_paragraph1": "DPC utilizes advanced photolithography, a method that is far enhanced to traditional Thick Film for high-resolution patterning.",
             "article_subsection4_paragraph2": "Metric: Our DPC substrates can achieve line widths and spacing as fine as 30μm to 50μm.",
             "article_subsection4_paragraph3": "Benefit: This precision enables the fabrication of highly compact, high-density interconnections required for micro-thermoelectric modules (TEMs down to 2.5 × 2.5 mm²), allowing for more P-N couples per unit area and maximizing cooling/generating power in a miniaturized package.",
             
@@ -93,7 +93,7 @@
             "dpc_step3": "Photolithography: The precise pattern for the electrical traces and contact pads is defined.",
             "dpc_step4": "Electroplating: Pure, dense copper is electroplated onto the seed layer, building up the required thickness (e.g., 20μm to 50μm) to handle high current density.",
             "dpc_step5": "Finishing: Optional final plating (Ni/Au) is applied for optimal wire-bonding and soldering compatibility with Bi₂Te₃ pellets.",
-            "article_section3_paragraph2": "This process results in a ceramic circuit board with superior bond strength (often > 45 MPa) and excellent surface planarity, perfect for Direct Chip Attach (DCA) and high-precision module assembly.",
+            "article_section3_paragraph2": "This process results in a ceramic circuit board with enhanced bond strength (often > 45 MPa) and excellent surface planarity, perfect for Direct Chip Attach (DCA) and high-precision module assembly.",
             
             "article_section4_title": "Key Technical Data: Performance Summary",
             
@@ -105,7 +105,7 @@
             "table_header_cte": "CTE (ppm/K)",
             "table_header_note": "Application Note",
             "table_row1_note": "Cost-effective, good balance",
-            "table_row2_note": "Best for high-power TEC/TEG; superior CTE match",
+            "table_row2_note": "Best for high-power TEC/TEG; enhanced CTE match",
             "table_row3_note": "Reference (CTE is target for stress reduction)",
             "table_row4_note": "Reference (illustrates DPC advantage over pure bulk Cu CTE)",
             
@@ -142,7 +142,7 @@
             "btn_contact_experts": "Contact Our Experts",
 
             // Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",

@@ -53,7 +53,7 @@
             "article_intro_paragraph1": "Bare ceramic substrates are essential materials in the electronics industry, valued for their outstanding thermal, electrical, and mechanical properties. These substrates, typically made from alumina (Al₂O₃) or aluminum nitride (AlN), serve as the foundation for a wide range of high-performance devices. Their versatility and reliability make them indispensable in applications demanding efficient heat dissipation, electrical insulation, and long-term durability.",
             
             "article_section1_title": "What Are Bare Ceramic Substrates?",
-            "article_section1_paragraph1": "Bare ceramic substrates are uncoated, precision-manufactured sheets of technical ceramics. Unlike metallized substrates, they do not have conductive layers or patterns, allowing engineers to customize them for specific requirements. Alumina is favored for its cost-effectiveness and robust insulation, while aluminum nitride offers superior thermal conductivity for demanding thermal management tasks. These substrates are available in various thicknesses, sizes, and grades, supporting diverse design needs in electronics, optoelectronics, and power modules.",
+            "article_section1_paragraph1": "Bare ceramic substrates are uncoated, precision-manufactured sheets of technical ceramics. Unlike metallized substrates, they do not have conductive layers or patterns, allowing engineers to customize them for specific requirements. Alumina is favored for its cost-effectiveness and robust insulation, while aluminum nitride offers enhanced thermal conductivity for demanding thermal management tasks. These substrates are available in various thicknesses, sizes, and grades, supporting diverse design needs in electronics, optoelectronics, and power modules.",
             "article_section1_paragraph2": "The manufacturing process involves sintering ceramic powders at high temperatures to achieve dense, uniform substrates with minimal porosity. This ensures consistent performance and reliability, even in harsh operating environments. Bare ceramics are also compatible with post-processing techniques such as laser cutting, dicing, and surface polishing, enabling precise integration into complex assemblies.",
             
             "article_image_caption": "High-precision bare ceramic substrate for electronics applications",
@@ -64,7 +64,7 @@
             "article_application2_title": "IGBT Modules:",
             "article_application2_description": "In power electronics, Insulated Gate Bipolar Transistor (IGBT) modules rely on bare ceramic substrates for both electrical isolation and thermal management. These substrates act as the interface between semiconductor chips and heat sinks, efficiently transferring heat away from high-power devices. Their robust insulation properties are critical for safe operation in high-voltage industrial and automotive systems, reducing the risk of electrical breakdown and improving overall module reliability.",
             "article_application3_title": "Thermoelectric Coolers:",
-            "article_application3_description": "Thermoelectric modules, used for precise temperature control and energy harvesting, benefit from the superior thermal properties of bare ceramics. The substrates facilitate efficient heat flow between hot and cold junctions, maximizing cooling performance and energy conversion efficiency. Their chemical stability ensures consistent operation in environments exposed to moisture, chemicals, or temperature fluctuations.",
+            "article_application3_description": "Thermoelectric modules, used for precise temperature control and energy harvesting, benefit from the enhanced thermal properties of bare ceramics. The substrates facilitate efficient heat flow between hot and cold junctions, maximizing cooling performance and energy conversion efficiency. Their chemical stability ensures consistent operation in environments exposed to moisture, chemicals, or temperature fluctuations.",
             "article_applications_conclusion": "Additional applications include sensor platforms, RF and microwave circuits, LED modules, and medical devices, where the unique combination of thermal, electrical, and mechanical properties is essential for reliable performance.",
             
             "article_section3_title": "Advantages of Bare Ceramic Substrates",
@@ -80,7 +80,7 @@
             "article_choose_paragraph2": "As electronic devices become more compact and powerful, the need for substrates that can handle higher thermal loads and voltages continues to grow. Bare ceramics meet these demands, supporting the development of next-generation technologies in power electronics, optoelectronics, renewable energy, and medical instrumentation.",
             
             "article_section5_title": "Conclusion",
-            "article_conclusion": "Bare ceramic substrates are driving innovation in advanced electronics by delivering unmatched reliability, efficiency, and adaptability. From laser diodes and IGBT modules to thermoelectric coolers and sensor platforms, their unique properties enable the creation of robust, high-performance devices for a wide range of industries. As technology evolves, bare ceramics will remain at the forefront of thermal management and electrical insulation solutions, empowering progress in energy, communications, and healthcare.",
+            "article_conclusion": "Bare ceramic substrates are driving innovation in advanced electronics by delivering reliable reliability, efficiency, and adaptability. From laser diodes and IGBT modules to thermoelectric coolers and sensor platforms, their unique properties enable the creation of robust, high-performance devices for a wide range of industries. As technology evolves, bare ceramics will remain at the forefront of thermal management and electrical insulation solutions, empowering progress in energy, communications, and healthcare.",
 
             // Technical Specifications Table
             "article_specs_title": "Technical Specifications Comparison",
@@ -122,7 +122,7 @@
             "btn_contact_experts": "Contact Our Experts",
 
             // Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",

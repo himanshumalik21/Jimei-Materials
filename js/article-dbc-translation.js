@@ -50,7 +50,7 @@
             "article_next": "Next",
             
             // Article Content
-            "dbc_article_intro_paragraph1": "Direct Bonded Copper (DBC) substrates are a cornerstone in the world of power electronics, offering exceptional thermal conductivity, electrical insulation, and mechanical strength. As industries demand higher performance and reliability, understanding the fundamentals of DBC substrates becomes essential for engineers, designers, and manufacturers.",
+            "dbc_article_intro_paragraph1": "Direct Bonded Copper (DBC) substrates are a cornerstone in the world of power electronics, offering high thermal conductivity, electrical insulation, and mechanical strength. As industries demand higher performance and reliability, understanding the fundamentals of DBC substrates becomes essential for engineers, designers, and manufacturers.",
   
   "dbc_image_caption1": "Direct Bonded Copper substrate structure showing ceramic core and copper layers",
   
@@ -80,12 +80,12 @@
   "app4_desc": "High-power lighting, laser diode modules",
   
   "dbc_section4_title": "Why Choose DBC Over Other Substrates?",
-  "dbc_section4_paragraph1": "Compared to traditional PCB materials or thick film substrates, DBC offers superior thermal management and reliability. This results in longer device lifespans, higher efficiency, and reduced risk of failure in demanding environments.",
+  "dbc_section4_paragraph1": "Compared to traditional PCB materials or thick film substrates, DBC offers enhanced thermal management and reliability. This results in longer device lifespans, higher efficiency, and reduced risk of failure in demanding environments.",
   
-  "dbc_technical_note": "<strong>Technical Advantage:</strong> DBC substrates provide superior thermal performance and reliability compared to traditional PCB materials, resulting in longer device lifespans, higher efficiency, and reduced risk of failure in demanding environments.",
+  "dbc_technical_note": "<strong>Technical Advantage:</strong> DBC substrates provide enhanced thermal performance and reliability compared to traditional PCB materials, resulting in longer device lifespans, higher efficiency, and reduced risk of failure in demanding environments.",
   
   "dbc_section5_title": "Conclusion",
-  "dbc_conclusion_paragraph1": "Direct Bonded Copper substrates are a critical enabler for advanced power electronics, providing unmatched thermal and electrical performance. As technology evolves, DBC substrates will continue to play a vital role in supporting innovation across industries including automotive, renewable energy, industrial automation, and telecommunications.",
+  "dbc_conclusion_paragraph1": "Direct Bonded Copper substrates are a critical enabler for advanced power electronics, providing reliable thermal and electrical performance. As technology evolves, DBC substrates will continue to play a vital role in supporting innovation across industries including automotive, renewable energy, industrial automation, and telecommunications.",
   "dbc_conclusion_paragraph2": "The combination of excellent thermal management, electrical insulation, and mechanical robustness makes DBC technology essential for next-generation power electronics applications where reliability, efficiency, and power density are paramount.",
             
             // Article Tags
@@ -121,7 +121,7 @@
             "btn_contact_experts": "Contact Our Experts",
 
             //Footer
-            "footer_description": "Leading manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
+            "footer_description": "manufacturer of ceramic metallization substrates for thermal management applications since 2016. ISO 14001:2015 certified with global manufacturing capabilities.",
             "footer_products": "Products",
             "footer_company": "Company",
             "footer_contact": "Contact Info",
